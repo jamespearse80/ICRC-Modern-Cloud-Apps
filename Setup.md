@@ -1,0 +1,76 @@
+## Before the hands-on lab
+
+Duration: 30 minutes
+
+Before initiating the hands-on lab, you will setup an environment to use for the rest of the exercises.
+
+### Task 1: Setup a development environment
+
+1.  Create a virtual machine in Azure using the Visual Studio Community 2017 with the latest release on Windows Server 2016 image.
+
+    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
+
+Note: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
+
+### Task 2: Disable IE Enhanced Security
+
+Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
+
+1.  On the new VM you just created, select the Server Manager icon.
+
+    ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
+
+2.  Click **Local Server**.
+
+    ![Local Server is selected from the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
+
+3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
+
+    ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
+
+4.  Change to **Off** for Administrators, and click **OK**.
+
+    ![In the Internet Explorer Enhanced Security Configuration dialog box, under Administrators, the Off radio button is selected, as is the OK button at the bottom.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
+
+### Task 3: Install SQL Server Management Studio
+
+1.  On the new VM, download and install SQL Server Management Studio.\
+    <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
+
+### Task 4: Validate connectivity to Azure
+
+1.  Within the virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.
+
+2.  Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription.
+
+    ![A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription.](images/Setup/image8.png "Visual Studio Server Explorer")
+
+### Task 5: Download and explore the Contoso Sports League sample
+
+1.  Create a new folder on your C: drive named **Hackathon**.
+
+2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the **Hackathon** folder.
+
+3.  From the **Contoso Sports League** folder under **Hackathon**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
+
+4.  The solution contains the following projects:
+    ```  
+    Contoso.Apps.SportsLeague.Web      Contoso Sports League e-commerce application
+    ---------------------------------- ------------------------------------------
+    Contoso.Apps.SportsLeague.Admin    Contoso Sports League call center admin application
+    Contoso.Apps.SportsLeague.Data     Data tier
+    Contoso.Apps.SportsLeague.Offers   API for returning list of available products
+    Contoso.Apps.PaymentGateway        API for payment processing
+    ```  
+
+### Task 6: Create a new Azure Resource Group
+
+1.  Create a new folder on your C: drive named **Hackathon**. Within the Azure Management Portal, open the **Resource groups** tile and click **Add**.
+
+    ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Setup/image9.png "Azure Management Portal")
+
+2.  Specify the name of the resource group as **contososports**, and choose the Azure region you want to deploy the lab to. This resource group will be used throughout the rest of the lab. Click **Create** to create the resource group.
+
+    ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
+
+You should follow all steps provided *before* attending the hands-on lab.

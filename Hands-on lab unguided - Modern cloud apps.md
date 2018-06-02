@@ -1,10 +1,17 @@
 ![](images/HeaderPic.png "Microsoft Cloud Workshops")
 
-# Modern cloud apps
+<div class="MCWHeader1">
+Modern cloud apps
+</div>
 
-## Hands-on lab unguided
+<div class="MCWHeader2">
+Hands-on lab unguided
+</div>
 
-## March 2018
+<div class="MCWHeader3">
+March 2018
+</div>
+
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -15,65 +22,53 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
-## Contents
-
+**Contents**
 <!-- TOC -->
 
-- [Modern cloud apps](#modern-cloud-apps)
-    - [Hands-on lab unguided](#hands-on-lab-unguided)
-    - [March 2018](#march-2018)
-    - [Contents](#contents)
 - [Modern cloud apps hands-on lab unguided](#modern-cloud-apps-hands-on-lab-unguided)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Overview](#overview)
     - [Requirements](#requirements)
     - [Solution architecture](#solution-architecture)
     - [Help references](#help-references)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Setup a development environment](#task-1--setup-a-development-environment)
-        - [Task 2: Disable IE Enhanced Security](#task-2--disable-ie-enhanced-security)
-        - [Task 3: Install SQL Server Management Studio](#task-3--install-sql-server-management-studio)
-        - [Task 4: Validate connectivity to Azure](#task-4--validate-connectivity-to-azure)
-        - [Task 5: Download and explore the Contoso Sports League sample](#task-5--download-and-explore-the-contoso-sports-league-sample)
-        - [Task 6: Create a new Azure Resource Group](#task-6--create-a-new-azure-resource-group)
-    - [Exercise 1: Proof of concept deployment](#exercise-1--proof-of-concept-deployment)
-        - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1--deploy-the-e-commerce-website--sql-database--and-storage)
-        - [Task 2: Setup SQL Database Geo-Replication](#task-2--setup-sql-database-geo-replication)
-        - [Task 3: Deploying the call center admin website](#task-3--deploying-the-call-center-admin-website)
-        - [Task 4: Deploying the payment gateway](#task-4--deploying-the-payment-gateway)
-        - [Task 5: Deploying the offers Web API](#task-5--deploying-the-offers-web-api)
-        - [Task 6: Update and deploy the e-commerce website](#task-6--update-and-deploy-the-e-commerce-website)
-    - [Exercise 2: Identity and security](#exercise-2--identity-and-security)
-        - [Task 1: Enable Azure AD Premium Trial](#task-1--enable-azure-ad-premium-trial)
-        - [Task 2: Create a new Contoso user](#task-2--create-a-new-contoso-user)
-        - [Task 3: Configure access control for the call center administration Web Application](#task-3--configure-access-control-for-the-call-center-administration-web-application)
-        - [Task 4: Apply custom branding for the Azure Active Directory logon page](#task-4--apply-custom-branding-for-the-azure-active-directory-logon-page)
-        - [Task 5: Verify the user can successfully login to the admin site](#task-5--verify-the-user-can-successfully-login-to-the-admin-site)
-    - [Exercise 3: Enable Azure B2C for customer site](#exercise-3--enable-azure-b2c-for-customer-site)
-        - [Task 1: Create a new directory](#task-1--create-a-new-directory)
-        - [Task 2: Add a new application](#task-2--add-a-new-application)
-        - [Task 3: Create Policies, Sign up](#task-3--create-policies--sign-up)
-        - [Task 4: Create a sign-in policy](#task-4--create-a-sign-in-policy)
-        - [Task 5: Create a profile editing policy](#task-5--create-a-profile-editing-policy)
-        - [Task 6: Modify the Contoso.App.SportsLeague.Web](#task-6--modify-the-contosoappsportsleagueweb)
-        - [Task 7: Send authentication requests to Azure AD](#task-7--send-authentication-requests-to-azure-ad)
-        - [Task 8: Display user information](#task-8--display-user-information)
-        - [Task 9: Run the sample app](#task-9--run-the-sample-app)
-    - [Exercise 4: Enabling Telemetry with Application Insights](#exercise-4--enabling-telemetry-with-application-insights)
-        - [Task 1: Configure the application for telemetry](#task-1--configure-the-application-for-telemetry)
+    - [Exercise 1: Proof of concept deployment](#exercise-1-proof-of-concept-deployment)
+        - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1-deploy-the-e-commerce-website-sql-database-and-storage)
+        - [Task 2: Setup SQL Database Geo-Replication](#task-2-setup-sql-database-geo-replication)
+        - [Task 3: Deploying the call center admin website](#task-3-deploying-the-call-center-admin-website)
+        - [Task 4: Deploying the payment gateway](#task-4-deploying-the-payment-gateway)
+        - [Task 5: Deploying the offers Web API](#task-5-deploying-the-offers-web-api)
+        - [Task 6: Update and deploy the e-commerce website](#task-6-update-and-deploy-the-e-commerce-website)
+    - [Exercise 2: Identity and security](#exercise-2-identity-and-security)
+        - [Task 1: Enable Azure AD Premium Trial](#task-1-enable-azure-ad-premium-trial)
+        - [Task 2: Create a new Contoso user](#task-2-create-a-new-contoso-user)
+        - [Task 3: Configure access control for the call center administration Web Application](#task-3-configure-access-control-for-the-call-center-administration-web-application)
+        - [Task 4: Apply custom branding for the Azure Active Directory logon page](#task-4-apply-custom-branding-for-the-azure-active-directory-logon-page)
+        - [Task 5: Verify the user can successfully login to the admin site](#task-5-verify-the-user-can-successfully-login-to-the-admin-site)
+    - [Exercise 3: Enable Azure B2C for customer site](#exercise-3-enable-azure-b2c-for-customer-site)
+        - [Task 1: Create a new directory](#task-1-create-a-new-directory)
+        - [Task 2: Add a new application](#task-2-add-a-new-application)
+        - [Task 3: Create Policies, Sign up](#task-3-create-policies-sign-up)
+        - [Task 4: Create a sign-in policy](#task-4-create-a-sign-in-policy)
+        - [Task 5: Create a profile editing policy](#task-5-create-a-profile-editing-policy)
+        - [Task 6: Modify the Contoso.App.SportsLeague.Web](#task-6-modify-the-contosoappsportsleagueweb)
+        - [Task 7: Send authentication requests to Azure AD](#task-7-send-authentication-requests-to-azure-ad)
+        - [Task 8: Display user information](#task-8-display-user-information)
+        - [Task 9: Run the sample app](#task-9-run-the-sample-app)
+    - [Exercise 4: Enabling Telemetry with Application Insights](#exercise-4-enabling-telemetry-with-application-insights)
+        - [Task 1: Configure the application for telemetry](#task-1-configure-the-application-for-telemetry)
                 - [Tasks to complete](#tasks-to-complete)
-        - [Task 2: Creating the web performance test and load test](#task-2--creating-the-web-performance-test-and-load-test)
-                - [Tasks to complete](#tasks-to-complete)
-    - [Exercise 5: Automating backend processes](#exercise-5--automating-backend-processes)
-        - [Task 1: Create an Azure Function to Generate PDF Receipts](#task-1--create-an-azure-function-to-generate-pdf-receipts)
+        - [Task 2: Creating the web performance test and load test](#task-2-creating-the-web-performance-test-and-load-test)
+                - [Tasks to complete](#tasks-to-complete-1)
+    - [Exercise 5: Automating backend processes](#exercise-5-automating-backend-processes)
+        - [Task 1: Create an Azure Function to Generate PDF Receipts](#task-1-create-an-azure-function-to-generate-pdf-receipts)
                 - [Tasks to Complete](#tasks-to-complete)
-        - [Task 2: Create an Azure Logic App to Process Orders](#task-2--create-an-azure-logic-app-to-process-orders)
-                - [Tasks to Complete](#tasks-to-complete)
-        - [Task 3: Use Twilio to send SMS Order Notifications](#task-3--use-twilio-to-send-sms-order-notifications)
-            - [Subtask 1: Configure your Twilio trial account](#subtask-1--configure-your-twilio-trial-account)
-            - [Subtask 2: Create a new logic app](#subtask-2--create-a-new-logic-app)
+        - [Task 2: Create an Azure Logic App to Process Orders](#task-2-create-an-azure-logic-app-to-process-orders)
+                - [Tasks to Complete](#tasks-to-complete-1)
+        - [Task 3: Use Twilio to send SMS Order Notifications](#task-3-use-twilio-to-send-sms-order-notifications)
+            - [Subtask 1: Configure your Twilio trial account](#subtask-1-configure-your-twilio-trial-account)
+            - [Subtask 2: Create a new logic app](#subtask-2-create-a-new-logic-app)
     - [After the hands-on lab](#after-the-hands-on-lab)
-        - [Task 1: Delete resources](#task-1--delete-resources)
+        - [Task 1: Delete resources](#task-1-delete-resources)
 
 <!-- /TOC -->
 
@@ -135,82 +130,7 @@ The Modern cloud apps Hackathon is a hands-on exercise that will challenge you t
 | Logic Apps Docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-what-are-logic-apps> |
 | Azure Functions -- create first function | <https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function> |
 | Azure Functions docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-functions> | 
-|
 
-## Before the hands-on lab
-
-Before initiating the hands-on lab, you will setup an environment to use for the rest of the exercises.
-
-### Task 1: Setup a development environment
-
-1.  Create a virtual machine in Azure using the Visual Studio Community 2017 with the latest release on Windows Server 2016 image.
-
-    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image3.png "Azure Portal, Search results section")
-
-Note: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
-
-### Task 2: Disable IE Enhanced Security
-
-Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
-
-1.  On the new VM you just created, select the Server Manager icon.
-
-    ![Screenshot of the Server Manager icon.](images/Hands-onlabunguided-Moderncloudappsimages/media/image4.png "Server Manager icon")
-
-2.  Click **Local Server**.
-
-    ![Local Server is selected from the Server Manager menu.](images/Hands-onlabunguided-Moderncloudappsimages/media/image5.png "Server Manager menu")
-
-3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
-
-    ![The On button is circled next to IE Enhanced Security Configuration.](images/Hands-onlabunguided-Moderncloudappsimages/media/image6.png "On button")
-
-4.  Change to **Off** for Administrators, and click **OK**.
-
-    ![In the Internet Explorer Enhanced Security Configuration dialog box, under Administrators, the Off radio button is selected, as is the OK button at the bottom.](images/Hands-onlabunguided-Moderncloudappsimages/media/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
-
-### Task 3: Install SQL Server Management Studio
-
-1.  On the new VM, download and install SQL Server Management Studio.\
-    <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
-
-### Task 4: Validate connectivity to Azure
-
-1.  Within the virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.
-
-2.  Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription.
-
-    ![A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription.](images/Hands-onlabunguided-Moderncloudappsimages/media/image8.png "Visual Studio Server Explorer")
-
-### Task 5: Download and explore the Contoso Sports League sample
-
-1.  Create a new folder on your C: drive named **Hackathon**.
-
-2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the **Hackathon** folder.
-
-3.  From the **Contoso Sports League** folder under **Hackathon**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
-
-4.  The solution contains the following projects:
-    ```
-    Contoso.Apps.SportsLeague.Web      Contoso Sports League e-commerce application
-    ---------------------------------- -----------------------------------------------------
-    Contoso.Apps.SportsLeague.Admin    Contoso Sports League call center admin application
-    Contoso.Apps.SportsLeague.Data     Data tier
-    Contoso.Apps.SportsLeague.Offers   API for returning list of available products
-    Contoso.Apps.PaymentGateway        API for payment processing
-    ```
-
-### Task 6: Create a new Azure Resource Group
-
-1.  Create a new folder on your C: drive named **Hackathon**. Within the Azure Management Portal, open the **Resource groups** tile and click **Add**.
-
-    ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Hands-onlabunguided-Moderncloudappsimages/media/image9.png "Azure Management Portal")
-
-2.  Specify the name of the resource group as **contososports**, and choose the Azure region you want to deploy the lab to. This resource group will be used throughout the rest of the lab. Click **Create** to create the resource group.
-
-    ![In the Resource group blade, fields are set to the previously described settings.](images/Hands-onlabunguided-Moderncloudappsimages/media/image10.png "Resource group blade")
-
-You should follow all steps provided *before* attending the hands-on lab.
 
 ## Exercise 1: Proof of concept deployment
 
