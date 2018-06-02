@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Modern Cloud Apps – includes</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cloudworkshop.blob.core.windows.net/styles/labstyles.css"></link>
+</head>
+<body>
+<h1 id="modern-cloud-apps-setup">Modern Cloud Apps setup</h1>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><p>Microsoft Azure subscription</p></li>
+<li><p>Local machine or Azure LABVM virtual machine configured with:</p></li>
+<li><p>Visual Studio 2017 Community Edition or later</p></li>
+</ul>
+<h2 id="before-the-hands-on-lab">Before the hands-on lab</h2>
+<p>Duration: 30 minutes</p>
+<p>Before initiating the hands-on lab, you will setup an environment to use for the rest of the exercises.</p>
+<h3 id="task-1-setup-a-development-environment">Task 1: Setup a development environment</h3>
+<ol type="1">
+<li><p>Create a virtual machine in Azure using the Visual Studio Community 2017 with the latest release on Windows Server 2016 image.</p>
+<figure>
+<img src="images/Setup/image3.png" title="Azure Portal, Search results section" alt="The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected." /><figcaption>The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.</figcaption>
+</figure></li>
+</ol>
+<p>Note: It is <strong>highly</strong> recommended to use a DS2 or D2 instance size for this VM.</p>
+<h3 id="task-2-disable-ie-enhanced-security">Task 2: Disable IE Enhanced Security</h3>
+<p>Note: Sometimes this image has IE ESC disabled, and sometimes it does not.</p>
+<ol type="1">
+<li><p>On the new VM you just created, select the Server Manager icon.</p>
+<figure>
+<img src="images/Setup/image4.png" title="Server Manager icon" alt="Screenshot of the Server Manager icon." /><figcaption>Screenshot of the Server Manager icon.</figcaption>
+</figure></li>
+<li><p>Click <strong>Local Server</strong>.</p>
+<figure>
+<img src="images/Setup/image5.png" title="Server Manager menu" alt="Local Server is selected from the Server Manager menu." /><figcaption>Local Server is selected from the Server Manager menu.</figcaption>
+</figure></li>
+<li><p>On the right side of the pane, click <strong>On</strong> by IE Enhanced Security Configuration.</p>
+<figure>
+<img src="images/Setup/image6.png" title="On button" alt="The On button is circled next to IE Enhanced Security Configuration." /><figcaption>The On button is circled next to IE Enhanced Security Configuration.</figcaption>
+</figure></li>
+<li><p>Change to <strong>Off</strong> for Administrators, and click <strong>OK</strong>.</p>
+<figure>
+<img src="images/Setup/image7.png" title="Internet Explorer Enhanced Security Configuration dialog box" alt="In the Internet Explorer Enhanced Security Configuration dialog box, under Administrators, the Off radio button is selected, as is the OK button at the bottom." /><figcaption>In the Internet Explorer Enhanced Security Configuration dialog box, under Administrators, the Off radio button is selected, as is the OK button at the bottom.</figcaption>
+</figure></li>
+</ol>
+<h3 id="task-3-install-sql-server-management-studio">Task 3: Install SQL Server Management Studio</h3>
+<ol type="1">
+<li>On the new VM, download and install SQL Server Management Studio.<br />
+<a href="https://msdn.microsoft.com/en-us/library/mt238290.aspx" class="uri">https://msdn.microsoft.com/en-us/library/mt238290.aspx</a></li>
+</ol>
+<h3 id="task-4-validate-connectivity-to-azure">Task 4: Validate connectivity to Azure</h3>
+<ol type="1">
+<li><p>Within the virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.</p></li>
+<li><p>Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription.</p>
+<figure>
+<img src="images/Setup/image8.png" title="Visual Studio Server Explorer" alt="A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription." /><figcaption>A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription.</figcaption>
+</figure></li>
+</ol>
+<h3 id="task-5-download-and-explore-the-contoso-sports-league-sample">Task 5: Download and explore the Contoso Sports League sample</h3>
+<ol type="1">
+<li><p>Create a new folder on your C: drive named <strong>Hackathon</strong>.</p></li>
+<li><p>Download the sample application from here: <a href="https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip">https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip</a> and extract to the <strong>Hackathon</strong> folder.</p></li>
+<li><p>From the <strong>Contoso Sports League</strong> folder under <strong>Hackathon</strong>, open the Visual Studio Solution file: <strong>Contoso.Apps.SportsLeague.sln</strong>.</p></li>
+<li><p>The solution contains the following projects:</p>
+<pre><code>Contoso.Apps.SportsLeague.Web      Contoso Sports League e-commerce application
+---------------------------------- ------------------------------------------
+Contoso.Apps.SportsLeague.Admin    Contoso Sports League call center admin application
+Contoso.Apps.SportsLeague.Data     Data tier
+Contoso.Apps.SportsLeague.Offers   API for returning list of available products
+Contoso.Apps.PaymentGateway        API for payment processing</code></pre></li>
+</ol>
+<h3 id="task-6-create-a-new-azure-resource-group">Task 6: Create a new Azure Resource Group</h3>
+<ol type="1">
+<li><p>Create a new folder on your C: drive named <strong>Hackathon</strong>. Within the Azure Management Portal, open the <strong>Resource groups</strong> tile and click <strong>Add</strong>.</p>
+<figure>
+<img src="images/Setup/image9.png" title="Azure Management Portal" alt="In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right." /><figcaption>In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.</figcaption>
+</figure></li>
+<li><p>Specify the name of the resource group as <strong>contososports</strong>, and choose the Azure region you want to deploy the lab to. This resource group will be used throughout the rest of the lab. Click <strong>Create</strong> to create the resource group.</p>
+<figure>
+<img src="images/Setup/image10.png" title="Resource group blade" alt="In the Resource group blade, fields are set to the previously described settings." /><figcaption>In the Resource group blade, fields are set to the previously described settings.</figcaption>
+</figure></li>
+</ol>
+<p>You should follow all steps provided <em>before</em> attending the hands-on lab.</p>
+</body>
+</html>

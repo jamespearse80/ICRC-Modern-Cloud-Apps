@@ -1,3 +1,15 @@
+# Modern Cloud Apps setup
+
+
+## Requirements
+
+-   Microsoft Azure subscription
+
+-   Local machine or Azure LABVM virtual machine configured with:
+
+-   Visual Studio 2017 Community Edition or later
+
+
 ## Before the hands-on lab
 
 Duration: 30 minutes
