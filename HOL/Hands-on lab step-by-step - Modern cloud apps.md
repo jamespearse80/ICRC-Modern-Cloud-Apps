@@ -1174,21 +1174,18 @@ To enable profile editing on your application, you will need to create a profile
     ```
     ConfigureAuth(app);
     ```
+
+    Example 
+
     ```
     // Startup.cs
 
     public partial class Startup
-
     {
-
-    public void Configuration(IAppBuilder app)
-
-    {
-
-    ConfigureAuth(app);
-
-    }
-
+        public void Configuration(IAppBuilder app)
+        {
+            ConfigureAuth(app);
+        }
     }
     ```
 
@@ -1200,158 +1197,93 @@ Note: The OWIN middleware will invoke the Configuration(\...) method when your a
 
 11. Replace the entire contents of Startup.Auth.cs with the following code:
     ```
-    // App\_Start\\Startup.Auth.cs
-
+    // App_Start\Startup.Auth.cs
     using System;
-
     using Owin;
-
     using Microsoft.Owin.Security;
-
     using Microsoft.Owin.Security.Cookies;
-
     using Microsoft.Owin.Security.OpenIdConnect;
-
     using System.Threading.Tasks;
-
     using Microsoft.Owin.Security.Notifications;
-
     using Microsoft.IdentityModel.Protocols;
 
     using System.Configuration;
-
     using System.IdentityModel.Tokens;
-
     using System.Web.Helpers;
-
     using System.IdentityModel.Claims;
 
     namespace Contoso.Apps.SportsLeague.Web
-
     {
+        public partial class Startup
+        {
+            // App config settings
+            private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
+            private static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
+            private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+            private static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
 
-    public partial class Startup
+            // B2C policy identifiers
+            public static string SignUpPolicyId = ConfigurationManager.AppSettings["ida:SignUpPolicyId"];
+            public static string SignInPolicyId = ConfigurationManager.AppSettings["ida:SignInPolicyId"];
+            public static string ProfilePolicyId = ConfigurationManager.AppSettings["ida:UserProfilePolicyId"];
 
-    {
+            public void ConfigureAuth(IAppBuilder app)
+            {
+                app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 
-    // App config settings
+                app.UseCookieAuthentication(new CookieAuthenticationOptions());
 
-    private static string clientId = ConfigurationManager.AppSettings\[\"ida:ClientId\"\];
+                // Configure OpenID Connect middleware for each policy
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignUpPolicyId));
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(ProfilePolicyId));
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignInPolicyId));
+                AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
+            }
 
-    private static string aadInstance = ConfigurationManager.AppSettings\[\"ida:AadInstance\"\];
+            // Used for avoiding yellow-screen-of-death
+            private Task AuthenticationFailed(AuthenticationFailedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> notification)
+            {
+                notification.HandleResponse();
+                if (notification.Exception.Message == "access_denied")
+                {
+                    notification.Response.Redirect("/");
+                }
+                else
+                {
+                    notification.Response.Redirect("/Home/Error?message=" + notification.Exception.Message);
+                }
 
-    private static string tenant = ConfigurationManager.AppSettings\[\"ida:Tenant\"\];
+                return Task.FromResult(0);
+            }
 
-    private static string redirectUri = ConfigurationManager.AppSettings\[\"ida:RedirectUri\"\];
+            private OpenIdConnectAuthenticationOptions CreateOptionsFromPolicy(string policy)
+            {
+                return new OpenIdConnectAuthenticationOptions
+                {
+                    // For each policy, give OWIN the policy-specific metadata address, and
+                    // set the authentication type to the id of the policy
+                    MetadataAddress = String.Format(aadInstance, tenant, policy),
+                    AuthenticationType = policy,
 
-    // B2C policy identifiers
+                    // These are standard OpenID Connect parameters, with values pulled from web.config
+                    ClientId = clientId,
+                    RedirectUri = redirectUri,
+                    PostLogoutRedirectUri = redirectUri,
+                    Notifications = new OpenIdConnectAuthenticationNotifications
+                    {
+                        AuthenticationFailed = AuthenticationFailed,
+                    },
+                    Scope = "openid",
+                    ResponseType = "id_token",
 
-    public static string SignUpPolicyId = ConfigurationManager.AppSettings\[\"ida:SignUpPolicyId\"\];
-
-    public static string SignInPolicyId = ConfigurationManager.AppSettings\[\"ida:SignInPolicyId\"\];
-
-    public static string ProfilePolicyId = ConfigurationManager.AppSettings\[\"ida:UserProfilePolicyId\"\];
-
-    public void ConfigureAuth(IAppBuilder app)
-
-    {
-
-    app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
-
-    app.UseCookieAuthentication(new CookieAuthenticationOptions());
-
-    // Configure OpenID Connect middleware for each policy
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignUpPolicyId));
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(ProfilePolicyId));
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignInPolicyId));
-
-    AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
-
-    }
-
-    // Used for avoiding yellow-screen-of-death
-
-    private Task AuthenticationFailed(AuthenticationFailedNotification\<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions\> notification)
-
-    {
-
-    notification.HandleResponse();
-
-    if (notification.Exception.Message == \"access\_denied\")
-
-    {
-
-    notification.Response.Redirect(\"/\");
-
-    }
-
-    else
-
-    {
-
-    notification.Response.Redirect(\"/Home/Error?message=\" + notification.Exception.Message);
-
-    }
-
-    return Task.FromResult(0);
-
-    }
-
-    private OpenIdConnectAuthenticationOptions CreateOptionsFromPolicy(string policy)
-
-    {
-
-    return new OpenIdConnectAuthenticationOptions
-
-    {
-
-    // For each policy, give OWIN the policy-specific metadata address, and
-
-    // set the authentication type to the id of the policy
-
-    MetadataAddress = String.Format(aadInstance, tenant, policy),
-
-    AuthenticationType = policy,
-
-    // These are standard OpenID Connect parameters, with values pulled from web.config
-
-    ClientId = clientId,
-
-    RedirectUri = redirectUri,
-
-    PostLogoutRedirectUri = redirectUri,
-
-    Notifications = new OpenIdConnectAuthenticationNotifications
-
-    {
-
-    AuthenticationFailed = AuthenticationFailed,
-
-    },
-
-    Scope = \"openid\",
-
-    ResponseType = \"id\_token\",
-
-    // This piece is optional - it is used for displaying the user\'s name in the navigation bar.
-
-    TokenValidationParameters = new TokenValidationParameters
-
-    {
-
-    NameClaimType = \"name\",
-
-    },
-
-    };
-
-    }
-
-    }
-
+                    // This piece is optional - it is used for displaying the user's name in the navigation bar.
+                    TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                    },
+                };
+            }
+        }
     }
     ```
 
@@ -1375,88 +1307,40 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
     ![The Default controller method Index is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image179.png "Default controller method Index")
 
     With the following code:
+   
     ```
-    // Controllers\\AccountController.cs
+    // Controllers\AccountController.cs
 
     public void SignIn()
-
     {
-
-    if (!Request.IsAuthenticated)
-
-    {
-
-    // To execute a policy, you simply need to trigger an OWIN challenge.
-
-    // You can indicate which policy to use by specifying the policy id as the AuthenticationType
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties () { RedirectUri = \"/\" }, Startup.SignInPolicyId);
-
-    }
-
+        if (!Request.IsAuthenticated)
+        {
+            // To execute a policy, you simply need to trigger an OWIN challenge.
+            // You can indicate which policy to use by specifying the policy id as the AuthenticationType
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties () { RedirectUri = "/" }, Startup.SignInPolicyId);
+        }
     }
 
     public void SignUp()
-
     {
-
-    if (!Request.IsAuthenticated)
-
-    {
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties() { RedirectUri = \"/\" }, Startup.SignUpPolicyId);
-
+        if (!Request.IsAuthenticated)
+        {
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties() { RedirectUri = "/" }, Startup.SignUpPolicyId);
+        }
     }
 
-    }
 
     public void Profile()
-
     {
-
-    if (Request.IsAuthenticated)
-
-    {
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties() { RedirectUri = \"/\" }, Startup.ProfilePolicyId);
-
+        if (Request.IsAuthenticated)
+        {
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties() { RedirectUri = "/" }, Startup.ProfilePolicyId);
+        }
     }
 
-    }
-    ```
-
-5.  You can also use OWIN to sign out the user from the app. Add the following method to the account controller (**Controllers\\AccountController.cs**):
-    ```
-    C\# Copy
-    ```
-    ```
-    // Controllers\\AccountController.cs
-
-    public void SignOut()
-
-    {
-
-    // To sign out the user, you should issue an OpenIDConnect sign out request
-
-    if (Request.IsAuthenticated)
-
-    {
-
-    IEnumerable\<AuthenticationDescription\> authTypes = HttpContext.GetOwinContext().Authentication.GetAuthenticationTypes();
-
-    HttpContext.GetOwinContext().Authentication.SignOut(authTypes.Select(t =\> t.AuthenticationType).ToArray());
-
-    Request.GetOwinContext().Authentication.GetAuthenticationTypes();
-
-    }
-
-    }
     ```
 
 ### Task 8: Display user information
@@ -1472,18 +1356,12 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
 
 2.  Open the **Controllers\\HomeController.cs** file and add the following method:
     ```
-    \[Authorize\]
-
+    [Authorize]
     public ActionResult Claims()
-
     {
-
-    Claim displayName = ClaimsPrincipal.Current.FindFirst(ClaimsPrincipal.Current.Identities.First().NameClaimType);
-
-    ViewBag.DisplayName = displayName != null ? displayName.Value : string.Empty;
-
-    return View();
-
+        Claim displayName = ClaimsPrincipal.Current.FindFirst(ClaimsPrincipal.Current.Identities.First().NameClaimType);
+        ViewBag.DisplayName = displayName != null ? displayName.Value : string.Empty;
+        return View();
     }
     ```
 
@@ -1491,43 +1369,29 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
 
 4.  Open the **Claims.cshtml** file and replace the code with the following:
     ```
-    \@using System.Security.Claims
-
+    @using System.Security.Claims
     @{
-
-    ViewBag.Title = \"Claims\";
-
+        ViewBag.Title = "Claims";
     }
+    <h2>@ViewBag.Title</h2>
 
-    \<h2\>\@ViewBag.Title\</h2\>
+    <h4>Claims Present in the Claims Identity: @ViewBag.DisplayName</h4>
 
-    \<h4\>Claims Present in the Claims Identity: \@ViewBag.DisplayName\</h4\>
+    <table class="table-hover claim-table">
+        <tr>
+            <th class="claim-type claim-data claim-head">Claim Type</th>
+            <th class="claim-data claim-head">Claim Value</th>
+        </tr>
 
-    \<table class=\"table-hover claim-table\"\>
+        @foreach (Claim claim in ClaimsPrincipal.Current.Claims)
+        {
+            <tr>
+                <td class="claim-type claim-data">@claim.Type</td>
+                <td class="claim-data">@claim.Value</td>
+            </tr>
+        }
+    </table>
 
-    \<tr\>
-
-    \<th class=\"claim-type claim-data claim-head\"\>Claim Type\</th\>
-
-    \<th class=\"claim-data claim-head\"\>Claim Value\</th\>
-
-    \</tr\>
-
-    \@foreach (Claim claim in ClaimsPrincipal.Current.Claims)
-
-    {
-
-    \<tr\>
-
-    \<td class=\"claim-type claim-data\"\>\@claim.Type\</td\>
-
-    \<td class=\"claim-data\"\>\@claim.Value\</td\>
-
-    \</tr\>
-
-    }
-
-    \</table\>
     ```
 
 5.  Right click on the **Views -\> Shared** folder, click **Add**, and add a new **MVC 5 Partial Page (Razor)**. Specify **\_LoginPartial** for the name.
@@ -1536,96 +1400,55 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
 
 6.  Add the following code to the razor partial view to provide a sign-in and sign-out link as well as a link to edit the user's profile.
     ```
-    \@if (Request.IsAuthenticated)
-
+    @if (Request.IsAuthenticated)
     {
-
-    \<text\>
-
-    \<ul class=\"nav navbar-nav navbar-right\"\>
-
-    \<li\>
-
-    \<a id=\"profile-link\"\>\@User.Identity.Name\</a\>
-
-    \<div id=\"profile-options\" class=\"nav navbar-nav navbar-right\"\>
-
-    \<ul class=\"profile-links\"\>
-
-    \<li class=\"profile-link\"\>
-
-    \@Html.ActionLink(\"Edit Profile\", \"Profile\", \"Account\")
-
-    \</li\>
-
-    \</ul\>
-
-    \</div\>
-
-    \</li\>
-
-    \<li\>
-
-    \@Html.ActionLink(\"Sign out\", \"SignOut\", \"Account\")
-
-    \</li\>
-
-    \</ul\>
-
-    \</text\>
-
+        <text>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a id="profile-link">@User.Identity.Name</a>
+                    <div id="profile-options" class="nav navbar-nav navbar-right">
+                        <ul class="profile-links">
+                            <li class="profile-link">
+                                @Html.ActionLink("Edit Profile", "Profile", "Account")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    @Html.ActionLink("Sign out", "SignOut", "Account")
+                </li>
+            </ul>
+        </text>
     }
-
     else
-
     {
-
-    \<ul class=\"nav navbar-nav navbar-right\"\>
-
-    \<li\>\@Html.ActionLink(\"Sign up\", \"SignUp\", \"Account\", routeValues: null, htmlAttributes: new { id = \"signUpLink\" })\</li\>
-
-    \<li\>\@Html.ActionLink(\"Sign in\", \"SignIn\", \"Account\", routeValues: null, htmlAttributes: new { id = \"loginLink\" })\</li\>
-
-    \</ul\>
-
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Sign up", "SignUp", "Account", routeValues: null, htmlAttributes: new { id = "signUpLink" })</li>
+            <li>@Html.ActionLink("Sign in", "SignIn", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
     }
+
     ```
 
 7.  Open Views\\Shared\\\_Layout.cshtml in Visual Studio. Locate the header-top div. and add the two lines highlighted.
     ```
-    \<div class=\"header-top\"\>
-
-    \<div class=\"container\"\>
-
-    \<div class=\"row\"\>
-
-    \<div class=\"header-top-left\"\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-twitter\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-facebook\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-linkedin\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-instagram\"\>\</i\>\</a\>
-
-    \</div\>
-
-    \<div class=\"header-top-right\"\>
-
-    \<a href=\"\#\" class=\"top-wrap\"\>\<span class=\"icon-phone\"\>Call today: \</span\> (555) 555-8000\</a\>
-
-    \@Html.ActionLink(\"Claims\", \"Claims\", \"Home\")
-
-    \</div\>
-
-    \@Html.Partial(\"\_LoginPartial\")
-
-    \</div\>
-
-    \</div\>
-
-    \</div\>
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="header-top-left">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="header-top-right">
+                    <a href="#" class="top-wrap"><span class="icon-phone">Call today: </span> (555) 555-8000</a>
+                    @Html.ActionLink("Claims", "Claims", "Home")                                        
+                </div>                   
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
     ```
 
 ### Task 9: Run the sample app
@@ -2022,7 +1845,7 @@ The advantages of using Logic Apps include the following:
 
 16. Find the line of code in the body for the Order item that reads the MessageText value from the queue, and add the base64 function around it to ensure it encoded before passing it off to the Azure function. It should look like the following:
     ```
-    \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"
+    "Order": "@{base64(triggerBody()?['MessageText'])}"
     ```
 
     ![In the Order item code, the following line of code is circled: \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image251.png "Order item code")
@@ -2063,42 +1886,27 @@ The advantages of using Logic Apps include the following:
 
     With these:
     ```
-    \"OrderDate\": \"@{body(\'ContosoMakePDF\')\[\'OrderDate\'\]}\",
-
-    \"FirstName\": \"@{body(\'ContosoMakePDF\')\[\'FirstName\'\]}\",
-
-    \"LastName\": \"@{body(\'ContosoMakePDF\')\[\'LastName\'\]}\",
-
-    \"Address\": \"@{body(\'ContosoMakePDF\')\[\'Address\'\]}\",
-
-    \"City\": \"@{body(\'ContosoMakePDF\')\[\'City\'\]}\",
-
-    \"State\": \"@{body(\'ContosoMakePDF\')\[\'State\'\]}\",
-
-    \"PostalCode\": \"@{body(\'ContosoMakePDF\')\[\'PostalCode\'\]}\",
-
-    \"Country\": \"@{body(\'ContosoMakePDF\')\[\'Country\'\]}\",
-
-    \"Phone\": \"@{body(\'ContosoMakePDF\')\[\'Phone\'\]}\",
-
-    \"SMSOptIn\": \"@{body(\'ContosoMakePDF\')\[\'SMSOptIn\'\]}\",
-
-    \"SMSStatus\": \"@{body(\'ContosoMakePDF\')\[\'SMSStatus\'\]}\",
-
-    \"Email\": \"@{body(\'ContosoMakePDF\')\[\'Email\'\]}\",
-
-    \"ReceiptUrl\": \"@{body(\'ContosoMakePDF\')\[\'ReceiptUrl\'\]}\",
-
-    \"Total\": \"@{body(\'ContosoMakePDF\')\[\'Total\'\]}\",
-
-    \"PaymentTransactionId\": \"@{body(\'ContosoMakePDF\')\[\'PaymentTransactionId\'\]}\",
-
-    \"HasBeenShipped\": \"@{body(\'ContosoMakePDF\')\[\'HasBeenShipped\'\]}\"
+    "OrderDate": "@{body('ContosoMakePDF')['OrderDate']}",
+    "FirstName": "@{body('ContosoMakePDF')['FirstName']}",
+    "LastName": "@{body('ContosoMakePDF')['LastName']}",
+    "Address": "@{body('ContosoMakePDF')['Address']}",
+    "City": "@{body('ContosoMakePDF')['City']}",
+    "State": "@{body('ContosoMakePDF')['State']}",
+    "PostalCode": "@{body('ContosoMakePDF')['PostalCode']}",
+    "Country": "@{body('ContosoMakePDF')['Country']}",
+    "Phone": "@{body('ContosoMakePDF')['Phone']}",
+    "SMSOptIn": "@{body('ContosoMakePDF')['SMSOptIn']}",
+    "SMSStatus": "@{body('ContosoMakePDF')['SMSStatus']}",
+    "Email": "@{body('ContosoMakePDF')['Email']}",
+    "ReceiptUrl": "@{body('ContosoMakePDF')['ReceiptUrl']}",
+    "Total": "@{body('ContosoMakePDF')['Total']}",
+    "PaymentTransactionId": "@{body('ContosoMakePDF')['PaymentTransactionId']}",
+    "HasBeenShipped": "@{body('ContosoMakePDF')['HasBeenShipped']}"
     ```
 
 26. And modify the path variable to include the index key or OrderId to be as follows:
     ```
-    \"path\": \"/datasets/default/tables/@{encodeURIComponent(encodeURIComponent(\'\[dbo\].\[Orders\]\'))}/items/@{encodeURIComponent(encodeURIComponent(body(\'ContosoMakePDF\')\[\'OrderId\'\]))}\"
+    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[Orders]'))}/items/@{encodeURIComponent(encodeURIComponent(body('ContosoMakePDF')['OrderId']))}"
     ```
 
     The code should now look as follows for the update\_row method:
@@ -2179,15 +1987,11 @@ The advantages of using Logic Apps include the following:
 
 3.  Replace the Stored Procedure Template code with the following:
     ```
-    CREATE PROCEDURE \[dbo\].\[GetUnprocessedOrders\]
-
+    CREATE PROCEDURE [dbo].[GetUnprocessedOrders]
     AS
-
-    declare \@returnCode int
-
-    SELECT \@returnCode = COUNT(\*) FROM \[dbo\].\[Orders\] WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null
-
-    return \@returnCode
+    declare @returnCode int 
+    SELECT @returnCode = COUNT(*) FROM [dbo].[Orders] WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null
+    return @returnCode
 
     GO
     ```
@@ -2197,13 +2001,11 @@ The advantages of using Logic Apps include the following:
 
 5.  Delete the SQL script for the Stored Procedure from the code editor, and replace it with the following:
     ```
-    CREATE PROCEDURE \[dbo\].\[ProcessOrders\]
-
+    CREATE PROCEDURE [dbo].[ProcessOrders]
     AS
+    SELECT * FROM [dbo].[Orders] WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null;
 
-    SELECT \* FROM \[dbo\].\[Orders\] WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null;
-
-    UPDATE \[dbo\].\[Orders\] SET SMSStatus = \'sent\' WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null;
+    UPDATE [dbo].[Orders] SET SMSStatus = 'sent' WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null;
     ```
 
 6.  Click on **Execute** in the toolbar, or press the F5 key.\
@@ -2292,25 +2094,27 @@ The advantages of using Logic Apps include the following:
 
     Add the following code between Hello and the comma.
 
-    **@{item()\[\'FirstName\'\]}**
+    ```
+    @{item()['FirstName']}
+    ```
 
     ![The Code view now displays the added code in the text message.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image300.png "Code view")
 
 28. Modify the **to** property to pull the phone number from the item.
 
-    **@{item()\[\'Phone\'\]}**
+    ```
+    @{item()['Phone']}
+    ```
 
     ![The to phone number code now displays the updated line of code.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image301.png "Code view")
 
 29. Immediately before the **Send\_Text\_Message\_(SMS)**, create a new line, and add the following code:
     ```
-    \"forEach\_email\": {
+    "forEach_email": {
+        "type": "Foreach",
+        "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
+        "actions": {
 
-    \"type\": \"Foreach\",
-
-    \"foreach\": \"\@body(\'Execute\_stored\_procedure\_2\')\[\'ResultSets\'\]\[\'Table1\'\]\",
-
-    \"actions\": {
     ```
 
 30. Remove the **runAfter** block from the **Send\_Text\_Message\_(SMS)** action.\
@@ -2318,18 +2122,12 @@ The advantages of using Logic Apps include the following:
 
 31. Locate the closing bracket of the **Send\_Text\_Message\_(SMS)** action, create a new line after it, and add the following code:
     ```
-    },
-
-    \"runAfter\": {
-
-    \"Execute\_stored\_procedure\_2\": \[
-
-    \"Succeeded\"
-
-    \]
-
-    }
-
+        },
+        "runAfter": {
+            "Execute_stored_procedure_2": [
+                "Succeeded"
+            ]
+        }
     }
     ```
 

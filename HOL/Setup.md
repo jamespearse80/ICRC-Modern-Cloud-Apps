@@ -22,11 +22,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
 
-Note: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
+> Note: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
 
 ### Task 2: Disable IE Enhanced Security
 
-Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
+> Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
 
 1.  On the new VM you just created, select the Server Manager icon.
 
@@ -66,14 +66,14 @@ Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
 3.  From the **Contoso Sports League** folder under **Hackathon**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
 
 4.  The solution contains the following projects:
-    ```  
-    Contoso.Apps.SportsLeague.Web      Contoso Sports League e-commerce application
-    ---------------------------------- ------------------------------------------
-    Contoso.Apps.SportsLeague.Admin    Contoso Sports League call center admin application
-    Contoso.Apps.SportsLeague.Data     Data tier
-    Contoso.Apps.SportsLeague.Offers   API for returning list of available products
-    Contoso.Apps.PaymentGateway        API for payment processing
-    ```  
+
+    |    |            |
+    |----------|:-------------:|
+    | Contoso.Apps.SportsLeague.Web |   Contoso Sports League e-commerce application |
+    | Contoso.Apps.SportsLeague.Admin |   Contoso Sports League call center admin application |
+    | Contoso.Apps.SportsLeague.Data  |   Data tier |
+    | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
+    | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
 ### Task 6: Create a new Azure Resource Group
 

@@ -33,17 +33,39 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Help references](#help-references)
     - [Exercise 1: Proof of concept deployment](#exercise-1-proof-of-concept-deployment)
         - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1-deploy-the-e-commerce-website-sql-database-and-storage)
+            - [Tasks to complete](#tasks-to-complete)
+            - [Exit criteria](#exit-criteria)
         - [Task 2: Setup SQL Database Geo-Replication](#task-2-setup-sql-database-geo-replication)
+            - [Tasks to complete](#tasks-to-complete-1)
+            - [Exit criteria](#exit-criteria-1)
         - [Task 3: Deploying the call center admin website](#task-3-deploying-the-call-center-admin-website)
+            - [Tasks to complete](#tasks-to-complete-2)
+            - [Exit criteria](#exit-criteria-2)
         - [Task 4: Deploying the payment gateway](#task-4-deploying-the-payment-gateway)
+            - [Tasks to complete](#tasks-to-complete-3)
+            - [Exit criteria](#exit-criteria-3)
         - [Task 5: Deploying the offers Web API](#task-5-deploying-the-offers-web-api)
+            - [Tasks to complete](#tasks-to-complete-4)
+            - [Exit criteria](#exit-criteria-4)
         - [Task 6: Update and deploy the e-commerce website](#task-6-update-and-deploy-the-e-commerce-website)
+            - [Tasks to complete](#tasks-to-complete-5)
+            - [Exit criteria](#exit-criteria-5)
     - [Exercise 2: Identity and security](#exercise-2-identity-and-security)
         - [Task 1: Enable Azure AD Premium Trial](#task-1-enable-azure-ad-premium-trial)
+            - [Tasks to complete](#tasks-to-complete-6)
+            - [Exit criteria](#exit-criteria-6)
         - [Task 2: Create a new Contoso user](#task-2-create-a-new-contoso-user)
+            - [Tasks to complete](#tasks-to-complete-7)
+            - [Exit criteria](#exit-criteria-7)
         - [Task 3: Configure access control for the call center administration Web Application](#task-3-configure-access-control-for-the-call-center-administration-web-application)
+            - [Tasks to complete](#tasks-to-complete-8)
+            - [Exit criteria](#exit-criteria-8)
         - [Task 4: Apply custom branding for the Azure Active Directory logon page](#task-4-apply-custom-branding-for-the-azure-active-directory-logon-page)
+            - [Tasks to complete](#tasks-to-complete-9)
+            - [Exit criteria](#exit-criteria-9)
         - [Task 5: Verify the user can successfully login to the admin site](#task-5-verify-the-user-can-successfully-login-to-the-admin-site)
+            - [Tasks to complete](#tasks-to-complete-10)
+            - [Exit criteria](#exit-criteria-10)
     - [Exercise 3: Enable Azure B2C for customer site](#exercise-3-enable-azure-b2c-for-customer-site)
         - [Task 1: Create a new directory](#task-1-create-a-new-directory)
         - [Task 2: Add a new application](#task-2-add-a-new-application)
@@ -56,14 +78,18 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         - [Task 9: Run the sample app](#task-9-run-the-sample-app)
     - [Exercise 4: Enabling Telemetry with Application Insights](#exercise-4-enabling-telemetry-with-application-insights)
         - [Task 1: Configure the application for telemetry](#task-1-configure-the-application-for-telemetry)
-                - [Tasks to complete](#tasks-to-complete)
+                - [Tasks to complete](#tasks-to-complete-11)
+            - [Exit criteria](#exit-criteria-11)
         - [Task 2: Creating the web performance test and load test](#task-2-creating-the-web-performance-test-and-load-test)
-                - [Tasks to complete](#tasks-to-complete-1)
+                - [Tasks to complete](#tasks-to-complete-12)
+            - [Exit criteria](#exit-criteria-12)
     - [Exercise 5: Automating backend processes](#exercise-5-automating-backend-processes)
         - [Task 1: Create an Azure Function to Generate PDF Receipts](#task-1-create-an-azure-function-to-generate-pdf-receipts)
                 - [Tasks to Complete](#tasks-to-complete)
+            - [Exit criteria](#exit-criteria-13)
         - [Task 2: Create an Azure Logic App to Process Orders](#task-2-create-an-azure-logic-app-to-process-orders)
                 - [Tasks to Complete](#tasks-to-complete-1)
+            - [Exit criteria](#exit-criteria-14)
         - [Task 3: Use Twilio to send SMS Order Notifications](#task-3-use-twilio-to-send-sms-order-notifications)
             - [Subtask 1: Configure your Twilio trial account](#subtask-1-configure-your-twilio-trial-account)
             - [Subtask 2: Create a new logic app](#subtask-2-create-a-new-logic-app)
@@ -142,7 +168,7 @@ Contoso has asked you to create a proof of concept deployment in Microsoft Azure
 
 In this exercise, you will provision a website via the Azure Web App + SQL template using the Microsoft Azure Portal. You will then edit the necessary configuration files in the starter project and deploy the e-commerce website.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Create the resources in Microsoft Azure needed to deploy the e-commerce web app, database, and storage.
 
@@ -150,7 +176,7 @@ In this exercise, you will provision a website via the Azure Web App + SQL templ
 
 -   Deploy the e-commerce application to Microsoft Azure.
 
-*Exit criteria* 
+#### Exit criteria 
 
 -   The web application should display locally. (Right-click the project and click **view in browser**.)
 
@@ -162,7 +188,7 @@ In this exercise, you will provision a website via the Azure Web App + SQL templ
 
 In this exercise, the attendee will provision a secondary SQL Database and configure Geo-Replication using the Microsoft Azure Portal.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Configure Readable Geo-Replication for the SQL Database created in Task 1 by setting up a Secondary database in the other Azure Region in the pair.
 
@@ -174,7 +200,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
 Manually forcing the Failover to the Secondary database is optional. The process of performing the Failover, testing it, then reverting back to the Primary database can take up to 30 minutes to complete. If you have time, it is recommended that you complete these steps.
 
-*Exit criteria*
+#### Exit criteria
 
 -   The web application should display locally when connected to the Secondary database in the Failover test (Right-click the project and click **view in browser**.)
 
@@ -188,7 +214,7 @@ Manually forcing the Failover to the Secondary database is optional. The process
 
 In this exercise, you will provision a website via the Azure Web App template using the Microsoft Azure Portal. You will then edit the necessary configuration files in the Starter Project and deploy the call center admin website.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Create the resources in Microsoft Azure needs to deploy the call center admin website.
 
@@ -196,7 +222,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 -   Deploy the call center admin website application to Microsoft Azure.
 
-*Exit criteria*
+#### Exit criteria
 
 -   The web application should display locally. (Right-click the project and click **view in browser**.)
 
@@ -208,11 +234,11 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 In this exercise, the attendee will provision an Azure API app template using the Microsoft Azure Portal. The attendee will then deploy the payment gateway API to the API app.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Create the resources in Microsoft Azure and deploy the payment gateway API application.
 
-*Exit criteria*
+#### Exit criteria
 
 -   Please note the URL of the deployed API app for future reference.
 
@@ -220,13 +246,13 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 In this exercise, the attendee will provision an Azure API app template using the Microsoft Azure Portal. The attendee will then deploy the offers Web API.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Create the resources in Microsoft Azure and deploy the offers API application.
 
 -   Specify the configuration settings to connect to the created resources in the Web Apps Application Settings in Azure.
 
-*Exit criteria*
+#### Exit criteria
 
 -   Please note the URL of the deployed API app for future reference.
 
@@ -234,7 +260,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 In this exercise, you will deploy the e-commerce web app and ensure all of the configuration to connect to the other services is correct.
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Update the e-commerce application to reference the new API applications.
 
@@ -242,7 +268,7 @@ In this exercise, you will deploy the e-commerce web app and ensure all of the c
 
 -   Verify the configuration by placing a test order on the e-commerce site and ensure the order appears on the admin site.
 
-*Exit criteria*
+#### Exit criteria
 
 -   The web application should display locally.
 
@@ -260,55 +286,55 @@ Duration: 75 Minutes
 
 The Contoso call center admin application will only be accessible by users of the Contoso Active Directory environment. You have been asked to create a new Azure AD Tenant and secure the application so only users from the tenant can log on.
 
-Note: Tasks 1, 2, and 4 are optional and require global admin permissions on the Azure AD Tenant. Task 3 is also optional but does require the permission to create an app in the Azure AD tenant.
+> Note: Tasks 1, 2, and 4 are optional and require global admin permissions on the Azure AD Tenant. Task 3 is also optional but does require the permission to create an app in the Azure AD tenant.
 
 ### Task 1: Enable Azure AD Premium Trial
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Enable Azure AD Premium on your existing Azure AD Tenant
 
-*Exit criteria*
+#### Exit criteria
 
 -   The Azure AD Premium SKU should be enabled on your subscription.
 
 ### Task 2: Create a new Contoso user 
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Create a new user in your Azure AD tenant
 
-*Exit criteria*
+#### Exit criteria
 
 -   A new users to test your web application should be present in Azure AD
 
 ### Task 3: Configure access control for the call center administration Web Application
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Enable Azure AD authentication with your existing Azure AD tenant on the call center admin web app and validate you can log in with the new user within that tenant.
 
-*Exit criteria*
+#### Exit criteria
 
 -   The call center application should only allow users that log in through the customized Azure AD form access to the application.
 
 ### Task 4: Apply custom branding for the Azure Active Directory logon page
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Customize the branding by providing a banner and tile logo, a large illustration, and custom text, and then validate the branding is applied. The logo files can be found in the folder you extracted the starter files to.
 
-*Exit criteria*
+#### Exit criteria
 
 -   The custom branding should be displayed on the logon page.
 
 ### Task 5: Verify the user can successfully login to the admin site
 
-*Tasks to complete*
+#### Tasks to complete
 
 -   Login to the site using the new user created in Azure AD
 
-*Exit criteria*
+#### Exit criteria
 
 -   The new user should be able to login to the Call Center Admin site.
 
@@ -497,19 +523,12 @@ To enable profile editing on your application, you will need to create a profile
     ConfigureAuth(app);
 
     // Startup.cs
-
     public partial class Startup
-
     {
-
-    public void Configuration(IAppBuilder app)
-
-    {
-
-    ConfigureAuth(app);
-
-    }
-
+        public void Configuration(IAppBuilder app)
+        {
+            ConfigureAuth(app);
+        }
     }
     ```
     
@@ -521,162 +540,97 @@ Note: The OWIN middleware will invoke the Configuration(\...) method when your a
 
 11. Replace the entire contents of Startup.Auth.cs with the following code:
     ```
-    // App\_Start\\Startup.Auth.cs
-
+   // App_Start\Startup.Auth.cs
     using System;
-
     using Owin;
-
     using Microsoft.Owin.Security;
-
     using Microsoft.Owin.Security.Cookies;
-
     using Microsoft.Owin.Security.OpenIdConnect;
-
     using System.Threading.Tasks;
-
     using Microsoft.Owin.Security.Notifications;
-
     using Microsoft.IdentityModel.Protocols;
 
     using System.Configuration;
-
     using System.IdentityModel.Tokens;
-
     using System.Web.Helpers;
-
     using System.IdentityModel.Claims;
 
     namespace Contoso.Apps.SportsLeague.Web
-
     {
+        public partial class Startup
+        {
+            // App config settings
+            private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
+            private static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
+            private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+            private static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
 
-    public partial class Startup
+            // B2C policy identifiers
+            public static string SignUpPolicyId = ConfigurationManager.AppSettings["ida:SignUpPolicyId"];
+            public static string SignInPolicyId = ConfigurationManager.AppSettings["ida:SignInPolicyId"];
+            public static string ProfilePolicyId = ConfigurationManager.AppSettings["ida:UserProfilePolicyId"];
 
-    {
+            public void ConfigureAuth(IAppBuilder app)
+            {
+                app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 
-    // App config settings
+                app.UseCookieAuthentication(new CookieAuthenticationOptions());
 
-    private static string clientId = ConfigurationManager.AppSettings\[\"ida:ClientId\"\];
+                // Configure OpenID Connect middleware for each policy
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignUpPolicyId));
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(ProfilePolicyId));
+                app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignInPolicyId));
+                AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
+            }
 
-    private static string aadInstance = ConfigurationManager.AppSettings\[\"ida:AadInstance\"\];
+            // Used for avoiding yellow-screen-of-death
+            private Task AuthenticationFailed(AuthenticationFailedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> notification)
+            {
+                notification.HandleResponse();
+                if (notification.Exception.Message == "access_denied")
+                {
+                    notification.Response.Redirect("/");
+                }
+                else
+                {
+                    notification.Response.Redirect("/Home/Error?message=" + notification.Exception.Message);
+                }
 
-    private static string tenant = ConfigurationManager.AppSettings\[\"ida:Tenant\"\];
+                return Task.FromResult(0);
+            }
 
-    private static string redirectUri = ConfigurationManager.AppSettings\[\"ida:RedirectUri\"\];
+            private OpenIdConnectAuthenticationOptions CreateOptionsFromPolicy(string policy)
+            {
+                return new OpenIdConnectAuthenticationOptions
+                {
+                    // For each policy, give OWIN the policy-specific metadata address, and
+                    // set the authentication type to the id of the policy
+                    MetadataAddress = String.Format(aadInstance, tenant, policy),
+                    AuthenticationType = policy,
 
-    // B2C policy identifiers
+                    // These are standard OpenID Connect parameters, with values pulled from web.config
+                    ClientId = clientId,
+                    RedirectUri = redirectUri,
+                    PostLogoutRedirectUri = redirectUri,
+                    Notifications = new OpenIdConnectAuthenticationNotifications
+                    {
+                        AuthenticationFailed = AuthenticationFailed,
+                    },
+                    Scope = "openid",
+                    ResponseType = "id_token",
 
-    public static string SignUpPolicyId = ConfigurationManager.AppSettings\[\"ida:SignUpPolicyId\"\];
-
-    public static string SignInPolicyId = ConfigurationManager.AppSettings\[\"ida:SignInPolicyId\"\];
-
-    public static string ProfilePolicyId = ConfigurationManager.AppSettings\[\"ida:UserProfilePolicyId\"\];
-
-    public void ConfigureAuth(IAppBuilder app)
-
-    {
-
-    app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
-
-    app.UseCookieAuthentication(new CookieAuthenticationOptions());
-
-    // Configure OpenID Connect middleware for each policy
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignUpPolicyId));
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(ProfilePolicyId));
-
-    app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SignInPolicyId));
-
-    AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
-
-    }
-
-    // Used for avoiding yellow-screen-of-death
-
-    private Task AuthenticationFailed(AuthenticationFailedNotification\<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions\> notification)
-
-    {
-
-    notification.HandleResponse();
-
-    if (notification.Exception.Message == \"access\_denied\")
-
-    {
-
-    notification.Response.Redirect(\"/\");
-
-    }
-
-    else
-
-    {
-
-    notification.Response.Redirect(\"/Home/Error?message=\" + notification.Exception.Message);
-
-    }
-
-    return Task.FromResult(0);
-
-    }
-
-    private OpenIdConnectAuthenticationOptions CreateOptionsFromPolicy(string policy)
-
-    {
-
-    return new OpenIdConnectAuthenticationOptions
-
-    {
-
-    // For each policy, give OWIN the policy-specific metadata address, and
-
-    // set the authentication type to the id of the policy
-
-    MetadataAddress = String.Format(aadInstance, tenant, policy),
-
-    AuthenticationType = policy,
-
-    // These are standard OpenID Connect parameters, with values pulled from web.config
-
-    ClientId = clientId,
-
-    RedirectUri = redirectUri,
-
-    PostLogoutRedirectUri = redirectUri,
-
-    Notifications = new OpenIdConnectAuthenticationNotifications
-
-    {
-
-    AuthenticationFailed = AuthenticationFailed,
-
-    },
-
-    Scope = \"openid\",
-
-    ResponseType = \"id\_token\",
-
-    // This piece is optional - it is used for displaying the user\'s name in the navigation bar.
-
-    TokenValidationParameters = new TokenValidationParameters
-
-    {
-
-    NameClaimType = \"name\",
-
-    },
-
-    };
-
-    }
-
-    }
-
+                    // This piece is optional - it is used for displaying the user's name in the navigation bar.
+                    TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                    },
+                };
+            }
+        }
     }
     ```
 
-Note: The parameters you provide in OpenIdConnectAuthenticationOptions serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
+> Note: The parameters you provide in OpenIdConnectAuthenticationOptions serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
 
 ### Task 7: Send authentication requests to Azure AD
 
@@ -697,86 +651,58 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
 
     With the following code:
     ```
-    // Controllers\\AccountController.cs
+    // Controllers\AccountController.cs
 
     public void SignIn()
-
     {
-
-    if (!Request.IsAuthenticated)
-
-    {
-
-    // To execute a policy, you simply need to trigger an OWIN challenge.
-
-    // You can indicate which policy to use by specifying the policy id as the AuthenticationType
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties () { RedirectUri = \"/\" }, Startup.SignInPolicyId);
-
-    }
-
+        if (!Request.IsAuthenticated)
+        {
+            // To execute a policy, you simply need to trigger an OWIN challenge.
+            // You can indicate which policy to use by specifying the policy id as the AuthenticationType
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties () { RedirectUri = "/" }, Startup.SignInPolicyId);
+        }
     }
 
     public void SignUp()
-
     {
-
-    if (!Request.IsAuthenticated)
-
-    {
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties() { RedirectUri = \"/\" }, Startup.SignUpPolicyId);
-
+        if (!Request.IsAuthenticated)
+        {
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties() { RedirectUri = "/" }, Startup.SignUpPolicyId);
+        }
     }
 
-    }
 
     public void Profile()
-
     {
-
-    if (Request.IsAuthenticated)
-
-    {
-
-    HttpContext.GetOwinContext().Authentication.Challenge(
-
-    new AuthenticationProperties() { RedirectUri = \"/\" }, Startup.ProfilePolicyId);
-
+        if (Request.IsAuthenticated)
+        {
+            HttpContext.GetOwinContext().Authentication.Challenge(
+                new AuthenticationProperties() { RedirectUri = "/" }, Startup.ProfilePolicyId);
+        }
     }
 
-    }
     ```
 
 5.  You can also use OWIN to sign out the user from the app. Add the following method to the account controller (**Controllers\\AccountController.cs**):
     ```
     C\# Copy
     ```
+
     ```
-    // Controllers\\AccountController.cs
-
+    // Controllers\AccountController.cs
     public void SignOut()
-
     {
+        // To sign out the user, you should issue an OpenIDConnect sign out request
+        if (Request.IsAuthenticated)
+        {
+            IEnumerable<AuthenticationDescription> authTypes = HttpContext.GetOwinContext().Authentication.GetAuthenticationTypes();
 
-    // To sign out the user, you should issue an OpenIDConnect sign out request
+            HttpContext.GetOwinContext().Authentication.SignOut(authTypes.Select(t => t.AuthenticationType).ToArray());
 
-    if (Request.IsAuthenticated)
-
-    {
-
-    IEnumerable\<AuthenticationDescription\> authTypes = HttpContext.GetOwinContext().Authentication.GetAuthenticationTypes();
-
-    HttpContext.GetOwinContext().Authentication.SignOut(authTypes.Select(t =\> t.AuthenticationType).ToArray());
-
-    Request.GetOwinContext().Authentication.GetAuthenticationTypes();
-
-    }
-
+            Request.GetOwinContext().Authentication.GetAuthenticationTypes();
+        }
     }
     ```
 
@@ -793,63 +719,44 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
 
 2.  Open the **Controllers\\HomeController.cs** file and add the following method:
     ```
-    \[Authorize\]
+    [Authorize]
 
     public ActionResult Claims()
-
     {
-
-    Claim displayName = ClaimsPrincipal.Current.FindFirst(ClaimsPrincipal.Current.Identities.First().NameClaimType);
-
-    ViewBag.DisplayName = displayName != null ? displayName.Value : string.Empty;
-
-    return View();
-
+        Claim displayName = ClaimsPrincipal.Current.FindFirst(ClaimsPrincipal.Current.Identities.First().NameClaimType);
+        ViewBag.DisplayName = displayName != null ? displayName.Value : string.Empty;
+        return View();
     }
     ```
 
 3.  You can access any claim that your application receives in the same way. A list of all the claims the app receives is available for you on the **Claims** page. Right click on **Views -\> Home,** click **Add -\> MVC 5 View Page (Razor)** and name it **Claims.** 
+
     ![In Solution Explorer, on the right-click menu for Views\\Home, Add is selected, and from its menu, MVC 5 View Page (Razor) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image37.png "Solution Explorer")
 
 4.  Open the **Claims.cshtml** file and replace the code with the following:
     ```
-    \@using System.Security.Claims
-
+    @using System.Security.Claims
     @{
-
-    ViewBag.Title = \"Claims\";
-
+        ViewBag.Title = "Claims";
     }
+    <h2>@ViewBag.Title</h2>
 
-    \<h2\>\@ViewBag.Title\</h2\>
+    <h4>Claims Present in the Claims Identity: @ViewBag.DisplayName</h4>
 
-    \<h4\>Claims Present in the Claims Identity: \@ViewBag.DisplayName\</h4\>
+    <table class="table-hover claim-table">
+        <tr>
+            <th class="claim-type claim-data claim-head">Claim Type</th>
+            <th class="claim-data claim-head">Claim Value</th>
+        </tr>
 
-    \<table class=\"table-hover claim-table\"\>
-
-    \<tr\>
-
-    \<th class=\"claim-type claim-data claim-head\"\>Claim Type\</th\>
-
-    \<th class=\"claim-data claim-head\"\>Claim Value\</th\>
-
-    \</tr\>
-
-    \@foreach (Claim claim in ClaimsPrincipal.Current.Claims)
-
-    {
-
-    \<tr\>
-
-    \<td class=\"claim-type claim-data\"\>\@claim.Type\</td\>
-
-    \<td class=\"claim-data\"\>\@claim.Value\</td\>
-
-    \</tr\>
-
-    }
-
-    \</table\>
+        @foreach (Claim claim in ClaimsPrincipal.Current.Claims)
+        {
+            <tr>
+                <td class="claim-type claim-data">@claim.Type</td>
+                <td class="claim-data">@claim.Value</td>
+            </tr>
+        }
+    </table>
     ```
 
 5.  Right click on the **Views -\> Shared** folder, click **Add**, and add a new **MVC 5 Partial Page (Razor)**. Specify **\_LoginPartial** for the name.
@@ -858,96 +765,55 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
 
 6.  Add the following code to the razor partial view to provide a sign-in and sign-out link as well as a link to edit the user's profile.
     ```
-    \@if (Request.IsAuthenticated)
-
+    @if (Request.IsAuthenticated)
     {
-
-    \<text\>
-
-    \<ul class=\"nav navbar-nav navbar-right\"\>
-
-    \<li\>
-
-    \<a id=\"profile-link\"\>\@User.Identity.Name\</a\>
-
-    \<div id=\"profile-options\" class=\"nav navbar-nav navbar-right\"\>
-
-    \<ul class=\"profile-links\"\>
-
-    \<li class=\"profile-link\"\>
-
-    \@Html.ActionLink(\"Edit Profile\", \"Profile\", \"Account\")
-
-    \</li\>
-
-    \</ul\>
-
-    \</div\>
-
-    \</li\>
-
-    \<li\>
-
-    \@Html.ActionLink(\"Sign out\", \"SignOut\", \"Account\")
-
-    \</li\>
-
-    \</ul\>
-
-    \</text\>
-
+        <text>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a id="profile-link">@User.Identity.Name</a>
+                    <div id="profile-options" class="nav navbar-nav navbar-right">
+                        <ul class="profile-links">
+                            <li class="profile-link">
+                                @Html.ActionLink("Edit Profile", "Profile", "Account")
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    @Html.ActionLink("Sign out", "SignOut", "Account")
+                </li>
+            </ul>
+        </text>
     }
-
     else
-
     {
-
-    \<ul class=\"nav navbar-nav navbar-right\"\>
-
-    \<li\>\@Html.ActionLink(\"Sign up\", \"SignUp\", \"Account\", routeValues: null, htmlAttributes: new { id = \"signUpLink\" })\</li\>
-
-    \<li\>\@Html.ActionLink(\"Sign in\", \"SignIn\", \"Account\", routeValues: null, htmlAttributes: new { id = \"loginLink\" })\</li\>
-
-    \</ul\>
-
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Sign up", "SignUp", "Account", routeValues: null, htmlAttributes: new { id = "signUpLink" })</li>
+            <li>@Html.ActionLink("Sign in", "SignIn", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
     }
+
     ```
 
 7.  Open Views\\Shared\\\_Layout.cshtml in Visual Studio. Locate the header-tap div. and add the two lines highlighted.
     ```
-    \<div class=\"header-top\"\>
-
-    \<div class=\"container\"\>
-
-    \<div class=\"row\"\>
-
-    \<div class=\"header-top-left\"\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-twitter\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-facebook\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-linkedin\"\>\</i\>\</a\>
-
-    \<a href=\"\#\"\>\<i class=\"fa fa-instagram\"\>\</i\>\</a\>
-
-    \</div\>
-
-    \<div class=\"header-top-right\"\>
-
-    \<a href=\"\#\" class=\"top-wrap\"\>\<span class=\"icon-phone\"\>Call today: \</span\> (555) 555-8000\</a\>
-
-    \@Html.ActionLink(\"Claims\", \"Claims\", \"Home\")
-
-    \</div\>
-
-    \@Html.Partial(\"\_LoginPartial\")
-
-    \</div\>
-
-    \</div\>
-
-    \</div\>
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="header-top-left">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="header-top-right">
+                    <a href="#" class="top-wrap"><span class="icon-phone">Call today: </span> (555) 555-8000</a>
+                    @Html.ActionLink("Claims", "Claims", "Home")                                        
+                </div>                   
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
     ```
 
 ### Task 9: Run the sample app
@@ -978,7 +844,7 @@ To validate the scalability of the application and to configure telemetry, you h
 
 -   Republish the web application with telemetry enabled.
 
-*Exit criteria*
+#### Exit criteria
 
 -   Verify that when you browse to the website, the telemetry data appears.
 
@@ -994,7 +860,7 @@ To validate the scalability of the application and to configure telemetry, you h
 
 -   Use the monitoring capabilities of your telemetry solution to identify performance issues from the test.
 
-*Exit criteria*
+#### Exit criteria
 
 -   You should be able to view the average response time for the simulated load test.
 
@@ -1016,7 +882,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 -   Use Storage Explorer or Visual Studio to view the generated PDF file.
 
-*Exit criteria*
+#### Exit criteria
 
 -   You should have a function that accepts the format specified in Sample.dat and generates a PDF file in the storage account for the Contoso Sports solution.
 
@@ -1030,52 +896,38 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     -   Hint: the following can be used to base64 encode the data
     ```
-    \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"
+    "Order": "@{base64(triggerBody()?['MessageText'])}"
     ```
 
 -   After the receipt is generated the order row should be updated HasBeenShipped value and the link to the receipt so the admin app can display it correctly.
 
     -   Hint the following values will need to be updated in SQL:
     ```
-    \"OrderDate\": \"@{body(\'ContosoMakePDF\')\[\'OrderDate\'\]}\",
-
-    \"FirstName\": \"@{body(\'ContosoMakePDF\')\[\'FirstName\'\]}\",
-
-    \"LastName\": \"@{body(\'ContosoMakePDF\')\[\'LastName\'\]}\",
-
-    \"Address\": \"@{body(\'ContosoMakePDF\')\[\'Address\'\]}\",
-
-    \"City\": \"@{body(\'ContosoMakePDF\')\[\'City\'\]}\",
-
-    \"State\": \"@{body(\'ContosoMakePDF\')\[\'State\'\]}\",
-
-    \"PostalCode\": \"@{body(\'ContosoMakePDF\')\[\'PostalCode\'\]}\",
-
-    \"Country\": \"@{body(\'ContosoMakePDF\')\[\'Country\'\]}\",
-
-    \"Phone\": \"@{body(\'ContosoMakePDF\')\[\'Phone\'\]}\",
-
-    \"SMSOptIn\": \"@{body(\'ContosoMakePDF\')\[\'SMSOptIn\'\]}\",
-
-    \"SMSStatus\": \"@{body(\'ContosoMakePDF\')\[\'SMSStatus\'\]}\",
-
-    \"Email\": \"@{body(\'ContosoMakePDF\')\[\'Email\'\]}\",
-
-    \"ReceiptUrl\": \"@{body(\'ContosoMakePDF\')\[\'ReceiptUrl\'\]}\",
-
-    \"Total\": \"@{body(\'ContosoMakePDF\')\[\'Total\'\]}\",
-
-    \"PaymentTransactionId\": \"@{body(\'ContosoMakePDF\')\[\'PaymentTransactionId\'\]}\",
-
-    \"HasBeenShipped\": \"@{body(\'ContosoMakePDF\')\[\'HasBeenShipped\'\]}\"
+    "OrderDate": "@{body('ContosoMakePDF')['OrderDate']}",
+    "FirstName": "@{body('ContosoMakePDF')['FirstName']}",
+    "LastName": "@{body('ContosoMakePDF')['LastName']}",
+    "Address": "@{body('ContosoMakePDF')['Address']}",
+    "City": "@{body('ContosoMakePDF')['City']}",
+    "State": "@{body('ContosoMakePDF')['State']}",
+    "PostalCode": "@{body('ContosoMakePDF')['PostalCode']}",
+    "Country": "@{body('ContosoMakePDF')['Country']}",
+    "Phone": "@{body('ContosoMakePDF')['Phone']}",
+    "SMSOptIn": "@{body('ContosoMakePDF')['SMSOptIn']}",
+    "SMSStatus": "@{body('ContosoMakePDF')['SMSStatus']}",
+    "Email": "@{body('ContosoMakePDF')['Email']}",
+    "ReceiptUrl": "@{body('ContosoMakePDF')['ReceiptUrl']}",
+    "Total": "@{body('ContosoMakePDF')['Total']}",
+    "PaymentTransactionId": "@{body('ContosoMakePDF')['PaymentTransactionId']}",
+    "HasBeenShipped": "@{body('ContosoMakePDF')['HasBeenShipped']}"
     ```
-```   
-\"path\": \"/datasets/default/tables/@{encodeURIComponent(encodeURIComponent(\'\[dbo\].\[Orders\]\'))}/items/@{encodeURIComponent(encodeURIComponent(body(\'ContosoMakePDF\')\[\'OrderId\'\]))}\"
-```
+
+    ```   
+    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[Orders]'))}/items/@{encodeURIComponent(encodeURIComponent(body('ContosoMakePDF')['OrderId']))}"
+    ```
 
 -   An action will need to be added to remove the message from the queue so it is not processed multiple times.
 
-*Exit criteria*
+#### Exit criteria
 
 -   A PDF receipt should be generated each time an order is created on the website.
 
@@ -1126,15 +978,11 @@ Note: This portion of the task is added inline due to the complexity involved.
 
 3.  Replace the Stored Procedure Template code with the following:
     ```
-    CREATE PROCEDURE \[dbo\].\[GetUnprocessedOrders\]
-
+    CREATE PROCEDURE [dbo].[GetUnprocessedOrders]
     AS
-
-    declare \@returnCode int
-
-    SELECT \@returnCode = COUNT(\*) FROM \[dbo\].\[Orders\] WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null
-
-    return \@returnCode
+    declare @returnCode int 
+    SELECT @returnCode = COUNT(*) FROM [dbo].[Orders] WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null
+    return @returnCode
 
     GO
     ```
@@ -1144,13 +992,11 @@ Note: This portion of the task is added inline due to the complexity involved.
 
 5.  Delete the SQL script for the Stored Procedure from the code editor, and replace it with the following:
     ```
-    CREATE PROCEDURE \[dbo\].\[ProcessOrders\]
-
+    CREATE PROCEDURE [dbo].[ProcessOrders]
     AS
+    SELECT * FROM [dbo].[Orders] WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null;
 
-    SELECT \* FROM \[dbo\].\[Orders\] WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null;
-
-    UPDATE \[dbo\].\[Orders\] SET SMSStatus = \'sent\' WHERE PaymentTransactionId is not null AND PaymentTransactionId \<\> \'\' AND Phone is not null AND Phone \<\> \'\' AND SMSOptIn = \'1\' AND SMSStatus is null;
+    UPDATE [dbo].[Orders] SET SMSStatus = 'sent' WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null;
     ```
 
 6.  Click on **Execute** in the toolbar, or press the F5 key.\
@@ -1185,7 +1031,7 @@ Note: This portion of the task is added inline due to the complexity involved.
 
 14. Type **SQL Server** into the filter box, and click the SQL **Server -- Execute stored procedure** action.
 
-![Under Choose an action, sql server is typed in the search field. On the Actions tab, SQL Server (Execute stored procedure) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image59.png "Choose an action section")
+    ![Under Choose an action, sql server is typed in the search field. On the Actions tab, SQL Server (Execute stored procedure) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image59.png "Choose an action section")
 
 15. The first time you add a SQL action, you will be prompted for the connection information. Name the connection **ContosoDB**, input the server and database details used earlier, and click **Create**.\
     ![In the SQL Server - Execute stored procedure section, the Connection Name is contosoDB. Server and database details are the same as used earlier.](images/Hands-onlabunguided-Moderncloudappsimages/media/image60.png "SQL Server - Execute stored procedure section")
@@ -1239,25 +1085,26 @@ Note: This portion of the task is added inline due to the complexity involved.
 
     Add the following code between Hello and the comma.
 
-    **@{item()\[\'FirstName\'\]}**
-
+    ```
+    @{item()['FirstName']}
+    ```
+    
     ![The Code view now displays the added code in the text message.](images/Hands-onlabunguided-Moderncloudappsimages/media/image73.png "Code view")
 
 28. Modify the **to** property to pull the phone number from the item.
 
-    **@{item()\[\'Phone\'\]}**
-
+    ```
+    @{item()['Phone']}
+    ```
+    
     ![The to phone number code now displays the updated line of code.](images/Hands-onlabunguided-Moderncloudappsimages/media/image74.png "Code view")
 
 29. Immediately before the **Send\_Text\_Message\_(SMS)**, create a new line, and add the following code:
     ```
-    \"forEach\_email\": {
-
-    \"type\": \"Foreach\",
-
-    \"foreach\": \"\@body(\'Execute\_stored\_procedure\_2\')\[\'ResultSets\'\]\[\'Table1\'\]\",
-
-    \"actions\": {
+    "forEach_email": {
+        "type": "Foreach",
+        "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
+        "actions": {
     ```
     
 30. Remove the **runAfter** block from the **Send\_Text\_Message\_(SMS)** action.\
@@ -1265,18 +1112,12 @@ Note: This portion of the task is added inline due to the complexity involved.
 
 31. Locate the closing bracket of the **Send\_Text\_Message\_(SMS)** action, create a new line after it, and add the following code:
     ```
-    },
-
-    \"runAfter\": {
-
-    \"Execute\_stored\_procedure\_2\": \[
-
-    \"Succeeded\"
-
-    \]
-
-    }
-
+        },
+        "runAfter": {
+            "Execute_stored_procedure_2": [
+                "Succeeded"
+            ]
+        }
     }
     ```
 
