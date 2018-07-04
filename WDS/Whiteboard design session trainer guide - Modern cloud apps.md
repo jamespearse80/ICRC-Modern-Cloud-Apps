@@ -42,7 +42,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Infographic for common scenarios](#infographic-for-common-scenarios)
   - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
   - [Step 3: Present the solution](#step-3-present-the-solution)
-  - [Step 3: Present the solution](#step-3-present-the-solution-1)
   - [Wrap-up](#wrap-up)
   - [Additional references](#additional-references)
 - [Modern cloud apps whiteboard design session trainer guide](#modern-cloud-apps-whiteboard-design-session-trainer-guide-1)
