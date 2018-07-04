@@ -1,4 +1,16 @@
-![](images/HeaderPic.png 'Microsoft Cloud Workshops')
+![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+
+<div class="MCWHeader1">
+Modern cloud apps
+</div>
+
+<div class="MCWHeader2">
+ Whiteboard design session trainer guide
+</div>
+
+<div class="MCWHeader3">
+March 2018
+</div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -10,8 +22,6 @@ The names of manufacturers, products, or URLs are provided for informational pur
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
 # Modern cloud apps whiteboard design session trainer guide
-
-March 2018
 
 **Contents**
 
@@ -38,7 +48,6 @@ March 2018
 - [Modern cloud apps whiteboard design session trainer guide](#modern-cloud-apps-whiteboard-design-session-trainer-guide-1)
   - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
   - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
-  - [Step 3: Present the solution](#step-3-present-the-solution-2)
   - [Wrap-up](#wrap-up-1)
   - [Preferred target audience](#preferred-target-audience)
   - [Preferred solution](#preferred-solution)
@@ -55,25 +64,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
-- Creates a safe environment in which learning can take place.
+- Creates a safe environment in which learning can take place
 
-- Stimulates the participant's thinking.
+- Stimulates the participant's thinking
 
-- Involves the participant in the learning process.
+- Involves the participant in the learning process
 
-- Manages the learning process (on time, on topic, and adjusting to benefit participants).
+- Manages the learning process (on time, on topic, and adjusting to benefit participants)
 
-- Ensures individual participant accountability.
+- Ensures individual participant accountability
 
-- Ties it all together for the participant.
+- Ties it all together for the participant
 
-- Provides insight and experience to the learning process.
+- Provides insight and experience to the learning process
 
-- Effectively leads the whiteboard design session discussion.
+- Effectively leads the whiteboard design session discussion
 
-- Monitors quality and appropriateness of participant deliverables.
+- Monitors quality and appropriateness of participant deliverables
 
-- Effectively leads the feedback process.
+- Effectively leads the feedback process
 
 ## Whiteboard design session flow
 
@@ -91,7 +100,7 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Prepare to present a solution for your target customer audience
+Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 - Determine your target customer audience
 
@@ -103,7 +112,7 @@ Outcome: Prepare to present a solution for your target customer audience
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+Outcome: Present solution to your customer.
 
 - Present solution
 
@@ -121,13 +130,13 @@ Before conducting your first whiteboard design session:
 
 - Read the Student guide (including the case study) and Trainer guide
 
-- Become familiar with all key points and activities.
+- Become familiar with all key points and activities
 
-- Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
+- Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
 
-- Prior to the whiteboard design session, discuss the case study to pick up more ideas.
+- Prior to the whiteboard design session, discuss the case study to pick up more ideas
 
-- Make notes for later.
+- Make notes for later
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -143,7 +152,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 - **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
-**\*Have fun**! Encourage participants to have fun and share!\*
+**Have fun!** *Encourage participants to have fun and share!*
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
@@ -172,7 +181,9 @@ Attendees will be better able to deploy and configure Azure Web Apps and associa
 **Outcome**
 
 Analyze your customer’s needs.
-Time frame: 15 minutes
+
+Timeframe: 15 minutes
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
 1.  Meet your table participants and trainer
@@ -199,19 +210,19 @@ Contoso is also looking to augment their data analytics story by introducing a d
 
 ### Customer needs
 
-1.  Maintain existing PCI compliance.
+1.  Maintain existing PCI compliance
 
-2.  Ensure data privacy and protection across all aspects of the system, in transit and at rest.
+2.  Ensure data privacy and protection across all aspects of the system, in transit and at rest
 
-3.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value.
+3.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value
 
-4.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change.
+4.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change
 
-5.  Provide a better solution for the management of usernames and passwords.
+5.  Provide a better solution for the management of usernames and passwords
 
-6.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost.
+6.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost
 
-7.  A data warehouse for analyzing their transaction history.
+7.  A data warehouse for analyzing their transaction history
 
 ### Customer objections
 
@@ -240,7 +251,7 @@ Contoso is also looking to augment their data analytics story by introducing a d
 **Outcome**
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -319,8 +330,8 @@ _Access control_
 Directions: With all participants at your table:
 
 1.  Identify any customer needs that are not addressed with the proposed solution.
-2.  Identify the benefits of your solution.
-3.  Determine how you will respond to the customer’s objections.
+2.  Identify the benefits of your solution
+3.  Determine how you will respond to the customer’s objections
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -336,25 +347,25 @@ Present a solution to the target customer audience in a 15-minute chalk-talk for
 
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation**
 
 Directions:
 
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6.
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team
+7.  Tables switch roles and repeat Steps 2–6
 
 ## Wrap-up
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
-- Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ## Additional references
 
@@ -378,47 +389,47 @@ Time frame: 15 minutes
 
 ## Step 1: Review the customer case study
 
-- Check in with your table participants to introduce yourself as the trainer.
+- Check in with your table participants to introduce yourself as the trainer
 
 - Ask, "What questions do you have about the customer case study?"
 
-- Briefly review the steps and timeframes of the whiteboard design session.
+- Briefly review the steps and timeframes of the whiteboard design session
 
-- Ready, set, go! Let the table participants begin.
+- Ready, set, go! Let the table participants begin
 
 ## Step 2: Design a proof of concept solution
 
-- Check in with your tables to ensure that they are transitioning from step to step on time.
+- Check in with your tables to ensure that they are transitioning from step to step on time
 
-- Provide some feedback on their responses to the business needs and design.
+- Provide some feedback on their responses to the business needs and design
 
-  - Try asking questions first that will lead the participants to discover the answers on their own.
+  - Try asking questions first that will lead the participants to discover the answers on their own
 
-- Provide feedback for their responses to the customer's objections.
+- Provide feedback for their responses to the customer's objections
 
-  - Try asking questions first that will lead the participants to discover the answers on their own.
+  - Try asking questions first that will lead the participants to discover the answers on their own
 
 ## Step 3: Present the solution
 
-- Determine which table will be paired with your table before Step 3 begins.
+- Determine which table will be paired with your table before Step 3 begins
 
-- For the first round, assign one table as the Microsoft team and the other table as the customer.
+- For the first round, assign one table as the Microsoft team and the other table as the customer
 
-- Have the Microsoft team present their solution to the customer team.
+- Have the Microsoft team present their solution to the customer team
 
-  - Have the customer team provide one objection for the Microsoft team to respond to.
+  - Have the customer team provide one objection for the Microsoft team to respond to
 
-  - The presentation and objections should be no longer than 10 minutes.
+  - The presentation and objections should be no longer than 10 minutes
 
-- Have participants on the customer team give feedback to the Microsoft team.
+- Have participants on the customer team give feedback to the Microsoft team
 
-  - The feedback should be no longer than 5 minutes.
+  - The feedback should be no longer than 5 minutes
 
-  - If needed, the trainer may also provide feedback.
+  - If needed, the trainer may also provide feedback
 
 ## Wrap-up
 
-- Have the table participants reconvene with the larger session group to hear a SME share the following preferred solution.
+- Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
 
 ## Preferred target audience
 
@@ -496,7 +507,7 @@ _Geo-resiliency_
 
     Finally, deploy copies of the App Services to the backup regions (you will have to consider a process of how you update these instances when the primary region gets updates). These can initially be deployed to resources with minimal scale out instance sizes, and increased when failover event occurs.
 
-2.  What process would you recommend to the customer to failover in the event of an outage, ensuring their web applications and associated Azure services change over to a secondary region?
+2.  _What process would you recommend to the customer to failover in the event of an outage, ensuring their web applications and associated Azure services change over to a secondary region?_
 
     When using auto-failover groups (in-preview) to manage database recovery and any outage that impacts one or several of the databases in the group results in automatic failover. You can configure the auto-failover policy that best meets your application needs, or you can opt out and use manual activation. Whether you use manual or automatic failover activation, failover switches all secondary databases in the group to primary. After the database failover is completed, the DNS record is automatically updated to redirect the end-points to the new region.
 
@@ -506,7 +517,7 @@ _Geo-resiliency_
 
     Understand that for Azure Storage, the geo-failover process is controlled by Azure. in the event of a major disaster that affects the primary location, Azure will first try to restore the data in the primary location. Failing that, affected customers will be notified via their subscription contact information. As part of the failover, the customer's "account.\<service\>.core.windows.net" DNS entry would be updated to point from the primary location to the secondary location. In other words, the connection information to Azure Storage does not need to be changed in the application configuration.
 
-3.  How long would a failover take and how much data could be lost, in terms of time?
+3.  _How long would a failover take and how much data could be lost, in terms of time?_
 
     The amount of time a failover takes is the Recovery Time Objective (RTO) and the amount of data loss that might transpire due to any replication latency is the Recovery Point Objective (RPO).
 
@@ -614,15 +625,15 @@ _Data warehouse_
 
 ## Checklist of preferred objection handling
 
-_It is not clear to us from the Azure Trust Center just how Azure helps our solution become PCI compliant._
+1. _It is not clear to us from the Azure Trust Center just how Azure helps our solution become PCI compliant._
 
 The Azure Trust Center helps you understand what Azure services have been certified for PCI compliance (for example, the services with which you could build a PCI compliant solution), but it does not describe how you build a PCI compliant solution on Azure. To fully accomplish a PCI compliant solution, you must address the requirements of PCI according to how you are handling cardholder data and the scope of your services. In many cases, Azure's PCI compliance attestations will be enough to satisfy aspects of PCI compliance for your solution, but there are at minimum some items which you must handle as a part of building your application (for example, it is up to you to define and enforce secure password policies).
 
-_Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse?_
+2. _Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse?_
 
 Yes. Azure can provide a solution that is both scalable and secure.
 
-_Our PCI compliance requires us to have a quarterly audit and to conduct occasional penetration tests. Is this supported by Azure?_
+3. _Our PCI compliance requires us to have a quarterly audit and to conduct occasional penetration tests. Is this supported by Azure?_
 
 Although prior approval is not required, you may still formally document upcoming penetration testing engagements against Azure by filling out the Azure Service Penetration Testing Notification Form (<https://portal.msrc.microsoft.com/en-us/engage/pentest>)
 
@@ -630,23 +641,23 @@ Although prior approval is not required, you may still formally document upcomin
 
 - Tests that would cause a Denial of Service (DoS) are prohibited.
 
-_Can we audit the Azure data center?_
+4. _Can we audit the Azure data center?_
 
 No. Our independent audits and certifications are shared with customers in lieu of individual customer audits. These certifications and attestations accurately represent how we obtain and meet our security and compliance objectives, and serve as a practical mechanism to validate our promises for all customers. Allowing potentially thousands of customers to audit our services would not be a scalable practice and might compromise security and privacy. Our independent third-party validation program includes audits that are conducted on an annual basis to provide verification of Azure security controls.
 
-_In the past, we have relied on SOASTA CloudTest to design and execute our web load tests at scale. In moving to Azure, are we still able to capitalize on CloudTest?_
+5. _In the past, we have relied on SOASTA CloudTest to design and execute our web load tests at scale. In moving to Azure, are we still able to capitalize on CloudTest?_
 
 Yes. Azure is a supported cloud provider for CloudTest, and your applications hosted in Azure can have load and performance tests conducted against them from SOASTA's global network of cloud resources, while monitoring results in their big-data, real-time streaming analytics platform.
 
-_Our previous infrastructure did not have great performance monitoring of our websites. What options would you recommend we investigate that would work with our web apps in Azure?_
+6. _Our previous infrastructure did not have great performance monitoring of our websites. What options would you recommend we investigate that would work with our web apps in Azure?_
 
 Web apps in Azure include first-class support for both Microsoft Application Insights and NewRelic Application Performance Monitoring---both of which enable you to collect performance telemetry from your web apps as they are running. You can view and analyze traces from both server-side and browser-side telemetry, diagnose errors, and set alerts from within the Azure Portal. Contoso can also capitalize on Log Analytics (a feature of Microsoft Operations Management Suite) by having the Application Insights logs or the Web App Diagnostic logs pushed to a Storage Account and then picked up and made searchable using the Custom Log. Alternately, they can also push their New Relic logs into Log Analytics, as well giving them a single pane of glass to do all of their monitoring through Operations Management Suite.
 
-_We have heard that Azure's data warehouse can be paused? Does that mean we have to store all our data in Azure Storage first before we can pause the instances and risk losing our data?_
+7. _We have heard that Azure's data warehouse can be paused? Does that mean we have to store all our data in Azure Storage first before we can pause the instances and risk losing our data?_
 
 SQL Data Warehouse uses storage in two ways, and both enable the data to exist even while the SQL DW instance is paused. For data that is managed by SQL Data Warehouse (e.g., it is inserted directly into relational or columnar tables), it is stored in Azure Premium Storage. For data supporting external tables in SQL DW, this data resides in Azure Standard Storage and is referenced via PolyBase, a component of SQL Data Warehouse.
 
-_We know it's possible to use Azure SQL Database as our data warehouse. What should we consider when deciding between this and Azure SQL Data Warehouse?_
+8. _We know it's possible to use Azure SQL Database as our data warehouse. What should we consider when deciding between this and Azure SQL Data Warehouse?_
 
 It is true that Azure SQL Database can be used as a data warehouse. This is considered an SMP-based warehouse, or symmetric multiprocessing. Azure SQL Data Warehouse is classified as an MPP-based warehouse, or massively parallel processing. As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data partly has to do with your organization's definition and supporting infrastructure.
 
