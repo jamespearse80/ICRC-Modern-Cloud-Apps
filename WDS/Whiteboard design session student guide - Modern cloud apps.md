@@ -1,4 +1,4 @@
-![](images/HeaderPic.png "Microsoft Cloud Workshops")
+![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Modern cloud apps
@@ -59,8 +59,11 @@ Attendees will be better able to deploy and configure Azure Web Apps and associa
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
@@ -85,19 +88,19 @@ Contoso is also looking to augment their data analytics story by introducing a d
 
 ### Customer needs 
 
-1.  Maintain existing PCI compliance.
+1.  Maintain existing PCI compliance
 
-2.  Ensure data privacy and protection across all aspects of the system, in transit and at rest.
+2.  Ensure data privacy and protection across all aspects of the system, in transit and at rest
 
-3.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value.
+3.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value
 
-4.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change.
+4.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change
 
-5.  Provide a better solution for the management of usernames and passwords.
+5.  Provide a better solution for the management of usernames and passwords
 
-6.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost.
+6.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost
 
-7.  A data warehouse for analyzing their transaction history.
+7.  A data warehouse for analyzing their transaction history
 
 ### Customer objections 
 
@@ -124,7 +127,7 @@ Contoso is also looking to augment their data analytics story by introducing a d
 **Outcome** 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -188,9 +191,9 @@ Directions: With all participants at your table, respond to the following questi
 
 *Data warehouse*
 
-1.  *How would you recommend Contoso implement their data warehouse?*
+1.  How would you recommend Contoso implement their data warehouse?
 
-2.  *How would Contoso schedule nightly data transfers from their OLTP database to their data warehouse?*
+2.  How would Contoso schedule nightly data transfers from their OLTP database to their data warehouse?
 
 *Access control*
 
@@ -202,9 +205,9 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution
+2.  Identify the benefits of your solution.
+3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -214,25 +217,25 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6
 
 
 ##  Wrap-up 
 
 Time frame: 15 minutes
 
--   Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 
