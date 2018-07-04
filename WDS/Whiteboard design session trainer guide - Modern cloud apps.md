@@ -630,35 +630,35 @@ _Data warehouse_
 
 2. _Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse?_
 
- Yes. Azure can provide a solution that is both scalable and secure.
+  Yes. Azure can provide a solution that is both scalable and secure.
 
 3. _Our PCI compliance requires us to have a quarterly audit and to conduct occasional penetration tests. Is this supported by Azure?_
 
- Although prior approval is not required, you may still formally document upcoming penetration testing engagements against Azure by filling out the Azure Service Penetration Testing Notification Form (<https://portal.msrc.microsoft.com/en-us/engage/pentest>)
+  Although prior approval is not required, you may still formally document upcoming penetration testing engagements against Azure by filling out the Azure Service Penetration Testing Notification Form (<https://portal.msrc.microsoft.com/en-us/engage/pentest>)
 
- - Penetration testing must be conducted in accordance with our terms and conditions and comply with the Microsoft Cloud Unified Penetration Testing Rules of Engagement (<https://technet.microsoft.com/mt784683>)
+   - Penetration testing must be conducted in accordance with our terms and conditions and comply with the Microsoft Cloud Unified Penetration Testing Rules of Engagement (<https://technet.microsoft.com/mt784683>)
 
- - Tests that would cause a Denial of Service (DoS) are prohibited.
+   - Tests that would cause a Denial of Service (DoS) are prohibited.
 
 4. _Can we audit the Azure data center?_
 
- No. Our independent audits and certifications are shared with customers in lieu of individual customer audits. These certifications and attestations accurately represent how we obtain and meet our security and compliance objectives, and serve as a practical mechanism to validate our promises for all customers. Allowing potentially thousands of customers to audit our services would not be a scalable practice and might compromise security and privacy. Our independent third-party validation program includes audits that are conducted on an annual basis to provide verification of Azure security controls.
+  No. Our independent audits and certifications are shared with customers in lieu of individual customer audits. These certifications and attestations accurately represent how we obtain and meet our security and compliance objectives, and serve as a practical mechanism to validate our promises for all customers. Allowing potentially thousands of customers to audit our services would not be a scalable practice and might compromise security and privacy. Our independent third-party validation program includes audits that are conducted on an annual basis to provide verification of Azure security controls.
 
 5. _In the past, we have relied on SOASTA CloudTest to design and execute our web load tests at scale. In moving to Azure, are we still able to capitalize on CloudTest?_
 
- Yes. Azure is a supported cloud provider for CloudTest, and your applications hosted in Azure can have load and performance tests conducted against them from SOASTA's global network of cloud resources, while monitoring results in their big-data, real-time streaming analytics platform.
+  Yes. Azure is a supported cloud provider for CloudTest, and your applications hosted in Azure can have load and performance tests conducted against them from SOASTA's global network of cloud resources, while monitoring results in their big-data, real-time streaming analytics platform.
 
 6. _Our previous infrastructure did not have great performance monitoring of our websites. What options would you recommend we investigate that would work with our web apps in Azure?_
 
- Web apps in Azure include first-class support for both Microsoft Application Insights and NewRelic Application Performance Monitoring---both of which enable you to collect performance telemetry from your web apps as they are running. You can view and analyze traces from both server-side and browser-side telemetry, diagnose errors, and set alerts from within the Azure Portal. Contoso can also capitalize on Log Analytics (a feature of Microsoft Operations Management Suite) by having the Application Insights logs or the Web App Diagnostic logs pushed to a Storage Account and then picked up and made searchable using the Custom Log. Alternately, they can also push their New Relic logs into Log Analytics, as well giving them a single pane of glass to do all of their monitoring through Operations Management Suite.
+  Web apps in Azure include first-class support for both Microsoft Application Insights and NewRelic Application Performance Monitoring---both of which enable you to collect performance telemetry from your web apps as they are running. You can view and analyze traces from both server-side and browser-side telemetry, diagnose errors, and set alerts from within the Azure Portal. Contoso can also capitalize on Log Analytics (a feature of Microsoft Operations Management Suite) by having the Application Insights logs or the Web App Diagnostic logs pushed to a Storage Account and then picked up and made searchable using the Custom Log. Alternately, they can also push their New Relic logs into Log Analytics, as well giving them a single pane of glass to do all of their monitoring through Operations Management Suite.
 
 7. _We have heard that Azure's data warehouse can be paused? Does that mean we have to store all our data in Azure Storage first before we can pause the instances and risk losing our data?_
 
- SQL Data Warehouse uses storage in two ways, and both enable the data to exist even while the SQL DW instance is paused. For data that is managed by SQL Data Warehouse (e.g., it is inserted directly into relational or columnar tables), it is stored in Azure Premium Storage. For data supporting external tables in SQL DW, this data resides in Azure Standard Storage and is referenced via PolyBase, a component of SQL Data Warehouse.
+  SQL Data Warehouse uses storage in two ways, and both enable the data to exist even while the SQL DW instance is paused. For data that is managed by SQL Data Warehouse (e.g., it is inserted directly into relational or columnar tables), it is stored in Azure Premium Storage. For data supporting external tables in SQL DW, this data resides in Azure Standard Storage and is referenced via PolyBase, a component of SQL Data Warehouse.
 
 8. _We know it's possible to use Azure SQL Database as our data warehouse. What should we consider when deciding between this and Azure SQL Data Warehouse?_
 
- It is true that Azure SQL Database can be used as a data warehouse. This is considered an SMP-based warehouse, or symmetric multiprocessing. Azure SQL Data Warehouse is classified as an MPP-based warehouse, or massively parallel processing. As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data partly has to do with your organization's definition and supporting infrastructure.
+  It is true that Azure SQL Database can be used as a data warehouse. This is considered an SMP-based warehouse, or symmetric multiprocessing. Azure SQL Data Warehouse is classified as an MPP-based warehouse, or massively parallel processing. As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data partly has to do with your organization's definition and supporting infrastructure.
 
  Beyond data sizes, the type of workload pattern is likely to be a greater determining factor. For example, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to the way jobs are distributed and consolidated across nodes. If your data sizes already exceed 1 TB and are expected to continually grow, consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well. Given this, consider Azure SQL Data Warehouse for small and medium datasets, where the workload is compute and memory intensive.
 
