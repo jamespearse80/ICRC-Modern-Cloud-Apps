@@ -461,11 +461,11 @@ _Notifications_
 
 1.  _How would you recommend CSLA manage notifying customers as their order in the CSLA orders database is processed? Are there specific Azure services that can be used? Include details on how this would be implemented and integrated into the proposed solution for CSLA._
 
-        Contoso can implement a logic app to notify customers of their order status.
+    Contoso can implement a logic app to notify customers of their order status.
 
-        The logic app would include a frequency trigger to execute a stored procedure at an interval that will identify orders that should receive SMS notifications and update them as they are processed.
+    The logic app would include a frequency trigger to execute a stored procedure at an interval that will identify orders that should receive SMS notifications and update them as they are processed.
 
-        A Twilio connector could act as the action to perform that sends the SMS message when the frequency trigger executes the stored procedure. CSLA would sign up for a free Twilio trial to get an API key. Then they would provision a Twilio connector within the logic app, and add the credentials. Then CSLA would select a Send Message action using data provided in the result set from the stored procedure, specifically the customer's phone number and their first name to include in the message, "Hello Satya, your order has shipped!"\
+    A Twilio connector could act as the action to perform that sends the SMS message when the frequency trigger executes the stored procedure. CSLA would sign up for a free Twilio trial to get an API key. Then they would provision a Twilio connector within the logic app, and add the credentials. Then CSLA would select a Send Message action using data provided in the result set from the stored procedure, specifically the customer's phone number and their first name to include in the message, "Hello Satya, your order has shipped!"
 
     Note: It currently involves extending the Logic App code for the Twilio connector.
 
