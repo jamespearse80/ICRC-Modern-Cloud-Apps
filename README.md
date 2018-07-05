@@ -1,6 +1,9 @@
 # Modern cloud apps
 
+Intro to follow
+
 ## Target audience
+TBD
 
 ## Abstract
 
@@ -19,14 +22,14 @@ Attendees will be better able to deploy and configure Azure Web Apps and associa
 ### Whiteboard Design Session
 TBD
 
-### Hand-on Lab
+### Hands-on Lab
 TBD
 
 ## Azure services and related products
 TBD
 
 ## Azure solutions
-
+TBD
 
 ## Related references
 - [MCW](https://github.com/Microsoft/MCW)
