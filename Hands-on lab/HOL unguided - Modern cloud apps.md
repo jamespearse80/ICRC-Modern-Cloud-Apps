@@ -296,7 +296,7 @@ The Contoso call center admin application will only be accessible by users of th
 
 #### Exit criteria
 
--   The Azure AD Premium SKU should be enabled on your subscription.
+-   The Azure AD Premium SKU should be enabled on your subscription
 
 ### Task 2: Create a new Contoso user 
 
@@ -312,21 +312,21 @@ The Contoso call center admin application will only be accessible by users of th
 
 #### Tasks to complete
 
--   Enable Azure AD authentication with your existing Azure AD tenant on the call center admin web app and validate you can log in with the new user within that tenant.
+-   Enable Azure AD authentication with your existing Azure AD tenant on the call center admin web app and validate you can log in with the new user within that tenant
 
 #### Exit criteria
 
--   The call center application should only allow users that log in through the customized Azure AD form access to the application.
+-   The call center application should only allow users that log in through the customized Azure AD form access to the application
 
 ### Task 4: Apply custom branding for the Azure Active Directory logon page
 
 #### Tasks to complete
 
--   Customize the branding by providing a banner and tile logo, a large illustration, and custom text, and then validate the branding is applied. The logo files can be found in the folder you extracted the starter files to.
+-   Customize the branding by providing a banner and tile logo, a large illustration, and custom text, and then validate the branding is applied. The logo files can be found in the folder you extracted the starter files to
 
 #### Exit criteria
 
--   The custom branding should be displayed on the logon page.
+-   The custom branding should be displayed on the logon page
 
 ### Task 5: Verify the user can successfully login to the admin site
 
@@ -336,15 +336,15 @@ The Contoso call center admin application will only be accessible by users of th
 
 #### Exit criteria
 
--   The new user should be able to login to the Call Center Admin site.
+-   The new user should be able to login to the Call Center Admin site
 
 ## Exercise 3: Enable Azure B2C for customer site
 
 Duration: 75 minutes
 
-In this exercise, you will configure an Azure AD Business to Consumer (B2C) instance to enable authentication and policies for sign-in, sign-out and profile policies for the Contoso E-Commerce site.
+In this exercise, you will configure an Azure AD Business to Consumer (B2C) instance to enable authentication and policies for sign-in, sign-out and profile policies for the Contoso E-Commerce site
 
-Note: This portion of the hands-on lab is written in a lab format due to the complexity of the configuration.
+Note: This portion of the hands-on lab is written in a lab format due to the complexity of the configuration
 
 ### Task 1: Create a new directory
 
@@ -852,21 +852,21 @@ To validate the scalability of the application and to configure telemetry, you h
 
 ##### Tasks to complete
 
--   Submit several test orders to verify that telemetry is capturing custom events.
+-   Submit several test orders to verify that telemetry is capturing custom events
 
--   Simulate a load test of at least 250 users browsing the home page over a 5-minute time frame.
+-   Simulate a load test of at least 250 users browsing the home page over a 5-minute time frame
 
--   Use the monitoring capabilities of your telemetry solution to identify failures from the test (if any).
+-   Use the monitoring capabilities of your telemetry solution to identify failures from the test (if any)
 
--   Use the monitoring capabilities of your telemetry solution to identify performance issues from the test.
+-   Use the monitoring capabilities of your telemetry solution to identify performance issues from the test
 
 #### Exit criteria
 
--   You should be able to view the average response time for the simulated load test.
+-   You should be able to view the average response time for the simulated load test
 
--   The telemetry solution should show custom events captured by the application such as new orders.
+-   The telemetry solution should show custom events captured by the application such as new orders
 
--   The telemetry solution should show performance numbers such as the number of sessions and average response time.
+-   The telemetry solution should show performance numbers such as the number of sessions and average response time
 
 ## Exercise 5: Automating backend processes
 
@@ -878,9 +878,9 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 -   Create an Azure Function in the contososports resource group using the assets in C:\\Hackathon\\Contoso Sports League\\Contoso.CreatePDFReport
 
--   Execute the function using the example data in Sample.dat to validate it generates a PDF in your storage account.
+-   Execute the function using the example data in Sample.dat to validate it generates a PDF in your storage account
 
--   Use Storage Explorer or Visual Studio to view the generated PDF file.
+-   Use Storage Explorer or Visual Studio to view the generated PDF file
 
 #### Exit criteria
 
@@ -890,9 +890,9 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 ##### Tasks to Complete
 
--   Create an Azure Logic App that listens for new orders on the receiptgenerator storage queue.
+-   Create an Azure Logic App that listens for new orders on the receiptgenerator storage queue
 
--   When a new message is received pass it to the Azure Function using the same syntax as the sample.dat file.
+-   When a new message is received pass it to the Azure Function using the same syntax as the sample.dat file
 
     -   Hint: the following can be used to base64 encode the data
     ```
@@ -925,23 +925,23 @@ Contoso wants to automate the process of generating receipts in PDF format and a
     "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[dbo].[Orders]'))}/items/@{encodeURIComponent(encodeURIComponent(body('ContosoMakePDF')['OrderId']))}"
     ```
 
--   An action will need to be added to remove the message from the queue so it is not processed multiple times.
+-   An action will need to be added to remove the message from the queue so it is not processed multiple times
 
 #### Exit criteria
 
--   A PDF receipt should be generated each time an order is created on the website.
+-   A PDF receipt should be generated each time an order is created on the website
 
--   The order should only be processed once.
+-   The order should only be processed once
 
--   The receipt should be downloadable from the admin website.
+-   The receipt should be downloadable from the admin website
 
 ### Task 3: Use Twilio to send SMS Order Notifications
 
-Note: This portion of the task is added inline due to the complexity involved.
+> Note: This portion of the task is added inline due to the complexity involved.
 
 #### Subtask 1: Configure your Twilio trial account
 
-1.  If you do not have a Twilio account, sign up for one for free at the following URL:??\
+1.  If you do not have a Twilio account, sign up for one for free at the following URL:
     [**https://www.twilio.com/try-twilio**](https://www.twilio.com/try-twilio).
 
     ![Screenshot of the Twilio account Sign up for free webpage.](images/Hands-onlabunguided-Moderncloudappsimages/media/image41.png "Twilio account Sign up webpage")
@@ -973,7 +973,8 @@ Note: This portion of the task is added inline due to the complexity involved.
 1.  Open **SQL Server Management Studio** and connect to the SQL Database for the **ContosoSportsDB** database.\
     ![In Object Explorer, ContosoSportsDBserver1234.database is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image49.png "Object Explorer")
 
-2.  Under the **ContosoSportsDB** database, expand **Programmability**, right-click on **Stored Procedures**, click **New**, followed by **Stored Procedure...**\
+2.  Under the **ContosoSportsDB** database, expand **Programmability**, right-click on **Stored Procedures**, click **New**, followed by **Stored Procedure...**
+
     ![In Object Explorer, the following path is expanded: ContosoSportsDBserver1234.database\\Databases\\ContosoSportsDB\\Programmability\\Stored Procedures. From the right-click menu for the Stored Procedures, New / Stored Procedure is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image50.png "Object Explorer")
 
 3.  Replace the Stored Procedure Template code with the following:
@@ -999,7 +1000,8 @@ Note: This portion of the task is added inline due to the complexity involved.
     UPDATE [dbo].[Orders] SET SMSStatus = 'sent' WHERE PaymentTransactionId is not null AND PaymentTransactionId <> '' AND Phone is not null AND Phone <> '' AND SMSOptIn = '1' AND SMSStatus is null;
     ```
 
-6.  Click on **Execute** in the toolbar, or press the F5 key.\
+6.  Click on **Execute** in the toolbar, or press the F5 key.
+
     ![Screenshot of the Execute button.](images/Hands-onlabunguided-Moderncloudappsimages/media/image51.png "Execute button")
 
 7.  Open the Azure Management Portal (<http://portal.azure.com>), and click **+New** **\> Web + Mobile \> Logic App**.
@@ -1019,7 +1021,7 @@ Note: This portion of the task is added inline due to the complexity involved.
 
 11. On the **Logic Apps Designer**, click **Schedule**.
 
-![In the Logic Apps Designer, the Schedule tile is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image56.png "Logic Apps Designer")
+    ![In the Logic Apps Designer, the Schedule tile is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image56.png "Logic Apps Designer")
 
 12. Set the **FREQUENCY** to **MINUTE**, and **INTERVAL** to 1.
 

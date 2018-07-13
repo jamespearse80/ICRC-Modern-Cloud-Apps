@@ -5,9 +5,9 @@
 
 -   Microsoft Azure subscription
 
--   Local machine or Azure LABVM virtual machine configured with:
+-   Local machine or Azure virtual machine configured with:
 
--   Visual Studio 2017 Community Edition or later
+    -   Visual Studio 2017 Community Edition or later
 
 
 ## Before the hands-on lab
