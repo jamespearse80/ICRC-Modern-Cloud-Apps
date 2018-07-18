@@ -180,7 +180,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
     ![The Web App + SQL blade](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image13.png "Web App + SQL blade")
 
 
-6.  On the Web App blade, specify the following configuration:
+4.  On the Web App blade, specify the following configuration:
 
     -  a unique and valid name (until the green check mark appears)
 
@@ -190,15 +190,15 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![The Web App + SQL blade, App Service plan, and New App Service Plan blades display, with fields set to the previously defined settings. In the Web App + SQL blade, the App name field is selected, and is set to contosoap2101. Resource group is selected, as is the App Service plan/location. In the App Service plan blade, on the left, the Create New button is selected. In the App Service plan blade, the App Service plan field is set to ContosoSportsPlan, and the Location field is set to South Central US.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image15.png "Web App + SQL blade")
 
-8. Select **SQL Database *Configure required settings***, and then click **+ Create a new database**.
+5. Select **SQL Database *Configure required settings***, and then click **+ Create a new database**.
     
     ![The tile for the Create a new database option is displayed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image16.png " Create a new database")
 
-9. On the **SQL Database** blade, specify **ContosSportsDB** as the database name and then select **Target** **Server *Configure required settings***.
+6. On the **SQL Database** blade, specify **ContosSportsDB** as the database name and then select **Target** **Server *Configure required settings***.
 
     ![Screenshot of the Target Server Configure required settings option.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image18.png "Target Server Configure required settings option")
 
-10. On the **New server** blade, specify the following configuration:
+7. On the **New server** blade, specify the following configuration:
 
     -  Server name: a unique value (ensure the green checkmark appears)
 
@@ -210,50 +210,50 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Fields in the New server blade are circled and set to the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image19.png "New server blade")
 
-11. Once the values are accepted in the **New server** blade, click **Select**.
+8. Once the values are accepted in the **New server** blade, click **Select**.
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-12. On the **SQL Database** blade, click **Select**.
+9. On the **SQL Database** blade, click **Select**.
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-13. After the values are accepted on the **Web App + SQL** creation blade, check **Pin to dashboard** and click **Create**.
+10. After the values are accepted on the **Web App + SQL** creation blade, check **Pin to dashboard** and click **Create**.
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image21.png "Create button")
 
 This may take a couple minutes to provision the Web App and SQL Database resources.
 
-14. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created.
+11. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created.
 
     ![In the Azure Portal, on the left side, "SQL Databases" is surrounded by a red box. In the right pane, "ContosoSportsDB" is surrounded by a red box](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image22.png "Azure Portal")
 
-15. On the **SQL Database** blade, click the **Show database connection strings** link.
+12. On the **SQL Database** blade, click the **Show database connection strings** link.
 
     ![On the SQL Database blade, in the left pane, Overview is selected. In the right pane, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image23.png "SQL Database blade")
 
-16. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **demo@pass123**, respectively.\
+13. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **demo@pass123**, respectively.\
     ![In the Database connection strings blade, the ADO.NET connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image24.png "Database connection strings blade")
 
-17. On the **Overview** screen of the **SQL Server** blade, click **Set Server Firewall**.
+14. On the **Overview** screen of the **SQL Server** blade, click **Set Server Firewall**.
 
     ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image25.png "SQL Server Blade, Essentials section")
 
-18. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
+15. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
     ![Screenshot of the Rule name, Start IP. and End IP fields on the Firewall Settings blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image27.png "Firewall Settings blade")
 
 This is only done to make the lab easier to do. In production, you do NOT want to open up your SQL Database to all IP Addresses this way. Instead, you will want to specify just the IP Addresses you wish to allow through the Firewall.
 
-19. Click **Save**.
+16. Click **Save**.
 
     ![Screenshot of the Firewall settings Save button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image28.png "Firewall settings Save button")
 
-20. On the **Success!** dialog box, click **OK**.
+17. On the **Success!** dialog box, click **OK**.
 
     ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image29.png "Success dialog box")
 
-21. Close all configuration blades.
+18. Close all configuration blades.
 
 #### Subtask 2: Provision the storage account
 
