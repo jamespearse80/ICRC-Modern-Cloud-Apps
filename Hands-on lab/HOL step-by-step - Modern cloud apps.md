@@ -704,7 +704,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-1.  In the **ALLOWED ORIGINS** text box, specify the URL of the **Offers Web API App** (can be found in the **Overview** link), and click **Save**.
+2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **Offers Web API App** (can be found in the **Overview** link), and click **Save**.
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -713,7 +713,7 @@ click **App Services** and then clicking the Offer API app you just created.
     ![In the App Service blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image103.png "App Service blade")
     
 
-3.  In the **Connection Strings** section, add a new **Connection string** with the following values:
+2.  In the **Connection Strings** section, add a new **Connection string** with the following values:
 
     -  Name: **ContosoSportsLeague**
 
@@ -725,7 +725,7 @@ click **App Services** and then clicking the Offer API app you just created.
     Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo\@pass123).
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
-4.  Click **Save**.
+3.  Click **Save**.
     
     ![The Save button is selected in the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image106.png "Save button")
 
@@ -857,7 +857,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 3.  On the **Azure Active Directory** blade, click on **Custom Domain names**.\
     ![Custom Domain Names menu option screenshot.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image128.png "Custom Domain names")
 
-1.  Copy the **Domain Name** for your Azure AD Tenant. It will be in the format: *[your tenant\].onmicrosoft.com*
+4.  Copy the **Domain Name** for your Azure AD Tenant. It will be in the format: *[your tenant\].onmicrosoft.com*
     This will be used for creating the new user's Username.\
     ![Under Name, the Domain Name is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image129.png "Domain name")
 
