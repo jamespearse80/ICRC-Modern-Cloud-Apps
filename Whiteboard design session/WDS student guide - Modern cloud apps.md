@@ -43,15 +43,9 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives
 
-In this Microsoft Cloud Workshop, attendees will implement an end-to-end solution for e-commerce that is based on Azure App Services, Azure Active Directory, and Visual Studio Online. Attendees will ensure the solution is PCI-compliant, and appropriate security measures are put into place for both on-premises and public access scenarios.
+In this whiteboard design session, you will work with a group to design a solution to modernize CSLA's e-commerce and back-end services, while maintaining existing PCI compliance. To ensure compliance, you will ensure data privacy and protection across all aspects of the system, in transit and at rest. The goal is to use Azure PaaS services for the public-facing and back-end websites, while providing a way for the on-premises components to securely communicate with these services. You will also design fault-tolerance and a regional failover plan of the Azure components.
 
-Attendees will be better able to deploy and configure Azure Web Apps and associated services. In addition,
-
-- Configure Web Apps for authentication with Azure AD
-
-- Instrument and load-test the application with App Insights
-
-- Automate back end services using Azure Functions and Logic Apps
+By the end of this whiteboard design session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
 
 ## Step 1: Review the customer case study
 
