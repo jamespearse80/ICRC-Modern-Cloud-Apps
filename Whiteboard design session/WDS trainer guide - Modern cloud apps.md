@@ -194,7 +194,7 @@ In addition to the public facing e-commerce website, they have a backend website
 
 CSLA manages the order fulfillment process. When an order arrives, they store the order details in their SQL database, and send a message for each order to their inventory management system running the warehouse. CSLA experiences a roughly 12-hour window that spans east to west coast business hours, during which they get most of their orders. The warehouse receives the message (which simply contains the order ID from the database), pulls up the order details identified in the message (by a lookup against the database), and then for each item in the order queues up a separate process to locate the item in inventory or place an order for it with their supplier. Once this initial status for each item in the order is collected, the inventory status is updated in the database and a confirmation email is sent to the customer indicating the estimated delivery date of their completed order (and if any items are in backorder). This inventory lookup rarely takes more than a few hours and never more than a day.
 
-They have reached a point where managing their server infrastructure is becoming a real challenge and are interested in understanding more about platform as a service (PaaS) solutions that could help them focus their efforts more on the core business value rather than infrastructure. They have observed that Azure has received PCI compliance certification, and are interested in moving their solution to Azure. "We're finding that with every upgrade, we're spending more and more engineering time on infrastructure and less on the experience that matters most to our fan base," says Francisco Martinez, Chief Executive Officer (CEO) of Contoso Sports League Association, "we need to rebalance those efforts."
+They have reached a point where managing their server infrastructure is becoming a real challenge.  Contoso wants to understand more about platform as a service (PaaS) solutions. They wonder if PaaS could help them focus their efforts more on the core business value rather than infrastructure. They have observed that Azure has received PCI compliance certification, and are interested in moving their solution to Azure. "We're finding that with every upgrade, we're spending more and more engineering time on infrastructure and less on the experience that matters most to our fan base," says Miles Strom, Chief Executive Officer (CEO) of Contoso Sports League Association, "we need to rebalance those efforts."
 
 One example is in how they manage the usernames and passwords for call center operators and support staff, as applied to the call center admin website. Today they have a homegrown solution that stores usernames and passwords in the same database used for storing merchandise information. They have experimented with other third-party solutions in the past, and their employees found it jarring to see another company's logo displayed when logging into their own call center website. In creating their identity solution, they want to ensure they can brand the login screens with their own logo. Additionally, Contoso is concerned about hackers from foreign countries/regions gaining access to the administrator site. Before they choose an identity solution, they would like to see how it indicates such attempts.
 
@@ -204,21 +204,21 @@ Contoso is also looking to augment their data analytics story by introducing a d
 
 ### Customer needs
 
-1.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value. Contoso is interested in understanding more about PaaS solutions
+1.  Make architectural decisions that help to minimize engineering around infrastructure in favor of those that deliver core business value. Contoso is interested in understanding more about PaaS solutions.
 
-2.  Maintain existing PCI compliance
+2.  Maintain existing PCI compliance.
 
-3.  Ensure data privacy and protection across all aspects of the system, in transit and at rest
+3.  Ensure data privacy and protection across all aspects of the system, in transit and at rest.
 
 4.  Want to be able to scale their offers' API independently of the website.
 
-5.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change
+5.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change.
 
-6.  Provide a better solution for the management of usernames and passwords
+6.  Provide a better solution for the management of usernames and passwords.
 
-7.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost
+7.  Provide a regional database failover plan that will enable the customer to initiate the failover to another region, allowing their various web applications and other hosted services to roll over to a synchronized database at minimal cost.
 
-8.  A data warehouse for analyzing their transaction history
+8.  A data warehouse for analyzing their transaction history.
 
 ### Customer objections
 
@@ -415,9 +415,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Preferred target audience
 
-Francisco Martinez, CEO of Contoso Sports League Association
+Miles Strom, CEO of Contoso Sports League Association
 
-The primary audience is the business decision makers and technology decision makers. Usually we talk to the infrastructure managers who report to the chief information offer (CIO), or to application sponsors (like a vice president \[VP\] line of business \[LOB\], or chief marketing officer \[CMO\]), or to those that represent the business unit IT or developers that report to application sponsors.
+The primary audience are the business decision makers and technology decision makers. Usually we talk to the infrastructure managers who report to the chief information offer (CIO), or to application sponsors (like a vice president \[VP\] line of business \[LOB\], or chief marketing officer \[CMO\]), or to those that represent the business unit IT or developers that report to application sponsors.
 
 ## Preferred solution
 
@@ -431,7 +431,7 @@ _High-level architecture_
 
     ![Diagram of the preferred solution. From a high-level, web apps hosting the e-commerce and call center websites access APIs hosted in API Apps, all hosted within an App Service Environment to enable secure communication. Access to call center website available through VPN connection only.](media/preferred-solution.png 'Preferred solution diagram')
 
-    From a high-level, they have Web Apps hosting the e-commerce and call center websites, API Apps hosting web services and Logic Apps hosting integration with SMS. Azure Traffic Manager is used for routing to the appropriate region for high availability. The Web and API Apps can be hosted within an Internal Load Balanced (ILB) App Service Environment (ASE) that enables them to take advantage of Network Security Groups to lock down inbound and outbound communication to the App Services it hosts. A Web Application Firewall (WAF) provided by an Azure App Gateway is hosted in its own subnet and NSGs. Internet traffic flows through the WAF to the e-commerce website tha's hosted within the ASE, which only allows inbound traffic from the WAF. When customers visit the website, they are presented orders whose data comes from the Offers Service REST API hosted within an API App. Orders come in from customers via the publicly accessible endpoint of the e-commerce website. The credit card is validated as a part of the checkout process by making a call to a third-party payment gateway. Once authorized and payment is captured, the order data is stored in the orders database on SQL DB and the inventory lookup message is sent to the Inventory Lookup queue. An Azure Function hosts the process for creating the PDF receipts for customer purchases. Customers are notified via SMS as their order is processed. This process involves a process running in a Logic App that integrates the SQL DB with a third-party solution for sending SMS text messages.
+    From a high-level, they have Web Apps hosting the e-commerce and call center websites, API Apps hosting web services and Logic Apps hosting integration with SMS. Azure Traffic Manager is used for routing to the appropriate region for high availability. The Web and API Apps can be hosted within an Internal Load Balanced (ILB) App Service Environment (ASE) that enables them to take advantage of Network Security Groups to lock down inbound and outbound communication to the App Services it hosts. A Web Application Firewall (WAF) provided by an Azure App Gateway is hosted in its own subnet and NSGs. Internet traffic flows through the WAF to the e-commerce website (hosted within the ASE), which only allows inbound traffic from the WAF. When customers visit the website, they are presented orders whose data comes from the Offers Service REST API hosted within an API App. Orders come in from customers via the publicly accessible endpoint of the e-commerce website. The credit card is validated as a part of the checkout process by making a call to a third-party payment gateway. Once authorized and payment is captured, the order data is stored in the orders database on SQL DB and the inventory lookup message is sent to the Inventory Lookup queue. An Azure Function hosts the process for creating the PDF receipts for customer purchases. Customers are notified via SMS as their order is processed. This process involves a process running in a Logic App that integrates the SQL DB with a third-party solution for sending SMS text messages.
 
     Inventory lookup requests are queued from the e-commerce website to the queue in Azure Storage queues. The on-premises inventory app reads from this queue to kick off its internal lookup processes and writes the status back to the orders database.
 
@@ -477,7 +477,7 @@ _Offers service_
 
     Second, the Web API code would need to be updated to include the System.Web.Http.Cors package, where CORS would need to be enabled in the WebApiConfig.cs file, and the EnableCors attribute would need to be applied to the controllers or actions of the Offers service allowing the aforementioned origins and allow the GET method.
 
-    It may also be worth clarifying plans with Contoso---that if Contoso chooses to open access of the Offers service for integration by partners they should also consider implementing API management in front of their API App hosted Web API. This would enable them to lock down access by requiring a key, apply policy (such as rate limiting requests), and monitor usage by API customers.
+    If Contoso chooses to open access of the Offers service for integration by partners they should also consider implementing API management in front of their API App hosted Web API. This would enable them to lock down access by requiring a key, apply policy (such as rate limiting requests), and monitor usage by API customers.
 
 _Geo-resiliency_
 
@@ -651,4 +651,4 @@ _Data warehouse_
 
 _"I can sleep better at night knowing that our e-commerce solution is scalable to handle our biggest days, doesn't sacrifice our required PCI compliance, and actually lowers our infrastructure burden."_
 
-Francisco Martinez, CEO of Contoso Sports League Association
+Miles Strom, CEO of Contoso Sports League Association

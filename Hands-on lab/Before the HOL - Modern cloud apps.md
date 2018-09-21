@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 
@@ -50,7 +50,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 > Note: Sometimes this image has IE ESC disabled, and sometimes it does not.
 
-1.  On the new VM you just created, select the Server Manager icon
+1.  On the new VM you just created, Click start and then the Server Manager.
 
     ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
 
@@ -64,7 +64,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 4.  Change to **Off** for Administrators, and select **OK**
 
-    ![In the Internet Explorer Enhanced Security Configuration dialog box, under Administrators, the Off radio button is selected, as is the OK button at the bottom.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
+    ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
 
 ### Task 3: Install SQL Server Management Studio
 
@@ -81,11 +81,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 5: Download and explore the Contoso Sports League sample
 
-1.  Create a new folder on your C: drive named **Hackathon**
+1.  Create a new folder on your C: drive named **MCW**
 
-2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the **Hackathon** folder.
+2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the **MCW** folder.
 
-3.  From the **Contoso Sports League** folder under **Hackathon**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**
+3.  From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**
 
 4.  The solution contains the following projects:
 
@@ -99,7 +99,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 6: Create a new Azure Resource Group
 
-1.  Create a new folder on your C: drive named **Hackathon**. Within the Azure Management Portal, open the **Resource groups** tile and select **Add**
+1.  Create a new folder on your C: drive named **MCW**. Within the Azure Management Portal, open the **Resource groups** tile and select **Add**
 
     ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Setup/image9.png "Azure Management Portal")
 

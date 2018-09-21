@@ -9,7 +9,7 @@ Hands-on lab unguided
 </div>
 
 <div class="MCWHeader3">
-June 2018
+Sept 2018 (Archived)
 </div>
 
 

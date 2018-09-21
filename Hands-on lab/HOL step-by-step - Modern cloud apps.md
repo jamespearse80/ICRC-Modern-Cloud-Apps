@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -102,13 +102,13 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure. 
 
-Please note that as opposed to the Whiteboard Design Session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
+Please note that as opposed to the Whiteboard Design Session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
 By the end of this hands-on lab, you will have learned how to use several key services within Azure to improve overall functionality of the original solution, and to increase the security and scalability of the new and improved design.
 
 ## Overview
 
-The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure App Services and related services. The scenario will include implementing compute, storage, security, and scale using various components of Microsoft Azure. The lab can be implemented on your own, but it is highly recommended to pair up with other members at the Hackathon to model a real-world experience much closer and to allow each member to share their expertise for the overall solution.
+The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure App Services and related services. The scenario will include implementing compute, storage, security, and scale using various components of Microsoft Azure. The lab can be implemented on your own, but it is highly recommended to pair up with other team members to model a real-world experience much closer and to allow each member to share their expertise for the overall solution.
 
 ## Requirements
 
@@ -200,7 +200,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Server admin login: **demouser**
 
-    -  **Password** and **Confirm Password**: **demo@pass123**
+    -  **Password** and **Confirm Password**: **Password.1!!**
 
     -  Ensure the **Location** is the same region as the Web App.
 
@@ -214,7 +214,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-10. After the values are accepted on the **Web App + SQL** creation blade, check **Pin to dashboard** and click **Create**.
+10. After the values are accepted on the **Web App + SQL** creation blade, check click **Create**.
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image21.png "Create button")
 
@@ -228,7 +228,7 @@ This may take a couple minutes to provision the Web App and SQL Database resourc
 
     ![On the SQL Database blade, in the left pane, Overview is selected. In the right pane, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image23.png "SQL Database blade")
 
-13. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **demo@pass123**, respectively.\
+13. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **Password.1!!**, respectively.\
     ![In the Database connection strings blade, the ADO.NET connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image24.png "Database connection strings blade")
 
 14. On the **Overview** screen of the **SQL Server** blade, click **Set Server Firewall**.
@@ -271,7 +271,7 @@ This is only done to make the lab easier to do. In production, you do NOT want t
 
     ![The fields in the Create Storage Account blade are set to the previously defined settings. In addition, the Name field set to contososports2101, Deployment model is Resource Manager, Account kind is General purpose, and Performance is standard.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image31.png "Create Storage Account blade")
 
-4.  Click **Create**.
+4.  Click **Review + create**.
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image32.png "Create button")
 
@@ -391,7 +391,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     -  Server admin login: **demouser**
 
-    -  Password and Confirm Password: **demo@pass123**
+    -  Password and Confirm Password: **Password.1!!**
 
     ![The fields in the New Server blade display with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image56.png "New Server blade")
 
@@ -479,7 +479,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 7.  Update the **ContosoSportsLeague** Connection String to the value of the **original Secondary Azure SQL Database**.\
     ![On the App Service blade, in the Connection strings section, the ContosoSportsLeague connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image70.png "App Service blade")
 
-    Ensure you replace the string placeholder values **{your\_username}** and **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo@pass123).
+    Ensure you replace the string placeholder values **{your\_username}** and **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder values")
 
@@ -599,7 +599,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![The Connection Strings fields display the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image83.png "Connection Strings fields")
 
-    Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo@pass123).
+    Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder values")
 
 5.  Click **Save**.
@@ -783,11 +783,10 @@ click **App Services** and then clicking the Offer API app you just created.
     d.  Value: enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end. 
     > Ex: https://offersapi4.azurewebsites.net/api/get
     
-    
-        ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
+    ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
 8.  Click on **Save**.
-\
+
     ![The Save button is boxed in red on the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image44.png "App Service blade")
 
 Note: Ensure both of the API URLs are using **SSL** (https://), or you will see a CORS errors.
@@ -944,7 +943,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 4.  Click on the **Configure...** information box.\
     ![The Configure company branding link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image149.png "Configure company branding link")
 
-5.  On the **Configure company branding** blade, select the **default\_signin\_illustration.jpg** image file from **C:\\hackathon** for the **Sign-in page image**.\
+5.  On the **Configure company branding** blade, select the **default\_signin\_illustration.jpg** image file from **C:\\MCW** for the **Sign-in page image**.\
     ![The Configure company branding blade displays the default sign in picture of the Contoso sports league text, and a person on a bicycle. Below that, the Select a file field and browse icon is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image150.png "Configure company branding blade")
 
 6.  Select the **logo-60-280.png** image file from the supplementary files for the **Banner image**.\
@@ -1765,7 +1764,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Screenshot of the Upload button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image226.png "Upload button")
 
-7.  Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder beneath: C:\\Hackathon.
+7.  Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder beneath: C:\\MCW.
 
     -   ViewModels.csx
 
