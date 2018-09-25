@@ -48,10 +48,6 @@ In this whiteboard design session, you will work with a group to design a soluti
 
 By the end of this whiteboard design session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
 
-## Abstract and learning objectives 
-
-\[insert what is trying to be solved for by using this workshop. . . \]
-
 ## Step 1: Review the customer case study 
 
 **Outcome**
