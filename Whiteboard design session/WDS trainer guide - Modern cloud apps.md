@@ -9,7 +9,7 @@ Modern cloud apps
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -17,6 +17,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
+
 © 2018 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
@@ -64,79 +65,85 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
-- Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
-- Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
-- Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
-- Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
-- Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
-- Ties it all together for the participant
+-   Ties it all together for the participant.
 
-- Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
-- Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
-- Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
-- Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
-## Whiteboard design session flow
+## Whiteboard design session flow 
 
 Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
 
-- Customer's background, situation, needs and technical requirements
+Analyze your customer's needs.
 
-- Current customer infrastructure and architecture
+-   Customer's background, situation, needs and technical requirements
 
-- Potential issues, objectives and blockers
+-   Current customer infrastructure and architecture
+
+-   Potential issues, objectives and blockers
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
 
-- Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
-- Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
-- Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
-- Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer.
+**Outcome**
 
-- Present solution
+Present solution to your customer:
 
-- Respond to customer objections
+-   Present solution
 
-- Receive feedback
+-   Respond to customer objections
+
+-   Receive feedback
 
 **Wrap-up (15 minutes)**
 
-- Review preferred solution
+-   Review preferred solution
 
 ## Before the whiteboard design session: How to prepare
 
 Before conducting your first whiteboard design session:
 
-- Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
-- Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
-- Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
-- Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
-- Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -146,13 +153,13 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
-- **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
-- **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
+-   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
-- **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
+-   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
-**Have fun!** _Encourage participants to have fun and share!_
+***Have fun**! Encourage participants to have fun and share!*
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
@@ -170,19 +177,21 @@ In this whiteboard design session, you will work with a group to design a soluti
 
 By the end of this whiteboard design session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
 
-## Step 1: Review the customer case study
+## Step 1: Review the customer case study 
 
 **Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
 Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer
-2.  Read all of the directions for steps 1–3 in the student guide
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -194,7 +203,7 @@ In addition to the public facing e-commerce website, they have a backend website
 
 CSLA manages the order fulfillment process. When an order arrives, they store the order details in their SQL database, and send a message for each order to their inventory management system running the warehouse. CSLA experiences a roughly 12-hour window that spans east to west coast business hours, during which they get most of their orders. The warehouse receives the message (which simply contains the order ID from the database), pulls up the order details identified in the message (by a lookup against the database), and then for each item in the order queues up a separate process to locate the item in inventory or place an order for it with their supplier. Once this initial status for each item in the order is collected, the inventory status is updated in the database and a confirmation email is sent to the customer indicating the estimated delivery date of their completed order (and if any items are in backorder). This inventory lookup rarely takes more than a few hours and never more than a day.
 
-They have reached a point where managing their server infrastructure is becoming a real challenge.  Contoso wants to understand more about platform as a service (PaaS) solutions. They wonder if PaaS could help them focus their efforts more on the core business value rather than infrastructure. They have observed that Azure has received PCI compliance certification, and are interested in moving their solution to Azure. "We're finding that with every upgrade, we're spending more and more engineering time on infrastructure and less on the experience that matters most to our fan base," says Miles Strom, Chief Executive Officer (CEO) of Contoso Sports League Association, "we need to rebalance those efforts."
+They have reached a point where managing their server infrastructure is becoming a real challenge.  Contoso wants to understand more about platform as a service (PaaS) solutions. They wonder if PaaS could help them focus their efforts more on the core business value rather than infrastructure. They have observed that Azure has received PCI compliance certification and are interested in moving their solution to Azure. "We're finding that with every upgrade, we're spending more and more engineering time on infrastructure and less on the experience that matters most to our fan base," says Miles Strom, Chief Executive Officer (CEO) of Contoso Sports League Association, "we need to rebalance those efforts."
 
 One example is in how they manage the usernames and passwords for call center operators and support staff, as applied to the call center admin website. Today they have a homegrown solution that stores usernames and passwords in the same database used for storing merchandise information. They have experimented with other third-party solutions in the past, and their employees found it jarring to see another company's logo displayed when logging into their own call center website. In creating their identity solution, they want to ensure they can brand the login screens with their own logo. Additionally, Contoso is concerned about hackers from foreign countries/regions gaining access to the administrator site. Before they choose an identity solution, they would like to see how it indicates such attempts.
 
@@ -210,7 +219,7 @@ Contoso is also looking to augment their data analytics story by introducing a d
 
 3.  Ensure data privacy and protection across all aspects of the system, in transit and at rest.
 
-4.  Want to be able to scale their offers' API independently of the website.
+4.  They want to be able to scale their offers' API independently of the website.
 
 5.  Ensure that they retain their core functionality, even if the way it is accomplished under the covers might change.
 
@@ -245,39 +254,42 @@ Contoso is also looking to augment their data analytics story by introducing a d
 ## Step 2: Design a proof of concept solution
 
 **Outcome**
+
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
 **Design**
-Directions: With all participants at your table, respond to the following questions on a flip chart.
 
-_High-level architecture_
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
-1.  Without getting into the details, (the following sections will address the details), diagram your initial vision for handling the top-level requirements for the e-commerce website, call center website, and inventory lookup process. You will refine this diagram as you proceed.
+*High-level architecture*
 
-_Order fulfillment_
+1.  Without getting into the details, the following sections will address the details, diagram your initial vision for handling the top-level requirements for the e-commerce website, call center website, and inventory lookup process. You will refine this diagram as you proceed.
+
+*Order fulfillment*
 
 1.  How would you recommend CSLA manage the inventory lookup queues? How would you help CSLA decide between Azure Queues and Service Bus? Be sure to consider details implied by CSLA's requirements such as volume, message lifetime, and sizing. Explain the details of any computations you make.
 
-_Notifications_
+*Notifications*
 
 1.  How would you recommend CSLA manage notifying customers as their order in the CSLA orders database is processed? Are there specific Azure services that can be used? Include details on how this would be implemented and integrated into the proposed solution for CSLA.
 
-_Offers service_
+*Offers service*
 
 1.  Would you propose Contoso use the Azure App Service API app to meet their requirements for the Offers service?
 
 2.  If so, what specific configurations would you need to make to support your proposed topology? Specifically, how would you implement the changes and configurations required to allow for inter-app communication between the e-commerce application and the Offers service?
 
-_Geo-resiliency_
+*Geo-resiliency*
 
 1.  How would you implement high availability for the orders database to guard against regional data center outages? Be specific on how you would configure SQL Database and Azure Storage.
 
@@ -285,11 +297,11 @@ _Geo-resiliency_
 
 3.  How long would a failover take and how much data could be lost, in terms of time?
 
-_Access control_
+*Access control*
 
 1.  With respect to managing access to the call center website, explain how you would recommend Contoso implement a solution that meets their requirements. Be specific about both the implementation and the process you would use to gain Contoso's acceptance of the proposed solution.
 
-_Enabling PCI compliance_
+*Enabling PCI compliance*
 
 1.  Keeping only the e-commerce website and handling of cardholder data in scope for PCI, consider the following in your design:
 
@@ -307,7 +319,7 @@ _Enabling PCI compliance_
 
 2.  Would you recommend they use Azure virtual machines? Why or why not?
 
-_Data warehouse_
+*Data warehouse*
 
 1.  How would you recommend Contoso implement their data warehouse?
 
@@ -318,8 +330,10 @@ _Data warehouse_
 Directions: With all participants at your table:
 
 1.  Identify any customer needs that are not addressed with the proposed solution.
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -335,15 +349,21 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team
-7.  Tables switch roles and repeat Steps 2–6
+1.  Pair with another table.
 
-## Wrap-up
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
+
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
@@ -371,47 +391,43 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
-- Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
-- Ask, "What questions do you have about the customer case study?"
+-   Ask, "What questions do you have about the customer case study?"
 
-- Briefly review the steps and timeframes of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
-- Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
-- Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
-- Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-  - Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
-- Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-  - Try asking questions first that will lead the participants to discover the answers on their own
-
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    
 ## Step 3: Present the solution
 
-- Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
-- For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
-- Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-  - Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-  - The presentation and objections should be no longer than 10 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
-- Have participants on the customer team give feedback to the Microsoft team
-
-  - The feedback should be no longer than 5 minutes
-
-  - If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
-- Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ## Preferred target audience
 
@@ -421,9 +437,9 @@ The primary audience are the business decision makers and technology decision ma
 
 ## Preferred solution
 
-_High-level architecture_
+*High-level architecture*
 
-1.  _Without getting into the details, (the following sections will address the details), diagram your initial vision for handling the top-level requirements for the e-commerce website, call center website, and inventory lookup process. You will refine this diagram as you proceed._
+1.  Without getting into the details, (the following sections will address the details), diagram your initial vision for handling the top-level requirements for the e-commerce website, call center website, and inventory lookup process. You will refine this diagram as you proceed.
 
     The Contoso Sports League Association (CSLA) was motivated to move its solution to Azure. After analyzing their requirements across the e-commerce, inventory, and customer support apps, they built their solution from the following high-level designs.
 
@@ -437,23 +453,23 @@ _High-level architecture_
 
     Call center operators access the call center website which, owing to the NSGs configured, is only available across the virtual private network (VPN) connection.
 
-_NOTE: The preferred solution is only one of many possible, viable approaches._
+>**Note**: The preferred solution is only one of many possible, viable approaches.
 
-_Order fulfillment_
+*Order fulfillment*
 
-1.  _How would you recommend CSLA manage the inventory lookup queues? How would you help CSLA decide between Azure Queues and Service Bus? Be sure to consider details implied by CSLA's requirements such a volume, message lifetime, and sizing. Explain the details of any computations you make._
+1.  How would you recommend CSLA manage the inventory lookup queues? How would you help CSLA decide between Azure Queues and Service Bus? Be sure to consider details implied by CSLA's requirements such a volume, message lifetime, and sizing. Explain the details of any computations you make.
 
     Given that CSLA did not provide specific requirements that imply a need for the more advanced queuing features that Service Bus offers (such as topics, larger message sizes, longer message lifetime, and so on), CSLA should consider using Azure Queues because it meets their requirements and is the most cost effective.
 
-    Their volume is fairly low---at 50K transactions per day it translates to 50K messages per day. Their actual load per unit of time depends on their actual peak order times that is implied to be akin to 9 a.m.--9 p.m. EST. Assuming a fairly consistent load during business hours, that equates to about 4,000 messages per hour, which is well below what Azure Queues can support (2,000 messages per second or approximately 120,000 messages per hour for messages sized below 1 kilobyte \[KB\]).
+    Their volume is fairly low, at 50K transactions per day, it translates to 50K messages per day. Their actual load per unit of time depends on their actual peak order times that is implied to be akin to 9 a.m.to 9 p.m. EST. Assuming a fairly consistent load during business hours, that equates to about 4,000 messages per hour, which is well below what Azure Queues can support (2,000 messages per second or approximately 120,000 messages per hour for messages sized below 1 kilobyte \[KB\]).
 
     The case study states that rarely does an inventory lookup message take longer than a few hours and never more than a day. It means that they will never encounter the 7-day lifetime limit required by messages in Azure Queues.
 
     As for the individual message size, since it is just the order ID from the database, it is unlikely to be a field larger than 64 KB (the maximum message size supported by Azure Queues), or even 1 KB (the size at which Azure Queues can handle 2,000 messages per second).
 
-_Notifications_
+*Notifications*
 
-1.  _How would you recommend CSLA manage notifying customers as their order in the CSLA orders database is processed? Are there specific Azure services that can be used? Include details on how this would be implemented and integrated into the proposed solution for CSLA._
+1. How would you recommend CSLA manage notifying customers as their order in the CSLA orders database is processed? Are there specific Azure services that can be used? Include details on how this would be implemented and integrated into the proposed solution for CSLA?
 
     Contoso can implement a logic app to notify customers of their order status.
 
@@ -461,15 +477,15 @@ _Notifications_
 
     A Twilio connector could act as the action to perform that sends the SMS message when the frequency trigger executes the stored procedure. CSLA would sign up for a free Twilio trial to get an API key. Then they would provision a Twilio connector within the logic app, and add the credentials. Then CSLA would select a Send Message action using data provided in the result set from the stored procedure, specifically the customer's phone number and their first name to include in the message, "Hello Satya, your order has shipped!"
 
-    Note: It currently involves extending the Logic App code for the Twilio connector.
+    >**Note**: It currently involves extending the Logic App code for the Twilio connector.
 
-_Offers service_
+*Offers service*
 
-1.  _Would you propose Contoso use the Azure App Service API app to meet their requirements for the Offers service?_
+1.  Would you propose Contoso use the Azure App Service API app to meet their requirements for the Offers service?
 
     Contoso could meet their requirement of scaling the Offers API independently from the main website by separating it out from the website project into its own Web API project and deploying that project to an Azure App Service API App.
 
-2.  _If so, what specific configurations would you need to make to support your proposed topology? Specifically, how would you implement the changes and configurations required to allow for inter-app communication between the e-commerce application and the Offers service?_
+2.  If so, what specific configurations would you need to make to support your proposed topology? Specifically, how would you implement the changes and configurations required to allow for inter-app communication between the e-commerce application and the Offers service?
 
     In order for the home page to be able to successfully retrieve the data from the now separate Web API (for example, it is located in another origin), cross origin resource sharing (CORS) would need to be configured.
 
@@ -479,17 +495,17 @@ _Offers service_
 
     If Contoso chooses to open access of the Offers service for integration by partners they should also consider implementing API management in front of their API App hosted Web API. This would enable them to lock down access by requiring a key, apply policy (such as rate limiting requests), and monitor usage by API customers.
 
-_Geo-resiliency_
+**Geo-resiliency**
 
-1.  _How would you implement high availability for the orders database to guard against regional data center outages? Be specific on how you would configure SQL Database and Azure Storage._
+1.  How would you implement high availability for the orders database to guard against regional data center outages? Be specific on how you would configure SQL Database and Azure Storage_
 
     Azure SQL Database auto-failover groups (in-preview) is a SQL Database feature designed to automatically manage geo-replication relationship, connectivity, and failover at scale. With it, the customers gain the ability to automatically recover multiple related databases in the secondary region after catastrophic regional failures or other unplanned events that result in full or partial loss of the SQL Database service's availability in the primary region. Additionally, they can use the readable secondary databases to offload read-only workloads. Because auto-failover groups involve multiple databases, they must be configured on the primary server. Both primary and secondary servers must be in the same subscription. Auto-failover groups support replication of all databases in the group to only one secondary server in a different region. Active geo-replication, without auto-failover groups, allows up to four secondaries in any region.
 
-    Provision the Azure Storage Account with RA-GRS redundancy with a primary and secondary geographic location matching those of the SQL databases, so that in the event of an outage all backup regions have copies of the data. It may affect your choice of SQL database secondary regions because the primary/secondary regions pairs for storage are predefined and not user selectable (e.g., West US primary will use East US as secondary). The replication between the primary storage account region and secondary storage account region is asynchronous to it does not impact the latency of requests made against the primary region (albeit some data loss might be possible if it has not replicated to the secondary region in the event of a disaster).
+    Provision the Azure Storage Account with RA-GRS redundancy with a primary and secondary geographic location matching those of the SQL databases, so that in the event of an outage all backup regions have copies of the data. It may affect your choice of SQL database secondary regions because the primary/secondary regions pairs for storage are predefined and not user selectable (e.g., West US primary will use East US as secondary). The replication between the primary storage account region and secondary storage account region is asynchronous to it does not impact the latency of requests made against the primary region, albeit some data loss might be possible if it has not replicated to the secondary region in the event of a disaster.
 
-    Finally, deploy copies of the App Services to the backup regions (you will have to consider a process of how you update these instances when the primary region gets updates). These can initially be deployed to resources with minimal scale out instance sizes, and increased when failover event occurs.
+    Finally, deploy copies of the App Services to the backup regions.  You will have to consider a process of how you update these instances when the primary region gets updates. These can initially be deployed to resources with minimal scale out instance sizes, and increased when failover event occurs.
 
-2.  _What process would you recommend to the customer to failover in the event of an outage, ensuring their web applications and associated Azure services change over to a secondary region?_
+2.  What process would you recommend to the customer to failover in the event of an outage, ensuring their web applications and associated Azure services change over to a secondary region?
 
     When using auto-failover groups (in-preview) to manage database recovery and any outage that impacts one or several of the databases in the group results in automatic failover. You can configure the auto-failover policy that best meets your application needs, or you can opt out and use manual activation. Whether you use manual or automatic failover activation, failover switches all secondary databases in the group to primary. After the database failover is completed, the DNS record is automatically updated to redirect the end-points to the new region.
 
@@ -499,17 +515,17 @@ _Geo-resiliency_
 
     Understand that for Azure Storage, the geo-failover process is controlled by Azure. in the event of a major disaster that affects the primary location, Azure will first try to restore the data in the primary location. Failing that, affected customers will be notified via their subscription contact information. As part of the failover, the customer's "account.\<service\>.core.windows.net" DNS entry would be updated to point from the primary location to the secondary location. In other words, the connection information to Azure Storage does not need to be changed in the application configuration.
 
-3.  _How long would a failover take and how much data could be lost, in terms of time?_
+3.  How long would a failover take and how much data could be lost, in terms of time?
 
     The amount of time a failover takes is the Recovery Time Objective (RTO) and the amount of data loss that might transpire due to any replication latency is the Recovery Point Objective (RPO).
 
     For SQL Database on the Premium Tier, the RTO is less than 30 seconds and the RPO is less than 5 seconds.
 
-    For Azure Storage, the RTO is about 24 hours and the RPO is typically less than 15 minutes (though this has no explicit SLA). Given the potentially long RTO and RPO for Azure Storage, Contoso might consider using RA-GRS storage and when a failover happens use the RA-GRS for read and a separate storage account for the writing of new files.
+    For Azure Storage, the RTO is about 24 hours and the RPO is typically less than 15 minutes, although this has no explicit SLA. Given the potentially long RTO and RPO for Azure Storage, Contoso might consider using RA-GRS storage and when a failover happens use the RA-GRS for read and a separate storage account for the writing of new files.
 
-_Access control_
+**Access control**
 
-1.  _With respect to managing access to the call center website, explain how you would recommend Contoso implement a solution that meets their requirements. Be specific about both the implementation and the process you would use to gain Contoso's acceptance of the proposed solution._
+1.  With respect to managing access to the call center website, explain how you would recommend Contoso implement a solution that meets their requirements. Be specific about both the implementation and the process you would use to gain Contoso's acceptance of the proposed solution_
 
     Contoso could capitalize on Azure Active Directory to manage the user accounts for the call center staff. They would need to provision an Azure Active Directory tenant in the Premium Tier to provide the branding. Once they have the tenant, they can create login screen branding by using the management portal.
 
@@ -525,27 +541,27 @@ _Access control_
 
     With respect to addressing Contoso's concerns over foreign hackers, Azure Active Directory can help by identifying logins from multiple geographic locations by using the report "Sign ins from multiple geographies." To demonstrate the function of it to Contoso, one approach to accomplish a login from a foreign IP is to spin up a virtual machine in Azure in a foreign geography, remote desktop into it, open the browser, and navigate to the Contoso admin site and log in. Then log in from a local machine at the same time. Within an hour or two the suspicious login would be listed in the report.
 
-    Provided that the call center administrator website is deployed to a web app and that currently anyone listed as a user in Azure Active Directory is a user who should have access to the call center website (since the case study does not stipulate any other more granular requirements), the setup for integrating Azure Active Directory access control requires no code on the part of Contoso, just configuration. This configuration is accomplished using the Azure portal (at https://portal.azure.com), navigating to the web app, and on the Settings blade selecting Authentication/Authorization. Then in the Authentication/Authorization blade, choose Login with Azure Active Directory, and then configure the Azure Active Directory authentication provider to create a new application in AAD or to use an existing application.
+    Provided that the call center administrator website is deployed to a web app and that currently anyone listed as a user in Azure Active Directory is a user who should have access to the call center website, since the case study does not stipulate any other more granular requirements, the setup for integrating Azure Active Directory access control requires no code on the part of Contoso, just configuration. This configuration is accomplished using the Azure portal (at https://portal.azure.com), navigating to the web app, and on the Settings blade selecting Authentication/Authorization. Then in the Authentication/Authorization blade, choose Login with Azure Active Directory, and then configure the Azure Active Directory authentication provider to create a new application in AAD or to use an existing application.
 
     ![On the Azure Portal, Authentication/Authorization blade, App Service Authorization is set to On, Users must Log in with Azure Active Directory when their request is not authenticated, and Authentication Provider is Azure Active Directory.](media/image7.png 'Azure Portal, Authentication/Authorization blade')
 
     Once applied, any access to the call center admin website will automatically be redirected to first log in through Azure Active Directory, and users would need to be created in Azure Active Directory in order to acquire access.
 
-_Enabling PCI compliance_
+**Enabling PCI compliance**
 
 1.  Keeping only the e-commerce website and handling of cardholder data in scope for PCI, consider the following in your design:
 
-    _Are web apps deployed in Azure App Service Environments an option?_
+    a. Are web apps deployed in Azure App Service Environments an option?
 
-    a. _Explain how using Azure App Service Environments could address the PCI requirements._
+    b. Explain how using Azure App Service Environments could address the PCI requirements.
 
-    b. _Keeping in mind the best choice for securing inbound and outbound traffic for an App Service Environment, detail all inbound and outbound traffic for this solution that allows it to be PCI compliant and allows it to operate within Azure. It should include traffic into and out of the solution, outbound for the e-commerce website, and any other traffic between the apps within the solution._
+    c. Keeping in mind the best choice for securing inbound and outbound traffic for an App Service Environment, detail all inbound and outbound traffic for this solution that allows it to be PCI compliant and allows it to operate within Azure. It should include traffic into and out of the solution, outbound for the e-commerce website, and any other traffic between the apps within the solution.
 
-    c. _Make sure to describe in detail the network topology you are using._
+    d. Make sure to describe in detail the network topology you are using.
 
-    d. _For any inbound and outbound application communications you are securing, please detail the specific mechanisms you will use to do so._
+    e. For any inbound and outbound application communications you are securing, please detail the specific mechanisms you will use to do so.
 
-    e. _If your approach includes configuration scripts, please provide an example of the scripts._
+    f. If your approach includes configuration scripts, please provide an example of the scripts.
 
     While web apps are certified as PCI compliant, they are not immediately PCI compliant when used by the customer. The PCI requirements 1.2.1, 1.3.3, and 1.3.5 require restricting outbound access to only that which is necessary for the cardholder environment. In the case of CSLA, it means that the only outbound communication allowed should be to Azure (for monitoring) and to the payment gateway. Web apps in the Standard Tier have no mechanism for restricting the outbound traffic.
 
@@ -591,55 +607,55 @@ _Enabling PCI compliance_
 
     There is no need to store cardholder data in this scenario, so by having SSL the requirement for protection of data in transit and at rest is also met.
 
-2.  _Would you recommend they use Azure virtual machines? Why or why not?_
+2.  Would you recommend they use Azure virtual machines? Why or why not?
 
     While virtual machines could certainly be used to enable a PCI compliant solution, they would not meet the customer requirement for minimizing infrastructure efforts.
 
-_Data warehouse_
+**Data warehouse**
 
-1.  _How would you recommend Contoso implement their data warehouse?_
+1.  How would you recommend Contoso implement their data warehouse?
 
     They could use Azure SQL Data Warehouse.
 
-2.  _How would Contoso schedule nightly data transfers from their OLTP database to their data warehouse?_
+2.  How would Contoso schedule nightly data transfers from their OLTP database to their data warehouse?
 
     They would need to provision an instance of Azure Data Factory, and then utilize the Azure Data Factory Copy Wizard to setup a recurring copy from their SQL Database instance to existing tables in their SQL Data Warehouse. They could enable PolyBase in the Copy Wizard to speed up the copying process.
 
 ## Checklist of preferred objection handling
 
-1.  _It is not clear to us from the Azure Trust Center just how Azure helps our solution become PCI compliant._
+1.  It is not clear to us from the Azure Trust Center just how Azure helps our solution become PCI compliant.
 
-    The Azure Trust Center helps you understand what Azure services have been certified for PCI compliance (for example, the services with which you could build a PCI compliant solution), but it does not describe how you build a PCI compliant solution on Azure. To fully accomplish a PCI compliant solution, you must address the requirements of PCI according to how you are handling cardholder data and the scope of your services. In many cases, Azure's PCI compliance attestations will be enough to satisfy aspects of PCI compliance for your solution, but there are at minimum some items which you must handle as a part of building your application (for example, it is up to you to define and enforce secure password policies).
+    The Azure Trust Center helps you understand what Azure services have been certified for PCI compliance. For example, the services with which you could build a PCI compliant solution, but it does not describe how you build a PCI compliant solution on Azure. To fully accomplish a PCI compliant solution, you must address the requirements of PCI according to how you are handling cardholder data and the scope of your services. In many cases, Azure's PCI compliance attestations will be enough to satisfy aspects of PCI compliance for your solution, but there are at minimum some items which you must handle as a part of building your application, it is up to you to define and enforce secure password policies.
 
-2.  _Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse?_
+2.  Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse_
 
     Yes. Azure can provide a solution that is both scalable and secure.
 
-3.  _Our PCI compliance requires us to have a quarterly audit and to conduct occasional penetration tests. Is this supported by Azure?_
+3.  Our PCI compliance requires us to have a quarterly audit and to conduct occasional penetration tests. Is this supported by Azure?
 
-    Although prior approval is not required, you may still formally document upcoming penetration testing engagements against Azure by filling out the Azure Service Penetration Testing Notification Form (<https://portal.msrc.microsoft.com/en-us/engage/pentest>)
+    Although prior approval is not required, you may still formally document upcoming penetration testing engagements against Azure by filling out the Azure Service Penetration Testing Notification Form (<https://portal.msrc.microsoft.com/en-us/engage/pentest>).
 
-    - Penetration testing must be conducted in accordance with our terms and conditions and comply with the Microsoft Cloud Unified Penetration Testing Rules of Engagement (<https://technet.microsoft.com/mt784683>)
+    - Penetration testing must be conducted in accordance with our terms and conditions and comply with the Microsoft Cloud Unified Penetration Testing Rules of Engagement (<https://technet.microsoft.com/mt784683>).
 
     - Tests that would cause a Denial of Service (DoS) are prohibited.
 
-4.  _Can we audit the Azure data center?_
+4.  Can we audit the Azure data center?
 
     No. Our independent audits and certifications are shared with customers in lieu of individual customer audits. These certifications and attestations accurately represent how we obtain and meet our security and compliance objectives, and serve as a practical mechanism to validate our promises for all customers. Allowing potentially thousands of customers to audit our services would not be a scalable practice and might compromise security and privacy. Our independent third-party validation program includes audits that are conducted on an annual basis to provide verification of Azure security controls.
 
-5.  _In the past, we have relied on SOASTA CloudTest to design and execute our web load tests at scale. In moving to Azure, are we still able to capitalize on CloudTest?_
+5.  In the past, we have relied on SOASTA CloudTest to design and execute our web load tests at scale. In moving to Azure, are we still able to capitalize on CloudTest?
 
     Yes. Azure is a supported cloud provider for CloudTest, and your applications hosted in Azure can have load and performance tests conducted against them from SOASTA's global network of cloud resources, while monitoring results in their big-data, real-time streaming analytics platform.
 
-6.  _Our previous infrastructure did not have great performance monitoring of our websites. What options would you recommend we investigate that would work with our web apps in Azure?_
+6.  Our previous infrastructure did not have great performance monitoring of our websites. What options would you recommend we investigate that would work with our web apps in Azure?
 
-    Web apps in Azure include first-class support for both Microsoft Application Insights and NewRelic Application Performance Monitoring---both of which enable you to collect performance telemetry from your web apps as they are running. You can view and analyze traces from both server-side and browser-side telemetry, diagnose errors, and set alerts from within the Azure Portal. Contoso can also capitalize on Log Analytics (a feature of Microsoft Operations Management Suite) by having the Application Insights logs or the Web App Diagnostic logs pushed to a Storage Account and then picked up and made searchable using the Custom Log. Alternately, they can also push their New Relic logs into Log Analytics, as well giving them a single pane of glass to do all of their monitoring through Operations Management Suite.
+    Web apps in Azure include first-class support for both Microsoft Application Insights and NewRelic Application Performance Monitoring, both of which enable you to collect performance telemetry from your web apps as they are running. You can view and analyze traces from both server-side and browser-side telemetry, diagnose errors, and set alerts from within the Azure Portal. Contoso can also capitalize on Log Analytics, a feature of Microsoft Operations Management Suite, by having the Application Insights logs or the Web App Diagnostic logs pushed to a Storage Account and then picked up and made searchable using the Custom Log. Alternately, they can also push their New Relic logs into Log Analytics, as well giving them a single pane of glass to do all of their monitoring through Operations Management Suite.
 
-7.  _We have heard that Azure's data warehouse can be paused? Does that mean we have to store all our data in Azure Storage first before we can pause the instances and risk losing our data?_
+7.  We have heard that Azure's data warehouse can be paused? Does that mean we have to store all our data in Azure Storage first before we can pause the instances and risk losing our data?
 
     SQL Data Warehouse uses storage in two ways, and both enable the data to exist even while the SQL DW instance is paused. For data that is managed by SQL Data Warehouse (e.g., it is inserted directly into relational or columnar tables), it is stored in Azure Premium Storage. For data supporting external tables in SQL DW, this data resides in Azure Standard Storage and is referenced via PolyBase, a component of SQL Data Warehouse.
 
-8.  _We know it's possible to use Azure SQL Database as our data warehouse. What should we consider when deciding between this and Azure SQL Data Warehouse?_
+8. We know it's possible to use Azure SQL Database as our data warehouse. What should we consider when deciding between this and Azure SQL Data Warehouse?
 
     It is true that Azure SQL Database can be used as a data warehouse. This is considered an SMP-based warehouse, or symmetric multiprocessing. Azure SQL Data Warehouse is classified as an MPP-based warehouse, or massively parallel processing. As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data partly has to do with your organization's definition and supporting infrastructure.
 
@@ -649,6 +665,6 @@ _Data warehouse_
 
 ## Customer quote (to be read back to the attendees at the end)
 
-_"I can sleep better at night knowing that our e-commerce solution is scalable to handle our biggest days, doesn't sacrifice our required PCI compliance, and actually lowers our infrastructure burden."_
+"I can sleep better at night knowing that our e-commerce solution is scalable to handle our biggest days, doesn't sacrifice our required PCI compliance, and actually lowers our infrastructure burden."
 
 Miles Strom, CEO of Contoso Sports League Association
