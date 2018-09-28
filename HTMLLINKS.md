@@ -7,5 +7,3 @@
 
 [HOL step-by-step - Modern cloud apps.html](https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Hands-on%20lab/HOL%20step-by-step%20-%20Modern%20cloud%20apps.html)
 
-[HOL unguided - Modern cloud apps.html](https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Hands-on%20lab/HOL%20unguided%20-%20Modern%20cloud%20apps.html)
-
