@@ -48,7 +48,7 @@ In this whiteboard design session, you will work with a group to design a soluti
 
 By the end of this whiteboard design session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome**
 
@@ -243,7 +243,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 ## Additional references
 
 |                                                              |                                                                                                                             |
-| ------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------: |
+| ------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------- |
 | **Description**                                              |                                                          **Links**                                                          |
 | Compliance Commitments                                       |                              <http://azure.microsoft.com/en-us/support/trust-center/services/>                              |
 | Azure App Services                                           |                 <https://azure.microsoft.com/en-us/documentation/articles/app-service-value-prop-what-is/>                  |
@@ -257,3 +257,4 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Data Factory                                           | <https://azure.microsoft.com/en-us/documentation/articles/data-factory-data-movement-activities/#data-factory-copy-wizard/> |
 | Azure SQL Database                                           |                <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview/>                 |
 | Designing highly available services using Azure SQL Database |     <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-designing-cloud-solutions-for-disaster-recovery>      |
+|

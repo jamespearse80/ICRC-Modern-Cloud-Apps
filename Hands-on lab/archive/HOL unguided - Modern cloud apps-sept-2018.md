@@ -515,7 +515,8 @@ To enable profile editing on your application, you will need to create a profile
     ![In the New class section, the word \"partial\" is circled in the line, \"public partial class Startup\".](images/Hands-onlabunguided-Moderncloudappsimages/media/image31.png "New class section")
 
 8.  Add the following code between the brackets of the Configuration method.
-    ```
+
+    ```csharp
     ConfigureAuth(app);
 
     // Startup.cs
@@ -535,7 +536,8 @@ Note: The OWIN middleware will invoke the Configuration(\...) method when your a
 10. Select **Visual C\# and Class,** and name the new file **Startup.Auth.cs**.![In the Installed field, Visual C\# is selected. In the Sort by field, Class is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image33.png "Installed and Sort by fields")
 
 11. Replace the entire contents of Startup.Auth.cs with the following code:
-    ```
+
+    ```csharp
    // App_Start\Startup.Auth.cs
     using System;
     using Owin;
@@ -637,7 +639,8 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
 2.  Select **MVC 5 Controller -- Empty, and click Add.** Replace **Default** with **Account** for the controller name.![On the left of the Add Scaffold window, Installed / Controller is selected. In the center of the window, MVC 5 Controller - Empty is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image35.png "Add Scaffold window")
 
 3.  Add the following using statement to the top of the controller:
-    ```
+
+    ```csharp
     using Microsoft.Owin.Security;
     ```
 
@@ -646,7 +649,8 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
     ![The Default controller method Index is circled.](images/Hands-onlabunguided-Moderncloudappsimages/media/image36.png "Default controller method Index")
 
     With the following code:
-    ```
+
+    ```csharp
     // Controllers\AccountController.cs
 
     public void SignIn()
@@ -682,11 +686,12 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
     ```
 
 5.  You can also use OWIN to sign out the user from the app. Add the following method to the account controller (**Controllers\\AccountController.cs**):
-    ```
+
+    ```csharp
     C\# Copy
     ```
 
-    ```
+    ```csharp
     // Controllers\AccountController.cs
     public void SignOut()
     {
@@ -707,14 +712,16 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
 When you authenticate users by using OpenID Connect, Azure AD returns an ID token to the app that contains **claims**. These are assertions about the user. You can use claims to personalize your app. You can access user claims in your controllers via the ClaimsPrincipal.Current security principal object.
 
 1.  Open the **Controllers\\HomeController.cs file** and add the following using statements at the end of the other using statements.
-    ```
+
+    ```csharp
     using System.Linq;
 
     using System.Security.Claims;
     ```
 
 2.  Open the **Controllers\\HomeController.cs** file and add the following method:
-    ```
+
+    ```csharp
     [Authorize]
 
     public ActionResult Claims()
@@ -730,7 +737,8 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
     ![In Solution Explorer, on the right-click menu for Views\\Home, Add is selected, and from its menu, MVC 5 View Page (Razor) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image37.png "Solution Explorer")
 
 4.  Open the **Claims.cshtml** file and replace the code with the following:
-    ```
+
+    ```csharp
     @using System.Security.Claims
     @{
         ViewBag.Title = "Claims";
@@ -760,7 +768,8 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
     ![In Solution Explorer, on the right-click menu for Views\\Shared, Add is selected, and from its menu, MVC 5 Partial Page (Razor) is selected.](images/Hands-onlabunguided-Moderncloudappsimages/media/image38.png "Solution Explorer")
 
 6.  Add the following code to the razor partial view to provide a sign-in and sign-out link as well as a link to edit the user's profile.
-    ```
+
+    ```csharp
     @if (Request.IsAuthenticated)
     {
         <text>
@@ -792,7 +801,8 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
     ```
 
 7.  Open Views\\Shared\\\_Layout.cshtml in Visual Studio. Locate the header-tap div. and add the two lines highlighted.
-    ```
+
+    ```xml
     <div class="header-top">
         <div class="container">
             <div class="row">
@@ -826,9 +836,9 @@ Launch a browser outside of Visual Studio for testing if the page loads in Visua
 
     Claims information page![On the Contoso website, the following links are circled: Russell, Sign out, and Edit Profile.](images/Hands-onlabunguided-Moderncloudappsimages/media/image40.png "Contoso website, Claims information page")
 
-## Exercise 4: Enabling Telemetry with Application Insights 
+## Exercise 4: Enabling Telemetry with Application Insights
 
-To validate the scalability of the application and to configure telemetry, you have been asked to configure Microsoft Azure Application Insights and perform a web load test using Visual Studio Online.
+To validate the scalability of the application and to configure telemetry, you have been asked to configure Microsoft Azure Application Insights and perform a web load test using Azure DevOps.
 
 ### Task 1: Configure the application for telemetry
 
