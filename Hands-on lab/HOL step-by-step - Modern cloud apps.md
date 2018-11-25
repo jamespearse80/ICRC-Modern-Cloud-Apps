@@ -324,7 +324,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Type: **SQLAzure**
 
-    Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo\@pass123).
+    Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
     
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -570,7 +570,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
     ![In the App Service blade Connection strings section, the ContosoSportsLeague connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image70.png "App Service blade")
 
-    > **Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo\@pass123).
+    > **Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -743,7 +743,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **Offers Web API App** (can be found in the **Overview** link), and click **Save**.
+2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **e-commerce Web App** (can be found in the **Overview** link), and click **Save**.
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -761,7 +761,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
         ![The Connection strings section now has a new string with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image105.png "Connection strings section")
 
-    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND demo\@pass123).
+    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
     
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -1964,7 +1964,7 @@ The advantages of using Logic Apps include the following:
 13. Type this in the Request Body:
 
     ```json
-    {"Order": [pick MessageText from list on right] }
+    {"Order": pick MessageText from list on right }
     ```
 
     Make sure the syntax is json format. Sometimes the ":" will go to the right side of MessageText by mistake. Keep it on the left. It should look like this:
