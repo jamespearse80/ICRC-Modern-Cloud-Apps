@@ -745,9 +745,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **ContosoSports Web App URL** (can be found in the **Overview** link), and click **Save**
+2.  In the **ALLOWED ORIGINS** text box, specify "*" to allow all origins, and click **Save**
 
->OPTIONAL: If you encounter problems with CORS later in the lab, return here and enter "*" instead of a URL
+    >NOTE: You should not normally do this in a production environment
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -765,11 +765,11 @@ click **App Services** and then clicking the Offer API app you just created.
 
         ![The Connection strings section now has a new string with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image105.png "Connection strings section")
 
-    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!)
+        >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!)
     
-    ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
+        ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
-3.  Click **Save**.
+3.  Click **Save**
 
     ![The Save button is selected in the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image106.png "Save button")
 
@@ -829,9 +829,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
 7.  Add another **Application Setting** with the following values:
 
-    c.  App Setting Name: **offersAPIUrl**
+    -  App Setting Name: **offersAPIUrl**
 
-    d.  Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
+    -  Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
 
     > EXAMPLE: <https://offersapi4.azurewebsites.net/api/get>
 
@@ -861,7 +861,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![On the Contoso Sports League webpage, the message Order Completed displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image122.png "Contoso Sports League webpage")
 
->**Leader Note:** If the attendee is still experiencing CORS errors ensure the URLs to the Web App in Azure local host are exact
+>**Leader Note:** If the attendee is still experiencing CORS errors, ensure the URLs to the Web App in Azure local host are exact
 
 ## Exercise 2: Identity and Security
 
@@ -1106,13 +1106,13 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 ### Task 3: Create Policies, Sign up
 
-1.  Navigate back to the **Azure AD B2C** blade that was opened in the last task.
+1.  Navigate back to the **Azure AD B2C** blade that was opened in the last task
 
 2.  To enable sign-up on your application, you will need to create a sign-up policy. This policy describes the experiences consumers will go through during sign-up and the contents of tokens the application will receive on successful sign-ups. Click **Sign-up or sign-in policies** and then **+Add** at the top of the blade.
 
     ![In the Azure Portal, on the left, under Policies, Sign-up or sign-in policies is selected. On the right, the Add button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image162.png "Azure Portal")
 
-3.  Enter **SignUp** in the **Name** field.
+3.  Enter **SignUp** in the **Name** field
 
 4.  Click **Identity providers**, and select **Email Signup**. Optionally, you can also select social identity providers (if previously configured for the tenant). Click **OK**.
 
@@ -1124,7 +1124,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
     - **Display Name**
     - **Postal Code**
 
-    Then, click **OK**.
+    Then, click **OK**
 
     ![In the Add policy blade, Sign-up attributes, with the message \"3 selected\" is selected. In the Select sign-up attributes blade, the following strings are selected: Country / Region, Display Name, and Postal Code.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image164.png "Add policy and Select sign-up attributes blades")
 
@@ -1136,7 +1136,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
     - **User is new**
     - **User's Object ID**
 
-    Then, click **OK**.
+    Then, click **OK**
 
     ![In the Add policy blade, Application claims with the message \"5 Selected\" is selected. In the Select application claims blade, the following five strings are selected: Display Name, Identity Provider, Postal Code, User is new, and User\'s Object ID.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image165.png "Add policy and Select application claims blades")
 
@@ -1156,11 +1156,11 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 To enable sign-in on your application, you will need to create a sign-in policy. This policy describes the experiences consumers will go through during sign-in and the contents of tokens the application will receive on successful sign-ins.
 
-1.  Click **Sign-in policies**.
+1.  Click **Sign-in policies**
 
     ![In the Policies section, Sign-in policies is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image166.png "Policies section")
 
-2.  Click **+Add** at the top of the blade.
+2.  Click **+Add** at the top of the blade
 
 3.  The **Name** determines the sign-in policy name used by your application. For example, enter **SignIn**.
 
@@ -1818,9 +1818,9 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 1.  Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Then in the new blade, select your Subscription, type an unique App name that identifies your function app, then specify the following settings:
 
-    -   [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group **contososports**
+    -   [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**
 
-    -   [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview), which can be one of these plans:
+    -   [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): One of the following plans:
 
         -   **Hosting plan**: The default hosting plan type for Azure Functions is **Consumption Plan**. When you choose a consumption plan, you must also choose the **Location**. For now, select **App Service Plan**.
 
@@ -1830,7 +1830,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![On the left side of the Portal, the Create a resource button is selected. In the middle, under New, Compute is selected. On the right, under Compute, Function App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image221.png "Azure Portal")
 
-2.  Click **Create** to provision and deploy the new function app.
+2.  Click **Create** to provision and deploy the new function app
 
     ![Under Function App, the App name field is set to ContosoFunctionApp, and at the bottom the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image222.png "Function App section")
 
@@ -1875,7 +1875,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![The arrow button besides the Logs tab is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image229.png "Logs window")
 
-    >**Note**: You should see several messages about downloading dependent assemblies such as the Azure SDK and iText Sharp that were defined in the project.json file.
+    >**Note**: You should see several messages about downloading dependent assemblies such as the Azure SDK and iText Sharp that were defined in the project.json file
 
 10. Select the name of your function app, and then click on **Platform Features** followed by **Application settings.**
 
@@ -1911,19 +1911,19 @@ Without writing any code, you can automate business processes more easily and qu
 
 The advantages of using Logic Apps include the following:
 
--   Saving time by designing complex processes using easy to understand design tools.
+-   Saving time by designing complex processes using easy to understand design tools
 
--   Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code.
+-   Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code
 
--   Getting started quickly from templates.
+-   Getting started quickly from templates
 
--   Customizing your logic app with your own custom APIs, code, and actions.
+-   Customizing your logic app with your own custom APIs, code, and actions
 
--   Connect and synchronize disparate systems across on-premises and the cloud.
+-   Connect and synchronize disparate systems across on-premises and the cloud
 
--   Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support.
+-   Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support
 
-1.  Next, we will create a Logic App that will trigger when an item is added to the **receiptgenerator** queue. In the Azure Management Portal, click the **+Creat a resource** button, search for **Logic App**, click the returned Logic App result, and click **Create**.
+1.  Next, we will create a Logic App that will trigger when an item is added to the **receiptgenerator** queue. In the Azure Management Portal, click the **+Create a resource** button, search for **Logic App**, click the returned Logic App result, and click **Create**.
 
     ![In the Azure Portal, under Marketplace, Everything is selected. Under Everything, Logic App is in the search field. Under Name, Logic App is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image236.png "Azure Portal")
 
@@ -1943,7 +1943,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the Logic Apps Designer, the Blank Logic App tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image240.png "Logic Apps Designer")
 
-6.  Select **Azure Queues**
+6.  Select **Azure Queues**. You may have to serach for it.
 
     ![In the Services section, the Azure Queues tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image241.png "Services section")
 
@@ -1959,15 +1959,15 @@ The advantages of using Logic Apps include the following:
 
     ![Under When there are messages in a queue, the Queue name is set to receiptgenerator. At the bottom, the New Step and Add an action buttons are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image244.png "Queue name")
 
-10. Select **Azure Functions**.
+10. Select **Azure Functions**
 
     ![In the Choose an action section, under Services ,the Azure Functions tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image245.png "Choose an action")
 
-11. Click the **Azure Function App** you just created.
+11. Click the **Azure Function App** you just created
 
     ![Under Azure Functions, on the Actions tab, a single Action, the Azure function contosofunction2101, is listed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image246.png "Azure Functions")
 
-12. Click the Azure function **ContosoMakePDF**.
+12. Click the Azure function **ContosoMakePDF**
 
     ![Under Azure Functions, on the Actions tab, a single Action, the Azure function contosofunction2101, is listed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image247.png "Azure Functions")
 
@@ -1981,7 +1981,7 @@ The advantages of using Logic Apps include the following:
 
     ![Under ContosoMakePDF, the previous JSON code is typed in the Request Body, and to the right of this, in Insert parameters from previous steps, Message text is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image248.png "ContosoMakePDF")
 
-14. Click **Save** to save the Logic App.
+14. Click **Save** to save the Logic App
 
 15. There is one modification we need to make in the code. Click on the **CodeView** button.
 
@@ -1995,7 +1995,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the Order item code, the following line of code is circled: \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image251.png "Order item code")
 
-    Click **Save** again.
+    Click **Save** again
 
 17. Run the logic app. It should process the orders you have submitted previously to test PDF generation. Using Azure Storage Explorer or Visual Studio Cloud Explorer you can navigate to the storage account and open the receipts container to see the created PDFs.
 
@@ -2003,7 +2003,7 @@ The advantages of using Logic Apps include the following:
 
 18. Double click it to see the Purchase receipt
 
-19. Now, click the **Designer** button in the Logic Apps Designer screen. add two more steps to the flow for updating the database and removing the message from the queue after it has been processed. Switch back to the designer, click **+ New step** and select **Add an Action**.
+19. Now, click the **Designer** button in the Logic Apps Designer screen. add two more steps to the flow for updating the database and removing the message from the queue after it has been processed. Switch back to the designer, click **+ New step**.
 
     ![In Designer, the New Step link is circled. Under New step, the Add an action tile is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image254.png "Designer")
 
@@ -2011,7 +2011,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the Services section, under Services, SQL Server is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image255.png "Services section")
 
-21. Select **SQL Server - Update row**.
+21. Select **SQL Server - Update row**
 
     ![In the SQL Server section, on the Actions tab, SQL Server - Update row is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image256.png "SQL Server section")
 
@@ -2066,11 +2066,11 @@ The advantages of using Logic Apps include the following:
 
     ![The Update row section displays the purchase fields.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image261.png "Update row section")
 
-29. Finally, let us add one more step to remove the message from the queue. Press **+New Step** and **Add an Action**. Type in Queue in the search box, and select Azure Queues -- Delete message.
+29. Finally, let us add one more step to remove the message from the queue. Press **+New Step**. Type in Queue in the search box, and select Azure Queues -- Delete message.
 
     ![In the Choose an action section, queue is typed in the search field. Under Services, Azure Queues is selected. On the Actions tab, Azure Queues - Delete message is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image262.png "Choose an action section")
 
-30. Select the **receiptgenerator** queue from the list.
+30. Select the **receiptgenerator** queue from the list
 
 31. Select **Message Id** **\>** **Pop Receipt** from the list, and click **Save**.
 
