@@ -128,4 +128,4 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
 
-You should successfully complete all steps provided in this guide *before* starting the acutal Modern Cloud Apps hands-on lab.
+You should successfully complete all steps provided in this guide *before* starting the actual Modern Cloud Apps hands-on lab.
