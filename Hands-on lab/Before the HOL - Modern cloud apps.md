@@ -1,7 +1,7 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Modern Cloud Apps
+Modern cloud apps
 </div>
 
 <div class="MCWHeader2">
@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Modern Cloud Apps before the hands-on lab setup guide](#modern-cloud-apps-before-the-hands-on-lab-setup-guide)
+- [Modern cloud apps before the hands-on lab setup guide](#modern-cloud-apps-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
@@ -38,7 +38,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Modern Cloud Apps before the hands-on lab setup guide 
+# Modern cloud apps before the hands-on lab setup guide 
 
 ## Requirements
 
@@ -47,7 +47,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 -   Local machine or Azure virtual machine configured with:
 
     -   Visual Studio 2017 Community Edition or later
-
 
 ## Before the hands-on lab
 
@@ -61,29 +60,29 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     - Name: Whatever you want
     - User Name: whatever you want
     - Password: Your choice, but make note of it
-    - Networking: You may wnat to enable RDP (port 3389) for Remote Desktop access
+    - Networking: You may want to enable RDP (port 3389) for Remote Desktop access
 
     ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
 
->**Note**: It is **highly** recommended to use a DS2 or D2 instance size for this VM
+>**Note**: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
 
 ### Task 2: Disable IE Enhanced Security
 
->**Note**: Sometimes this image has IE ESC disabled, and sometimes it does not
+>**Note**: Sometimes this image has IE ESC already disabled, and sometimes it does not.
 
-1.  Connect and log on to the new VM you just created, click **Start** and then then **Server Manager** if not already started
+1.  Connect and log on to the new VM you just created, click **Start** and then then **Server Manager** if not already started.
 
     ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
 
-2.  Select **Local Server**
+2.  Select **Local Server**.
 
     ![Local Server is selected from the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
 
-3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration
+3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
 
     ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
 
-4.  Change to **Off** for Administrators, and select **OK**
+4.  Change to **Off** for Administrators, and select **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
 
@@ -95,7 +94,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 4: Validate connectivity to Azure
 
-1.  Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted
+1.  Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.
 
 2.  Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
 
@@ -103,11 +102,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 5: Download and explore the Contoso Sports League sample
 
-1.  Create a new folder on your C: drive named **MCW**
+1.  Create a new folder on your C: drive named **MCW**.
 
 2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the newly created **MCW** folder.
 
-3.  From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**
+3.  From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
 
 4.  The solution contains the following projects:
 
@@ -121,7 +120,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 6: Create a new Azure Resource Group
 
-1.  Within the Azure Management Portal, open the **Resource groups** tile and then select **+Add**
+1.  Within the Azure Management Portal, open the **Resource groups** tile and then select **+Add**.
 
     ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Setup/image9.png "Azure Management Portal")
 
@@ -129,4 +128,4 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
 
-You should successfully complete all steps providedin this guide *before* starting the acutal Modern Cloud Apps hands-on lab
+You should successfully complete all steps provided in this guide *before* starting the acutal Modern Cloud Apps hands-on lab.
