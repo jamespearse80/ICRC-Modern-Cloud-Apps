@@ -1974,7 +1974,7 @@ The advantages of using Logic Apps include the following:
 13. Type this in the Request Body:
 
     ```json
-    {"Order": [pick MessageText from list on right] }
+    {"Order": pick MessageText from list on right }
     ```
 
     Make sure the syntax is json format. Sometimes the ":" will go to the right side of MessageText by mistake. Keep it on the left. It should look like this:
