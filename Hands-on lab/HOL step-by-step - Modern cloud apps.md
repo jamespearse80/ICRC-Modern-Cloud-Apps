@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-September 2018
+November 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -109,7 +109,7 @@ By the end of this hands-on lab, you will have learned how to use several key se
 
 ## Overview
 
-The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure App Services and related services. The scenario will include implementing compute, storage, security, and scale using various components of Microsoft Azure. The lab can be implemented on your own, but it is highly recommended to pair up with other team members to model a real-world experience much closer and to allow each member to share their expertise for the overall solution.
+The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will challenge you to implement an end-to-end scenario using a supplied sample that is based on Microsoft Azure App Services and related services. The scenario will include implementing compute, storage, security, and scale using various components of Microsoft Azure. The lab can be implemented on your own, but it is highly recommended to pair up with additional team members to more closely model a real-world experience, and to allow members to share their expertise for the overall solution.
 
 ## Solution architecture
 
@@ -118,10 +118,8 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 ## Requirements
 
 1.  Microsoft Azure subscription
-
-2.  Local machine or a virtual machine configured with:
-
-    -  Visual Studio 2017 Community Edition
+2.  Local machine or a virtual machine configured Visual Studio 2017 Community Edition
+3.  Twilio account and/or personal cell phone to setup a trial Twilio account
     
 ## Help references
 
@@ -167,9 +165,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance and login with your lab-provided Azure credentials.
 
-2.  In the navigation menu to the left, click **+ Create a resource** and in the Marketplace search text box, enter **Web App + SQL** and select the appropriate auto-suggestion.
+2.  In the navigation menu to the left, click **+Create a resource** and in the Marketplace search text box, enter **Web App + SQL** and select the appropriate auto-suggestion.
 
-    ![In the Azure Portal on the left, "+ Create a resource", search box text and auto-suggestion are surrounded by red boxes.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image11.png "Azure Portal")
+    ![In the Azure Portal on the left, "+Create a resource", search box text and auto-suggestion are surrounded by red boxes.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image11.png "Azure Portal")
 
 3.  In the new product blade, click **Create**.
 
@@ -178,13 +176,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 4.  On the Web App blade, specify the following configuration:
 
-    -  A unique and valid name (until the green check mark appears).
+    -  A unique and valid name (until the green check mark appears). We've used ContosoAp2010. Make note of your selection.
 
     -  Select **contososports** resource group.
 
-    -  **ContosoSportsPlan** as a new App Service Plan. Make sure it's in the same location as the **contososports** resource group. Use the default **Standard S1** pricing tier. 
-
-    ![The Web App + SQL blade, App Service plan, and New App Service Plan blades display, with fields set to the previously defined settings. In the Web App + SQL blade, the App name field is selected, and is set to contosoap2101. Resource group is selected, as is the App Service plan/location. In the App Service plan blade, on the left, the Create New button is selected. In the App Service plan blade, the App Service plan field is set to ContosoSportsPlan, and the Location field is set to South Central US.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image15.png "Web App + SQL blade")
+    -  **ContosoSportsPlan** as a new App Service Plan. Make sure it's in the same location as the **contososports** resource group you created earlier. Use the default **Standard S1** pricing tier. 
 
 5. Select **SQL Database *Configure required settings***, and then click **+ Create a new database**.
 
@@ -196,13 +192,13 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 7. On the **New server** blade, specify the following configuration:
 
-    -  Server name: **A unique value (ensure the green checkmark appears)**.
+    -  Server name: **A unique value (ensure the green checkmark appears)**
 
     -  Server admin login: **demouser**
 
     -  Password and Confirm Password: **Password.1!!**
 
-    -  Ensure the **Location** is the same region as the Web App.
+    -  Ensure the **Location** is the same region as the Web app
 
     ![Fields in the New server blade are circled and set to the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image19.png "New server blade")
 
@@ -220,7 +216,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     > **Note**: This may take a couple minutes to provision the Web App and SQL Database resources.
 
-11. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created.
+11. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created and select it.
 
     ![In the Azure Portal, on the left side, "SQL Databases" is surrounded by a red box. In the right pane, "ContosoSportsDB" is surrounded by a red box](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image22.png "Azure Portal")
 
@@ -232,7 +228,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In the Database connection strings blade, the ADO.NET connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image24.png "Database connection strings blade")
 
-14. On the **Overview** screen of the **SQL Server** blade, click **Set Server Firewall**.
+14. On the **Overview** screen of the **SQL Server** blade, click **Set server firewall**.
 
     ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image25.png "SQL Server Blade, Essentials section")
 
@@ -256,17 +252,17 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
-2.  From the navigation menu to the left, click **+ Create a resource**, **Storage Accounts** and then click **+ Add** at the top of the new blade.
+2.  From the navigation menu to the left, click **+Create a resource**, **Storage Accounts** and then click **+Add** at the top of the new blade.
 
-    ![In the Azure Portal, in the navigation menu on the left, Storage Account is surrounded by a red box. To the right, the "+ Add" tile is likewise surrounded](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image30.png "Azure Portal - Storage Accounts")
+    ![In the Azure Portal, in the navigation menu on the left, Storage Account is surrounded by a red box. To the right, the "+Add" tile is likewise surrounded](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image30.png "Azure Portal - Storage Accounts")
 
 3.  On the **Create storage account** blade, specify the following configuration options:
 
     -  Name: Unique value for the storage account (ensure the green check mark appears).
 
-    -  Specify the existing Resource Group **contososports**.
+    -  Specify the existing resource group **contososports**.
 
-    -  Specify the same **Location** as the resource group.
+    -  Specify the same **Location** as the Contoso Sports resource group.
 
     -  Accept the defaults for all other settings.
 
@@ -274,17 +270,21 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 4.  Click **Review + create**.
 
-    ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image32.png "Create button")
+    ![Screenshot of the Review + create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image32.png "Create button")
 
-5.  Once the storage account has completed provisioning, open the storage account by clicking **Storage accounts** in the navigation menu to the left and clicking on the storage account name.
+5.  Click **Create** after Validation passed.
+
+    ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image32a.png "Create button")
+
+6.  Once the storage account has completed provisioning, open the storage account by clicking **Storage accounts** in the navigation menu to the left and clicking on the storage account name.
 
     ![The Storage Account menu link in the Azure Portal.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image33.png "Azure Portal, More services")
 
-6.  On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option.
+7.  On the **Storage account** blade, scroll down, and, under the **SETTINGS** menu area, select the **Access keys** option.
 
     ![In the Storage account blade, under Settings, Access keys is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image35.png "Storage account blade")
 
-7.  On the **Access keys** blade, click the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
+8.  On the **Access keys** blade, click the copy button by the **Connection String** field in the **key1** section. Paste the value into **Notepad** for later usage. 
 
     ![In the Access keys blade default keys section, the copy button for the key1 connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image36.png "Access keys blade, default keys section")
 
@@ -294,7 +294,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In the Azure Portal left menu, Resource groups selected. In the Resource groups blade, under Name, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image37.png "Azure Portal")
 
-2.  Click on the **Web App** just created in a previous step.
+2.  Click on the **Web App** (App Service type) created previously.
 
 3.  On the **App Service** blade, scroll down in the left pane, and, under the **SETTINGS** menu, click on **Application settings**.
 
@@ -308,11 +308,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Key: **AzureQueueConnectionString**
 
-    -  Value: **Enter the Connection String for the Azure Account just created**.
+    -  Value: **Enter the Connection String for the Azure Account just created** from your Notepad file
 
     ![In the App settings section for the App Service blade, the new entry for AzureQueueConnectionString is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image40.png "App settings section")
 
-6.  Locate **Connection Strings** below **Application Settings**.
+6.  Locate **Connection Strings** below **Application Settings** in your Notepad file.
 
     ![The Connection Strings section for the App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image41.png "Connection Strings section")
 
@@ -320,11 +320,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Name: **ContosoSportsLeague**
 
-    -  Value: **Enter the Connection String for the SQL Database just created**.
+    -  Value: **Enter the Connection String for the SQL Database just created**
 
     -  Type: **SQLAzure**
 
-    Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
+    >IMPORTANT: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously. 
     
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -342,7 +342,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In Solution Explorer, Contoso.Apps.SportsLeague.Web is selected, and from its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image46.png "Solution Explorer")
 
-3.  Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
+3.  Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
 
 ![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
 
@@ -350,19 +350,21 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Microsoft account subscriptions tile.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image48.png "Microsoft account tile")
 
-5.  Select the **Contoso Sports Web App**.
+5.  Select the **Contoso Sports Web App** (with the name you created previously).
 
     ![Under Subscriptions, under contososports, contososportsweb0 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image49.png "Subscriptions")
 
-6.  Click **OK**, and click **Publish** to publish the Web Application.
+6.  Click **OK**, and click **Publish** to publish the Web application.
 
-7.  In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
+7.  In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully. 
 
     ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
 
-8.  Validate the website by clicking the **Store** link on the menu. As long as products return, the connection to the database is successful.
+8.  A new browser should automatically open the new web applications. Validate the website by clicking the **Store** link on the menu. As long as products return, the connection to the database is successful.
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
+
+    >TROUBLESHOOTING: If the web site fails to show products, go back and double check all of your connection string entries and passwords.
 
 ### Task 2: Setup SQL Database Geo-Replication
 
@@ -394,7 +396,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
 7.  On the **New server** blade, specify the following configuration:
 
-    -  Server name: **A unique value (ensure the green checkmark appears)**.
+    -  Server name: **A unique value (ensure the green checkmark appears)**
 
     -  Server admin login: **demouser**
 
@@ -416,7 +418,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
 11. Click the name of the Secondary SQL Database you just created.
 
-    ![In the list of Databases, the ContosoSportsDB secondary replicatoin role is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image58.png "Database list")
+    ![In the list of Databases, the ContosoSportsDB secondary replication role is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image58.png "Database list")
 
 12. On the **SQL Database** blade, click the **Show database connection strings** link.
 
@@ -426,7 +428,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![On the Database connection strings blade, ADO.NET tab, the connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image60.png "Database connection strings blade")
 
-14. On the SQL database blade in the Essentials section,, click the SQL Database Server name link.
+14. On the SQL database blade in the Essentials section, click the SQL Database Server name link.
 
     ![On the SQL database blade in the Essentials section, the Server name (contososqlserver2.database.windows.net) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image61.png "SQL database blade, Essentials section")
 
@@ -454,7 +456,7 @@ Since the Replication and Failover process can take anywhere from 10 to 30 minut
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>.
 
-2.  In the navigation menu to the left, click **SQL databases**, and click the name of the SQL Database you created previously.
+2.  In the navigation menu to the left, click **SQL databases**, and click the name of the *primary* SQL Database you created previously.
 
     ![Screenshot of SQL Databases tile](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image52.png "Azure Portal")
 
@@ -462,7 +464,7 @@ Since the Replication and Failover process can take anywhere from 10 to 30 minut
 
     ![On the Settings blade, under Settings, Geo-Replication is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image64.png "Settings section")
 
-4.  On the **Geo-Replication** blade, select the Secondary database.
+4.  On the **Geo-Replication** blade, select the *secondary* database.
 
     ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West US, which on the map has a blue checkmark. Under Secondaries, East US is circled, and on the map displays with a green checkmark. A line connects the West Coast (blue) and East Coast (green) checkmarks.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image65.png "Geo-Replication blade")
 
@@ -478,19 +480,19 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 #### Subtask 3: Test e-commerce Web App after Failover
 
-1.  Once completed, in the Azure Portal, click on **SQL databases**, and select the **ContosoSportsDB** secondary.
+1.  Once completed, in the Azure Portal, click on **SQL databases**, and select the NEW **ContosoSportsDB** secondary.
 
     ![On the SQL databases blade, under Name, the ContosoSportsDB Secondary replication role is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image68.png "SQL databases blade")
 
 2.  Next, click on **Show database connection strings**, and copy it off thereby replacing the user and password.
 
-    ![On the SQL database blade,on the left Overview is selected. On the right, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image69.png "SQL database blade")
+    ![On the SQL database blade, on the left Overview is selected. On the right, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image69.png "SQL database blade")
 
 3.  From the Azure portal, click on **Resource Groups**, and select **contososports**.
 
     ![In the Azure Portal, on the left, Resource groups is circled. On the right, under Name, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image37.png "Azure Portal")
 
-4.  Click on the **Web App** just created in a previous step.
+4.  Click on the **Web App** created earlier.
 
 5.  On the **App Service** blade, scroll down in the left pane, and click on **Application settings**.
 
@@ -502,7 +504,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
     ![On the App Service blade, in the Connection strings section, the ContosoSportsLeague connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image70.png "App Service blade")
 
-    >**Note**: Ensure you replace the string placeholder values **{your\_username}** and **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
+    >**Note**: Ensure you replace the string placeholder values **{your\_username}** and **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!).
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder values")
 
@@ -556,9 +558,9 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 1.  In the Azure Portal, click on **Resource Groups** **\>** **contososports** resource group.
 
-    ![In the left menu of the Azure Portal, Resource groups is selected. On the right, underResource groups, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image37.png "Azure Portal")
+    ![In the left menu of the Azure Portal, Resource groups is selected. On the right, under Resource groups, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image37.png "Azure Portal")
 
-2.  Click on the **Web App** just created in a previous step.
+2.  Click on the **Web App** created in a previous step.
 
 3.  On the **App Service** blade, scroll down in the left pane, and click on **Application settings**.
 
@@ -570,7 +572,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
     ![In the App Service blade Connection strings section, the ContosoSportsLeague connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image70.png "App Service blade")
 
-    > **Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
+    > **Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!).
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -594,7 +596,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
     ![Screenshot of the Contoso store webpage. Under Team Apparel, a Contoso hat, tank top, and hoodie display.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image74.png "Contoso store webpage")
 
-### Task 3: Deploying the call center admin website
+### Task 3: Deploying the Call Center admin website
 
 In this exercise, you will provision a website via the Azure Web App template using the Microsoft Azure Portal. You will then edit the necessary configuration files in the Starter Project and deploy the call center admin website.
 
@@ -602,7 +604,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
-2.  Click **+ Create a new resource** **\>** **Web** **\>** **Web App**. 
+2.  Click **+Create a new resource** **\>** **Web** **\>** **Web App** 
 
    ![In the left menu of the Azure Portal, the New button is selected. In middle section, under Marketplace, Web + mobile is selected. In the right, Web + mobile section, under Featured apps, Web App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image78.png "Azure Portal")
 
@@ -610,7 +612,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![On the Web App blade, the App name field is set to contososportsadmin2101.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image79.png "Web App blade")
 
-4.  Click on **App Service plan/Location**, and select the **ContosoSportsPlan** used by the front-end Web App.
+4.  Click on **App Service plan/Location**, and select the **ContosoSportsPlan** used by the front-end Web app.
 
 5.  After the values are accepted, click **Create**.
 
@@ -626,19 +628,19 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![In the Settings section of the App Service blade, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image81.png "Settings section")
 
-3.  Scroll down, and locate the **Connection strings** section.
+3.  Scroll down, and locate the **Connection strings** section
 
 4.  Add a new **Connection string** with the following values:
 
     -  Name: **ContosoSportsLeague**
 
-    -  Value: **Enter the Connection String for the last SQL Database that was created**.
+    -  Value: **Enter the Connection String for the last SQL Database that was created**
 
     -  Type: **SQL Database**
 
     ![The Connection Strings fields display the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image83.png "Connection Strings fields")
 
-    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
+    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!).
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder values")
 
@@ -678,7 +680,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>.
 
-2.  Click **+ Create a resource**, type **API App** into the marketplace search box, and press **Enter**.
+2.  Click **+Create a resource**, type **API App** into the marketplace search box, and press **Enter**.
 
     ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image90.png "Azure Portal")
 
@@ -700,7 +702,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image96.png "Solution Explorer")
 
-3.  On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
+3.  On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing** and then **Publish**.
 
     ![In the Publish web dialog box, Microsoft Azure App Service is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image97.png "Publish web dialog box")
 
@@ -714,7 +716,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Copy and paste the **URL** of the deployed **API App** for later use.
 
-### Task 5: Deploying the offers Web API
+### Task 5: Deploying the Offers Web API
 
 In this exercise, the attendee will provision an Azure API app template using the Microsoft Azure Portal. The attendee will then deploy the Offers Web API.
 
@@ -722,7 +724,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management Portal (<http://portal.azure.com>).
 
-2.  In the navigation menu to the left, click **+ Create a resource** -\> **Web** -\> **API App**.
+2.  In the navigation menu to the left, click **+Create a resource** -\> **Web** -\> **API App**.
 
     ![In the Azure Portal left menu, New is selected. On the right, under New, API App is typed in the Search box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image90.png "Azure Portal")
 
@@ -737,13 +739,15 @@ click **App Services** and then clicking the Offer API app you just created.
 
    ![In the Azure Portal, on the left More services is selected, and on the right under Web + Mobile, App Services displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image101.png "Azure Portal, More Services")
 
-#### Subtask 2: Configure cross-origin resource sharing (CORS)
+#### Subtask 2: Configure Cross-Origin Resource Sharing (CORS)
 
 1.  On the **App Service** blade for the Offers API, under the **API** menu section, click **CORS**.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2.  In the **ALLOWED ORIGINS** text box, specify the URL of the **e-commerce Web App** (can be found in the **Overview** link), and click **Save**.
+2.  In the **ALLOWED ORIGINS** text box, specify "*" to allow all origins, and click **Save**.
+
+    >NOTE: You should not normally do this in a production environment.
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -755,15 +759,15 @@ click **App Services** and then clicking the Offer API app you just created.
 
     -  Name: **ContosoSportsLeague**
 
-    -  Value: **Enter the Connection String for the SQL Database that was created**.
+    -  Value: **Enter the Connection String for the SQL Database that was created**
 
     -  Type: **SQL Database**
 
         ![The Connection strings section now has a new string with the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image105.png "Connection strings section")
 
-    >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser AND Password.1!!).
+        >**Note**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you respectively setup during creation (demouser & Password.1!!).
     
-    ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
+        ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
 3.  Click **Save**.
 
@@ -799,7 +803,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
 2.  Click on **Resource groups** **\>** **contososports** resource group.
 
-    ![In the Azure Portal left menu, Resource groups is selected. On the right, underResource groups, under Name, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image112.png "Azure Portal")
+    ![In the Azure Portal left menu, Resource groups is selected. On the right, under Resource groups, under Name, contososports is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image112.png "Azure Portal")
 
 3.  Click on the **App Service Web App** for the front-end web application.
 
@@ -815,21 +819,21 @@ click **App Services** and then clicking the Offer API app you just created.
 
 6.  Add a new **Application Setting** with the following values:
 
-    -  Key: **paymentsAPIUrl**
+    -  App Setting Name: **paymentsAPIUrl**
 
-    -  Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end.
+    -  Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end
 
-    > Example: <https://paymentsapi0.azurewebsites.net/api/nvp>
+    > EXAMPLE: <https://paymentsapi0.azurewebsites.net/api/nvp>
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
 
 7.  Add another **Application Setting** with the following values:
 
-    c.  Key: **offersAPIUrl**
+    -  App Setting Name: **offersAPIUrl**
 
-    d.  Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end.
+    -  Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
 
-    > Ex: <https://offersapi4.azurewebsites.net/api/get>
+    > EXAMPLE: <https://offersapi4.azurewebsites.net/api/get>
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
@@ -857,13 +861,13 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![On the Contoso Sports League webpage, the message Order Completed displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image122.png "Contoso Sports League webpage")
 
->**Leader Note:** If the attendee is still experiencing CORS errors ensure the URLs to the Web App in Azure local host are exact.
+>**Leader Note:** If the attendee is still experiencing CORS errors, ensure the URLs to the Web App in Azure local host are exact.
 
-## Exercise 2: Identity and security
+## Exercise 2: Identity and Security
 
 Duration: 75 Minutes
 
-The Contoso call center admin application will only be accessible by users of the Contoso Active Directory environment. You have been asked to create a new Azure AD Tenant and secure the application so only users from the tenant can log onT
+The Contoso call center admin application will only be accessible by users of the Contoso Active Directory environment. You have been asked to create a new Azure AD Tenant and secure the application so only users from the tenant can log on.
 
 ### Task 1: Enable Azure AD Premium Trial
 
@@ -899,7 +903,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
 >**Note**: This task is **optional**, and it is valid only if you are a global administrator on the Azure AD tenant associated with your subscription.
 
-1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance.
+1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance
 
 2.  Click **Azure Active Directory** in the navigation menu to the left.
 
@@ -909,7 +913,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
     ![Custom Domain Names menu option screenshot.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image128.png "Custom Domain names")
 
-4.  Copy the **Domain Name** for your Azure AD Tenant. It will be in the format: *[your tenant\].onmicrosoft.com*
+4.  Copy the **Domain Name** for your Azure AD Tenant. It will be in the format: *[your tenant\].onmicrosoft.com*.
     This will be used for creating the new user's Username.
 
     ![Under Name, the Domain Name is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image129.png "Domain name")
@@ -944,7 +948,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
     ![Screenshot of the App Services button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image135.png "App Services button")
 
-2.  On the **Web Apps** page, select the **call center administration Web App**.
+2.  On the **Web Apps** page, select the **Call Center Administration Web app**.
 
     ![In the App Services blade, under Name, contososportsadmin2101 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image136.png "App Services blade")
 
@@ -978,7 +982,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
 #### Subtask 2: Verify the call center administration website uses the access control logon
 
-1.  Close your browser (or use an alternative), and launch a browser is InPrivate or Incognito mode. Navigate to the **call center administration** website.
+1.  Close your browser (or use an alternative), and launch a browser is InPrivate or Incognito mode. Navigate to the **Call Center Administration** website.
 
 2.  The browser will redirect to the non-branded Access Control logon URL. You can log on with your Microsoft account or the **Contoso test user** you created earlier.
 
@@ -996,9 +1000,9 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
 >**Note**: this task is **optional**, and it is valid only if you are a global administrator on the Azure AD tenant associated with your subscription, and you completed the Enabling Azure AD Premium exercise.
 
-1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance.
+1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance
 
-2.  In the navigation menu to the left, select **Azure Active Directory**. 
+2.  In the navigation menu to the left, select **Azure Active Directory**.
 
     ![The Azure Active Directory menu option](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image123.png "Azure Active Directory")
 
@@ -1038,7 +1042,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
     ![Screenshot of the Logged in message.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image146.png "Logged in message")
 
-5.  If you run the app using localhost, ensure connection strings for all of the web.config files in the solution have the placeholders removed with actual values. Search on web.config in the solution explorer to come up with the list.
+5.  If you run the app using localhost, ensure connection strings for all of the web.config files in the solution have the placeholders removed with actual values. Search on web.config in the Visual Studio Solution Explorer to come up with the list.
 
     ![In Solution Explorer, the following path is expanded: API\\Contoso.Apps.PaymentGateway\\Areas\\HelpPage\\Views. In the Views folder, Web.config is selected. In addition, the Web.config file is highlighted in several other folders.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image154.png "Solution Explorer")
 
@@ -1050,7 +1054,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 ### Task 1: Create a new directory
 
-1.  Log in to the Azure portal by using your existing Azure subscription or by starting a free trial. In the left-hand navigation menu, click **+ Create a resource**. Then, search for and select **Azure Active Directory B2C** and click **Create** on the new blade that pops up. 
+1.  Log in to the Azure portal by using your existing Azure subscription or by starting a free trial. In the left-hand navigation menu, click **+Create a resource**. Then, search for and select **Azure Active Directory B2C** and click **Create** on the new blade that pops up. 
 
     ![In the Everything blade, the active directory B2C text is in the Search field, and under Results, Azure Active Directory B2C displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image156.png "Everything blade")
 
@@ -1076,7 +1080,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![In the Azure AD B2C tenant window, on the left, All Settings is selected. In the bottom right section, the Azure AD B2C Settings tile is selected](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image160.png "Azure AD B2C Settings window")
 
-7. In the new tab that opened, under the **MANAGE** menu area of the open **Azure AD B2C** blade, select **Applications**. Then, in the new pane, click **+ Add**.
+7. In the new tab that opened, under the **MANAGE** menu area of the open **Azure AD B2C** blade, select **Applications**. Then, in the new pane, click **+Add**.
 
     ![In the Azure AD B2C Settings window, on the left, All Settings is selected. In the middle, under Settings, under Manage, Applications is selected. On the right, the Add button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/b2c-add-app-link.png "Azure AD B2C Settings window")
 
@@ -1086,7 +1090,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     -   Name: **Contoso B2C Application**
 
-    -   Reply URL: **https://\[your web url\].azurewebsites.net \<- This should be the HTTPS URL to the Contoso E-Commerce Site**.
+    -   Reply URL: **https://\[your web url\].azurewebsites.net** (This should be the HTTPS URL to the Contoso E-Commerce Site)
 
     -   Include Web App / web API: **Yes**
 
@@ -1104,7 +1108,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 1.  Navigate back to the **Azure AD B2C** blade that was opened in the last task.
 
-2.  To enable sign-up on your application, you will need to create a sign-up policy. This policy describes the experiences consumers will go through during sign-up and the contents of tokens the application will receive on successful sign-ups. Click **Sign-up or sign-in policies** and then **+ Add** at the top of the blade.
+2.  To enable sign-up on your application, you will need to create a sign-up policy. This policy describes the experiences consumers will go through during sign-up and the contents of tokens the application will receive on successful sign-ups. Click **Sign-up or sign-in policies** and then **+Add** at the top of the blade.
 
     ![In the Azure Portal, on the left, under Policies, Sign-up or sign-in policies is selected. On the right, the Add button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image162.png "Azure Portal")
 
@@ -1156,7 +1160,7 @@ To enable sign-in on your application, you will need to create a sign-in policy.
 
     ![In the Policies section, Sign-in policies is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image166.png "Policies section")
 
-2.  Click **+ Add** at the top of the blade.
+2.  Click **+Add** at the top of the blade.
 
 3.  The **Name** determines the sign-in policy name used by your application. For example, enter **SignIn**.
 
@@ -1189,7 +1193,7 @@ To enable profile editing on your application, you will need to create a profile
 
     ![In the Policies section, Profile editing policies is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image169.png "Policies section")
 
-2.  Click **+ Add** at the top of the blade.
+2.  Click **+Add** at the top of the blade.
 
 3.  The Name determines the profile editing policy name used by your application. For example, enter **EditProfile**.
 
@@ -1208,7 +1212,7 @@ To enable profile editing on your application, you will need to create a profile
 
     Click **OK**.
 
-    ![In the Add policy blade,Profile attributes (6 Selected) is selected. In the Profile attributes blade, the following six profile attributes are selected: Country / Region, Display Name, Job Title, Postal Code, State / Province, and Street Address.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image171.png "Add policy and Select identity providers blades")
+    ![In the Add policy blade, Profile attributes (6 Selected) is selected. In the Profile attributes blade, the following six profile attributes are selected: Country / Region, Display Name, Job Title, Postal Code, State / Province, and Street Address.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image171.png "Add policy and Select identity providers blades")
 
 6.  Click **Application claims**. Here, you choose claims you want returned in the tokens sent back to your application after a successful profile editing experience. For now, select:
 
@@ -1296,11 +1300,11 @@ To enable profile editing on your application, you will need to create a profile
 
     ![In Solution Explorer, on the App Start folder\'s right-click menu, Add is selected, and from its menu, Class is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image175.png "Solution Explorer")
 
-10. Select **Visual C\#** category and **Class**. Name the new file **Startup.Auth.cs**.
+10. Select **Visual C\#** category and **Class** and name the new file **Startup.Auth.cs**.
 
     ![In the Installed field, Visual C\# is selected. In the Sort by field, Class is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image176.png "Installed and Sort by fields")
 
-11. Replace the entire contents of Startup.Auth.cs with the following code:
+11. Replace the entire contents of Startup.Auth.cs with the following code and Save.
 
     ```csharp
     // App_Start\Startup.Auth.cs
@@ -1403,7 +1407,7 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
 
     ![In Solution Explorer, in the right-click menu for the Controllers folder, Add is selected, and from its menu, Controller is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image177.png "Solution Explorer")
 
-2.  Select **MVC 5 Controller -- Empty** amd then click **Add**. Replace **DefaultController** with **AccountController** in the **Add Controller** dialog box.
+2.  Select **MVC 5 Controller -- Empty** and then click **Add**. Replace **DefaultController** with **AccountController** in the **Add Controller** dialog box.
 
     ![On the left of the Add Scaffold window, Installed / Controller is selected. In the center of the window, MVC 5 Controller - Empty is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image178.png "Add Scaffold window")
 
@@ -1413,7 +1417,7 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
     using Microsoft.Owin.Security;
     ```
 
-4.  Replace the default controller method Index...
+4.  Replace the default controller method Index... and Save.
 
     ![The Default controller method Index is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image179.png "Default controller method Index")
 
@@ -1477,7 +1481,7 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
     }
     ```
 
-3.  You can access any claim that your application receives in the same way. A list of all the claims the app receives is available for you on the **Claims** page. Right click on **Views -\> Home,** click **Add -\> MVC 5 View Page (Razor)** and name it **Claims.** 
+3.  You can access any claim that your application receives in the same way. A list of all the claims the app receives is available for you on the **Claims** page. In Visual Studio on the Contoso.Apps.SportsLeague.Web object, right click on **Views -\> Home,** click **Add -\> MVC 5 View Page (Razor)** and name it **Claims.**  Select **OK**. 
 
     ![In Solution Explorer, on the right-click menu for Views\\Home, Add is selected, and from its menu, MVC 5 View Page (Razor) is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image180.png "Solution Explorer")
 
@@ -1588,7 +1592,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 >**Note**: You may need to create an Application Insights Resource in Azure portal depending on your subscription rights. After it is created, you can configure it and add to the project using the tasks below. To create a new Application Insights resource.
 
-1.  Click **Create** a resource. **Search** the marketplace for Application Insights. **Select** Application Insights.
+1.  Click **+Create a resource**. Search the Marketplace for Application Insights. **Select** Application Insights.
 
     ![In this screenshot a new application insights instance is created using the Azure portal.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image184.png "Screenshot of creating a resource")
 
@@ -1622,11 +1626,12 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![In the Sending telemetry to section, the link to Configure settings is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image190.png "Sending telemetry to section")
 
-6.  In the **Application Insights Configuration** dialog box, change the **Resource Group** to the **contososports** resource group used to host the Web App, and choose the New Application Insights Resource. Next, click **OK**, followed by **Update Resource**.
+6.  In the **Application Insights Configuration** dialog box, change the **Resource Group** to the **contososports** resource group used to host the Web App, and choose the New Application Insights Resource. Next, click **OK**, followed by **Update resource**.
 
     ![In the Application Insights Configuration dialog box, the Resource Group contososports is selected. In the Application Insights Resource drop-down list box, Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image191.png "Application Insights Configuration dialog box")
 
 7.  Press **Finish** on the Application Insights window.
+    >NOTE: You may also have to configure Trace Collection depending on your ID and subscription.
 
     ![The Finish button is circled in the Application Insights window.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image192.png "Application Insights window")
 
@@ -1668,11 +1673,11 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![Under Name, Contoso.Apps.SportsLeague.Web displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image195.png "Name section")
 
-3.  In CONFIGURE menu click on **Getting Started**.
+3.  In the tiles up top, click on **Getting Started**.
 
     ![From the Configure menu, Getting started is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image196.png "Configure menu")
 
-4.  Next, click the **MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION** arrow. This will open the **Client application monitoring and diagnosis** blade.
+4.  in the portal, navigate to How-to Guides-> Collect data-> Configure applications-> Web Pages -> JavaScript.
 
     ![Screenshot of the MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION arrow.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image197.png "MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION ")
 
@@ -1732,7 +1737,8 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![On the Organization Settings tile, the Or Create New link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image207.png "Account tile")
 
-6.  Specify a unique name for the account and select a region. Note the region may differ from the region you have deployed your resources.
+6.  Specify a unique name for the account and select a region. 
+    >Note: the region may differ from the region you have deployed your resources
 
     ![On the Organization Settings blade, under Azure DevOps Account, contososportsis selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image208.png "Account Settings blade")
 
@@ -1754,7 +1760,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![On the Application Insights blade, the New button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image211.png "Application Insights blade")
 
-11. Click on **Configure Test Using**.
+11. Click on **Configure Test Using**
 
     ![The Configure Test Using option displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image212.png "Configure Test Using option")
 
@@ -1766,7 +1772,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![On the New performance test blade, under Name, ContosoSportsTest is selected. At the bottom, the Run test button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image214.png "New performance test blade")
 
-14. Wait until the load test has completed.
+14. Wait until the load test has completed. This may take 5-10 minutes.
 
     ![In the Recent runs section, the load test for ContosoSportsTest has a state of Completed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image215.png "Recent runs section")
 
@@ -1804,23 +1810,23 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 -   Advanced formatting or compute of fields in logic apps
 
--   Perform calculations in a workflow.
+-   Perform calculations in a workflow
 
 -   Extend the logic app functionality with functions that are supported in C\# or node.js
 
 ### Task 1: Create an Azure Function to Generate PDF Receipts
 
-1.  Click the **+ Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Then in the new blade, select your Subscription, type an unique App name that identifies your function app, then specify the following settings:
+1.  Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Then in the new blade, select your Subscription, type an unique App name that identifies your function app, then specify the following settings:
 
-    -   [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group **contososports**.
+    -   [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
 
-    -   [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview), which can be one of these plans:
+    -   [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): One of the following plans:
 
-        -   **Hosting plan**: The default hosting plan type for Azure Functions is **Consumption Plan**. When you choose a consumption plan, you must also choose the **Location**. For now, select **App Service Plan**. 
+        -   **Hosting plan**: The default hosting plan type for Azure Functions is **Consumption Plan**. When you choose a consumption plan, you must also choose the **Location**. For now, select **App Service Plan**.
 
         -   **App Service plan**: An App Service plan requires you to create an **App Service plan/location** or select an existing one. These settings determine the [location, features, cost, and compute resources](https://azure.microsoft.com/pricing/details/app-service/) associated with your app. For now, select the existing App Service Plan you have been using so far in this lab. 
 
-        -   **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking Select Existing and choosing the storage account in the contososports resource group.
+        -   **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking **Select Existing** and choosing the storage account in the **contososports** resource group.
 
     ![On the left side of the Portal, the Create a resource button is selected. In the middle, under New, Compute is selected. On the right, under Compute, Function App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image221.png "Azure Portal")
 
@@ -1828,17 +1834,21 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Under Function App, the App name field is set to ContosoFunctionApp, and at the bottom the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image222.png "Function App section")
 
-3.  Open the Function App you just created. Click the **+** besides **Functions**, scroll down, and select **Custom function**.
+3.  Open the Function App you just created. Click the **+** besides **Functions**, select **In-portal** and select **Continue**.
 
-    ![In Function Apps, on the left side, the plus sign shown when hovering over Function is selected. On the right side, the Custom Function link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image223.png "Function Apps")
+    ![In Function Apps Getting Started,In-Portal is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image223.png "Function Apps")
 
-4.  In the **GenericWebHook** card, click the **C#** link.
+4.  In the **Azure Functions for .NET getting started** card, click the **More templates...#**. Select **Finish and view templates**.
 
-    ![In the Azure Portal, under Choose a template below, the GenericWebHook-CSharp tile is selected. Below, the Name your function field is ContosoMakePDF, and the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image224.png "Azure Portal")
+    ![In the Azure Portal, under Azure Functions for .NET getting started dialog, the More templates tile is selected. .](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image224.png "Azure Portal")
 
-5.  In the **New Function** blade, name the function **ContosoMakePDF** and then click **Create**.
+5.  In the **Choose template** dialog, select **HTTP trigger**.
 
     ![In the New Function blade, settings are consistent with instructions.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image225.png "View files expand arrow")
+
+5.  In the **HTTP trigger New Function** blade, name the function **ContosoMakePDF** and then click **Create**.
+
+    ![In the New Function blade, settings are consistent with instructions.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image225a.png "View files expand arrow")
 
 6.  Expand the **View files** area on the right of the code window and then click **Upload**.
 
@@ -1846,7 +1856,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Screenshot of the Upload button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image226.png "Upload button")
 
-7.  Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder beneath: C:\\MCW.
+7.  Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder beneath: C:\\MCW:
 
     -   ViewModels.csx
     -   CreatePdfReport.csx
@@ -1867,15 +1877,15 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     >**Note**: You should see several messages about downloading dependent assemblies such as the Azure SDK and iText Sharp that were defined in the project.json file.
 
-10. Select the name of your function app, and then click on **Platform Features** followed by **Application settings.**
+10. Select the name of your function app, and then click on **Platform Features** followed by **Application settings**.
 
     ![In the Azure Portal, under Function Apps, ContosoFunctionApp is selected. Under General Settings, Application settings is selected. The Platform Features link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image230.png "Azure Portal")
 
-10. In the **Application Settings**, add a new entry called **contososportsstorage**, and paste the value of the connection string noted in an earlier exercise. Click **Save** after adding the value.
+10. In the **Application Settings**, add a new entry called **contososportsstorage**, and paste the value of the **connection string** noted in an earlier exercise. Click **Save** after adding the value.
 
     ![In the Application settings section, contososportsstorage and its value are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image231.png "App settings section")
 
-    >**Note**: You can find the value by opening the storage account, and clicking the **Access Keys** tile.
+    >**Note**: You can find the Connection String value by opening the storage account, and clicking the **Access Keys** tile. Be sue to use the connection string and NOT the key itself.
 
 11. Back in your function, open the **sample.dat** file, and select as well as copy (Ctrl+C) the test data.
 
@@ -1885,7 +1895,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Screenshot of the run.csx file, and the Test tab request body.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image233.png "Run.csx file, Test tab request body")
 
-13. Select the **View Files** tab, select **Run.csx**, and click run.
+13. Select the **View Files** tab, select **Run.csx**, and click **Run**.
 
 14. You should see messages in the Logs window stating the Webhook was triggered, and the PDF was generated / saving it the storage account. Also, you should see that actual message text in the Output Window.
 
@@ -1901,19 +1911,19 @@ Without writing any code, you can automate business processes more easily and qu
 
 The advantages of using Logic Apps include the following:
 
--   Saving time by designing complex processes using easy to understand design tools.
+-   Saving time by designing complex processes using easy to understand design tools
 
--   Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code.
+-   Implementing patterns and workflows seamlessly, that would otherwise be difficult to implement in code
 
--   Getting started quickly from templates.
+-   Getting started quickly from templates
 
--   Customizing your logic app with your own custom APIs, code, and actions.
+-   Customizing your logic app with your own custom APIs, code, and actions
 
--   Connect and synchronize disparate systems across on-premises and the cloud.
+-   Connect and synchronize disparate systems across on-premises and the cloud
 
--   Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support.
+-   Build off of BizTalk server, API Management, Azure Functions, and Azure Service Bus with first-class integration support
 
-1.  Next, we will create a Logic App that will trigger when an item is added to the **receiptgenerator** queue. In the Azure Management Portal, click the **+** button, search for **Logic App**, click the returned Logic App result, and click **Create**.
+1.  Next, we will create a Logic App that will trigger when an item is added to the **receiptgenerator** queue. In the Azure Management Portal, click the **+Create a resource** button, search for **Logic App**, click the returned Logic App result, and click **Create**.
 
     ![In the Azure Portal, under Marketplace, Everything is selected. Under Everything, Logic App is in the search field. Under Name, Logic App is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image236.png "Azure Portal")
 
@@ -1933,11 +1943,11 @@ The advantages of using Logic Apps include the following:
 
     ![In the Logic Apps Designer, the Blank Logic App tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image240.png "Logic Apps Designer")
 
-6.  Select **Azure Queues.**
+6.  Select **Azure Queues**. You may have to search for it.
 
     ![In the Services section, the Azure Queues tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image241.png "Services section")
 
-7.  Select **Azure Queues -- When there are messages in a queue**.
+7.  Select **Azure Queues -- When there are messages in a queue**
 
     ![In the Search all triggers section, Azure Queues - When there are messages in a queue is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image242.png "Search all triggers section")
 
@@ -1993,7 +2003,7 @@ The advantages of using Logic Apps include the following:
 
 18. Double click it to see the Purchase receipt.
 
-19. Now, click the **Designer** button in the Logic Apps Designer screen. add two more steps to the flow for updating the database and removing the message from the queue after it has been processed. Switch back to the designer, click **+ New Step** and select **Add an Action**.
+19. Now, click the **Designer** button in the Logic Apps Designer screen. add two more steps to the flow for updating the database and removing the message from the queue after it has been processed. Switch back to the designer, click **+ New step**.
 
     ![In Designer, the New Step link is circled. Under New step, the Add an action tile is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image254.png "Designer")
 
@@ -2005,7 +2015,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the SQL Server section, on the Actions tab, SQL Server - Update row is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image256.png "SQL Server section")
 
-22. Name the connection ContosoSportsDB, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create.**
+22. Name the connection ContosoSportsDB, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create**.
 
     ![TheUpdate row section displays the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image257.png "Update row")
 
@@ -2056,7 +2066,7 @@ The advantages of using Logic Apps include the following:
 
     ![The Update row section displays the purchase fields.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image261.png "Update row section")
 
-29. Finally, let us add one more step to remove the message from the queue. Press **+New Step** and **Add an Action**. Type in Queue in the search box, and select Azure Queues -- Delete message.
+29. Finally, let us add one more step to remove the message from the queue. Press **+New Step**. Type in Queue in the search box, and select Azure Queues -- Delete message.
 
     ![In the Choose an action section, queue is typed in the search field. Under Services, Azure Queues is selected. On the Actions tab, Azure Queues - Delete message is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image262.png "Choose an action section")
 
@@ -2066,9 +2076,9 @@ The advantages of using Logic Apps include the following:
 
     ![In the Update row section, on the left in the Delete message fields, Message ID and Pop receipt are selected. On the right, under When there are messages in a queue, Message ID and Pop receipt are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image263.png "Update row section")
 
-32. Click Run on the Logic App Desinger, and then run the Contoso sports Web App and check out an Item.
+32. Click Run on the Logic App Designer, and then run the Contoso sports Web App and check out an Item.
 
-33. Run the admin website app, and select the last Details link in the list.\
+33. Run the admin website app, and select the last Details link in the list.
     ![Screenshot of the Details link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image264.png "Details link")
 
 34. You should now see a Download receipt link because the database has been updated.
@@ -2087,7 +2097,7 @@ The advantages of using Logic Apps include the following:
 
 1.  If you do not have a Twilio account, sign up for one for free at the following URL:
 
-    [**https://www.twilio.com/try-twilio**](https://www.twilio.com/try-twilio).
+    [**https://www.twilio.com/try-twilio**](https://www.twilio.com/try-twilio)
 
     ![Screenshot of the Twilio account Sign up for free webpage.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image268.png "Twilio account Sign up webpage")
 
@@ -2109,13 +2119,13 @@ The advantages of using Logic Apps include the following:
 
 6.  Click **Get Started**.
 
-    ![On the Console, under Phone Nunbers, the Get Started button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image272.png "Console")
+    ![On the Console, under Phone Numbers, the Get Started button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image272.png "Console")
 
 7.  Click the **Get your first Twilio phone number** button.
 
     ![On the Get Started with Phone Numbers prompt, the Get your first Twilio phone number button displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image273.png "Get Started with Phone Numbers prompt")
 
-8.  Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done.**
+8.  Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done**.
 
     ![On the Your first Twilio Phone Number prompt, the number is obscured.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image274.png "Your first Twilio Phone Number prompt")
 
@@ -2163,7 +2173,7 @@ The advantages of using Logic Apps include the following:
 
     ![Screenshot of the Execute button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image278.png "Execute button")
 
-7.  In the Azure Management Portal, click the **+ Create a resource** button, then **Web**, and, finally **Logic App**.
+7.  In the Azure Management Portal, click the **+Create a resource** button, then **Web**, and, finally **Logic App**.
 
     ![In the Azure Portal, on the left side, the Create a resource menu option is selected. On the right, Web and Logic App are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image279.png "Azure Portal")
 
@@ -2173,7 +2183,7 @@ The advantages of using Logic Apps include the following:
 
 9.  In the navigation menu to the left in the Portal, click **Resource Groups** then **contososports**, then the new Logic App you just created. 
 
-10. In the Logic App blade, under the **DEVELOPMENT TOOLS** menu area, click **Logic App Designer**. Then, sselect the **Blank Logic App** Template.
+10. In the Logic App blade, under the **DEVELOPMENT TOOLS** menu area, click **Logic App Designer**. Then, select the **Blank Logic App** Template.
 
     ![In the Logic Apps Designer, the Blank Logic App tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image282.png "Logic Apps Designer")
 
@@ -2201,19 +2211,27 @@ The advantages of using Logic Apps include the following:
 
     ![In the Execute stored procedure section, the Procedure name is \[dbo\].\[GetUnprocessedOrders\].](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image288.png "Execute stored procedure section")
 
-17. Click on **New Step**, and click the **Add a condition** link.
+17. Click on **New Step**, and search for and select the **Control** object.
 
-    ![The New step and Add a condition buttons are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image289.png "Buttons")
+    ![The Control object is highlighted on the logic app designer pick tool.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image289.png "Buttons")
 
-18. Specify **ReturnCode** for the OBJECT NAME, set the RELATIONSHIP to **is greater than**, and set the VALUE to **0**.
+17. Click on **New Step**, and search for and select the **Control -> Condition** object.
 
-    ![Under Condition, Object Name is ReturnCode, Relationship is is greater than, and Value is 0.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image290.png "Condition section")
+    ![The Control Condition object is highlighted on the logic app designer pick tool.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image290b.png "Buttons")  
+    
+17. Click on **Choose a value**, and then select **Return Code** from the Dynamic content tile.
+
+    ![The Choose a value box and Return Code objects are highlighte in the Dynamic content tile in the Logic Designer.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image290c.png "Buttons")        
+
+18. Specify **ReturnCode**, set the RELATIONSHIP to **is greater than**, and set the VALUE to **0**.
+
+    ![Under Condition, Object Name is ReturnCode, Relationship is greater than, and Value is 0.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image290.png "Condition section")
 
 19. Click the **Add an action** link on the **If true** condition.
 
     ![Under If true, the Add an action button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image291.png "If yes section")
 
-20. Click **SQL Server**, and then click the **SQL Server -- Execute stored procedure** action.
+20. Click **SQL Server**, and then click the **SQL Server -- Execute stored procedure** action
 
     ![Under If Yes, SQL Server - Execute stored procedure is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image292.png "If yes section")
 
