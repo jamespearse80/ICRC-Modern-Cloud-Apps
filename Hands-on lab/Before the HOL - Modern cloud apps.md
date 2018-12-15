@@ -57,10 +57,10 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 ### Task 1: Setup a development environment
 
 1.  Create a virtual machine in Azure using the Visual Studio Community 2017 with the **latest release** on Windows Server 2016 image.
-    - Name: Whatever you want
-    - User Name: whatever you want
-    - Password: Your choice, but make note of it
-    - Networking: You may want to enable RDP (port 3389) for Remote Desktop access
+    - **Name**: Whatever you want
+    - **User Name**: whatever you want
+    - **Password**: Your choice, but make note of it
+    - **Networking**: You may want to enable RDP (port 3389) for Remote Desktop access.
 
     ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
 
@@ -128,4 +128,4 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
 
-You should successfully complete all steps provided in this guide *before* starting the actual Modern Cloud Apps hands-on lab.
+You should follow all steps provided *before* performing the Hands-on lab.
