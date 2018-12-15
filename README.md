@@ -16,11 +16,11 @@ In this workshop, you will work as a group to implement an end-to-end solution f
 
 At the end of this workshop, you will be better able to deploy and configure Azure Web Apps and associated services. In addition, you will learn to configure Web Apps for authentication with Azure AD, instrument and load-test the application with App Insights, and automate back-end services using Azure Functions and Logic Apps.
 
-### Whiteboard Design Session
+### Whiteboard design session
 
-In the Whiteboard Design Session, you will work in groups to design a solution to modernize CSLA's e-commerce and back-end services while maintaining existing PCI compliance. To ensure compliance, you will ensure data privacy and protection across all aspects of the system, in transit and at rest. The goal is to use Azure PaaS services for the public-facing and back-end websites, while providing a way for the on-premises components to securely communicate with these services. You will also design fault-tolerance and a regional failover plan of the Azure components.
+In the whiteboard design session, you will work in groups to design a solution to modernize CSLA's e-commerce and back-end services while maintaining existing PCI compliance. To ensure compliance, you will ensure data privacy and protection across all aspects of the system, in transit and at rest. The goal is to use Azure PaaS services for the public-facing and back-end websites, while providing a way for the on-premises components to securely communicate with these services. You will also design fault-tolerance and a regional failover plan of the Azure components.
 
-By the end of this Whiteboard Design Session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
+By the end of this whiteboard design session, you will have a better understanding of how to modernize a legacy web app by retargeting it for the cloud, taking advantage of the many services Azure provides to enhance functionality and secure your solution's components by following best practices for PCI compliance and security.
 
 ### Hands-on Lab
 
