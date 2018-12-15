@@ -103,7 +103,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure. 
 
-Please note that as opposed to the Whiteboard Design Session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
+Please note that as opposed to the whiteboard design session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
 By the end of this hands-on lab, you will have learned how to use several key services within Azure to improve overall functionality of the original solution, and to increase the security and scalability of the new and improved design.
 
@@ -149,7 +149,6 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 | Logic Apps Docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-what-are-logic-apps> |
 | Azure Functions -- create first function | <https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function> |
 | Azure Functions docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-functions> |
-|
 
 ## Exercise 1: Proof of concept deployment
 
@@ -165,11 +164,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance and login with your lab-provided Azure credentials.
 
-2.  In the navigation menu to the left, click **+Create a resource** and in the Marketplace search text box, enter **Web App + SQL** and select the appropriate auto-suggestion.
+2.  In the navigation menu to the left, select **+Create a resource** and in the Marketplace search text box, enter **Web App + SQL** and select the appropriate auto-suggestion.
 
     ![In the Azure Portal on the left, "+Create a resource", search box text and auto-suggestion are surrounded by red boxes.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image11.png "Azure Portal")
 
-3.  In the new product blade, click **Create**.
+3.  In the new product blade, select **Create**.
 
     ![The Web App + SQL blade](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image13.png "Web App + SQL blade")
 
@@ -182,7 +181,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  **ContosoSportsPlan** as a new App Service Plan. Make sure it's in the same location as the **contososports** resource group you created earlier. Use the default **Standard S1** pricing tier. 
 
-5. Select **SQL Database *Configure required settings***, and then click **+ Create a new database**.
+5. Select **SQL Database *Configure required settings***, and then **+ Create a new database**.
 
     ![The tile for the Create a new database option is displayed.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image16.png " Create a new database")
 
@@ -198,7 +197,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Password and Confirm Password: **Password.1!!**
 
-    -  Ensure the **Location** is the same region as the Web app
+    -  Ensure the **Location** is the same region as the Web app.
 
     ![Fields in the New server blade are circled and set to the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image19.png "New server blade")
 
@@ -210,7 +209,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-10. After the values are accepted on the **Web App + SQL** creation blade, check click **Create**.
+10. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image21.png "Create button")
 
@@ -324,7 +323,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     -  Type: **SQLAzure**
 
-    >IMPORTANT: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously. 
+    >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously. 
     
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
@@ -364,7 +363,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
-    >TROUBLESHOOTING: If the web site fails to show products, go back and double check all of your connection string entries and passwords.
+    >**Troubleshooting**: If the web site fails to show products, go back and double check all of your connection string entries and passwords.
 
 ### Task 2: Setup SQL Database Geo-Replication
 
@@ -604,7 +603,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
-2.  Click **+Create a new resource** **\>** **Web** **\>** **Web App** 
+2.  Select **+Create a new resource** **\>** **Web** **\>** **Web App**.
 
    ![In the left menu of the Azure Portal, the New button is selected. In middle section, under Marketplace, Web + mobile is selected. In the right, Web + mobile section, under Featured apps, Web App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image78.png "Azure Portal")
 
@@ -628,13 +627,13 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![In the Settings section of the App Service blade, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image81.png "Settings section")
 
-3.  Scroll down, and locate the **Connection strings** section
+3.  Scroll down, and locate the **Connection strings** section.
 
 4.  Add a new **Connection string** with the following values:
 
     -  Name: **ContosoSportsLeague**
 
-    -  Value: **Enter the Connection String for the last SQL Database that was created**
+    -  Value: **Enter the Connection String for the last SQL Database that was created**.
 
     -  Type: **SQL Database**
 
@@ -747,7 +746,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
 2.  In the **ALLOWED ORIGINS** text box, specify "*" to allow all origins, and click **Save**.
 
-    >NOTE: You should not normally do this in a production environment.
+    >**Note**: You should not normally do this in a production environment.
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -759,7 +758,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     -  Name: **ContosoSportsLeague**
 
-    -  Value: **Enter the Connection String for the SQL Database that was created**
+    -  Value: **Enter the Connection String for the SQL Database that was created**.
 
     -  Type: **SQL Database**
 
@@ -823,7 +822,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     -  Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end
 
-    > EXAMPLE: <https://paymentsapi0.azurewebsites.net/api/nvp>
+    > **Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
 
@@ -833,7 +832,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     -  Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
 
-    > EXAMPLE: <https://offersapi4.azurewebsites.net/api/get>
+    > **Example**: <https://offersapi4.azurewebsites.net/api/get>
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
@@ -1000,7 +999,7 @@ If you already have a Premium Azure Active Directory, skip to Task 2.
 
 >**Note**: this task is **optional**, and it is valid only if you are a global administrator on the Azure AD tenant associated with your subscription, and you completed the Enabling Azure AD Premium exercise.
 
-1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance
+1.  Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance.
 
 2.  In the navigation menu to the left, select **Azure Active Directory**.
 
@@ -1631,7 +1630,8 @@ To configure the application for logging and diagnostics, you have been asked to
     ![In the Application Insights Configuration dialog box, the Resource Group contososports is selected. In the Application Insights Resource drop-down list box, Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image191.png "Application Insights Configuration dialog box")
 
 7.  Press **Finish** on the Application Insights window.
-    >NOTE: You may also have to configure Trace Collection depending on your ID and subscription.
+
+    >**Note**: You may also have to configure Trace Collection depending on your ID and subscription.
 
     ![The Finish button is circled in the Application Insights window.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image192.png "Application Insights window")
 
@@ -1677,7 +1677,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![From the Configure menu, Getting started is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image196.png "Configure menu")
 
-4.  in the portal, navigate to How-to Guides-> Collect data-> Configure applications-> Web Pages -> JavaScript.
+4.  In the portal, navigate to How-to Guides-> Collect data-> Configure applications-> Web Pages -> JavaScript.
 
     ![Screenshot of the MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION arrow.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image197.png "MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION ")
 
@@ -1737,8 +1737,9 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![On the Organization Settings tile, the Or Create New link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image207.png "Account tile")
 
-6.  Specify a unique name for the account and select a region. 
-    >Note: the region may differ from the region you have deployed your resources
+6.  Specify a unique name for the account and select a region.
+
+    >**Note**: The region may differ from the region you have deployed your resources.
 
     ![On the Organization Settings blade, under Azure DevOps Account, contososportsis selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image208.png "Account Settings blade")
 
@@ -1760,7 +1761,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![On the Application Insights blade, the New button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image211.png "Application Insights blade")
 
-11. Click on **Configure Test Using**
+11. Click on **Configure Test Using**.
 
     ![The Configure Test Using option displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image212.png "Configure Test Using option")
 
@@ -1947,7 +1948,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the Services section, the Azure Queues tile is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image241.png "Services section")
 
-7.  Select **Azure Queues -- When there are messages in a queue**
+7.  Select **Azure Queues -- When there are messages in a queue**.
 
     ![In the Search all triggers section, Azure Queues - When there are messages in a queue is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image242.png "Search all triggers section")
 
