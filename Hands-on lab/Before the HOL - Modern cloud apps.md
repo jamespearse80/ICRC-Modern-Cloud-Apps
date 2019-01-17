@@ -104,7 +104,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 1.  Create a new folder on your C: drive named **MCW**.
 
-2.  Download the sample application from here: <https://cloudworkshop.blob.core.windows.net/modern-cloud-apps/Modern%20Cloud%20Apps%20Student%20Files.zip> and extract to the newly created **MCW** folder.
+2.  Download the sample application from here: <https://github.com/Microsoft/MCW-Modern-cloud-apps/tree/master/Hands-on%20lab/Lab-files/Modern%20Cloud%20Apps%20Student%20Files.zip>  and extract to the newly created **MCW** folder.
 
 3.  From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
 

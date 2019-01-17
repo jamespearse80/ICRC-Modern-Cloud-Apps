@@ -1882,11 +1882,12 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![In the Azure Portal, under Function Apps, ContosoFunctionApp is selected. Under General Settings, Application settings is selected. The Platform Features link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image230.png "Azure Portal")
 
-10. In the **Application Settings**, add a new entry called **contososportsstorage**, and paste the value of the **connection string** noted in an earlier exercise. Click **Save** after adding the value.
+10. In the **Application Settings**, add a new entry called **contososportsstorage**, and paste the value of the **connection string** noted in an earlier exercise. Also expand the FUNCTIONS_EXTENSION_VERSION attribute and change the value from ~2 (the Azure default now) to ~1. Click **Save** after adding the value.
 
     ![In the Application settings section, contososportsstorage and its value are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image231.png "App settings section")
 
     >**Note**: You can find the Connection String value by opening the storage account, and clicking the **Access Keys** tile. Be sue to use the connection string and NOT the key itself.
+    >**Note**: Azure Function Apps now use FUNCTIONS_EXTENSION_VERSION with a *default* setting of ~2 (version 2). The Student lab solution requires v1 to function properly. 
 
 11. Back in your function, open the **sample.dat** file, and select as well as copy (Ctrl+C) the test data.
 
