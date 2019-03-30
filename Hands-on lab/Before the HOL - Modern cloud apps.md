@@ -81,8 +81,21 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
 
     ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
+4. Allow for downloading files.  Open **Internet Explorer**.
+    - Type F10.  The menu should be displayed.
+    - Go to **Tools**.
 
-4.  Change to **Off** for Administrators, and select **OK**.
+        ![Showing IE menu.](media/2019-03-20-15-40-37.png)
+    - Click **Internet Options**
+    - Click the **Security** tab and then **Custom Level** button for the **Internet**
+
+    ![Showing the Internet Options](media/2019-03-20-15-44-24.png)
+    - Scroll down to **File download** and enable.
+
+    ![Showing Internet custom options](media/2019-03-20-15-46-49.png)
+
+5. Now you can dowload files from the Internet. Download and install **Google Chrome**. 
+6. Change to **Off** for Administrators, and select **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
 

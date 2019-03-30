@@ -342,9 +342,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 9.  Click **Save**.
 
-    ![On the App Service blade, the Save button selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image44.png "App Service blade")
-
-10.  Update the Visual Studio Solution configuration settings.
+10.  If the following AppSettings are missing, update the Visual Studio Solution configuration settings.
      - Log into your Lab VM you created in the Before HOL.
      - Open the Visual Studio solution and expand the ``Contoso.Apps.SportsLeague.Web`` project.
      - Find the ``Web.config`` file.
@@ -360,7 +358,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
     
      - Update the ``ContosoSportsLeague`` connection string with the database connection string.
 
-![AppSettings values from Contoso.Apps.SportsLeague.Web](media/2019-03-22-16-49-52.png)
+        ![AppSettings values from Contoso.Apps.SportsLeague.Web](media/2019-03-22-16-49-52.png)
 
 #### Subtask 4: Deploy the e-commerce Web App from Visual Studio
 
@@ -421,6 +419,10 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
     ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West US, which on the map has a blue checkmark.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image54.png "Geo-Replication blade")
 
     The Secondary Azure Region should be the Region Pair for the region the SQL Database is hosted in. Consult https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions to see which region pair the location you are using for this lab is in.
+
+    >Note: If you choose a region that cannot be used as a secondary region, you will not be able to pick a pricing plan. Choose another region.
+
+    ![Wrong geo-replication region selected. Not available options presented.](media/2019-03-30-16-05-25.png "Not available options presented.")
 
 5.  On the **Create secondary** blade, select **Secondary Type** as **Readable**.
 
@@ -1955,7 +1957,6 @@ Contoso wants to automate the process of generating receipts in PDF format and a
     ![Screenshot of the Upload button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image226.png "Upload button")
 
 8.  Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder.
-    >Note: To complete this next task, you could navigate to the Lab VM and log into [the Azure portal](https://portal.azure.com/), and locate the files to upload.  The other option is to navigate to GitHub and download the lab zip file locally to upload CreatePDFReport files.    
 
     ![CreatePDFReport project files to be uploaded](media/2019-03-29-12-19-37.png "CreatePDFReport project files to be uploaded")
 
