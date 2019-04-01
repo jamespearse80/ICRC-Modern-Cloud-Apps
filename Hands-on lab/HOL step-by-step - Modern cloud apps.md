@@ -235,7 +235,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 14. On the **Overview** screen of the **SQL Server** blade, click **Set server firewall**.
 
-    ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image25.png "SQL Server Blade, Essentials section")
+    ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](media/2019-03-31-14-37-31.png "SQL Server Blade, Essentials section")
 
 15. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
@@ -254,6 +254,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 18. Close all configuration blades.
 
 #### Subtask 2: Provision the storage account
+>Note: You can skip the storage account provisioning steps if you use the storage account created during the Lab VM provisioning.
 
 1.  Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
@@ -342,23 +343,6 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 9.  Click **Save**.
 
-10.  If the following AppSettings are missing, update the Visual Studio Solution configuration settings.
-     - Log into your Lab VM you created in the Before HOL.
-     - Open the Visual Studio solution and expand the ``Contoso.Apps.SportsLeague.Web`` project.
-     - Find the ``Web.config`` file.
-     - Add the AppSetting values
-        ```<add key="ida:Tenant" value=""/>
-         <add key="ida:ClientId" value=""/>
-         <add key="ida:RedirectUri" value="https://<your web app url>.azurewebsites.net"/>
-         <add key="ida:SignupPolicyId" value="B2C_1_SignUp"/>
-         <add key="ida:SignInPolicyId" value="B2C_1_SignIn"/>
-         <add key="ida:UserProfilePolicyId" value="B2C_1_EditProfile"/>
-         <add key="ida:AadInstance" value="https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}"/>
-         ```
-    
-     - Update the ``ContosoSportsLeague`` connection string with the database connection string.
-
-        ![AppSettings values from Contoso.Apps.SportsLeague.Web](media/2019-03-22-16-49-52.png)
 
 #### Subtask 4: Deploy the e-commerce Web App from Visual Studio
 
@@ -396,7 +380,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
-    >**Troubleshooting**: If the web site fails to show products, go back and double check all of your connection string entries and passwords.
+    >**Troubleshooting**: If the web site fails to show products, go back and double check all of your connection string entries and passwords. Start the solution in debug mode.
 
 ### Task 2: Setup SQL Database Geo-Replication
 
@@ -719,7 +703,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 2.  Click **+Create a resource**, type **API App** into the marketplace search box, and press **Enter**.  At the bottom of the blade, click **Create**.
 
-    ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png) "Azure Portal - Create API App"
+    ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png "Azure Portal - Create API App") 
 
 3.  On the new **API App** blade, specify a unique name for the App Name, and ensure the previously used Resource Group and App Service Plan are selected.
 
@@ -764,8 +748,6 @@ In this exercise, the attendee will provision an Azure API app template using th
 1.  Using a new tab or instance of your browser, navigate to the Azure Management Portal (<http://portal.azure.com>).
 
 2.  In the navigation menu to the left, click **+Create a resource** -\> **Web** -\> **API App**.
-
-    ![In the Azure Portal left menu, New is selected. On the right, under New, API App is typed in the Search box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image90.png "Azure Portal")
 
 3.  On the new **API App** blade, specify a unique name for the **API App**, and ensure the previously used Resource Group and App Service Plan are selected.
 
@@ -878,11 +860,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
+    >**Note**: Ensure both of the API URLs are using **SSL** (https://), or you will see a CORS errors.
+
 8.  Click on **Save**.
-
-    ![The Save button is boxed in red on the App Service blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image44.png "App Service blade")
-
->**Note**: Ensure both of the API URLs are using **SSL** (https://), or you will see a CORS errors.
 
 #### Subtask 2: Validate App Settings are correct
 
@@ -1201,7 +1181,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![Azure AD B2C - User flows list.  Shows the newly created flow.](media/2019-03-28-12-46-48.png "Azure AD B2C User Flow List")
 
-10.  Open the policy by clicking the link in the list e.g. **B2C\_1\_SignUpSignIn**.
+10.  Open the policy by clicking the link in the list e.g. **B2C\_1\_SignUp**.
 
 11. Click **Run user flow** and open the dialog.
     ![In the Policies section, Sign-in policies is selected.](media/2019-03-28-12-52-27.png "Policies section")
@@ -1343,19 +1323,20 @@ To enable profile editing on your application, you will need to create a profile
 
 5.  Click **Save** when you are complete.
 
-6.  Within Visual Studio, **right** click on the **Contoso.Apps.SportsLeague.Web** project, and click **Add -\> New Item.**
+6.  Expand the **Contoso.Apps.SportsLeague.Web** project. Find the **Web.config** file and delete the AppSetting key, ```<add key="owin:AutomaticAppStartup" value="false"/>```.
+7.  Within Visual Studio, **right** click on the **Contoso.Apps.SportsLeague.Web** project, and click **Add -\> New Item.**
 
     ![In Solution Explorer, the Web folder is expanded, and Contoso.Apps.SportsLeague.Web is selected. From its right-click menu, Add is selected, and from its menu, New item is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image173.png "Solution Explorer")
 
-7.  In the **Search Installed Templates** search box, search for **OWIN**. Click the **OWIN Startup** class, change the name to **Startup.cs**, and then click **Add**.
+8.  In the **Search Installed Templates** search box, search for **OWIN**. Click the **OWIN Startup** class, change the name to **Startup.cs**, and then click **Add**.
 
     ![In the New class section, the word \"partial\" is circled in the line, \"public partial class Startup\".](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/add-owin-class.png "New class section")
 
-8.  In the new class, insert the word partial in between public and class to make this a partial class.
+9.  In the new class, insert the word partial in between public and class to make this a partial class.
 
     ![In the New class section, the word \"partial\" is circled in the line, \"public partial class Startup\".](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image174.png "New class section")
 
-9.  Add the following code between the brackets of the Configuration method:
+10. Add the following code between the brackets of the Configuration method:
 
     ```csharp
     ConfigureAuth(app);
