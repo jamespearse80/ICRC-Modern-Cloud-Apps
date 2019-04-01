@@ -27,14 +27,14 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Modern cloud apps before the hands-on lab setup guide](#modern-cloud-apps-before-the-hands-on-lab-setup-guide)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
-        - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
-        - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
-        - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
-        - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
-        - [Task 6: Create a new Azure Resource Group](#task-6-create-a-new-azure-resource-group)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
+    - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
+    - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
+    - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
+    - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
+    - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
+    - [Task 6: Create a new Azure Resource Group](#task-6-create-a-new-azure-resource-group)
 
 <!-- /TOC -->
 
@@ -57,47 +57,65 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 ### Task 1: Setup a development environment
 
 1.  Create a virtual machine in Azure using the Visual Studio Community 2017 with the **latest release** on Windows Server 2016 image.
-    - **Name**: Whatever you want
-    - **User Name**: whatever you want
-    - **Password**: Your choice, but make note of it
-    - **Networking**: You may want to enable RDP (port 3389) for Remote Desktop access.
 
-    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
+    Click **+Create a resource**.  In the marketplace search type **Visual Studio**.
 
->**Note**: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
+    ![Azure portal. Click the +Create a resource. Type Visual Studio](media/2019-03-31-12-33-27.png "Find Visual Studio")
+
+    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](media/2019-03-31-12-35-39.png "Azure Portal, Search results section")
+
+    Enter the Basics configuration.
+
+    - **Resource Group**: Click the **Create new** link. Enter the value **ContosoSports**.
+    - **Virtual machine name**: Enter your machine name.  e.g. **LabVM**
+    - **Region**: Select a region close to you.
+    - **Image**: Select **Visual Studio Community (latest release) on Windows Server 2016 (x64)**.
+    - **Size**: Enter **D2 v3**.
+    - **Username**: Enter a username.
+    - **Password**: Enter a password.
+    - **Inbound ports**: Select RDP on port 3389.
+
+    ![Create a virtual machine.  Enter the configuration for the virutal machine. Basic tab.](media/2019-03-31-12-40-27.png "Create a virutal machine - basic tab")
+
+    ![Create a virtual machine.  Enter inbound port rules.](media/2019-03-31-12-49-41.png "Enter inbound port rules")
+
+    - Click the **Management** tab.
+    - Click the **Create new** link. Enter a unique storage account name. e.g. ContosoSports + ``<your initials>``.
+
+    ![Create a virtual machine. Click the management tab. Enter configuration.](media/2019-03-31-12-55-09.png "Click the management tab")
+
+    Click the **Review + create** button. Once validation passes, then click the **Create** button.
+
+    Deployment may take a few minutes.
+
+    ![Create a virtual machine. Your deployment is underway.](media/2019-03-31-13-02-56.png "Your deployment is underway.")
 
 ### Task 2: Disable IE Enhanced Security
 
 >**Note**: Sometimes this image has IE ESC already disabled, and sometimes it does not.
 
-1.  Connect and log on to the new VM you just created, click **Start** and then then **Server Manager** if not already started.
+1.  Connect and log on to the new VM you just created
 
+    ![Azure connect to newly created VM](media/2019-03-31-13-12-31.png "Azure connect to newly created VM")
+
+2.  Click **Start** and then then **Server Manager** if not already started.
     ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
 
-2.  Select **Local Server**.
+3.  Select **Local Server**.
 
     ![Local Server is selected from the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
 
-3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
+4.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
 
     ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
-4. Allow for downloading files.  Open **Internet Explorer**.
-    - Type F10.  The menu should be displayed.
-    - Go to **Tools**.
 
-        ![Showing IE menu.](media/2019-03-20-15-40-37.png)
-    - Click **Internet Options**
-    - Click the **Security** tab and then **Custom Level** button for the **Internet**
-
-    ![Showing the Internet Options](media/2019-03-20-15-44-24.png)
-    - Scroll down to **File download** and enable.
-
-    ![Showing Internet custom options](media/2019-03-20-15-46-49.png)
-
-5. Now you can dowload files from the Internet. Download and install **Google Chrome**. 
-6. Change to **Off** for Administrators, and select **OK**.
+5. Change to **Off** for Administrators and Users, and select **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
+
+
+6. Download and install **Google Chrome**. 
+
 
 ### Task 3: Install SQL Server Management Studio
 
