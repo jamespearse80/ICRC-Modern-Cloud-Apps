@@ -701,7 +701,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 2. Click **+Create a resource**, type **API App** into the marketplace search box, and press **Enter**.  Click the **Create** button.
 
-    ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png "Azure Portal - Create API App") 
+    ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png "Azure Portal - Create API App")
 
 3. On the new **API App** blade, specify a unique name for the App Name, and ensure the previously used Resource Group and App Service Plan are selected.
 
@@ -853,7 +853,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
    - Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end
 
-    > **Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
+        >**Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
 
@@ -1082,7 +1082,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 ### Task 1: Create a new directory
 
-1. Log in to the Azure portal by using your existing Azure subscription or by starting a free trial. In the left-hand navigation menu, click **+Create a resource**. Then, search for and select **Azure Active Directory B2C** and click **Create** on the new blade that pops up. 
+1. Log in to the Azure portal by using your existing Azure subscription or by starting a free trial. In the left-hand navigation menu, click **+Create a resource**. Then, search for and select **Azure Active Directory B2C** and click **Create** on the new blade that pops up.
 
     ![In the Everything blade, the active directory B2C text is in the Search field, and under Results, Azure Active Directory B2C displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image156.png "Everything blade")
 
@@ -1254,7 +1254,7 @@ To enable profile editing on your application, you will need to create a profile
 
 4. The Name determines the profile editing policy name used by your application. For example, enter **EditProfile**.
 
-5. Click Identity providers, and select \"**Local Account SignIn**." 
+5. Click Identity providers, and select \"**Local Account SignIn**."
 
     ![In the Add policy blade, Identity providers (1 Selected) is selected. Identities providers - select Local Account SignIn](media/2019-03-28-16-24-26.png "select Local Account SignIn")
 
@@ -1620,8 +1620,8 @@ When you authenticate users by using OpenID Connect, Azure AD returns an ID toke
                 </div>
                 <div class="header-top-right">
                     <a href="#" class="top-wrap"><span class="icon-phone">Call today: </span> (555) 555-8000</a>
-                    @Html.ActionLink("Claims", "Claims", "Home")               
-                </div>                   
+                    @Html.ActionLink("Claims", "Claims", "Home")
+                </div>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -1906,88 +1906,83 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Under Function App, the App name field is set to ContosoFunctionApp, and at the bottom the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image222.png "Function App section")
 
-3. Open the Function App you just created. Click the **+** besides **Functions**, select **In-portal** and select **Continue**.
-    ![Click + link in the Functions menu](media/2019-03-29-11-53-50.png "Plus button on Function menu")
+3. Paste your storage account connection string into Notepad.
 
-    ![In Function Apps Getting Started,In-Portal is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image223.png "Function Apps")
+    ![Display storage account list.  Pointing to Access keys.](media/2019-04-15-15-07-15.png "Storage Account Access keys")
 
-4. In the **Azure Functions for .NET getting started** card, click the **More templates...#**. Select **Finish and view templates**.
+4. Create Function App Application Settings
+    - Navigate to the Function App you just created earlier.
 
-    ![In the Azure Portal, under Azure Functions for .NET getting started dialog, the More templates tile is selected.](media/2019-03-29-11-58-10.png "More templates tile is selected")
+    ![Display Contoso Function App. Arrow showing the Application Setting link.](media/2019-04-15-15-15-22.png "Contoso Function App Application Settings")
 
-5. In the **Choose template** dialog, select **HTTP trigger**.
+    - Click the **+ New application setting** link.
+    - Enter the name ``AzureWebJobsStorage``.
+    - Enter the value for your storage account connection string.
+    - Click the **Update** button.
 
-    ![In the New Function blade, settings are consistent with instructions.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image225.png "View files expand arrow")
+    - Click the **+ New application setting** link.
+    - Enter the name ``contososportsstorage``.
+    - Enter the value for your storage account connection string, again.
+    - Click the **Update** button.
 
-6. In the **HTTP trigger New Function** blade, name the function **ContosoMakePDF** and then click **Create**.
+    ![Updated Function App Application settings. Showing final values.](media/2019-04-15-16-18-36.png "Updated Function App Application settings.")
 
-    ![In the New Function blade, settings are consistent with instructions.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image225a.png "View files expand arrow")
+5. Publish the Function App.
 
-7. Expand the **View files** area on the right of the code window and then click **Upload**.
+    - Open the Visual Studio solution.
+    - Right click on the **ContosoFunctionApp**.
+    - Select **Publish**.
 
-    ![Screenshot of the Upload button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/function-view-files.png "Upload button")
+    ![Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
 
-    ![Screenshot of the Upload button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image226.png "Upload button")
+    - Select your Function App.
 
-8. Upload the following files in the (Contoso Sports League\\Contoso.CreatePDFReport) folder.
+    ![Azure function app tree displayed.  Click OK button.](media/2019-04-15-15-34-54.png "Azure function app tree displayed")
 
-    ![CreatePDFReport project files to be uploaded](media/2019-03-29-12-19-37.png "CreatePDFReport project files to be uploaded")
+    - Check for errors in the Output window.
 
-    - ViewModels.csx
-    - CreatePdfReport.csx
-    - run.csx
-    - sample.dat
-    - StorageMethods.csx
-    - Project.json
+    ![Check for errors in the Output window](media/2019-04-15-15-33-20.png "Output window.")
 
-    ![The previously mentioned files display.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image227.png "Files")
+6. Test your new published Function App.
 
-9. Click on **run.csx**, to refresh the code editor.
+    - Navigate back to your Contoso Function App in the Azure Portal. You should see the newly created **ContosoMakePDF** function listed in the functions.  Select it.
 
-    ![In the Code Editor, on the right, run.csx is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image228.png "Code Editor")
+    - Click on the **Test** link located on the right hand blade.
 
-10. Expand the **Log** pane on the bottom.
+        ![Click on the Test link in Function App ](media/2019-04-15-15-40-27.png "Function Test link")
 
-    ![The arrow button besides the Logs tab is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image229.png "Logs window")
+    - Select POST for the HTTP method.
 
-    >**Note**: You should see several messages about downloading dependent assemblies such as the Azure SDK and iText Sharp that were defined in the project.json file.
+    - Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
 
-    ![Example of project assembly references missing](media/2019-03-29-12-26-57.png "project assembly references missing")
+        ![Windows Explorer. Showing the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
 
-11. Select the name of your function app, and then click on **Platform Features** followed by **Application settings**.
+    - Click the **Run** button located at the bottom of the blade.
 
-    ![In the Azure Portal, under Function Apps, ContosoFunctionApp is selected. Under General Settings, Application settings is selected. The Platform Features link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image230.png "Azure Portal")
+        ![Display Test blade with sample.dat contents.  Arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
 
-12. In the **Application Settings**, add a new entry called **contososportsstorage**, and paste the value of the **connection string** noted in an earlier exercise.
+    After a few seconds, you should see logs similar to the image below. You should see return status code of 200.  The **Output** text box should show recent Contoso purchase data. You should see a message stating the file has been created and stored in the blob storage.
 
-    >If you need to find the connection string again, then click on the **Storage accounts** on the left menu.  Click the **Access keys** link.  
+    ![Function App test result log.  Status code of 200.](media/2019-04-15-15-58-54.png "Function App test result log.")
 
-    Also expand the FUNCTIONS_EXTENSION_VERSION attribute and change the value from ~2 (the Azure default now) to ~1. Click **Save** after adding the value.
+7. Check your receipt PDF in the storage account blob.
 
-    ![In the Application settings section, contososportsstorage and its value are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image231.png "App settings section")
+    - Navigate to the ContosoSports storage account.
+    - Click on the **Blobs** link.
 
-    >**Note**: You can find the Connection String value by opening the storage account, and clicking the **Access Keys** tile. Be sure to use the connection string and NOT the key itself.
-    >**Note**: Azure Function Apps now use FUNCTIONS_EXTENSION_VERSION with a *default* setting of ~2 (version 2). The Student lab solution requires v1 to function properly. 
+        ![Blobs link](media/2019-04-15-16-06-17.png "Blobs link")
 
-13. Back in your function, open the **sample.dat** file, and select as well as copy (Ctrl+C) the test data.
+8. Click the newly created **receipts** blob container.
 
-    ![The Sample.dat file displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image232.png "Sample.dat file")
+    ![Click the Blobs link](media/2019-04-15-16-08-35.png "Click the Blobs link")
 
-14. Select the **Run.csx** file, click on the **Test** tab, and replace the contents by pasting (CTRL-V) in the Test tab Request Body. Ensure that there are no parameters.
+9. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
 
-    ![Screenshot of the run.csx file, and the Test tab request body.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image233.png "Run.csx file, Test tab request body")
+    ![Displaying the newly created PDF receipts.](media/2019-04-15-16-11-24.png "PDF Receipts")
 
-15. Select the **View Files** tab, select **Run.csx**, and click **Run**.
+    - Open the ``...`` link and choose download menu item.
 
-16. You should see messages in the Logs window stating the Webhook was triggered, and the PDF was generated / saving it the storage account. Also, you should see that actual message text in the Output Window.
-
-    ![In the run.csx file, under Logs, messages stating the Webhook was triggered and the PDF was generated are circled. In the Test tab request body, under Output, the message text is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image234.png "Run.csx file, Test tab request body")
-
-17. To see that the PDF indeed landed in the receipts container in blob storage, download **Microsoft Storage Explorer** at [http://storageexplorer.com](http://storageexplorer.com/). Use Microsoft Storage Explorer to verify the PDF landed on the Blob Container for receipts. You may need to refresh and/or select another folder, and arrive back to the receipts folder to see the PDF.
-
-    ![In Storage Explorer, on the left, the following path is expanded: Storage Accounts\\contososportsstorage01\\Blob containers. Under Blob Containers, receipts is circled. On the right, on the receipts tab, ContosoSportsLeague-Store-Receipts-38.pdf is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image235.png "Storage Explorer")
-
-    ![Storage Explorer retrieved the sample PDF and displayed it in the browser](media/2019-03-29-12-50-23.png "Sample Receipt Displayed")
+     ![Sample PDF receipt](media/2019-04-15-16-15-06.png "Sample PDF receipt")
 
 ### Task 2: Create an Azure Logic App to Process Orders
 
