@@ -1943,7 +1943,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     ![Check for errors in the Output window](media/2019-04-15-15-33-20.png "Output window.")
 
-6. Test your new published Function App.
+6. Test your newly published Function App.
 
     - Navigate back to your Contoso Function App in the Azure Portal. You should see the newly created **ContosoMakePDF** function listed in the functions.  Select it.
 
