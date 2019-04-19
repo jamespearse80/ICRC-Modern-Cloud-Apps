@@ -56,17 +56,17 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 1: Setup a development environment
 
-1. Create a virtual machine in Azure using the Visual Studio Community 2017 with the **latest release** on Windows Server 2016 image.
+1. Create a virtual machine in Azure using the Visual Studio Community 2019 with the on Windows Server 2016 image.
 
     Click **+Create a resource**.  In the marketplace search type **Visual Studio**.
 
-    ![Azure portal. Click the +Create a resource. Type Visual Studio](media/2019-03-31-12-33-27.png "Find Visual Studio")
+    ![Search window for resources. Visual Studio 2019 selected.](media/2019-04-19-09-31-16.png "Visual Studio 2019 selected")
 
-    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](media/2019-03-31-12-35-39.png "Azure Portal, Search results section")
+    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](media/2019-04-19-09-26-51.png "Azure Portal, Search results section")
 
     Enter the Basics configuration.
 
-    - **Resource Group**: Click the **Create new** link. Enter the value **ContosoSports**.
+    - **Resource Group**: Click the **Create new** link. Enter the value **ContosoSports** or some similar unique name.
     - **Virtual machine name**: Enter your machine name.  e.g. **LabVM**
     - **Region**: Select a region close to you.
     - **Image**: Select **Visual Studio Community (latest release) on Windows Server 2016 (x64)**.
@@ -75,7 +75,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     - **Password**: Enter a password.
     - **Inbound ports**: Select RDP on port 3389.
 
-    ![Create a virtual machine.  Enter the configuration for the virtual machine. Basic tab.](media/2019-03-31-12-40-27.png "Create a virtual machine - basic tab")
+    ![Create a virtual machine.  Enter the configuration for the virtual machine. Basic tab.](media/2019-04-19-09-49-11.png "Create a virtual machine - basic tab")
 
     ![Create a virtual machine.  Enter inbound port rules.](media/2019-03-31-12-49-41.png "Enter inbound port rules")
 
@@ -88,32 +88,34 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     Deployment may take a few minutes.
 
-    ![Create a virtual machine. Your deployment is underway.](media/2019-03-31-13-02-56.png "Your deployment is underway.")
+    ![Create a virtual machine. Your deployment is underway.](media/2019-04-19-09-56-17.png "Your deployment is underway.")
 
 ### Task 2: Disable IE Enhanced Security
 
 >**Note**: Sometimes this image has IE ESC already disabled, and sometimes it does not.
 
-1. Connect and log on to the new VM you just created
+1. Connect and log on to the new VM you just created by clicking the **Download RDP file** button.
 
     ![Azure connect to newly created VM](media/2019-03-31-13-12-31.png "Azure connect to newly created VM")
 
-2. Click **Start** and then then **Server Manager** if not already started.
-    ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
+    ![Remote Desktop Connection dialog. Click the Connect button.](media/2019-04-19-10-00-38.png "Remote Desktop Connection dialog")
 
-3. Select **Local Server**.
+2. Enable Internet file downloads.
 
-    ![Local Server is selected from the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
+    - Open **Internet Explorer**.
+    - Press **F10** button on your keyboard.
+    - Select the **Tools** menu option.
+    - Select the **Internet options** menu item.
+    - Select the **Security** tab.
+    - Click the **Custom level ...** button.
 
-4. On the right side of the pane, click **On** by IE Enhanced Security Configuration.
+    ![Internet options.  Click the Custom level button.](media/2019-04-19-10-21-11.png "Custom level button")
 
-    ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
+    - Scroll down to **Downloads** options and enable **File download**.
 
-5. Change to **Off** for Administrators and Users, and select **OK**.
+    ![Security Settings - Internet Zone. Custom level options. Enable file downloads.](media/2019-04-19-10-23-26.png "Enable file downloads")
 
-    ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
-
-6. Download and install **Google Chrome**. 
+    - Apply the new setting and click the **OK** button.
 
 ### Task 3: Install SQL Server Management Studio
 
@@ -121,13 +123,30 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
 
+    ![Download status dialog](media/2019-04-19-10-29-35.png "Download status dialog")
+
+    ![Installing SQL Server Management Studio dialog.](media/2019-04-19-10-31-08.png "Installing SQL Server Management Studio dialog")
+
 ### Task 4: Validate connectivity to Azure
 
-1. Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.
+1. Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft MSDN Account when prompted. 
+   - Click the **Check for an updated license** link.  
+   - Click the **Close** button.
+
+    ![Visual Studio Community 2019 license check dialog displayed.](media/2019-04-19-10-39-37.png "Visual Studio Community 2019 license check")
 
 2. Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
 
-    ![A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription.](images/Setup/image8.png "Visual Studio Server Explorer")
+    ![Visual Studio 2019 starting splash page. Arrow pointing to the Continue without code link](media/2019-04-19-10-44-15.png "Continue without code")
+
+    - Click **View** menu.  Select the **Cloud Explorer** menu item.
+
+    ![Visual Studio 2019 View menu options. Cloud Explorer selected.](media/2019-04-19-10-52-30.png "Cloud Explorer selected")
+
+    >**Note:** You should see your Azure subscriptions.  If you don't see your subscription listed, make sure you are using the correct user account.
+
+    ![Cloud Explorer tree menu. Displaying Azure subscription results.](media/2019-04-19-10-54-53.png "Azure subscription results")
+
 
 ### Task 5: Download and explore the Contoso Sports League sample
 
@@ -143,18 +162,10 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     |----------|:-------------:|
     | Contoso.Apps.SportsLeague.Web |   Contoso Sports League e-commerce application |
     | Contoso.Apps.SportsLeague.Admin |   Contoso Sports League call center admin application |
-    | Contoso.Apps.SportsLeague.Data  |   Data tier |
+    | Contoso.Apps.Common  |   Shared tier |
+    | Contoso.Apps.SportsLeague.Data  |   Shared tier |
+    | Contoso.Apps.FunctionApp  |   Function app tier |
     | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
     | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
-### Task 6: Create a new Azure Resource Group
-
-1. Within the Azure Management Portal, open the **Resource groups** tile and then select **+Add**.
-
-    ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Setup/image9.png "Azure Management Portal")
-
-2. Specify the name of the resource group as **contososports**, and choose the Azure region into which you want to deploy the lab. This resource group will be used throughout the remainder of this Modern Cloud App lab. Click on **Create** to create the resource group.
-
-    ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
-
-You should follow all steps provided *before* performing the Hands-on lab.
+<h3>You should follow all steps provided *before* performing the Hands-on lab.</h3>
