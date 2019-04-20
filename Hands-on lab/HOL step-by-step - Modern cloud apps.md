@@ -248,7 +248,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
 
-18. On the **Success!** dialog box, click **OK**.
+18. Update progress can be found by clicking on **Notifications** link located at the top of the page.
 
     ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
@@ -467,9 +467,9 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
 
-18. On the **Success!** Dialog box, click **OK**.
+18. Update progress can be found by clicking on **Notifications** link located at the top of the page.
 
-    ![The Success dialog box message explains that the server firewall rules were successfully updated.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image29.png "Success dialog box")
+    ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
 19. Close all configuration blades.
 
