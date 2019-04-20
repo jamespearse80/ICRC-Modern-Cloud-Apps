@@ -30,11 +30,14 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
-    - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
+    - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
+    - [Task 2: Enable file downloading](#task-2-enable-file-downloading)
     - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
     - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
     - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
-    - [Task 6: Create a new Azure Resource Group](#task-6-create-a-new-azure-resource-group)
+
 
 <!-- /TOC -->
 
@@ -42,11 +45,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-- Microsoft Azure subscription
+- Microsoft Azure MSDN subscription
 
 - Local machine or Azure virtual machine configured with:
 
-  - Visual Studio 2017 Community Edition or later
+  - Visual Studio 2019 Community Edition or later
+  - Windows Server 2016
 
 ## Before the hands-on lab
 
@@ -62,7 +66,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![Search window for resources. Visual Studio 2019 selected.](media/2019-04-19-09-31-16.png "Visual Studio 2019 selected")
 
-    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](media/2019-04-19-09-26-51.png "Azure Portal, Search results section")
+    ![The Azure Portal Search field text is Visual Studio Community 2019 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2019 on Windows Server 2016 (x64) is selected.](media/2019-04-20-07-21-55.png "Azure Portal, Search results section")
 
     Enter the Basics configuration.
 
@@ -82,6 +86,8 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     - Click the **Management** tab.
     - Click the **Create new** link. Enter a unique storage account name. e.g. ContosoSports + ``<your initials>``.
 
+        >**Note:** You can use this storage account for the entire lab.
+
     ![Create a virtual machine. Click the management tab. Enter configuration.](media/2019-03-31-12-55-09.png "Click the management tab")
 
     Click the **Review + create** button. Once validation passes, then click the **Create** button.
@@ -90,7 +96,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![Create a virtual machine. Your deployment is underway.](media/2019-04-19-09-56-17.png "Your deployment is underway.")
 
-### Task 2: Disable IE Enhanced Security
+### Task 2: Enable file downloading
 
 >**Note**: Sometimes this image has IE ESC already disabled, and sometimes it does not.
 
@@ -135,7 +141,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     ![Visual Studio Community 2019 license check dialog displayed.](media/2019-04-19-10-39-37.png "Visual Studio Community 2019 license check")
 
-2. Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
+2. Validate connectivity to your Azure subscription. Launch Visual Studio, open **Cloud Explorer** from the **View** menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
 
     ![Visual Studio 2019 starting splash page. Arrow pointing to the Continue without code link](media/2019-04-19-10-44-15.png "Continue without code")
 
@@ -168,4 +174,4 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
     | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
-<h3>You should follow all steps provided *before* performing the Hands-on lab.</h3>
+## You should follow all of the steps provided *before* performing the Hands-on lab.
