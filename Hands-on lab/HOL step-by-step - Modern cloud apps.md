@@ -26,7 +26,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 **Contents**
 
 <!-- TOC -->
-
 - [Modern cloud apps hands-on lab step-by-step](#modern-cloud-apps-hands-on-lab-step-by-step)
   - [Abstract and learning objectives](#abstract-and-learning-objectives)
   - [Overview](#overview)
@@ -41,7 +40,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
       - [Subtask 4: Deploy the e-commerce Web App from Visual Studio](#subtask-4-deploy-the-e-commerce-web-app-from-visual-studio)
     - [Task 2: Setup SQL Database Geo-Replication](#task-2-setup-sql-database-geo-replication)
       - [Subtask 1: Add secondary database](#subtask-1-add-secondary-database)
-      - [Subtask 2: Failover secondary SQL database -- OPTIONAL](#subtask-2-failover-secondary-sql-database----optional)
+      - [Subtask 2: Failover secondary SQL database](#subtask-2-failover-secondary-sql-database)
       - [Subtask 3: Test e-commerce Web App after Failover](#subtask-3-test-e-commerce-web-app-after-failover)
       - [Subtask 4: Revert Failover back to Primary database](#subtask-4-revert-failover-back-to-primary-database)
       - [Subtask 5: Test e-commerce Web App after reverting failover](#subtask-5-test-e-commerce-web-app-after-reverting-failover)
@@ -97,9 +96,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Modern cloud apps hands-on lab step-by-step 
+# Modern cloud apps hands-on lab step-by-step
 
-## Abstract and learning objectives 
+## Abstract and learning objectives
 
 In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure. 
 
@@ -248,7 +247,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
 
-18. Update progress can be found by clicking on **Notifications** link located at the top of the page.
+18. Update progress can be found by clicking on the **Notifications** link located at the top of the page.
 
     ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
@@ -308,12 +307,12 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 3. Copy the web app URL to Notepad.
 
-    - Click on Overview
-    - Copy the URL to Notepad for later using the **Copy to clipboard** link.
+    - Click on the **Overview** link.
+    - Copy the URL to Notepad for later use. Use the **Copy to clipboard** link.
 
     ![Web App Overview settings. Capture the URL.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
 
-4. On the **App Service** blade, scroll down in the left pane, and, under the **Settings** menu, click on **Configuration**.
+4. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, click on **Configuration**.
 
     ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
@@ -329,7 +328,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In the App settings section for the App Service blade, the new entry for AzureQueueConnectionString is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image40.png "App settings section")
 
-7. Locate **Connection Strings** below **Application Settings** in your Notepad file.
+7. Locate **Connection Strings** section below **Application Settings**.
 
     ![The Connection Strings section for the App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image41.png "Connection Strings section")
 
@@ -365,9 +364,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![App Service - Select Existing App Service - Sign In](media/2019-04-19-14-07-19.png "Azure Sign In")
 
-4. If prompted, log on with your credentials, and ensure the subscription you published earlier are selected.
+4. If prompted, log on with your Azure MSDN credentials.
 
-    >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution.
+    >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
 
 5. Select the **Contoso Sports Web App** (with the name you created previously).
 
@@ -379,7 +378,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
 
-8. A new browser should automatically open the new web applications. Validate the website by clicking the **Store** link on the menu. As long as products return, the connection to the database is successful.
+    >**Note:** Your URL will differ from the one shown in the Output screenshot because it has to be globally unique.
+
+8. A new browser should automatically open the new web applications. Validate the website by clicking the **Store** link on the menu. You should see product items. As long as products return, the connection to the database is successful.
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
@@ -467,13 +468,15 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
 
-18. Update progress can be found by clicking on **Notifications** link located at the top of the page.
+18. Update progress can be found by clicking on the **Notifications** link located at the top of the page.
 
     ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
 19. Close all configuration blades.
 
-#### Subtask 2: Failover secondary SQL database -- OPTIONAL
+#### Subtask 2: Failover secondary SQL database
+
+>**Note:** This is optional.
 
 Since the Replication and Failover process can take anywhere from 10 to 30 minutes to complete, you have the choice to skip Subtask 2 through 5, and skip directly to Task 3. However, if you have the time, it is recommended that you complete these steps.
 
@@ -653,7 +656,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     - Name: **ContosoSportsLeague**
 
-    - Value: **Enter the Connection String for the last SQL Database that was created**.
+    - Value: **Enter the Connection String for the primary SQL Database**.
 
     - Type: **SQL Azure**
 
@@ -705,9 +708,15 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In the Azure Portal left menu, New is selected. In the New blade, the search field is set to API App.](media/2019-03-28-07-57-54.png "Azure Portal - Create API App")
 
-3. On the new **API App** blade, specify a unique name for the App Name, and ensure the previously used Resource Group and App Service Plan are selected.
+3. On the new **API App** blade, create the following values:
 
-    ![On the API App blade. Configuration fields are displayed.](media/2019-04-11-04-49-28.png "Configuration fields are displayed")
+   - **App name:** Specify a unique name for the App Name.
+   - **Subscription:** Your Azure MSDN subscription.
+   - **Resource Group:** select **Use existing** option.
+   - **App Service Plan/Location** Select the same primary region used in previous steps.
+   - **Application Insights:** **Disabled**
+
+    ![On the API App blade. Configuration fields are displayed.](media/2019-04-20-14-55-42.png "Configuration fields are displayed")
 
 4. After the values are accepted, click **Create**.  It will take a few minutes to provision.
 
@@ -1282,7 +1291,7 @@ To enable profile editing on your application, you will need to create a profile
 
 ### Task 6: Modify the Contoso.App.SportsLeague.Web
 
-1. Expand the **Contoso.Apps.SportsLeague.Web** project. Find the **Web.config** file and update the AppSetting key, ```<add key="owin:AutomaticAppStartup" value="false"/>``` to **true** or delete the key. This step is necessary because the Owin libraries, already installed, will try to look for dependant files like **Startup.cs** which you are about to create. There would have been several errors in the beginning of the lab without this key.
+1. Expand the **Contoso.Apps.SportsLeague.Web** project. Find the **Web.config** file and update the AppSetting key, ```<add key="owin:AutomaticAppStartup" value="false"/>``` to **true** or delete the key. This step is necessary because the Owin libraries, already installed, will try to look for dependent files like **Startup.cs** which you are about to create. There would have been several errors in the beginning of the lab without this key.
 
     ![Web.config file. appSettings node displayed. Owin AutomaticStartup to be deleted.](media/2019-04-19-15-08-40.png "Owin AutomaticStartup to be deleted")
 
@@ -2176,7 +2185,7 @@ The advantages of using Logic Apps include the following:
 
     ![On the Verification prompt, the \"We need to verify you\'re a human\" message displays. Under that is a phone number field, and a Verify via SMS button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image269.png "Verification prompt")
 
-3. Give your a project a name.
+3. Give your project a name.
 
     ![Screenshot of Twilio project name screen.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/twilio-project-name.png "Twilio Project Name Screen")
 
