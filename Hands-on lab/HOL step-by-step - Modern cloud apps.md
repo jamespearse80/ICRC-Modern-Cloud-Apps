@@ -117,7 +117,7 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 ## Requirements
 
 1. Microsoft Azure subscription
-2. Local machine or a virtual machine configured Visual Studio 2017 Community Edition
+2. Local machine or a virtual machine configured Visual Studio 2019 Community Edition
 3. Twilio account and/or personal cell phone to setup a trial Twilio account
 
 ## Help references
@@ -199,65 +199,63 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Password and Confirm Password: **Password.1!!**
 
-   - Ensure the **Location** is the same region as the Web app.
+   - Ensure the **Target server** is the same region as the Web app.
 
-    ![Fields in the New server blade are circled and set to the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image19.png "New server blade")
+8. Application Insights should be disabled.
 
-8. Once the values are accepted in the **New server** blade, click **Select**.
+    ![Application Insight configuration. Disabled option selected.](media/2019-04-19-13-24-11.png "Application Insight configuration")
 
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-9. On the **SQL Database** blade, click **Select**.
+9. Once the values are accepted in the **New server** blade, click **Select**.
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-10. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
+10. On the **SQL Database** blade, click **Select**.
 
-    ![Screenshot of the Create button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image21.png "Create button")
+    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-    > **Note**: This may take a couple minutes to provision the Web App and SQL Database resources.
+11. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
+
+    ![Final web app configuration settings.  Arrow pointing to the Create button.](media/2019-04-19-13-32-16.png "Final web app configuration settings")
+
+    >**Note**: This may take a couple minutes to provision the Web App and SQL Database resources.
 
     ![Notifications - Check provision progress.](media/2019-03-22-11-36-59.png "Check provision progress")
 
-11. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created and select it.
+12. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created and select it.
 
     ![In the Azure Portal, on the left side, "SQL Databases" is surrounded by a red box. In the right pane, "ContosoSportsDB" is surrounded by a red box](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image22.png "Azure Portal")
 
-12. On the **SQL Database** blade, click the **Show database connection strings** link.
+13. On the **SQL Database** blade, click the **Show database connection strings** link.
 
     ![On the SQL Database blade, in the left pane, Overview is selected. In the right pane, under Essentials, the Connection strings (Show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image23.png "SQL Database blade")
 
-13. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **Password.1!!**, respectively.
+14. On the **Database connection strings** blade, select and copy the **ADO.NET** connection string. Then, save it in **Notepad** for use later, being sure to replace the placeholders with your username and password with **demouser** and **Password.1!!**, respectively.
 
     ![In the Database connection strings blade, the ADO.NET connection string is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image24.png "Database connection strings blade")
 
-14. On the **Overview** screen of the **SQL Server** blade, click **Set server firewall**.
+15. On the **Overview** screen of the **SQL Server** blade, click **Set server firewall** link at the top.
 
     ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](media/2019-03-31-14-37-31.png "SQL Server Blade, Essentials section")
 
-15. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
+16. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
     ![Screenshot of the Rule name, Start IP. and End IP fields on the Firewall Settings blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image27.png "Firewall Settings blade")
 
-    > **Note**: This is only done to make the lab easier to do. In production, you do **NOT** want to open up your SQL Database to all IP Addresses this way. Instead, you will want to specify just the IP Addresses you wish to allow through the Firewall.
+    >**Note**: This is only done to make the lab easier to do. In production, you do **NOT** want to open up your SQL Database to all IP Addresses this way. Instead, you will want to specify just the IP Addresses you wish to allow through the Firewall.
 
-16. Click **Save**.
+17. Click **Save**.
 
     ![Screenshot of the Firewall settings Save button.](media/2019-04-10-16-00-29.png "Firewall settings Save button")
 
-<<<<<<< HEAD
 18. Update progress can be found by clicking on the **Notifications** link located at the top of the page.
-=======
-17. On the **Success!** dialog box, click **OK**.
->>>>>>> parent of 2a12df7... Updated lab files and HOL instructions for Visual Studio 2019
 
-    ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image29.png "Success dialog box")
+    ![Screenshot of the Success dialog box, which says that the server firewall rules have been successfully updated.](media/2019-04-19-13-39-41.png "Success dialog box")
 
-18. Close all configuration blades.
+19. Close all configuration blades.
 
 #### Subtask 2: Provision the storage account
 
->Note: You can skip the storage account provisioning steps if you use the storage account created during the Lab VM provisioning.
+>**Note:** You can skip the storage account provisioning steps if you use the storage account created during the Lab VM provisioning.
 
 1. Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
@@ -305,25 +303,18 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 2. Click on the **Web App** (App Service type) created previously.
 
+    ![Resources listed for ContosoSports. Web app selected.](media/2019-04-19-13-46-40.png "Resources listed for ContosoSports")
+
 3. Copy the web app URL to Notepad.
 
-<<<<<<< HEAD
     - Click on the **Overview** link.
     - Copy the URL to Notepad for later use. Use the **Copy to clipboard** link.
 
     ![Web App Overview settings. Capture the URL.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
 
 4. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, click on **Configuration**.
-=======
-    - Click on Overview
-    - Copy the URL to Notepad for later use.
 
-    ![Web App Overview settings. Capture the URL.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
-
-4. On the **App Service** blade, scroll down in the left pane, and, under the **SETTINGS** menu, click on **Application settings**.
->>>>>>> parent of 2a12df7... Updated lab files and HOL instructions for Visual Studio 2019
-
-    ![In the App Service blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image38.png "App Service blade")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 5. Locate the **Application settings** section.
 
@@ -333,7 +324,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Key: **AzureQueueConnectionString**
 
-   - Value: **Enter the Connection String for the Azure Account just created** from your Notepad file
+   - Value: Enter the Connection String for the **Azure Storage Account** just created.
 
     ![In the App settings section for the App Service blade, the new entry for AzureQueueConnectionString is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image40.png "App settings section")
 
@@ -359,11 +350,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio.
 
-    ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image45.png "Solution Explorer")
+    ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](media/2019-04-19-14-03-04.png "Solution Explorer")
 
 2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
-
-    ![In Solution Explorer, Contoso.Apps.SportsLeague.Web is selected, and from its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image46.png "Solution Explorer")
 
     >Note: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure portal.
 
@@ -373,17 +362,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
 
-<<<<<<< HEAD
     ![App Service - Select Existing App Service - Sign In](media/2019-04-19-14-07-19.png "Azure Sign In")
 
 4. If prompted, log on with your Azure MSDN credentials.
 
     >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
-=======
-4. If prompted, log on with your credentials, and ensure the subscription you published earlier are selected.
-
-    ![Screenshot of the Microsoft account subscriptions tile.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image48.png "Microsoft account tile")
->>>>>>> parent of 2a12df7... Updated lab files and HOL instructions for Visual Studio 2019
 
 5. Select the **Contoso Sports Web App** (with the name you created previously).
 
@@ -401,7 +384,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
-    >**Troubleshooting**: If the web site fails to show products, go back and double check all of your connection string entries and passwords. Start the solution in debug mode.
+    >**Troubleshooting**: If the web site fails to show products, go back and double check all of your connection string entries and passwords web application settings.
 
 ### Task 2: Setup SQL Database Geo-Replication
 
@@ -537,9 +520,9 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 4. Click on the **Web App** created earlier.
 
-5. On the **App Service** blade, scroll down in the left pane, and click on **Application settings**.
+5. On the **App Service** blade, scroll down in the left pane, and click on **Configuration settings**.
 
-    ![On the App Service blade, under Settings, Application settings is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image38.png "App Service blade")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 6. Scroll down, and locate the **Connection strings** section.
 
@@ -603,9 +586,9 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 2. Click on the **Web App** created in a previous step.
 
-3. On the **App Service** blade, scroll down in the left pane, and click on **Application settings**.
+3. On the **App Service** blade, scroll down in the left pane, and click on **Configuration settings**.
 
-    ![In the App Service blade Settings section, Application settings is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image38.png "App Service blade")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 4. Scroll down, and locate the **Connection strings** section.
 
@@ -655,7 +638,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 4. Click on **App Service plan/Location**, and select the **ContosoSportsPlan** used by the front-end Web app.
 
-5. After the values are accepted, click **Create**.
+5. After the values are accepted, click **Create**.  It will take a few minutes to provision.
 
 #### Subtask 2: Update the configuration in the starter project
 
@@ -663,9 +646,9 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![The App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image80.png "App Service blade")
 
-2. On the **App Service** blade, click on **Application settings** in the left pane.
+2. On the **App Service** blade, click on **Configuration settings** in the left pane.
 
-    ![In the Settings section of the App Service blade, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image81.png "Settings section")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 3. Scroll down, and locate the **Connection strings** section.
 
@@ -693,11 +676,9 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 1. Navigate to the **Contoso.Apps.SportsLeague.Admin** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, The Web folder is expanded, and Contoso.Apps.SportsLeague.Admin is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image85.png "Solution Explorer")
-
 2. Right-click the **Contoso.Apps.SportsLeague.Admin** project, and click **Publish**.
 
-    ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image86.png "Right-Click menu")
+    ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](media/2019-04-19-14-30-03.png "Right-Click menu")
 
 3. Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
 
@@ -737,25 +718,19 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![On the API App blade. Configuration fields are displayed.](media/2019-04-20-14-55-42.png "Configuration fields are displayed")
 
-4. After the values are accepted, click **Create**.
+4. After the values are accepted, click **Create**.  It will take a few minutes to provision.
 
 #### Subtask 2: Deploy the Contoso.Apps.PaymentGateway project in Visual Studio
 
 1. Navigate to the **Contoso.Apps.PaymentGateway** project located in the **APIs** folder using the **Solution Explorer** in Visual Studio.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, the API folder is expanded, and Contoso.Apps.PaymentGateway is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image95.png "Solution Explorer")
-
 2. Right-click the **Contoso.Apps.PaymentGateway** project, and click **Publish**.
 
-    ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image96.png "Solution Explorer")
+    ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
 3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**.
     - If your Azure resource group does not show, choose **New Profile**
     - Select **Select Existing**
-    - Click the **Publish** button.
-  
-    ![Pick a publish target dialog. Choose Select Existing](media/2019-03-28-08-05-30.png "Pick a publish target dialog")
-
 4. Select the Payment Gateway API app created earlier, click **OK** **\>** **Publish**.
 
     ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
@@ -805,9 +780,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
 #### Subtask 3: Update the configuration in the starter project
 
-1. On the **App Service** blade for the Offers API, click on **Application settings**.
+1. On the **App Service** blade for the Offers API, click on **Configuration**.
 
-    ![In the App Service blade, under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image103.png "App Service blade")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 2. In the **Connection Strings** section, add a new **Connection string** with the following values:
 
@@ -833,11 +808,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
 1. Navigate to the **Contoso.Apps.SportsLeague.Offers** project located in the **APIs** folder using the **Solution Explorer** in Visual Studio.
 
-    ![In Solution Explorer, under Solution Contoso.Apps.SportsLeague, the API folder is expanded, and Contoso.Apps.SportsLeague.Offer is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image107.png "Solution Explorer")
-
 2. Right-click the **Contoso.Apps.SportsLeague.Offers** project, and select **Publish**.
 
-    ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image108.png "Solution Explorer")
+    ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](media/2019-04-19-15-03-45.png "Solution Explorer")
 
 3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
 
@@ -869,9 +842,9 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the Resource Group blade on the right, under Name, contososportsweb2101 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image113.png "Resource Group blade")
 
-4. On the **App Service** blade, scroll down, and click on **Application settings** in the left pane.
+4. On the **App Service** blade, scroll down, and click on **Configuration** in the left pane.
 
-    ![In the App Service blade, under settings, Application settings is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image103.png "App Service blade")
+    ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
 5. Scroll down, and locate the **Applications settings** section.
 
@@ -1264,7 +1237,7 @@ To enable ``sign-in`` on your application, you will need to create a ``sign-in``
 
 9. Open the policy by clicking **B2C\_1\_SignIn**.
 
-10. You should see the **Contonso B2C Application** selected from the dropdown, if not choose it.  Leave the defaults seleceted.
+10. You should see the **Contonso B2C Application** selected from the dropdown, if not choose it.  Leave the defaults selected.
 
 11. Click **Run user flow**. A new browser tab opens, and you can run through the consumer experience of signing into your application.
 
@@ -1320,11 +1293,13 @@ To enable profile editing on your application, you will need to create a profile
 
 1. Expand the **Contoso.Apps.SportsLeague.Web** project. Find the **Web.config** file and update the AppSetting key, ```<add key="owin:AutomaticAppStartup" value="false"/>``` to **true** or delete the key. This step is necessary because the Owin libraries, already installed, will try to look for dependent files like **Startup.cs** which you are about to create. There would have been several errors in the beginning of the lab without this key.
 
+    ![Web.config file. appSettings node displayed. Owin AutomaticStartup to be deleted.](media/2019-04-19-15-08-40.png "Owin AutomaticStartup to be deleted")
+
 2. Locate the Azure AD B2C name by navigating to your resource group. Copy the name to Notepad.
 
     ![List of all of the resources within the ContosoSports resource group. Pointing to the B2C tenant name.](media/2019-03-28-16-51-14.png "Locate B2C tenant name")
 
-3. Next, using the Azure Management Portal, using your main subscription, open the Contoso E-Commerce Web App blade, and click on **Application Settings**.
+3. Next, using the Azure Management Portal, using your main subscription, open the Contoso Web App blade, and click on **Configuration**.
 
 4. Add the following settings in the **Application Settings** section:
 
@@ -1360,7 +1335,7 @@ To enable profile editing on your application, you will need to create a profile
 
     ![In the New class section, the word \"partial\" is circled in the line, \"public partial class Startup\".](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image174.png "New class section")
 
-9.  Add the following code between the brackets of the Configuration method:
+9. Add the following code between the brackets of the Configuration method:
 
     ```csharp
     ConfigureAuth(app);
@@ -1698,11 +1673,9 @@ To configure the application for logging and diagnostics, you have been asked to
 
 2. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
 
-    ![In Solution Explorer, the Web folder is expanded, and Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image187.png "Solution Explorer")
-
 3. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Add \| Application Insights Telemetry..**.
 
-    ![In Solution Explorer, on the Web folder\'s right-click menu, Add is selected, and from its menu, Application Insight Telemetry is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image188.png "Solution Explorer")
+    ![In Solution Explorer, on the Web folder\'s right-click menu, Add is selected, and from its menu, Application Insight Telemetry is selected.](media/2019-04-19-15-35-52.png "Solution Explorer")
 
 4. Expand the **Sending telemetry to** section.
 
@@ -1782,7 +1755,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 8. Open **Views \> Shared \> \_Layout.cshtml**.
 
-    ![In Solution Explorer, under Views\\Shared, Layout.cshtml is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image199.png "Solution Explorer")
+    ![In Solution Explorer, under Views\\Shared, Layout.cshtml is selected](media/2019-04-19-15-45-29.png "Solution Explorer")
 
 9. Paste in the code before the **\</head\>** tag. Insert your **Instrumentation Key** from Notepad into the JavaScript code ``instrumentationKey:`` value.
 
@@ -1794,9 +1767,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
 
-    ![In Solution Explorer, under the Web folder, Contoso.Apps.SportsLeague.Web is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image201.png "Solution Explorer")
-
-2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
+2. Right-click on the **Contoso.Apps.SportsLeague.Web** project, and select **Publish**.
 
     ![From the Contoso.Apps.SportsLeague.Web right-click menu, Publish is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image202.png "Solution Explorer")
 
@@ -1960,7 +1931,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 5. Publish the Function App.
 
     - Open the Visual Studio solution.
-    - Right click on the **ContosoFunctionApp**.
+    - Right click on the **ContosoFunctionApp** project.
     - Select **Publish**.
 
     ![Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
