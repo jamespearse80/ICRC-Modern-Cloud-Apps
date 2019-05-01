@@ -30,9 +30,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
     - [Task 2: Enable file downloading](#task-2-enable-file-downloading)
     - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
     - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
@@ -143,7 +140,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 2. Validate connectivity to your Azure subscription. Launch Visual Studio, open **Cloud Explorer** from the **View** menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
 
-    ![Visual Studio 2019 starting splash page. Arrow pointing to the Continue without code link](media/2019-04-19-10-44-15.png "Continue without code")
+    ![Visual Studio 2019 starting splash page with an arrow pointing to the Continue without code link.](media/2019-04-19-10-44-15.png "Continue without code")
 
     - Click **View** menu.  Select the **Cloud Explorer** menu item.
 
@@ -174,4 +171,4 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
     | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
-## You should follow all of the steps provided *before* performing the Hands-on lab.
+You should follow all of the steps provided *before* performing the Hands-on lab.
