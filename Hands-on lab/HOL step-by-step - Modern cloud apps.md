@@ -179,7 +179,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - **ContosoSportsPlan** as a new App Service Plan. Make sure it's in the same location as the **contososports** resource group you created earlier. Use the default **Standard S1** pricing tier.
 
-    ![App Service Plan configuration settings.](media/2019-03-22-11-29-13.png "App Service Plan configuration settings")
+    ![App Service Plan configuration settings are displayed. The values listed in the instructions are entered into the fields.](media/2019-03-22-11-29-13.png "App Service Plan configuration settings")
 
     - Select **OK**
 
@@ -219,7 +219,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     >**Note**: This may take a couple minutes to provision the Web App and SQL Database resources.
 
-    ![Notifications - Check provision progress.](media/2019-03-22-11-36-59.png "Check provision progress")
+    ![The bell icon located at the top of the web page has been clicked.  Notifications message tells you deployment in progress.](media/2019-03-22-11-36-59.png "Check provision progress")
 
 12. After the Web App and SQL Database are provisioned, click **SQL databases** in the left-hand navigation menu followed by the name of the SQL Database you just created and select it.
 
@@ -235,7 +235,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 15. On the **Overview** screen of the **SQL Server** blade, click **Set server firewall** link at the top.
 
-    ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a red box.](media/2019-03-31-14-37-31.png "SQL Server Blade, Essentials section")
+    ![In the SQL Server Blade, Overview section, the Set server firewall tile is in a box.](media/2019-03-31-14-37-31.png "SQL Server Blade, Essentials section")
 
 16. On the **Firewall Settings** blade, specify a new rule named **ALL**, with START IP **0.0.0.0**, and END IP **255.255.255.255**.
 
@@ -310,7 +310,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
     - Click on the **Overview** link.
     - Copy the URL to Notepad for later use. Use the **Copy to clipboard** link.
 
-    ![Web App Overview settings. Capture the URL.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
+    ![In the Web App Overview settings, the URL has a box around the link.](media/2019-03-22-16-33-05.png "Contoso Web App Overview")
 
 4. On the **App Service** blade, scroll down in the left pane. Under the **Settings** menu, click on **Configuration**.
 
@@ -356,13 +356,13 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     >Note: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure portal.
 
-    ![Visual Studio Publish configuration left over from developer.](media/2019-03-22-12-42-48.png)
+    ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
 
 3. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
 
     ![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
 
-    ![App Service - Select Existing App Service - Sign In](media/2019-04-19-14-07-19.png "Azure Sign In")
+    ![App Service Select Existing App Service dialog is displayed. The Sign In link is highlighted](media/2019-04-19-14-07-19.png "Azure Sign In")
 
 4. If prompted, log on with your Azure MSDN credentials.
 
@@ -776,7 +776,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     >**Note**: You should not normally do this in a production environment.
 
-    ![CORS configuration blade.  Entering *](media/2019-03-28-08-20-57.png "CORS configuration blade")
+    ![CORS configuration blade displayed.  Entering * as the Allowed Origins value.](media/2019-03-28-08-20-57.png "CORS configuration blade")
 
 #### Subtask 3: Update the configuration in the starter project
 
@@ -802,7 +802,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
 3. Click the **Save** button.
 
-    ![the Save button is circled on the App Service blade.](media/2019-03-28-05-36-38.png "App Service blade")
+    ![The Save button is circled on the App Service blade.](media/2019-03-28-05-36-38.png "App Service blade")
 
 #### Subtask 4: Deploy the Contoso.Apps.SportsLeague.Offers project in Visual Studio
 
@@ -1133,9 +1133,9 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 2. Click **Create**.
 
-3. Back on the **Azure AD B2C** blade in the **Applications** screen, copy the  application ID of your new application to Notepad to use later. Keep this tab open for the next task. 
+3. Back on the **Azure AD B2C** blade in the **Applications** screen, copy the  application ID of your new application to Notepad to use later. Keep this tab open for the next task.
 
-     ![B2C application name and ID](media/2019-04-11-08-36-28.png "Azure AD B2C screen")
+     ![B2C application name and ID values are shown.](media/2019-04-11-08-36-28.png "Azure AD B2C screen")
 
 ### Task 3: Create Policies, Sign up
 
@@ -1147,11 +1147,11 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     - Click the **Sign up and sign in** link.
   
-    ![Create a user flow - Select a user flow type - Sign up and sign in link](media/2019-03-28-12-20-42.png "Sign up and sign in link")
+    ![Recommended for most applications results is displayed. Sign up and sign in link is highlighted.](media/2019-03-28-12-20-42.png "Sign up and sign in link")
 
 3. Enter **SignUp** in the **Name** field.
 
-    ![The unique Azure AD B2C user flow name](media/2019-04-11-08-40-58.png "User Flow Name")
+    ![The unique Azure AD B2C user flow name is displayed.](media/2019-04-11-08-40-58.png "User Flow Name")
 
 4. Click **Identity providers**, and select **Email Signup**. Optionally, you can also select social identity providers (if previously configured for the tenant). Click **OK**.
 
@@ -1161,7 +1161,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 6. **User attributes and claims**.
     - Click the **Show more...** link
 
-    ![Azure AD B2C - User flow policy - create user flow - select Show more... link](media/2019-03-28-12-38-39.png "Show more link")
+    ![In the Azure AD B2C - User flow policy - create user flow pane, the Show more link is highlighted after the default user attributes and claims.](media/2019-03-28-12-38-39.png "Show more link")
 
    - Select the following **Collect attributes**:
 
@@ -1194,7 +1194,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 12. **Run user flow** - Choose application and run user flow. 
 
-    ![Run user flow - choose application and test the link](media/2019-03-28-12-55-51.png "Test the user flow")
+    ![Choose application options are displayed. Contoso B2C Application option is selected. Run user flow button is displayed.](media/2019-03-28-12-55-51.png "Test the user flow")
 
     - Test user flow
 
@@ -1214,7 +1214,7 @@ To enable ``sign-in`` on your application, you will need to create a ``sign-in``
 
 3. Click the **All** tab link.
 
-    ![Click the ALL tab. Select a user flow type. Choose Sign in](media/2019-03-28-13-26-02.png "Select a user flow type")
+    ![The Create a user flow pane is displayed.  The ALL tab is selected. All user flows are displayed. The Sign in link is highlighted.](media/2019-03-28-13-26-02.png "Select a user flow type")
 
 4. Click **Sign in**
 5. Enter **Name** value **SignIn**
@@ -1253,7 +1253,7 @@ To enable profile editing on your application, you will need to create a profile
 
 3. Click the **All** tab link.
 
-    ![Azure AD B2C - Select a user flow type - select Profile editing](media/2019-03-28-16-19-55.png "Select Profile Editing")
+    ![The Create a user flow pane is displayed.  The ALL tab is selected. All user flows are displayed. The Profile editing has an arrow pointing at it.](media/2019-03-28-16-19-55.png "Select Profile Editing")
 
 4. The Name determines the profile editing policy name used by your application. For example, enter **EditProfile**.
 
@@ -1293,7 +1293,7 @@ To enable profile editing on your application, you will need to create a profile
 
 1. Expand the **Contoso.Apps.SportsLeague.Web** project. Find the **Web.config** file and update the AppSetting key, ```<add key="owin:AutomaticAppStartup" value="false"/>``` to **true** or delete the key. This step is necessary because the Owin libraries, already installed, will try to look for dependent files like **Startup.cs** which you are about to create. There would have been several errors in the beginning of the lab without this key.
 
-    ![Web.config file. appSettings node displayed. Owin AutomaticStartup to be deleted.](media/2019-04-19-15-08-40.png "Owin AutomaticStartup to be deleted")
+    ![The Web.config file is highlighted within the Visual Studio solution explorer. appSettings node is displayed. Owin AutomaticStartup key is highlighted.](media/2019-04-19-15-08-40.png "Owin AutomaticStartup to be deleted")
 
 2. Locate the Azure AD B2C name by navigating to your resource group. Copy the name to Notepad.
 
@@ -1777,7 +1777,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 4. Click a few links on the published E-Commerce website, and submit several orders to generate some sample telemetry.
 
-    ![Telemetry - Live data from your app dialog](media/2019-03-28-19-38-31.png "Telemetry - Live data from your app")
+    ![Telemetry - Live data from your app dialog is displayed showing request and failure results.](media/2019-03-28-19-38-31.png "Telemetry - Live data from your app")
 
 ### Task 2: Creating the web performance test and load test
 
@@ -1857,23 +1857,23 @@ To configure the application for logging and diagnostics, you have been asked to
 
 5. Click **Dashboard**.  View the performance timeline to see the overall number of requests and page load time.
 
-    ![Application Insights - Contoso.Apps.SportsLeague.Web - Click the Dashboard link](media/2019-03-29-11-10-04.png "Click the Dashboard link")
+    ![Application Insights - Contoso.Apps.SportsLeague.Web - At the top of the page, the Application Dashboard link is highlighted and has an arrow pointing to it. Failed requests and server response metrics are displayed.](media/2019-03-29-11-10-04.png "Click the Dashboard link")
 
-    ![Application Insights - Default Dashboard](media/2019-03-29-11-12-13.png "Application Insights Default Dashboard")
+    ![The Contoso web metrics are displayed. Usage, reliability, and responsiveness graphs are displayed. ](media/2019-03-29-11-12-13.png "Application Insights Default Dashboard")
 
 6. Navigate back to the Application Insights overview for ``Contoso.Apps.SportsLeague.Web``. Click on **Performance** to see individual endpoint render performance.
   
     ![Contoso.Apps.SportsLeague.Web Performance link selected](media/2019-03-29-11-01-14.png "Performance link selected")
 
-    ![Contoso.Apps.SportsLeague.Web Performance - Endpoint performance](media/2019-03-29-11-20-06.png "Endpoint performance")
+    ![Contoso.Apps.SportsLeague.Web Performance - Endpoint performance metrics are displayed for various types of HTTP requests.](media/2019-03-29-11-20-06.png "Endpoint performance")
 
-7. Under **Usage** menu area. click the **Events** menu option. Click the **View More Insights** button. 
+7. Under **Usage** menu area. click the **Events** menu option. Click the **View More Insights** button.
 
     ![A screenshot using the Events button under the Usage Preview section](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image218.png "The Usage Preview section")
 
 8. View Event metrics.  Scroll down to see event list.
 
-    ![In the Custom events section, OrderCompleted and SuccessfulPaymentAuth](media/2019-03-29-11-35-33.png "Event Statistics")
+    ![In the Custom events section, event metrics are displayed for users and sessions. Different web pages are listed. e.g. OrderCompleted and SuccessfulPaymentAuth](media/2019-03-29-11-35-33.png "Event Statistics")
 
 ## Exercise 5: Automating backend processes with Azure Functions and Logic Apps
 
@@ -1934,15 +1934,15 @@ Contoso wants to automate the process of generating receipts in PDF format and a
     - Right click on the **ContosoFunctionApp** project.
     - Select **Publish**.
 
-    ![Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
+    ![Visual Studio Solution Explorer is open. Menu is displayed for Contoso Function App. Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
 
     - Select your Function App.
 
-    ![Azure function app tree displayed.  Click OK button.](media/2019-04-15-15-34-54.png "Azure function app tree displayed")
+    ![Azure function app tree displayed. The Contoso Function App is selected.](media/2019-04-15-15-34-54.png "Azure function app tree displayed")
 
     - Check for errors in the Output window.
 
-    ![Check for errors in the Output window](media/2019-04-15-15-33-20.png "Output window.")
+    ![The build Output window is displayed. Publish succeeded message is shown.](media/2019-04-15-15-33-20.png "Output window.")
 
 6. Test your newly published Function App.
 
@@ -1950,40 +1950,40 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     - Click on the **Test** link located on the right hand blade.
 
-        ![Click on the Test link in Function App ](media/2019-04-15-15-40-27.png "Function Test link")
+        ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
 
     - Select POST for the HTTP method.
 
     - Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
 
-        ![Windows Explorer. Showing the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
+        ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
 
     - Click the **Run** button located at the bottom of the blade.
 
-        ![Display Test blade with sample.dat contents.  Arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
+        ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
 
     After a few seconds, you should see logs similar to the image below. You should see return status code of 200.  The **Output** text box should show recent Contoso purchase data. You should see a message stating the file has been created and stored in the blob storage.
 
-    ![Function App test result log.  Status code of 200.](media/2019-04-15-15-58-54.png "Function App test result log.")
+    ![There is a screenshot displaying the Function App test result log.  A status code of 200 OK is displayed on the right side pane.](media/2019-04-15-15-58-54.png "Function App test result log.")
 
 7. Check your receipt PDF in the storage account blob.
 
     - Navigate to the ContosoSports storage account.
     - Click on the **Blobs** link.
 
-        ![Blobs link](media/2019-04-15-16-06-17.png "Blobs link")
+        ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
 
 8. Click the newly created **receipts** blob container.
 
-    ![Click the Blobs link](media/2019-04-15-16-08-35.png "Click the Blobs link")
+    ![The storage account blobs are listed. Receipts blob container is highlighted.](media/2019-04-15-16-08-35.png "Click the Blobs link")
 
 9. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
 
-    ![Displaying the newly created PDF receipts.](media/2019-04-15-16-11-24.png "PDF Receipts")
+    ![There is a screenshot displaying a list of the newly created PDF receipts. An arrow pointing to the Download link is located on the right side of the screen.](media/2019-04-15-16-11-24.png "PDF Receipts")
 
     - Open the ``...`` link and choose download menu item.
 
-     ![Sample PDF receipt](media/2019-04-15-16-15-06.png "Sample PDF receipt")
+     ![A sample Contoso Sports League PDF receipt is displayed.](media/2019-04-15-16-15-06.png "Sample PDF receipt")
 
 ### Task 2: Create an Azure Logic App to Process Orders
 

@@ -30,13 +30,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
     - [Task 2: Enable file downloading](#task-2-enable-file-downloading)
     - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
     - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
     - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
+  - [You should follow all of the steps provided *before* performing the Hands-on lab.](#you-should-follow-all-of-the-steps-provided-before-performing-the-hands-on-lab)
 
 
 <!-- /TOC -->
@@ -64,7 +62,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     Click **+Create a resource**.  In the marketplace search type **Visual Studio**.
 
-    ![Search window for resources. Visual Studio 2019 selected.](media/2019-04-19-09-31-16.png "Visual Studio 2019 selected")
+    ![The text box for the resource search window is displayed. A list of results is displayed.  Visual Studio 2019 selected.](media/2019-04-19-09-31-16.png "Visual Studio 2019 selected")
 
     ![The Azure Portal Search field text is Visual Studio Community 2019 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2019 on Windows Server 2016 (x64) is selected.](media/2019-04-20-07-21-55.png "Azure Portal, Search results section")
 
@@ -79,22 +77,22 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     - **Password**: Enter a password.
     - **Inbound ports**: Select RDP on port 3389.
 
-    ![Create a virtual machine.  Enter the configuration for the virtual machine. Basic tab.](media/2019-04-19-09-49-11.png "Create a virtual machine - basic tab")
+    ![The Create a virtual machine blade is displayed. The Basics tab is selected. The values from the instructions above have been entered into the corresponding fields.](media/2019-04-19-09-49-11.png "Create a virtual machine - basic tab")
 
-    ![Create a virtual machine.  Enter inbound port rules.](media/2019-03-31-12-49-41.png "Enter inbound port rules")
+    ![The inbound port rules section is displayed. Allow selected ports is chosen. RDP 3389 value is checked.](media/2019-03-31-12-49-41.png "Enter inbound port rules")
 
     - Click the **Management** tab.
     - Click the **Create new** link. Enter a unique storage account name. e.g. ContosoSports + ``<your initials>``.
 
         >**Note:** You can use this storage account for the entire lab.
 
-    ![Create a virtual machine. Click the management tab. Enter configuration.](media/2019-03-31-12-55-09.png "Click the management tab")
+    ![The Create a virtual machine blade is displayed. The management tab is displayed and storage account name is entered in the Diagnostics storage account field.](media/2019-03-31-12-55-09.png "Click the management tab")
 
     Click the **Review + create** button. Once validation passes, then click the **Create** button.
 
     Deployment may take a few minutes.
 
-    ![Create a virtual machine. Your deployment is underway.](media/2019-04-19-09-56-17.png "Your deployment is underway.")
+    ![Your deployment is underway message is being displayed. A download link for deployment details is available. Resources are listed and corresponding status.](media/2019-04-19-09-56-17.png "Your deployment is underway.")
 
 ### Task 2: Enable file downloading
 
@@ -102,9 +100,9 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 1. Connect and log on to the new VM you just created by clicking the **Download RDP file** button.
 
-    ![Azure connect to newly created VM](media/2019-03-31-13-12-31.png "Azure connect to newly created VM")
+    ![The LabVM overview is displayed. There is a arrow pointing at the Connect button at the top. On the right hand side, there is an arrow pointing at the Download RDP file button.](media/2019-03-31-13-12-31.png "Azure connect to newly created VM")
 
-    ![Remote Desktop Connection dialog. Click the Connect button.](media/2019-04-19-10-00-38.png "Remote Desktop Connection dialog")
+    ![The Remote Desktop Connection or RDP dialog is displayed. The Connect button is highlighted.](media/2019-04-19-10-00-38.png "Remote Desktop Connection dialog")
 
 2. Enable Internet file downloads.
 
@@ -115,11 +113,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     - Select the **Security** tab.
     - Click the **Custom level ...** button.
 
-    ![Internet options.  Click the Custom level button.](media/2019-04-19-10-21-11.png "Custom level button")
+    ![Internet options dialog is displayed.  An arrow pointing at the Custom level button is displayed.](media/2019-04-19-10-21-11.png "Custom level button")
 
     - Scroll down to **Downloads** options and enable **File download**.
 
-    ![Security Settings - Internet Zone. Custom level options. Enable file downloads.](media/2019-04-19-10-23-26.png "Enable file downloads")
+    ![Security Settings - Internet Zone dialog is displayed. Under the Custom level options, download options are shown. Enable file downloads is selected.](media/2019-04-19-10-23-26.png "Enable file downloads")
 
     - Apply the new setting and click the **OK** button.
 
@@ -129,9 +127,9 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
 
-    ![Download status dialog](media/2019-04-19-10-29-35.png "Download status dialog")
+    ![The file download dialog box is displayed.  The percentage of file content downloaded is displayed. Pause, cancel and view downloads buttons are available.](media/2019-04-19-10-29-35.png "Download status dialog")
 
-    ![Installing SQL Server Management Studio dialog.](media/2019-04-19-10-31-08.png "Installing SQL Server Management Studio dialog")
+    ![Microsoft SQL Server Management Studio download status dialog is being displayed.  Loading packages. Please wait progress meter is displayed.](media/2019-04-19-10-31-08.png "Installing SQL Server Management Studio dialog")
 
 ### Task 4: Validate connectivity to Azure
 
@@ -139,7 +137,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
    - Click the **Check for an updated license** link.  
    - Click the **Close** button.
 
-    ![Visual Studio Community 2019 license check dialog displayed.](media/2019-04-19-10-39-37.png "Visual Studio Community 2019 license check")
+    ![Visual Studio Community 2019 license check dialog is displayed. There is a link for checking the the updated license.](media/2019-04-19-10-39-37.png "Visual Studio Community 2019 license check")
 
 2. Validate connectivity to your Azure subscription. Launch Visual Studio, open **Cloud Explorer** from the **View** menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
 
@@ -147,11 +145,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     - Click **View** menu.  Select the **Cloud Explorer** menu item.
 
-    ![Visual Studio 2019 View menu options. Cloud Explorer selected.](media/2019-04-19-10-52-30.png "Cloud Explorer selected")
+    ![The Visual Studio 2019 View menu options has been clicked. Cloud Explorer menu item option is selected.](media/2019-04-19-10-52-30.png "Cloud Explorer selected")
 
     >**Note:** You should see your Azure subscriptions.  If you don't see your subscription listed, make sure you are using the correct user account.
 
-    ![Cloud Explorer tree menu. Displaying Azure subscription results.](media/2019-04-19-10-54-53.png "Azure subscription results")
+    ![Cloud Explorer tree menu is displayed. Displaying Azure subscription results, like App Service Plans and App Services.](media/2019-04-19-10-54-53.png "Azure subscription results")
 
 
 ### Task 5: Download and explore the Contoso Sports League sample
