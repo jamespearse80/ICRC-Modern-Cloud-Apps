@@ -117,7 +117,7 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 ## Requirements
 
 1. Microsoft Azure subscription
-2. Local machine or a virtual machine configured Visual Studio 2019 Community Edition
+2. Local machine or a virtual machine configured with Visual Studio 2019 Community Edition
 3. Twilio account and/or personal cell phone to setup a trial Twilio account
 
 ## Help references
@@ -408,7 +408,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     The Secondary Azure Region should be the Region Pair for the region the SQL Database is hosted in. Consult <https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions> to see which region pair the location you are using for this lab is in.
 
-    >Note: If you choose a region that cannot be used as a secondary region, you will not be able to pick a pricing plan. Choose another region.
+    >**Note**: If you choose a region that cannot be used as a secondary region, you will not be able to pick a pricing plan. Choose another region.
 
     ![Wrong geo-replication region selected. Not available options presented.](media/2019-03-30-16-05-25.png "Not available options presented.")
 
@@ -729,8 +729,8 @@ In this exercise, the attendee will provision an Azure API app template using th
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
 3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**.
-    - If your Azure resource group does not show, choose **New Profile**
-    - Select **Select Existing**
+    - If your Azure resource group does not show, choose **New Profile**.
+    - Select **Select Existing**.
 4. Select the Payment Gateway API app created earlier, click **OK** **\>** **Publish**.
 
     ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
@@ -798,7 +798,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
         ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
-      - Click the **Update** button
+      - Click the **Update** button.
 
 3. Click the **Save** button.
 
@@ -854,7 +854,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
    - App Setting Name: **paymentsAPIUrl**
 
-   - Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end
+   - Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end.
 
         >**Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
 
@@ -1017,7 +1017,7 @@ The Contoso call center admin application will only be accessible by users of th
 
 2. The browser will redirect to the non-branded Access Control logon URL. You can log on with your Microsoft account or the **Contoso test user** you created earlier.
 
-    ![Microsoft login prompt](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image144.png "Microsoft login prompt")
+    ![Microsoft login prompt.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image144.png "Microsoft login prompt")
 
 3. After you log on and **accept the consent**, your browser will be redirected to the Contoso Sports League Admin webpage.
 
@@ -1063,7 +1063,7 @@ The Contoso call center admin application will only be accessible by users of th
 
 2. The browser will redirect to the branded access control logon URL.
 
-    ![The Call center administration Sign in webpage displays in an InPrivate / Incognito browser](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image153.png "Call center administration website")
+    ![The Call center administration Sign in webpage displays in an InPrivate / Incognito browser.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image153.png "Call center administration website")
 
 3. After you log on, your browser will be redirected to the Contoso Sports League Admin webpage.
 
@@ -1123,7 +1123,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
    - Name: **Contoso B2C Application**
 
-   - Reply URL: **https://\[your web url\].azurewebsites.net** (This should be the HTTPS URL to the Contoso E-Commerce Site)
+   - Reply URL: **https://\[your web url\].azurewebsites.net** (This should be the HTTPS URL to the Contoso E-Commerce Site.)
 
    - Include Web App / web API: **Yes**
 
@@ -1143,7 +1143,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 2. To enable sign-up on your application, you will need to create a sign-up policy. This policy describes the experiences consumers will go through during sign-up and the contents of tokens the application will receive on successful sign-ups. Click **User flows (policies)** link on the left menu and then **+New user flow** link at the top of the blade.
 
-    ![In the Azure Portal, on the left, Azure AD B2C - User Flows selected](media/2019-03-28-12-17-22.png "Azure AD B2C - User Flows selected")
+    ![In the Azure Portal, on the left, Azure AD B2C - User Flows selected.](media/2019-03-28-12-17-22.png "Azure AD B2C - User Flows selected")
 
     - Click the **Sign up and sign in** link.
   
@@ -1200,7 +1200,7 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![Test the user flow.  Sample sign in presented in the browser.](media/2019-03-28-13-00-01.png "Test the user flow")
 
-    - Click **Sign up now**
+    - Click **Sign up now**.
 
     ![Sign up now fields are presented to the user](media/2019-03-28-13-02-25.png "Sign up now")
 
@@ -1216,9 +1216,9 @@ To enable ``sign-in`` on your application, you will need to create a ``sign-in``
 
     ![The Create a user flow pane is displayed.  The ALL tab is selected. All user flows are displayed. The Sign in link is highlighted.](media/2019-03-28-13-26-02.png "Select a user flow type")
 
-4. Click **Sign in**
-5. Enter **Name** value **SignIn**
-6. Select the Local Account Sign-in checkbox
+4. Click **Sign in**.
+5. Enter **Name** value **SignIn**.
+6. Select the Local Account Sign-in checkbox.
 
     ![Azure AD B2C Create SignIn options](media/2019-03-28-13-29-47.png "Create SignIn options")
 
@@ -1259,7 +1259,7 @@ To enable profile editing on your application, you will need to create a profile
 
 5. Click Identity providers, and select \"**Local Account SignIn**."
 
-    ![In the Add policy blade, Identity providers (1 Selected) is selected. Identities providers - select Local Account SignIn](media/2019-03-28-16-24-26.png "select Local Account SignIn")
+    ![In the Add policy blade, Identity providers (1 Selected) is selected. Identities providers - select Local Account SignIn.](media/2019-03-28-16-24-26.png "select Local Account SignIn")
 
 6. Click the Show more... link
 
@@ -1277,7 +1277,7 @@ To enable profile editing on your application, you will need to create a profile
     - **Display Name**
     - **Postal Code**
 
-    ![Sign up - User attributes selected blade](media/2019-03-28-16-28-53.png "Sign up - User attributes selected blade")
+    ![Sign up - User attributes selected blade.](media/2019-03-28-16-28-53.png "Sign up - User attributes selected blade")
 
     Click **OK**.
 
@@ -1305,15 +1305,15 @@ To enable profile editing on your application, you will need to create a profile
 
    - ida:Tenant - **\[your Azure AD B2C name\].onmicrosoft.com**
 
-   - ida:ClientId -- **\[B2C Application ID you copied down earlier\]**
+   - ida:ClientId - **\[B2C Application ID you copied down earlier\]**
 
    - ida:RedirectUri - **https://\[your web app url\].azurewebsites.net**
 
-   - ida:SignupPolicyId -- **B2C\_1\_SignUp**
+   - ida:SignupPolicyId - **B2C\_1\_SignUp**
 
-   - ida:SignInPolicyId -- **B2C\_1\_SignIn**
+   - ida:SignInPolicyId - **B2C\_1\_SignIn**
 
-   - ida:UserProfilePolicyId -- **B2C\_1\_EditProfile**
+   - ida:UserProfilePolicyId - **B2C\_1\_EditProfile**
 
    - ida:AadInstance - https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}
 
@@ -1359,7 +1359,7 @@ To enable profile editing on your application, you will need to create a profile
 
 10. In the **Solution Explorer**, under **Contoso.Apps.SportsLeague.Web**, right-click on the **App\_Start** folder, and click **Add -\> Class**.
 
-    ![In Solution Explorer, on the App Start folder\'s right-click menu, Add is selected, and from its menu, Class is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image175.png "Solution Explorer")
+    ![In Solution Explorer, on the App Start folder\'s right-click menu, Add is selected, and from its menu, Class is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image175.png "Solution Explorer")
 
 11. Select **Visual C\#** category and **Class** and name the new file **Startup.Auth.cs**.
 
@@ -1663,7 +1663,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
 3. Enter the name as **Contoso.Apps.SportsLeague.Web.** Choose the existing resource group of **contososports**. Location should be the same location as your resource group.
 
-    ![A dialog that shows the properties of the application insights resource](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image186.png "Application insights creation dialog")
+    ![A dialog that shows the properties of the application insights resource.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image186.png "Application insights creation dialog")
 
 ### Task 1: Configure the application for telemetry
 
@@ -1859,21 +1859,21 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![Application Insights - Contoso.Apps.SportsLeague.Web - At the top of the page, the Application Dashboard link is highlighted and has an arrow pointing to it. Failed requests and server response metrics are displayed.](media/2019-03-29-11-10-04.png "Click the Dashboard link")
 
-    ![The Contoso web metrics are displayed. Usage, reliability, and responsiveness graphs are displayed. ](media/2019-03-29-11-12-13.png "Application Insights Default Dashboard")
+    ![The Contoso web metrics are displayed. Usage, reliability, and responsiveness graphs are displayed.](media/2019-03-29-11-12-13.png "Application Insights Default Dashboard")
 
 6. Navigate back to the Application Insights overview for ``Contoso.Apps.SportsLeague.Web``. Click on **Performance** to see individual endpoint render performance.
   
-    ![Contoso.Apps.SportsLeague.Web Performance link selected](media/2019-03-29-11-01-14.png "Performance link selected")
+    ![Contoso.Apps.SportsLeague.Web Performance link selected.](media/2019-03-29-11-01-14.png "Performance link selected")
 
     ![Contoso.Apps.SportsLeague.Web Performance - Endpoint performance metrics are displayed for various types of HTTP requests.](media/2019-03-29-11-20-06.png "Endpoint performance")
 
 7. Under **Usage** menu area. click the **Events** menu option. Click the **View More Insights** button.
 
-    ![A screenshot using the Events button under the Usage Preview section](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image218.png "The Usage Preview section")
+    ![A screenshot using the Events button under the Usage Preview section.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image218.png "The Usage Preview section")
 
 8. View Event metrics.  Scroll down to see event list.
 
-    ![In the Custom events section, event metrics are displayed for users and sessions. Different web pages are listed. e.g. OrderCompleted and SuccessfulPaymentAuth](media/2019-03-29-11-35-33.png "Event Statistics")
+    ![In the Custom events section, event metrics are displayed for users and sessions. Different web pages are listed. e.g. OrderCompleted and SuccessfulPaymentAuth.](media/2019-03-29-11-35-33.png "Event Statistics")
 
 ## Exercise 5: Automating backend processes with Azure Functions and Logic Apps
 
@@ -1887,7 +1887,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 ### Task 1: Create an Azure Function to Generate PDF Receipts
 
-1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom. Then in the new blade, select your Subscription, type an unique App name that identifies your function app e.g. (ContosoFunctionApp), then specify the following settings:
+1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom. Then in the new blade, select your Subscription, type a unique App name that identifies your function app e.g. (ContosoFunctionApp), then specify the following settings:
 
     - [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
 
@@ -1948,7 +1948,7 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
     - Navigate back to your Contoso Function App in the Azure Portal. You should see the newly created **ContosoMakePDF** function listed in the functions.  Select it.
 
-    - Click on the **Test** link located on the right hand blade.
+    - Click on the **Test** link located on the right-hand blade.
 
         ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
 
@@ -2037,7 +2037,7 @@ The advantages of using Logic Apps include the following:
 
 9. Select the **receiptgenerator** queue from the drop-down, click **New Step**, and **Add an Action**.
 
-    ![Under When there are messages in a queue, the Queue name is set to receiptgenerator. At the bottom, the New Step and Add an action buttons are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image244.png "Queue name")
+    ![Under When there are messages in a queue, the Queue name is set to receiptgenerator. At the bottom, the New Step and Add an action buttons are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image244.png "Queue name")
 
 10. Select **Azure Functions**.
 
@@ -2217,9 +2217,9 @@ The advantages of using Logic Apps include the following:
 
 1. Open **SQL Server Management Studio** and connect to the SQL Database for the **ContosoSportsDB** database.
 
-    >Note: You can find the database server name by:
+    >**Note**: You can find the database server name by:
     - Navigate the Azure ContosoSportsDB in the portal.
-    - In the Overview, locate the **Show database connection strings** link
+    - In the Overview, locate the **Show database connection strings** link.
     - Copy the **Server** parameter value.
     e.g. Server=tcp:``contososqlserver2019th.database.windows.net,1433``
 
