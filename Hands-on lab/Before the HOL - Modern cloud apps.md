@@ -69,7 +69,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
     Enter the Basics configuration.
 
     - **Resource Group**: Click the **Create new** link. Enter the value **ContosoSports** or some similar unique name.
-    - **Virtual machine name**: Enter your machine name.  e.g. **LabVM**
+    - **Virtual machine name**: Enter your machine name, e.g. **LabVM**.
     - **Region**: Select a region close to you.
     - **Image**: Select **Visual Studio Community (latest release) on Windows Server 2016 (x64)**.
     - **Size**: Enter **D2 v3**.
@@ -117,7 +117,7 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
     - Scroll down to **Downloads** options and enable **File download**.
 
-    ![Security Settings - Internet Zone dialog is displayed. Under the Custom level options, download options are shown. Enable file downloads is selected.](media/2019-04-19-10-23-26.png "Enable file downloads")
+    ![The Security Settings, Internet Zone dialog is displayed. Under the Custom level options, download options are shown. Enable file downloads is selected.](media/2019-04-19-10-23-26.png "Enable file downloads")
 
     - Apply the new setting and click the **OK** button.
 
