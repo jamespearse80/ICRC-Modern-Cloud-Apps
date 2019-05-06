@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-November 2018
+April 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.# Modern Cloud Apps setup
 
@@ -27,14 +27,15 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Modern cloud apps before the hands-on lab setup guide](#modern-cloud-apps-before-the-hands-on-lab-setup-guide)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
-        - [Task 2: Disable IE Enhanced Security](#task-2-disable-ie-enhanced-security)
-        - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
-        - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
-        - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
-        - [Task 6: Create a new Azure Resource Group](#task-6-create-a-new-azure-resource-group)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
+    - [Task 1: Setup a development environment](#task-1-setup-a-development-environment)
+    - [Task 2: Enable file downloading](#task-2-enable-file-downloading)
+    - [Task 3: Install SQL Server Management Studio](#task-3-install-sql-server-management-studio)
+    - [Task 4: Validate connectivity to Azure](#task-4-validate-connectivity-to-azure)
+    - [Task 5: Download and explore the Contoso Sports League sample](#task-5-download-and-explore-the-contoso-sports-league-sample)
+  - [You should follow all of the steps provided *before* performing the Hands-on lab.](#you-should-follow-all-of-the-steps-provided-before-performing-the-hands-on-lab)
+
 
 <!-- /TOC -->
 
@@ -42,11 +43,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
--   Microsoft Azure subscription
+- Microsoft Azure MSDN subscription
 
--   Local machine or Azure virtual machine configured with:
+- Local machine or Azure virtual machine configured with:
 
-    -   Visual Studio 2017 Community Edition or later
+  - Visual Studio 2019 Community Edition or later
+  - Windows Server 2016
 
 ## Before the hands-on lab
 
@@ -56,76 +58,118 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 1: Setup a development environment
 
-1.  Create a virtual machine in Azure using the Visual Studio Community 2017 with the **latest release** on Windows Server 2016 image.
-    - **Name**: Whatever you want
-    - **User Name**: whatever you want
-    - **Password**: Your choice, but make note of it
-    - **Networking**: You may want to enable RDP (port 3389) for Remote Desktop access.
+1. Create a virtual machine in Azure using the Visual Studio Community 2019 with the on Windows Server 2016 image.
 
-    ![The Azure Portal Search field text is Visual Studio Community 2017 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2017 on Windows Server 2016 (x64) is selected.](images/Setup/image3.png "Azure Portal, Search results section")
+    Click **+Create a resource**.  In the marketplace search type **Visual Studio**.
 
->**Note**: It is **highly** recommended to use a DS2 or D2 instance size for this VM.
+    ![The text box for the resource search window is displayed. A list of results is displayed.  Visual Studio 2019 selected.](media/2019-04-19-09-31-16.png "Visual Studio 2019 selected")
 
-### Task 2: Disable IE Enhanced Security
+    ![The Azure Portal Search field text is Visual Studio Community 2019 on Windows Server 2016 (x64). In the Search results section, Visual Studio Community 2019 on Windows Server 2016 (x64) is selected.](media/2019-04-20-07-21-55.png "Azure Portal, Search results section")
+
+    Enter the Basics configuration.
+
+    - **Resource Group**: Click the **Create new** link. Enter the value **ContosoSports** or some similar unique name.
+    - **Virtual machine name**: Enter your machine name, e.g. **LabVM**.
+    - **Region**: Select a region close to you.
+    - **Image**: Select **Visual Studio Community (latest release) on Windows Server 2016 (x64)**.
+    - **Size**: Enter **D2 v3**.
+    - **Username**: Enter a username.
+    - **Password**: Enter a password.
+    - **Inbound ports**: Select RDP on port 3389.
+
+    ![The Create a virtual machine blade is displayed. The Basics tab is selected. The values from the instructions above have been entered into the corresponding fields.](media/2019-04-19-09-49-11.png "Create a virtual machine - basic tab")
+
+    ![The inbound port rules section is displayed. Allow selected ports is chosen. RDP 3389 value is checked.](media/2019-03-31-12-49-41.png "Enter inbound port rules")
+
+    - Click the **Management** tab.
+    - Click the **Create new** link. Enter a unique storage account name. e.g. ContosoSports + ``<your initials>``.
+
+        >**Note:** You can use this storage account for the entire lab.
+
+    ![The Create a virtual machine blade is displayed. The management tab is displayed and storage account name is entered in the Diagnostics storage account field.](media/2019-03-31-12-55-09.png "Click the management tab")
+
+    Click the **Review + create** button. Once validation passes, then click the **Create** button.
+
+    Deployment may take a few minutes.
+
+    ![Your deployment is underway message is being displayed. A download link for deployment details is available. Resources are listed and corresponding status.](media/2019-04-19-09-56-17.png "Your deployment is underway.")
+
+### Task 2: Enable file downloading
 
 >**Note**: Sometimes this image has IE ESC already disabled, and sometimes it does not.
 
-1.  Connect and log on to the new VM you just created, click **Start** and then then **Server Manager** if not already started.
+1. Connect and log on to the new VM you just created by clicking the **Download RDP file** button.
 
-    ![Screenshot of the Server Manager icon.](images/Setup/image4.png "Server Manager icon")
+    ![The LabVM overview is displayed. There is a arrow pointing at the Connect button at the top. On the right hand side, there is an arrow pointing at the Download RDP file button.](media/2019-03-31-13-12-31.png "Azure connect to newly created VM")
 
-2.  Select **Local Server**.
+    ![The Remote Desktop Connection or RDP dialog is displayed. The Connect button is highlighted.](media/2019-04-19-10-00-38.png "Remote Desktop Connection dialog")
 
-    ![Local Server is selected from the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
+2. Enable Internet file downloads.
 
-3.  On the right side of the pane, click **On** by IE Enhanced Security Configuration.
+    - Open **Internet Explorer**.
+    - Press **F10** button on your keyboard.
+    - Select the **Tools** menu option.
+    - Select the **Internet options** menu item.
+    - Select the **Security** tab.
+    - Click the **Custom level ...** button.
 
-    ![The On button is circled next to IE Enhanced Security Configuration.](images/Setup/image6.png "On button")
+    ![Internet options dialog is displayed.  An arrow pointing at the Custom level button is displayed.](media/2019-04-19-10-21-11.png "Custom level button")
 
-4.  Change to **Off** for Administrators, and select **OK**.
+    - Scroll down to **Downloads** options and enable **File download**.
 
-    ![In the Internet Explorer Enhanced Security Configuration dialog box, select Off for both Administrators and Users then click OK.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
+    ![The Security Settings, Internet Zone dialog is displayed. Under the Custom level options, download options are shown. Enable file downloads is selected.](media/2019-04-19-10-23-26.png "Enable file downloads")
+
+    - Apply the new setting and click the **OK** button.
 
 ### Task 3: Install SQL Server Management Studio
 
-1.  On the new VM, download and install the latest version of SQL Server Management Studio from the URL below: [17.9.x as of Nov 2018]. This may take 15-20 minutes.
+1. On the new VM, download and install the latest version of SQL Server Management Studio from the URL below: [17.9.x as of Nov 2018]. This may take 15-20 minutes.
 
     <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
 
+    ![The file download dialog box is displayed.  The percentage of file content downloaded is displayed. Pause, cancel and view downloads buttons are available.](media/2019-04-19-10-29-35.png "Download status dialog")
+
+    ![Microsoft SQL Server Management Studio download status dialog is being displayed.  Loading packages. Please wait progress meter is displayed.](media/2019-04-19-10-31-08.png "Installing SQL Server Management Studio dialog")
+
 ### Task 4: Validate connectivity to Azure
 
-1.  Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft Account when prompted.
+1. Within your new virtual machine, launch Visual Studio, and validate you can login with your Microsoft MSDN Account when prompted. 
+   - Click the **Check for an updated license** link.  
+   - Click the **Close** button.
 
-2.  Validate connectivity to your Azure subscription. Launch Visual Studio, open Server Explorer from the View menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
+    ![Visual Studio Community 2019 license check dialog is displayed. There is a link for checking the the updated license.](media/2019-04-19-10-39-37.png "Visual Studio Community 2019 license check")
 
-    ![A right-click menu displays over the Visual Studio Server Explorer window. Menu options include Refresh, connect to Microsoft Azure Subscription, Manage and Filter Subscriptions, and Open Getting Started Page, which indicate that you can connect to your Azure subscription.](images/Setup/image8.png "Visual Studio Server Explorer")
+2. Validate connectivity to your Azure subscription. Launch Visual Studio, open **Cloud Explorer** from the **View** menu, and ensure that you can connect to your Azure subscription. Right click on Azure and select **Connect to Microsoft Azure Subscription**. Enter your credentials when prompted.
+
+    ![Visual Studio 2019 starting splash page with an arrow pointing to the Continue without code link.](media/2019-04-19-10-44-15.png "Continue without code")
+
+    - Click **View** menu.  Select the **Cloud Explorer** menu item.
+
+    ![The Visual Studio 2019 View menu options has been clicked. Cloud Explorer menu item option is selected.](media/2019-04-19-10-52-30.png "Cloud Explorer selected")
+
+    >**Note:** You should see your Azure subscriptions.  If you don't see your subscription listed, make sure you are using the correct user account.
+
+    ![Cloud Explorer tree menu is displayed. Displaying Azure subscription results, like App Service Plans and App Services.](media/2019-04-19-10-54-53.png "Azure subscription results")
+
 
 ### Task 5: Download and explore the Contoso Sports League sample
 
-1.  Create a new folder on your C: drive named **MCW**.
+1. Create a new folder on your C: drive named **MCW**.
 
-2.  Download the sample application from here: <https://github.com/Microsoft/MCW-Modern-cloud-apps/tree/master/Hands-on%20lab/Lab-files/Modern%20Cloud%20Apps%20Student%20Files.zip>  and extract to the newly created **MCW** folder.
+2. Download the sample application from here: <https://github.com/Microsoft/MCW-Modern-cloud-apps/tree/master/Hands-on%20lab/Lab-files/Modern%20Cloud%20Apps%20Student%20Files.zip>  and extract to the newly created **MCW** folder.
 
-3.  From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
+3. From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
 
-4.  The solution contains the following projects:
+4. The solution contains the following projects:
 
     |    |            |
     |----------|:-------------:|
     | Contoso.Apps.SportsLeague.Web |   Contoso Sports League e-commerce application |
     | Contoso.Apps.SportsLeague.Admin |   Contoso Sports League call center admin application |
-    | Contoso.Apps.SportsLeague.Data  |   Data tier |
+    | Contoso.Apps.Common  |   Shared tier |
+    | Contoso.Apps.SportsLeague.Data  |   Shared tier |
+    | Contoso.Apps.FunctionApp  |   Function app tier |
     | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
     | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
-### Task 6: Create a new Azure Resource Group
-
-1.  Within the Azure Management Portal, open the **Resource groups** tile and then select **+Add**.
-
-    ![In the Azure Management Portal, Resource groups is selected on the left, and the Add button selected on the right.](images/Setup/image9.png "Azure Management Portal")
-
-2.  Specify the name of the resource group as **contososports**, and choose the Azure region into which you want to deploy the lab. This resource group will be used throughout the remainder of this Modern Cloud App lab. Click on **Create** to create the resource group.
-
-    ![In the Resource group blade, fields are set to the previously described settings.](images/Setup/image10.png "Resource group blade")
-
-You should follow all steps provided *before* performing the Hands-on lab.
+You should follow all of the steps provided *before* performing the Hands-on lab.
