@@ -114,7 +114,10 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 ### Task 3: Explore the Contoso Sports League sample
 
-1. Connect to the **LabVM** that was deployed using the previous template using Remote Desktop.
+1. Connect to the **LabVM** that was deployed using the previous template using Remote Desktop, using these credentials:
+
+    - Admin username: `demouser`
+    - Admin password: `demo@pass123`
 
 2. Open the `C:\MCW` folder.
 
