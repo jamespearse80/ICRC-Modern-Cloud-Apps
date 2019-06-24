@@ -6,7 +6,7 @@ choco install sql-server-management-studio -y
 
 # Download Lab Files
 $labFilesFolder = "C:\LabFiles"
-if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
+if ([string]::IsNullOrEmpty($labFilesName) -eq $false)
 {
     Write-Host "Make sure folder exists"
     if ((Test-Path $labFilesFolder) -eq $false)
