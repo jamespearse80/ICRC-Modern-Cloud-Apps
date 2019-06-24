@@ -19,7 +19,7 @@ if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
     $fileName = $filePathParts[$filePathParts.Length - 1]
 
     # Download .ZIP file
-    (New-Object Net.WebClient).DownloadFile($labFilesUri, $labFilesFolder)
+    (New-Object System.Net.WebClient).DownloadFile($labFilesUri, $labFilesFolder)
 
     # Extract .ZIP file
     (New-Object -com shell.application).namespace($labFilesFolder).CopyHere((New-Object -com shell.application).namespace($labFilesFolder).Items(), 16)
