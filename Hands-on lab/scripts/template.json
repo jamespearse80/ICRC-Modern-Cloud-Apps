@@ -10,8 +10,8 @@
         }
     },
     "variables": {
-        "GitHubScriptRepo": "crpietschmann/MCW-Modern-cloud-apps",
-        "GitHubScriptRepoBranch": "jun-2019-arm-setup",
+        "GitHubScriptRepo": "microsoft/MCW-Modern-cloud-apps",
+        "GitHubScriptRepoBranch": "master",
         "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/')]",  
 
         "uniqueString": "[uniqueString(resourceGroup().id)]",
