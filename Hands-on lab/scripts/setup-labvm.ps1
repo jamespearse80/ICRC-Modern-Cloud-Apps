@@ -16,7 +16,7 @@ if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
 
     # Parse file name
     $filePathParts = $labFilesUri.Split("/")
-    $fileName = $filePathParts($filePathParts.Length - 1)
+    $fileName = $filePathParts[$filePathParts.Length - 1]
 
     # Download .ZIP file
     (New-Object Net.WebClient).DownloadFile($labFilesUri, $labFilesFolder)
