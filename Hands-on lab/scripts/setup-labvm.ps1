@@ -1,4 +1,4 @@
-param($labFilesUri="")
+param($labFilesName="")
 
 # Install SSMS
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1')) 
@@ -14,14 +14,6 @@ if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
         New-Item -Path $labFilesFolder -ItemType directory
     }
 
-    Write-Host "Parse file name"
-    $filePathParts = $labFilesUri.Split("/")
-    $fileName = $filePathParts[$filePathParts.Length - 1]
-    Write-Host "File Name: $fileName"
-
-    Write-Host "Download File..."
-    (New-Object System.Net.WebClient).DownloadFile($labFilesUri, $labFilesFolder)
-
     Write-Host "Extract .ZIP file..."
-    Expand-Archive -Path $fileName -DestinationPath $labFilesFolder -Force
+    Expand-Archive -Path $labFilesName -DestinationPath $labFilesFolder -Force
 }

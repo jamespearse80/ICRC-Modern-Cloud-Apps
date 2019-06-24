@@ -31,7 +31,8 @@
 
         "labVMCustomScriptFilename": "setup-labvm.ps1",
         "labVMCustomScriptUri": "[concat(variables('GitHubScriptRepoBranchURL'), '/scripts/', variables('labVMCustomScriptFilename'))]",
-        "labVMLabFilesUri": "[concat(variables('GitHubScriptRepoBranchURL'), '/Lab-files/Modern Cloud Apps Student Files.zip')]",
+        "labVMLabFilesName": "Modern%20Cloud%20Apps%20Student%20Files.zip",
+        "labVMLabFilesUri": "[concat(variables('GitHubScriptRepoBranchURL'), '/Lab-files/', variables('labVMLabFilesName'))]",
 
         "virtualMachineSize": "Standard_D4s_v3",
         "virtualMachineImageReference": {
@@ -192,9 +193,10 @@
                       "autoUpgradeMinorVersion": false,
                       "settings": {
                         "fileUris": [
-                          "[variables('labVMCustomScriptUri')]"
+                          "[variables('labVMCustomScriptUri')]",
+                          "[variables('labVMLabFilesUri')]"
                         ],
-                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesPath \"', variables('labVMLabFilesUri'), '\"')]"
+                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesName \"', variables('labVMLabFilesName'), '\"')]"
                       }
                     }
                   }
