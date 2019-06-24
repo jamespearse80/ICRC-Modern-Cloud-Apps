@@ -12,7 +12,7 @@
     "variables": {
         "GitHubScriptRepo": "crpietschmann/MCW-Modern-cloud-apps",
         "GitHubScriptRepoBranch": "jun-2019-arm-setup",
-        "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/scripts/')]",  
+        "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/')]",  
 
         "uniqueString": "[uniqueString(resourceGroup().id)]",
 
@@ -29,7 +29,7 @@
         "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
 
-        "labVMCustomScriptFilename": "setup-labvm.ps1",
+        "labVMCustomScriptFilename": "Hands-on lab/Lab-files/Modern Cloud Apps Student Files.zip",
         "labVMCustomScriptUri": "[concat(variables('GitHubScriptRepoBranchURL'), variables('labVMCustomScriptFilename'))]",
         
         "virtualMachineSize": "Standard_D4s_v3",
@@ -193,7 +193,7 @@
                         "fileUris": [
                           "[variables('labVMCustomScriptUri')]"
                         ],
-                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesPath C:\\LabFiles')]"
+                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesPath ', variables('labVMCustomScriptUri'))]"
                       }
                     }
                   }

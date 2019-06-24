@@ -5,7 +5,7 @@ iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.p
 choco install sql-server-management-studio -y
 
 # Download Lab Files
-$labFilesFolder = ""
+$labFilesFolder = "C:/LabFiles"
 if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
 {
     # Ensure folder exists
