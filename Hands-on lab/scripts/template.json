@@ -194,7 +194,7 @@
                         "fileUris": [
                           "[variables('labVMCustomScriptUri')]"
                         ],
-                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesPath ', variables('labVMLabFilesUri'))]"
+                        "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ./', variables('labVMCustomScriptFilename'), ' -labFilesPath \"', variables('labVMLabFilesUri'), '\"')]"
                       }
                     }
                   }
