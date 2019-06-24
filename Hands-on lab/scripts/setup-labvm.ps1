@@ -5,7 +5,7 @@ iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.p
 choco install sql-server-management-studio -y
 
 # Download Lab Files
-$labFilesFolder = "C:/LabFiles"
+$labFilesFolder = "C:\LabFiles"
 if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
 {
     # Ensure folder exists
@@ -22,5 +22,5 @@ if ([string]::IsNullOrEmpty($labFilesUri) -eq $false)
     (New-Object System.Net.WebClient).DownloadFile($labFilesUri, $labFilesFolder)
 
     # Extract .ZIP file
-    (New-Object -com shell.application).namespace($labFilesFolder).CopyHere((New-Object -com shell.application).namespace($labFilesFolder).Items(), 16)
+    Expand-Archive -Path $fileName -DestinationPath $labFilesFolder -Force
 }
