@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Modern cloud apps
@@ -116,10 +116,10 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 1. Connect to the **LabVM** that was deployed using the previous template using Remote Desktop, using these credentials:
 
-    - Admin username: `demouser`
-    - Admin password: `demo@pass123`
+    - **Admin username**: demouser
+    - **Admin password**: demo@pass123
 
-2. Open the `C:\MCW` folder.
+2. Open the **C:\MCW**` folder.
 
 3. From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
 
