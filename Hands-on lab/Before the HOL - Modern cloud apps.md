@@ -26,13 +26,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Modern cloud apps before the hands-on lab setup guide](#modern-cloud-apps-before-the-hands-on-lab-setup-guide)
-  - [Requirements](#requirements)
-  - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Download GitHub resources](#task-1-download-github-resources)
-    - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
-    - [Task 3: Explore the Contoso Sports League sample](#task-3-explore-the-contoso-sports-league-sample)
-  - [You should follow all of the steps provided *before* performing the Hands-on lab.](#you-should-follow-all-of-the-steps-provided-before-performing-the-hands-on-lab)
+- [Modern cloud apps before the hands-on lab setup guide](#Modern-cloud-apps-before-the-hands-on-lab-setup-guide)
+  - [Requirements](#Requirements)
+  - [Before the hands-on lab](#Before-the-hands-on-lab)
+    - [Task 1: Download GitHub resources](#Task-1-Download-GitHub-resources)
+    - [Task 2: Deploy resources to Azure](#Task-2-Deploy-resources-to-Azure)
+    - [Task 3: Explore the Contoso Sports League sample](#Task-3-Explore-the-Contoso-Sports-League-sample)
 
 
 <!-- /TOC -->
@@ -110,7 +109,11 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 18. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
-    ![View template deployment status](images/Setup/2019-06-24-17-22-19.png)
+    ![View template deployment status](images/Setup/2019-06-24-17-22-19.png "Resource group deployments")
+
+19. **Note**: A configuration script to install SSMS and the require lab files will run after the deployment of the LabVM completes. The task will be listed on the deployment progress screen as `LabVM/CustomScriptExtension`. You should wait for this task to complete before attempting to log into the LabVM in the next task, as it downloads and installs files you will need for the next task.
+
+    ![The CustomScriptExtension task in highlighted in the list of deployment tasks.](media/deployment-progress.png "Deployment progress")
 
 ### Task 3: Explore the Contoso Sports League sample
 
