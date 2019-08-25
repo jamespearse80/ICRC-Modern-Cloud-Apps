@@ -316,13 +316,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
-5. Locate the **Application settings** section.
-
-    ![The App settings section from the App Service blade displays.](media/2019-03-28-04-57-20.png "App Service blade")
-
 6. Add a new **Application setting** with the following values:
 
-   - Key: **AzureQueueConnectionString**
+   - Key: `AzureQueueConnectionString`
 
    - Value: Enter the Connection String for the **Azure Storage Account** just created.
 
@@ -334,11 +330,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 8. Add a new **Connection String** with the following values:
 
-   - Name: **ContosoSportsLeague**
+   - Name: `ContosoSportsLeague`
 
    - Value: **Enter the Connection String for the SQL Database just created**
 
-   - Type: **SQLAzure**
+   - Type: `SQLAzure`
 
     >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously.
 
@@ -355,8 +351,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
 
     >Note: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure portal.
-
-    ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
+    > ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
 
 3. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
 
@@ -364,7 +359,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![App Service Select Existing App Service dialog is displayed. The Sign In link is highlighted](media/2019-04-19-14-07-19.png "Azure Sign In")
 
-4. If prompted, log on with your Azure MSDN credentials.
+4. If prompted, log on with your Azure Subscription credentials.
 
     >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
 
@@ -374,7 +369,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 6. Click **OK**, and click **Publish** to publish the Web application.
 
-7. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully. 
+7. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
 
     ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
 
@@ -435,6 +430,8 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 9. On the **Create secondary** blade, click **OK**.
 
     ![Screenshot of the OK button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image57.png "OK button")
+
+    > **NOTE:** The Geo-Replication will take a few minutes to complete.
 
 10. After the Geo-Replication has finished provisioning, click **SQL Databases** in the navigation menu to the left.
 
