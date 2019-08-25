@@ -1119,13 +1119,13 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
    - Name: **Contoso B2C Application**
 
-   - Reply URL: **https://\[your web url\].azurewebsites.net** (This should be the HTTPS URL to the Contoso E-Commerce Site.)
-
    - Include Web App / web API: **Yes**
 
    - Allow Implicit Flow: **Yes**
 
-    ![The New application fields are set to the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image161.png "New application")
+   - Reply URL: `https://[your web url].azurewebsites.net` (This should be the HTTPS URL to the Contoso E-Commerce Site.)
+
+   ![The New application fields are set to the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image161.png "New application")
 
 2. Click **Create**.
 
@@ -1192,19 +1192,21 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![Choose application options are displayed. Contoso B2C Application option is selected. Run user flow button is displayed.](media/2019-03-28-12-55-51.png "Test the user flow")
 
-    - Test user flow
+13. A browser tab/window will open that looks like the following screenshot.
 
     ![Test the user flow.  Sample sign in presented in the browser.](media/2019-03-28-13-00-01.png "Test the user flow")
 
-    - Click **Sign up now**.
+14. Click **Sign up now**.
 
-    ![Sign up now fields are presented to the user](media/2019-03-28-13-02-25.png "Sign up now")
+   ![Sign up now fields are presented to the user](media/2019-03-28-13-02-25.png "Sign up now")
 
 ### Task 4: Create a sign-in policy
 
 To enable ``sign-in`` on your application, you will need to create a ``sign-in`` policy. This policy describes the experiences consumers will go through during sign-in and the contents of tokens the application will receive on successful sign-ins. Many of the previous steps will be repeated for this policy.
 
 1. Click **User flows (polices)** link on the left blade.
+
+    ![The User flows item is highlighted.](media/2019-08-25-18-01-57.png "Azure Portal")
 
 2. Click **+ New user flow** link at the top of the blade.
 
@@ -1227,11 +1229,11 @@ To enable ``sign-in`` on your application, you will need to create a ``sign-in``
 
     ![In the Add policy blade, Application claims (4 Selected) is selected. In the Select application claims blade, the following five application claims are selected: Display Name, Identity Provider, Postal Code, and User\'s Object ID.](media/2019-03-28-13-31-03.png "Add policy and Select application claims blades")
 
-      - Click the **OK** button.
+8. Click the **OK** button.
 
 8. Click **Create**. Observe the policy just created appears as **B2C\_1\_SignIn** (the **B2C\_1\_** fragment is automatically added) in the **Sign-in policies** blade.
 
-9. Open the policy by clicking **B2C\_1\_SignIn**.
+9. Open the policy by clicking **B2C\_1\_SignIn**, then click **Run user flow**.
 
 10. You should see the **Contonso B2C Application** selected from the dropdown, if not choose it.  Leave the defaults selected.
 
@@ -1279,7 +1281,7 @@ To enable profile editing on your application, you will need to create a profile
 
 9. Click **Create**. Observe the policy just created appears as \"**B2C\_1\_EditProfile**\" (the **B2C\_1\_** fragment is automatically added) in the **Profile editing policies** blade.
 
-10. Open the policy by clicking **B2C\_1\_EditProfile**.
+10. Open the policy by clicking **B2C\_1\_EditProfile**, then click **Run user flow**.
 
 11. Select **Contoso B2C application** in the **Select Application** drop-down.
 
