@@ -770,7 +770,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2. In the **Allowed Origins** text box, specify "*" to allow all origins, and click **Save**.
+2. In the **Allowed Origins** text box, specify `*` to allow all origins, and click **Save**.
 
     >**Note**: You should not normally do this in a production environment.
 
@@ -784,11 +784,11 @@ click **App Services** and then clicking the Offer API app you just created.
 
 2. In the **Connection Strings** section, add a new **Connection string** with the following values:
 
-      - Name: **ContosoSportsLeague**
+      - Name: `ContosoSportsLeague`
 
       - Value: **Enter the Connection String for the SQL Database that was created**.
 
-      - Type: **SQL Azure**
+      - Type: `SQL Azure`
 
         ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
 
@@ -810,7 +810,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](media/2019-04-19-15-03-45.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
+3. On the **Publish Web** dialog box, click **Azure App Service**, choose **Select Existing**, and select **Publish**.
 
     ![On the Publish tab, the Microsoft Azure App Service tile is selected, and under it, the radio button for Select Existing is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image109.png "Publish tab")
 
@@ -850,21 +850,21 @@ click **App Services** and then clicking the Offer API app you just created.
 
 6. Add a new **Application Setting** with the following values:
 
-   - App Setting Name: **paymentsAPIUrl**
+   - App Setting Name: `paymentsAPIUrl`
 
-   - Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end.
+   - Value: Enter the **HTTPS** URL for the Payments API App with `/api/nvp` appended to the end.
 
-        >**Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
+        >**Example**: `https://paymentsapi0.azurewebsites.net/api/nvp`
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
 
 7. Add another **Application Setting** with the following values:
 
-   - App Setting Name: **offersAPIUrl**
+   - App Setting Name: `offersAPIUrl`
 
-   - Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
+   - Value: Enter the **HTTPS** URL for the Offers API App with `/api/get` appended to the end
 
-    >**Example**: <https://offersapi4.azurewebsites.net/api/get>
+    >**Example**: `https://offersapi4.azurewebsites.net/api/get`
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
@@ -886,7 +886,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![On the Contoso Sports League webpage, Today\'s offers display: Baseball socks, Road bike, and baseball mitt.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image121.png "Contoso Sports League webpage")
 
-4. Submit several test orders to ensure all pieces of the site are functional.  ``Accept the default data during the payment processing.``
+4. Submit several test orders to ensure all pieces of the site are functional.  **Accept the default data during the payment processing.**
 
     ![On the Contoso Sports League webpage, the message Order Completed displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image122.png "Contoso Sports League webpage")
 
@@ -918,15 +918,11 @@ The Contoso call center admin application will only be accessible by users of th
 
     If you already have a Premium Azure Active Directory, skip to Task 2.
 
-5. On the **Activate** blade, click on the **Free Trial** link within the **Azure AD Premium P2** box.
+5. On the **Activate** blade, click on the **Free Trial** link within the **Azure AD Premium P2**, then click **Activate**.
 
-    ![The Free trial link is selected on the Activate blade in the Azure AD Premium P2 box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image126.png "Activate blade")
+    ![The Free trial link is selected on the Activate blade in the Azure AD Premium P2 box, and the Activate button is highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image126.png "Activate blade")
 
-6. On the **Active Azure AD Premium P2 trial** blade, click the **Activate** button.
-
-    ![On the Active Azure AD Premium P2 trial blade, the Activate button is boxed in red.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image127.png "Active Azure AD Premium trial blade")
-
-7. Close the **Azure Active Directory** blades.
+6. Close the **Azure Active Directory** blades.
 
 ### Task 2: Create a new Contoso user
 
@@ -947,7 +943,7 @@ The Contoso call center admin application will only be accessible by users of th
 
     ![Under Name, the Domain Name is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image129.png "Domain name")
 
-5. On the **Azure Active Directory** blade, click on **Users and groups** followed by **All users**.
+5. On the **Azure Active Directory** blade, click on **Users**.
 
     ![Under Manage, All users is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image130.png "Azure Active Directory blade")
 
@@ -1043,15 +1039,15 @@ The Contoso call center admin application will only be accessible by users of th
 
     ![The Configure company branding link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image149.png "Configure company branding link")
 
-5. On the **Configure company branding** blade, select the **default\_signin\_illustration.jpg** image file from **C:\\MCW** for the **Sign-in page image**.
+5. On the **Configure company branding** blade, select the `default_signin_illustration.jpg` image file from `C:\MCW` for the **Sign-in page image**.
 
     ![The Configure company branding blade displays the default sign in picture of the Contoso sports league text, and a person on a bicycle. Below that, the Select a file field and browse icon is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image150.png "Configure company branding blade")
 
-6. Select the **logo-60-280.png** image file from the supplementary files for the **Banner image**.
+6. Select the `logo-60-280.png` image file from the supplementary files for the **Banner image**.
 
     ![The Contoso sports league banner text displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image151.png "Contoso sports league banner")
 
-    Click **Save**.
+7. Click **Save**.
 
     ![The Save button is circled on the Configure company branding blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image152.png "Configure company branding blade")
 
