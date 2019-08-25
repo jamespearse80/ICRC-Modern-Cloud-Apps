@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -201,19 +201,19 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Ensure the **Target server** is the same region as the Web app.
 
-8. Application Insights should be disabled.
+8. Once the values are accepted in the **New server** blade, click **Select**.
+
+    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
+
+9. On the **SQL Database** blade, click **Select**.
+
+    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
+
+11. Application Insights should be disabled.
 
     ![Application Insight configuration. Disabled option selected.](media/2019-04-19-13-24-11.png "Application Insight configuration")
 
-9. Once the values are accepted in the **New server** blade, click **Select**.
-
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-10. On the **SQL Database** blade, click **Select**.
-
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-11. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
+12. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
 
     ![Final web app configuration settings.  Arrow pointing to the Create button.](media/2019-04-19-13-32-16.png "Final web app configuration settings")
 

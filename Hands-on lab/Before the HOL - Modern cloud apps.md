@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -69,23 +69,23 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 1. Open your Azure Portal.
 
-2. Select Resource groups.
+2. Select **Resource groups**.
 
-3. Select +Add.
+3. Select **+Add**.
  
 4. Type a resource group name, such as *ContosoSports-[your initials or first name]*.
 
-5. Select Review + Create, then select Create.
+5. Select **Review + Create**, then select **Create**.
 
-6. Select Refresh to see your new resource group displayed and select it.
+6. Select **Refresh** to see your new resource group displayed and select it.
 
-7. Select Export template, and then select Deploy.
+7. Select **Export template**, and then select **Deploy**.
 
     ![Select Deploy](images/Setup/2019-06-24-17-15-18.png)
 
 8. Select **Build your own template in the editor**.
 
-9. In the extracted folder, open the **\Hands-on lab\Scripts\template.json** file.
+9. In the extracted folder, open the `\Hands-on lab\Scripts\template.json` file.
 
 10. Copy and paste it into the window.
 
@@ -119,12 +119,12 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 1. Connect to the **LabVM** that was deployed using the previous template using Remote Desktop, using these credentials:
 
-    - **Admin username**: demouser
-    - **Admin password**: demo@pass123
+    - **Admin username**: `demouser`
+    - **Admin password**: `demo@pass123`
 
-2. Open the **C:\MCW**` folder.
+2. Open the `C:\MCW` folder.
 
-3. From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: **Contoso.Apps.SportsLeague.sln**.
+3. From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: `Contoso.Apps.SportsLeague.sln`.
 
 4. The solution contains the following projects:
 
