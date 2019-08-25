@@ -1313,7 +1313,7 @@ To enable profile editing on your application, you will need to create a profile
 
    - ida:UserProfilePolicyId - **B2C\_1\_EditProfile**
 
-   - ida:AadInstance - https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}
+   - ida:AadInstance - `https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}`
 
    Example of settings:
 
@@ -1365,7 +1365,7 @@ To enable profile editing on your application, you will need to create a profile
 
 12. Replace the entire contents of Startup.Auth.cs with the following code and Save.
 
-    ```csharp
+   ```csharp
     // App_Start\Startup.Auth.cs
     using System;
     using Owin;
@@ -1454,9 +1454,9 @@ To enable profile editing on your application, you will need to create a profile
             }
         }
     }
-    ```
+   ```
 
-    > **Note**: The parameters you provide in **OpenIdConnectAuthenticationOptions** serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
+   > **Note**: The parameters you provide in **OpenIdConnectAuthenticationOptions** serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
 
 ### Task 7: Send authentication requests to Azure AD
 
@@ -1659,9 +1659,11 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![A screenshot that provides an overview of Application Insights and a button to click Create.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image185.png "Application insights resource")
 
-3. Enter the name as **Contoso.Apps.SportsLeague.Web.** Choose the existing resource group of **contososports**. Location should be the same location as your resource group.
+3. Enter the name as **Contoso.Apps.SportsLeague.Web** Choose the existing resource group of **contososports**. Location should be the same location as your resource group.
 
     ![A dialog that shows the properties of the application insights resource.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image186.png "Application insights creation dialog")
+
+4. Click **Review + create**, then **Create**.
 
 ### Task 1: Configure the application for telemetry
 
@@ -1697,7 +1699,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![Screenshot of Output.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image193.png "Output")
 
-9. Open the file **\\Helpers\\TelemetryHelper.cs** located in the **Contoso.Apps.SportsLeague.Web** project.
+9. Open the file `\Helpers\TelemetryHelper.cs` located in the **Contoso.Apps.SportsLeague.Web** project.
 
 10. Add the following using statement to the top of the file:
 
@@ -1719,7 +1721,7 @@ To configure the application for logging and diagnostics, you have been asked to
     client.TrackEvent(eventName, properties);
     ```
 
-13. Save the **TelemetryHelper.cs** file.
+13. Save the `TelemetryHelper.cs` file.
 
 #### Subtask 2: Enable client side telemetry
 
@@ -1741,13 +1743,27 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![From the Configure menu, Getting started is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image196.png "Configure menu")
 
-5. In the portal, navigate to How-to Guides-> Collect data-> Configure applications-> Web Pages -> JavaScript.
+5. In the portal, navigate to **How-to Guides** -> **Monitor resources** -> **Applications** -> **Code-based monitoring** -> **Web pages** -> **Client-side JavaScript**, then navigate to the **Adding the Javascript SDK** section of the documentation page.
 
     ![Screenshot of the MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION arrow.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image197.png "MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION ")
 
-6. Select and copy the full contents of the JavaScript on the **Client application monitoring and diagnosis** blade.
+    > **NOTE:** You can find the documentation page at the following URL: <https://docs.microsoft.com/en-us/azure/azure-monitor/app/javascript#snippet-based-setup>
+
+6. Select and copy the full contents of the JavaScript under the **Snippet based setup** heading.
 
     ![Under Guidance in the Client application monitoring and diagnosis blade, JavaScript displays. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image198.png "Client application monitoring and diagnosis blade")
+
+    Here's the Javascript code to copy/paste for quick reference:
+
+```javascript
+    <script type="text/javascript">
+    var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}var t={config:e};t.initialize=!0;var i=document,a=window;setTimeout(function(){var n=i.createElement("script");n.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",i.getElementsByTagName("script")[0].parentNode.appendChild(n)});try{t.cookie=i.cookie}catch(e){}t.queue=[],t.version=2;for(var r=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];r.length;)n("track"+r.pop());n("startTrackPage"),n("stopTrackPage");var s="Track"+r[0];if(n("start"+s),n("stop"+s),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)){n("_"+(r="onerror"));var o=a[r];a[r]=function(e,n,i,a,s){var c=o&&o(e,n,i,a,s);return!0!==c&&t["_"+r]({message:e,url:n,lineNumber:i,columnNumber:a,error:s}),c},e.autoExceptionInstrumented=!0}return t}(
+    {
+        instrumentationKey:"INSTRUMENTATION_KEY"
+    }
+    );window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({});
+    </script>
+```
 
 7. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
 
