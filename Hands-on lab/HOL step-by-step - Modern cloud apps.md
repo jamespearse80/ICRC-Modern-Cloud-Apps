@@ -633,9 +633,9 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![On the Web App blade, the App name field is set to contososportsadmin2101](media/2019-03-28-05-29-59.png "Web App blade")
 
-4. Click on **App Service plan/Location**, and select the **ContosoSportsPlan** used by the front-end Web app.
+4. Click on **Windows Plan**, and select the **ContosoSportsPlan** used by the front-end Web app.
 
-5. After the values are accepted, click **Create**.  It will take a few minutes to provision.
+5. After the values are accepted, click **Review and create**, then **Create**.  It will take a few minutes to provision.
 
 #### Subtask 2: Update the configuration in the starter project
 
@@ -643,7 +643,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![The App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image80.png "App Service blade")
 
-2. On the **App Service** blade, click on **Configuration settings** in the left pane.
+2. On the **App Service** blade, click on **Configuration** in the left pane.
 
     ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
@@ -651,11 +651,11 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 4. Add a new **Connection string** with the following values:
 
-    - Name: **ContosoSportsLeague**
+    - Name: `ContosoSportsLeague`
 
     - Value: **Enter the Connection String for the primary SQL Database**.
 
-    - Type: **SQL Azure**
+    - Type: `SQL Azure`
 
     ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
 
@@ -677,19 +677,19 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](media/2019-04-19-14-30-03.png "Right-Click menu")
 
-3. Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
+3. Choose **App Service** as the publish target, choose **Select Existing**, then click **Publish**
 
     ![On the Publish tab, Microsoft Azure App Service is selected. Below that, the radio button is selected for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image87.png "Publish tab")
 
 4. Select the **Web App** for the Call Center Admin App.
 
-    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and contososportsadmin4 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
+    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and the Call Center Web App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
 
-5. Click **OK**, and click **Publish** to deploy the site.
+5. Click **OK** to deploy the site.
 
     ![Display the Visual Studio Contoso.Apps.SportsLeague.Admin publish success message in the output.](media/2019-03-28-05-45-28.png "Publish Succeeded")
 
-6. The website should load / display the following:
+6. Once deployment is complete, navigate to the Web App. It should look like the following:
 
     ![The Contoso website displays the Contoso Sports League Admin webpage, which says that orders that display below are sorted by date, and you can click on an order to see its details. However, at this time, there is no data available under Completed Orders.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image89.png "Contoso website")
 
@@ -725,10 +725,11 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**.
-    - If your Azure resource group does not show, choose **New Profile**.
-    - Select **Select Existing**.
-4. Select the Payment Gateway API app created earlier, click **OK** **\>** **Publish**.
+3. On the **Publish Web** dialog box, click **Azure App Service**, then choose **Select Existing**, and select **Publish**.
+
+    > **NOTE:** If your Azure resource group does not show, choose **New Profile**.
+
+4. Select the Payment Gateway API app created earlier, click **OK**.
 
     ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
 
@@ -738,7 +739,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Copy and paste the gateway **URL** of the deployed **API App** into Notepad for later use.
 
-7. Your browser should open and display the following web page:
+7. Viewing the Web App in a browser will display the following web page:
 
    ![Your App Service app is up and running web page displayed](media/2019-04-11-04-58-04.png "App is up and running")
 
