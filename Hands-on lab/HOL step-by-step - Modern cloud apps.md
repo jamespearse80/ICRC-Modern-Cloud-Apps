@@ -1901,103 +1901,97 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 ### Task 1: Create an Azure Function to Generate PDF Receipts
 
-1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom. Then in the new blade, select your Subscription, type a unique App name that identifies your function app e.g. (ContosoFunctionApp), then specify the following settings:
-
-    - [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
-
-    - [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): One of the following plans:
-
-    - **Hosting plan**: The default hosting plan type for Azure Functions is **Consumption Plan**. When you choose a consumption plan, you must also choose the **Location**. For now, select **App Service Plan**.
-        - **Runtime Stack**: Keep **.NET** value.
-
-        - **App Service plan**: An App Service plan requires you to create an **App Service plan/location** or select an existing one. These settings determine the [location, features, cost, and compute resources](https://azure.microsoft.com/pricing/details/app-service/) associated with your app. For now, select the existing App Service Plan you have been using so far in this lab.
-
-        - **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking **Select Existing** and choosing the storage account in the **contososports** resource group.
-        - **Application Insights** - Disabled
+1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom.
 
     ![On the left side of the Portal, the Create a resource button is selected. In the middle, under New, Compute is selected. On the right, under Compute, Function App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image221.png "Azure Portal")
 
-2. Click **Create** to provision and deploy the new function app.
+2. Provision and deploy the new function app, with the following settings:
+
+    - [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
+
+    - **OS**: Windows
+
+    - [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): App Service Plan
+
+    - **App Service plan**: Select the **existing App Service Plan** you have been using so far in this lab. An App Service plan requires you to create an App Service plan/location or select an existing one. These settings determine the [location, features, cost, and compute resources](https://azure.microsoft.com/pricing/details/app-service/) associated with your app.
+
+    - **Runtime Stack**: .NET Core
+
+    - **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking **Select Existing** and choosing the storage account in the **contososports** resource group.
+
+    - **Application Insights**: Disabled
 
     ![Under Function App, the App name field is set to ContosoFunctionApp, and at the bottom the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image222.png "Function App section")
 
-3. Paste your storage account connection string into Notepad.
+3. Navigate to the Storage Account in the **contososports** resource group, go to **Access Keys** and copy the **Connection String** for the Storage Account. Paste your storage account connection string into Notepad to save for later.
 
     ![Display storage account list.  Pointing to Access keys.](media/2019-04-15-15-07-15.png "Storage Account Access keys")
 
-4. Create Function App Application Settings
-    - Navigate to the Function App you just created earlier.
+4. Navigate to the **Function App** that was just created, and click on **Configuration**.
 
-    ![Display Contoso Function App. Arrow showing the Application Setting link.](media/2019-04-15-15-15-22.png "Contoso Function App Application Settings")
+    ![Display Contoso Function App, with the Configuration link highlighted.](media/2019-04-15-15-15-22.png "Contoso Function App Application Settings")
 
-    - Click the **+ New application setting** link.
-    - Enter the name ``AzureWebJobsStorage``.
-    - Enter the value for your storage account connection string.
-    - Click the **Update** button.
+5. Add a new Application Setting with the following values, then click **Save**:
 
-    - Click the **+ New application setting** link.
-    - Enter the name ``contososportsstorage``.
-    - Enter the value for your storage account connection string, again.
-    - Click the **Update** button.
+    - **Name**: `contososportsstorage`
+    - **Value**: Enter the Connection String for your storage account.
 
     ![Updated Function App Application settings. Showing final values.](media/2019-04-15-16-18-36.png "Updated Function App Application settings.")
 
-5. Publish the Function App.
-
-    - Open the Visual Studio solution.
-    - Right click on the **ContosoFunctionApp** project.
-    - Select **Publish**.
+6. To publish the Function App, open the Visual Studio solution, Right-click on the **ContosoFunctionApp** project, then select **Publish**.
 
     ![Visual Studio Solution Explorer is open. Menu is displayed for Contoso Function App. Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
 
-    - Select your Function App.
+7. On the **Pick a publish target** dialog, Select **Select existing**, then click **Publish**.
+
+8. Select the **Function App**, then click **OK**.
 
     ![Azure function app tree displayed. The Contoso Function App is selected.](media/2019-04-15-15-34-54.png "Azure function app tree displayed")
 
-    - Check for errors in the Output window.
+9. The publish should only take minute or so. You can check the **Output** window for any errors that may occur.
 
     ![The build Output window is displayed. Publish succeeded message is shown.](media/2019-04-15-15-33-20.png "Output window.")
 
-6. Test your newly published Function App.
+10. To test your newly published Function App, start by navigating back to your Contoso Function App in the Azure Portal. Select the newly created **ContosoMakePDF** function listed in the functions.
 
-    - Navigate back to your Contoso Function App in the Azure Portal. You should see the newly created **ContosoMakePDF** function listed in the functions.  Select it.
+11. Click on the **Test** link located on the right-hand blade.
 
-    - Click on the **Test** link located on the right-hand blade.
+  ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
 
-        ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
+12. Select **POST** for the HTTP method.
 
-    - Select POST for the HTTP method.
+13. Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
 
-    - Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
+  ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
 
-        ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
+14. Click the **Run** button located at the bottom of the blade.
 
-    - Click the **Run** button located at the bottom of the blade.
+    ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
 
-        ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
+    > **NOTE:** There is also a **Run** button located at the top of the Azure Function blade. Clicking either of these buttons will run the function just the same.
 
     After a few seconds, you should see logs similar to the image below. You should see return status code of 200.  The **Output** text box should show recent Contoso purchase data. You should see a message stating the file has been created and stored in the blob storage.
 
     ![There is a screenshot displaying the Function App test result log.  A status code of 200 OK is displayed on the right side pane.](media/2019-04-15-15-58-54.png "Function App test result log.")
 
-7. Check your receipt PDF in the storage account blob.
+15. Check your receipt PDF in the storage account blob.
 
     - Navigate to the ContosoSports storage account.
     - Click on the **Blobs** link.
 
-        ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
+    ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
 
-8. Click the newly created **receipts** blob container.
+16. Click the newly created **receipts** blob container.
 
     ![The storage account blobs are listed. Receipts blob container is highlighted.](media/2019-04-15-16-08-35.png "Click the Blobs link")
 
-9. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
+17. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
 
     ![There is a screenshot displaying a list of the newly created PDF receipts. An arrow pointing to the Download link is located on the right side of the screen.](media/2019-04-15-16-11-24.png "PDF Receipts")
 
-    - Open the ``...`` link and choose download menu item.
+    - Open the `...` link and choose download menu item.
 
-     ![A sample Contoso Sports League PDF receipt is displayed.](media/2019-04-15-16-15-06.png "Sample PDF receipt")
+    ![A sample Contoso Sports League PDF receipt is displayed.](media/2019-04-15-16-15-06.png "Sample PDF receipt")
 
 ### Task 2: Create an Azure Logic App to Process Orders
 
