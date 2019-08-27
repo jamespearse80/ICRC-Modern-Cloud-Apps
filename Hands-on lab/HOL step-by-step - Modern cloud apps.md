@@ -100,7 +100,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure. 
+In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
 Please note that as opposed to the whiteboard design session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
@@ -2083,9 +2083,9 @@ The advantages of using Logic Apps include the following:
 
     ![In the Order item code, the following line of code is circled: \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image251.png "Order item code")
 
-    Click **Save** again.
+17. Click **Save** again.
 
-17. Run the logic app. It should process the orders you have submitted previously to test PDF generation. Using Azure Storage Explorer or Visual Studio Cloud Explorer you can navigate to the storage account and open the receipts container to see the created PDFs.
+18. Run the logic app. It should process the orders you have submitted previously to test PDF generation. Using Azure Storage Explorer or Visual Studio Cloud Explorer you can navigate to the storage account and open the receipts container to see the created PDFs.
 
     ![In Azure Storage Explorer, on the left, the following tree view is expanded: Storage Accounts\\contososportsstorage01r\\Blob Containers. Under Blob Containers, receipts is selected. On the right, the ContosoSportsLeague-Store-Receipt-72.pdf is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image252.png "Azure Storage Explorer")
 
@@ -2103,7 +2103,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the SQL Server section, on the Actions tab, SQL Server - Update row is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image256.png "SQL Server section")
 
-22. Name the connection ContosoSportsDB, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create**.
+22. Name the connection `ContosoSportsDB`, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create**.
 
     ![TheUpdate row section displays the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image257.png "Update row")
 
@@ -2189,31 +2189,23 @@ The advantages of using Logic Apps include the following:
 
     ![Screenshot of the Twilio account Sign up for free webpage.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image268.png "Twilio account Sign up webpage")
 
-2. When you sign up for a free Twilio trial, you will be asked to verify your personal phone number. This is an important security step that is mandatory for trying Twilio.
-
-    ![On the Verification prompt, the \"We need to verify you\'re a human\" message displays. Under that is a phone number field, and a Verify via SMS button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image269.png "Verification prompt")
-
-3. Give your project a name.
-
-    ![Screenshot of Twilio project name screen.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/twilio-project-name.png "Twilio Project Name Screen")
-
-4. Click **All Products & Services**.
+2. Click **All Products & Services**.
 
     ![In the Console, under Home, the All Products and Services (ellipses) button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image270.png "Console")
 
-5. Click on **Phone Numbers**.
+3. Click on **Phone Numbers**.
 
     ![On the Console, under Numbers, Phone Numbers is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image271.png "Console")
 
-6. Click **Get Started**.
+4. Click **Get Started**.
 
     ![On the Console, under Phone Numbers, the Get Started button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image272.png "Console")
 
-7. Click the **Get your first Twilio phone number** button.
+5. Click the **Get your first Twilio phone number** button.
 
     ![On the Get Started with Phone Numbers prompt, the Get your first Twilio phone number button displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image273.png "Get Started with Phone Numbers prompt")
 
-8. Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done**.
+6. Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done**.
 
     ![On the Your first Twilio Phone Number prompt, the number is obscured.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image274.png "Your first Twilio Phone Number prompt")
 
