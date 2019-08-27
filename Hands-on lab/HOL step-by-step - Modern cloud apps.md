@@ -2213,14 +2213,14 @@ The advantages of using Logic Apps include the following:
 
     ![On the Console, on the left, the Home button and the Settings menu tab are selected. On the right, under API Credentials, Account SID and Auth Token are circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image275.png "Console")
 
-#### Subtask 2: Create a new logic app 
+#### Subtask 2: Create a new logic app
 
 1. Open **SQL Server Management Studio** and connect to the SQL Database for the **ContosoSportsDB** database.
 
     >**Note**: You can find the database server name by:
-    - Navigate the Azure ContosoSportsDB in the portal.
-    - In the Overview, locate the **Show database connection strings** link.
-    - Copy the **Server** parameter value.
+    > - Navigate the Azure ContosoSportsDB in the portal.
+    > - In the Overview, locate the **Show database connection strings** link.
+    > - Copy the **Server** parameter value.
     e.g. Server=tcp:``contososqlserver2019th.database.windows.net,1433``
 
     ![In Object Explorer, ContosoSportsDBserver1234.database is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image276.png "Object Explorer")
@@ -2367,12 +2367,12 @@ The advantages of using Logic Apps include the following:
 
 31. Immediately before the **Send\_Text\_Message\_(SMS)** section, create a new line, and add the following code:
 
-    ```json
+  ```json
     "forEach_email": {
-        "type": "Foreach",
-        "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
-        "actions": {
-    ```
+      "type": "Foreach",
+      "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
+      "actions": {
+  ```
 
 32. Remove the **runAfter** block from the **Send\_Text\_Message\_(SMS)** action.
 
@@ -2380,15 +2380,15 @@ The advantages of using Logic Apps include the following:
 
 33. Locate the closing bracket of the **Send\_Text\_Message\_(SMS)** action, create a new line after it (be **SURE** to place a leading comma after the closing bracket), and add the following code:
 
-    ```json
-         },
-            "runAfter": {
-                "Execute_stored_procedure_2": [
-                    "Succeeded"
-                ]
-            }
+  ```json
+        },
+        "runAfter": {
+            "Execute_stored_procedure_2": [
+                "Succeeded"
+            ]
         }
-    ```
+    }
+  ```
 
 34. Click **Save** on the toolbar to enable the logic app.
 
