@@ -1516,6 +1516,14 @@ Your app is now properly configured to communicate with Azure AD B2C by using th
                 new AuthenticationProperties() { RedirectUri = "/" }, Startup.ProfilePolicyId);
         }
     }
+    
+    public void SignOut()
+    {
+        if (Request.IsAuthenticated)
+        {
+            HttpContext.GetOwinContext().Authentication.SignOut();
+        }
+    }
 
     ```
 
