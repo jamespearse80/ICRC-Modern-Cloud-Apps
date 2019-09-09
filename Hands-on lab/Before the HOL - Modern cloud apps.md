@@ -93,23 +93,23 @@ Before initiating the hands-on lab, you will setup an environment to use for the
 
 12. Select **Edit parameters**
 
-    ![Select Edit Parameters](images/Setup/2019-06-24-17-17-05.png)
+    ![Select Edit Parameters.](images/Setup/2019-06-24-17-17-05.png)
 
 13. In the extracted folder, open the **\Hands-on lab\Scripts\parameters.json** file.
 
 14. Copy and paste it into the window.
 
-15. Select **Save**
+15. Select **Save**.
 
 16. Check the **I agree to the terms and conditions stated above** checkbox.
 
 17. Select **Purchase**.
 
-    ![Select Purchase](images/Setup/2019-06-24-17-20-12.png)
+    ![Select Purchase.](images/Setup/2019-06-24-17-20-12.png)
 
 18. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
-    ![View template deployment status](images/Setup/2019-06-24-17-22-19.png "Resource group deployments")
+    ![View template deployment status.](images/Setup/2019-06-24-17-22-19.png "Resource group deployments")
 
 19. **Note**: A configuration script to install SSMS and the require lab files will run after the deployment of the LabVM completes. The task will be listed on the deployment progress screen as `LabVM/CustomScriptExtension`. You should wait for this task to complete before attempting to log into the LabVM in the next task, as it downloads and installs files you will need for the next task.
 
