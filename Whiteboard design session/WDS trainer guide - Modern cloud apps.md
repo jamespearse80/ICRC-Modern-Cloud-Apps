@@ -496,7 +496,7 @@ The primary audience are the business decision makers and technology decision ma
 
     If Contoso chooses to open access of the Offers service for integration by partners they should also consider implementing API management in front of their API App hosted Web API. This would enable them to lock down access by requiring a key, apply policy (such as rate limiting requests), and monitor usage by API customers.
 
-**Geo-resiliency**
+*Geo-resiliency*
 
 1.  How would you implement high availability for the orders database to guard against regional data center outages? Be specific on how you would configure SQL Database and Azure Storage_
 
@@ -524,7 +524,7 @@ The primary audience are the business decision makers and technology decision ma
 
     For Azure Storage, the RTO is about 24 hours and the RPO is typically less than 15 minutes, although this has no explicit SLA. Given the potentially long RTO and RPO for Azure Storage, Contoso might consider using RA-GRS storage and when a failover happens use the RA-GRS for read and a separate storage account for the writing of new files.
 
-**Access control**
+*Access control*
 
 1.  With respect to managing access to the call center website, explain how you would recommend Contoso implement a solution that meets their requirements. Be specific about both the implementation and the process you would use to gain Contoso's acceptance of the proposed solution_
 
@@ -548,7 +548,7 @@ The primary audience are the business decision makers and technology decision ma
 
     Once applied, any access to the call center admin website will automatically be redirected to first log in through Azure Active Directory, and users would need to be created in Azure Active Directory in order to acquire access.
 
-**Enabling PCI compliance**
+*Enabling PCI compliance*
 
 1.  Keeping only the e-commerce website and handling of cardholder data in scope for PCI, consider the following in your design:
 
@@ -612,7 +612,7 @@ The primary audience are the business decision makers and technology decision ma
 
     While virtual machines could certainly be used to enable a PCI compliant solution, they would not meet the customer requirement for minimizing infrastructure efforts.
 
-**Data warehouse**
+*Data warehouse*
 
 1.  How would you recommend Contoso implement their data warehouse?
 
