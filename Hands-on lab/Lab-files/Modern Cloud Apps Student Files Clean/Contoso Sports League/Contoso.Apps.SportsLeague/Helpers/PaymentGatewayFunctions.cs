@@ -35,7 +35,7 @@ public class NVPAPICaller
     private string APIPassword = "ContosoPassword";
     private string APISignature = "ABCDEFGHIJKLMNOP1234567890";
     private string Subject = "";
-    private string BNCode = "PP-ECWizard";
+    //private string BNCode = "PP-ECWizard";
 
 
     // HttpWebRequest Timeout specified in milliseconds.
