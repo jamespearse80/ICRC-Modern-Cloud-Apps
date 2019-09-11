@@ -32,8 +32,7 @@ By the end of this hands-on lab, you will have learned how to use several key se
 
 ## Azure services and related products
 
-- Web App
-- API App
+- Azure App Service (Web App, API App)
 - App Service Environment
 - Azure Functions
 - Application Gateway
@@ -45,6 +44,9 @@ By the end of this hands-on lab, you will have learned how to use several key se
 - Azure Active Directory
 - Azure Logic Apps
 - Azure DevOps
+- Azure Application Insights
+- Visual Studio 2019 Community Edition or later
+- Twilio (third-party service to send SMS messages)
 
 ## Azure solutions
 
