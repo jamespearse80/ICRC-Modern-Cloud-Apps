@@ -427,13 +427,13 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-9. On the **Create secondary** blade, click **OK**.
+9. On the **Create secondary** blade, select **OK**.
 
     ![Screenshot of the OK button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image57.png "OK button")
 
-    > **NOTE:** The Geo-Replication will take a few minutes to complete.
+    > **Note**: The Geo-Replication will take a few minutes to complete.
 
-10. After the Geo-Replication has finished provisioning, click **SQL Databases** in the navigation menu to the left.
+10. After the Geo-Replication has finished provisioning, select **SQL Databases** in the navigation menu to the left.
 
     ![The SQL databases option in the Azure Portal navigation menu](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image52.png "SQL Databases")
 
@@ -441,7 +441,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![In the list of Databases, the ContosoSportsDB secondary replication role is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image58.png "Database list")
 
-12. On the **SQL Database** blade, click the **Show database connection strings** link.
+12. On the **SQL Database** blade, open the **Show database connection strings** link.
 
     ![On the SQL database blade, in the Essentials blade, the Connection strings (show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image59.png "SQL database blade")
 
@@ -725,9 +725,9 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, click **Azure App Service**, then choose **Select Existing**, and select **Publish**.
+3. On the **Publish Web** dialog box, select **Azure App Service**, then choose **Select Existing**, and **Publish**.
 
-    > **NOTE:** If your Azure resource group does not show, choose **New Profile**.
+    > **Note**: If your Azure resource group does not show, choose **New Profile**.
 
 4. Select the Payment Gateway API app created earlier, click **OK**.
 
@@ -751,7 +751,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 1. Using a new tab or instance of your browser, navigate to the Azure Management Portal (<http://portal.azure.com>).
 
-2. In the navigation menu to the left, click **+Create a resource** -\> **Web** -\> **API App**.
+2. In the navigation menu to the left, select **+Create a resource** -\> **Web** -\> **API App**.
 
 3. On the new **API App** blade, specify a unique name for the **API App**, and ensure the previously used Resource Group and App Service Plan are selected.
 
@@ -1747,7 +1747,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![Screenshot of the MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION arrow.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image197.png "MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION ")
 
-    > **NOTE:** You can find the documentation page at the following URL: <https://docs.microsoft.com/en-us/azure/azure-monitor/app/javascript#snippet-based-setup>
+    > **Note**: You can find the documentation page at the following URL: <https://docs.microsoft.com/en-us/azure/azure-monitor/app/javascript#snippet-based-setup>
 
 6. Select and copy the full contents of the JavaScript under the **Snippet based setup** heading.
 
@@ -1964,11 +1964,11 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
   ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
 
-14. Click the **Run** button located at the bottom of the blade.
+14. Select the **Run** button located at the bottom of the blade.
 
     ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
 
-    > **NOTE:** There is also a **Run** button located at the top of the Azure Function blade. Clicking either of these buttons will run the function just the same.
+    > **Note**: There is also a **Run** button located at the top of the Azure Function blade. Clicking either of these buttons will run the function just the same.
 
     After a few seconds, you should see logs similar to the image below. You should see return status code of 200.  The **Output** text box should show recent Contoso purchase data. You should see a message stating the file has been created and stored in the blob storage.
 
@@ -1977,11 +1977,11 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 15. Check your receipt PDF in the storage account blob.
 
     - Navigate to the ContosoSports storage account.
-    - Click on the **Blobs** link.
+    - Select the **Blobs** link.
 
     ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
 
-16. Click the newly created **receipts** blob container.
+16. Choose the newly created **receipts** blob container.
 
     ![The storage account blobs are listed. Receipts blob container is highlighted.](media/2019-04-15-16-08-35.png "Click the Blobs link")
 
