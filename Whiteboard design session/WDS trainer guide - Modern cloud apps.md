@@ -9,7 +9,7 @@ Modern cloud apps
 </div>
 
 <div class="MCWHeader3">
-June 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -496,7 +496,7 @@ The primary audience are the business decision makers and technology decision ma
 
     If Contoso chooses to open access of the Offers service for integration by partners they should also consider implementing API management in front of their API App hosted Web API. This would enable them to lock down access by requiring a key, apply policy (such as rate limiting requests), and monitor usage by API customers.
 
-**Geo-resiliency**
+*Geo-resiliency*
 
 1.  How would you implement high availability for the orders database to guard against regional data center outages? Be specific on how you would configure SQL Database and Azure Storage_
 
@@ -524,7 +524,7 @@ The primary audience are the business decision makers and technology decision ma
 
     For Azure Storage, the RTO is about 24 hours and the RPO is typically less than 15 minutes, although this has no explicit SLA. Given the potentially long RTO and RPO for Azure Storage, Contoso might consider using RA-GRS storage and when a failover happens use the RA-GRS for read and a separate storage account for the writing of new files.
 
-**Access control**
+*Access control*
 
 1.  With respect to managing access to the call center website, explain how you would recommend Contoso implement a solution that meets their requirements. Be specific about both the implementation and the process you would use to gain Contoso's acceptance of the proposed solution_
 
@@ -548,21 +548,21 @@ The primary audience are the business decision makers and technology decision ma
 
     Once applied, any access to the call center admin website will automatically be redirected to first log in through Azure Active Directory, and users would need to be created in Azure Active Directory in order to acquire access.
 
-**Enabling PCI compliance**
+*Enabling PCI compliance*
 
 1.  Keeping only the e-commerce website and handling of cardholder data in scope for PCI, consider the following in your design:
 
-    a. Are web apps deployed in Azure App Service Environments an option?
+    - Are web apps deployed in Azure App Service Environments an option?
 
-    b. Explain how using Azure App Service Environments could address the PCI requirements.
+    - Explain how using Azure App Service Environments could address the PCI requirements.
 
-    c. Keeping in mind the best choice for securing inbound and outbound traffic for an App Service Environment, detail all inbound and outbound traffic for this solution that allows it to be PCI compliant and allows it to operate within Azure. It should include traffic into and out of the solution, outbound for the e-commerce website, and any other traffic between the apps within the solution.
+    - Keeping in mind the best choice for securing inbound and outbound traffic for an App Service Environment, detail all inbound and outbound traffic for this solution that allows it to be PCI compliant and allows it to operate within Azure. It should include traffic into and out of the solution, outbound for the e-commerce website, and any other traffic between the apps within the solution.
 
-    d. Make sure to describe in detail the network topology you are using.
+    - Make sure to describe in detail the network topology you are using.
 
-    e. For any inbound and outbound application communications you are securing, please detail the specific mechanisms you will use to do so.
+    - For any inbound and outbound application communications you are securing, please detail the specific mechanisms you will use to do so.
 
-    f. If your approach includes configuration scripts, please provide an example of the scripts.
+    - If your approach includes configuration scripts, please provide an example of the scripts.
 
     While web apps are certified as PCI compliant, they are not immediately PCI compliant when used by the customer. The PCI requirements 1.2.1, 1.3.3, and 1.3.5 require restricting outbound access to only that which is necessary for the cardholder environment. In the case of CSLA, it means that the only outbound communication allowed should be to Azure (for monitoring) and to the payment gateway. Web apps in the Standard Tier have no mechanism for restricting the outbound traffic.
 
@@ -604,7 +604,7 @@ The primary audience are the business decision makers and technology decision ma
 
     To meet the antivirus requirement, you need only deploy to Azure since that requirement is itself met by Azure and managed against the virtual machines running your web app on your behalf.
 
-    By structuring the web app so all it does it handle the e-commerce transaction, you would meet the server specialization requirement. By capitalizing on web apps you are inherently addressing the patching requirement since Azure handles that for you (with the exception of any custom code or libraries your application may use).
+    By structuring the web app so all it does it handle the e-commerce transaction, you would meet the server specialization requirement. By capitalizing on web apps, you are inherently addressing the patching requirement since Azure handles that for you (with the exception of any custom code or libraries your application may use).
 
     There is no need to store cardholder data in this scenario, so by having SSL the requirement for protection of data in transit and at rest is also met.
 
@@ -612,7 +612,7 @@ The primary audience are the business decision makers and technology decision ma
 
     While virtual machines could certainly be used to enable a PCI compliant solution, they would not meet the customer requirement for minimizing infrastructure efforts.
 
-**Data warehouse**
+*Data warehouse*
 
 1.  How would you recommend Contoso implement their data warehouse?
 
@@ -628,7 +628,7 @@ The primary audience are the business decision makers and technology decision ma
 
     The Azure Trust Center helps you understand what Azure services have been certified for PCI compliance. For example, the services with which you could build a PCI compliant solution, but it does not describe how you build a PCI compliant solution on Azure. To fully accomplish a PCI compliant solution, you must address the requirements of PCI according to how you are handling cardholder data and the scope of your services. In many cases, Azure's PCI compliance attestations will be enough to satisfy aspects of PCI compliance for your solution, but there are at minimum some items which you must handle as a part of building your application, it is up to you to define and enforce secure password policies.
 
-2.  Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse_
+2.  Can we provide a solution that scales to meet our public demand, but is also secure for use by our call center and warehouse?
 
     Yes. Azure can provide a solution that is both scalable and secure.
 

@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -100,7 +100,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure. 
+In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
 Please note that as opposed to the whiteboard design session, the lab is not focused on maintaining PCI compliance and using more advanced security features such as App Service Environment, Network Security Groups, and Application Gateway. The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
@@ -201,19 +201,19 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Ensure the **Target server** is the same region as the Web app.
 
-8. Application Insights should be disabled.
+8. Once the values are accepted in the **New server** blade, click **Select**.
+
+    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
+
+9. On the **SQL Database** blade, click **Select**.
+
+    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
+
+11. Application Insights should be disabled.
 
     ![Application Insight configuration. Disabled option selected.](media/2019-04-19-13-24-11.png "Application Insight configuration")
 
-9. Once the values are accepted in the **New server** blade, click **Select**.
-
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-10. On the **SQL Database** blade, click **Select**.
-
-    ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
-
-11. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
+12. After the values are accepted on the **Web App + SQL** creation blade, check select **Create**.
 
     ![Final web app configuration settings.  Arrow pointing to the Create button.](media/2019-04-19-13-32-16.png "Final web app configuration settings")
 
@@ -316,13 +316,9 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
-5. Locate the **Application settings** section.
-
-    ![The App settings section from the App Service blade displays.](media/2019-03-28-04-57-20.png "App Service blade")
-
 6. Add a new **Application setting** with the following values:
 
-   - Key: **AzureQueueConnectionString**
+   - Key: `AzureQueueConnectionString`
 
    - Value: Enter the Connection String for the **Azure Storage Account** just created.
 
@@ -334,11 +330,11 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 8. Add a new **Connection String** with the following values:
 
-   - Name: **ContosoSportsLeague**
+   - Name: `ContosoSportsLeague`
 
    - Value: **Enter the Connection String for the SQL Database just created**
 
-   - Type: **SQLAzure**
+   - Type: `SQLAzure`
 
     >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously.
 
@@ -355,8 +351,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
 
     >Note: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure portal.
-
-    ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
+    > ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
 
 3. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
 
@@ -364,7 +359,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
     ![App Service Select Existing App Service dialog is displayed. The Sign In link is highlighted](media/2019-04-19-14-07-19.png "Azure Sign In")
 
-4. If prompted, log on with your Azure MSDN credentials.
+4. If prompted, log on with your Azure Subscription credentials.
 
     >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
 
@@ -374,7 +369,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 6. Click **OK**, and click **Publish** to publish the Web application.
 
-7. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully. 
+7. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
 
     ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
 
@@ -432,11 +427,13 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![Screenshot of the Select button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image20.png "Select button")
 
-9. On the **Create secondary** blade, click **OK**.
+9. On the **Create secondary** blade, select **OK**.
 
     ![Screenshot of the OK button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image57.png "OK button")
 
-10. After the Geo-Replication has finished provisioning, click **SQL Databases** in the navigation menu to the left.
+    > **Note**: The Geo-Replication will take a few minutes to complete.
+
+10. After the Geo-Replication has finished provisioning, select **SQL Databases** in the navigation menu to the left.
 
     ![The SQL databases option in the Azure Portal navigation menu](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image52.png "SQL Databases")
 
@@ -444,7 +441,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![In the list of Databases, the ContosoSportsDB secondary replication role is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image58.png "Database list")
 
-12. On the **SQL Database** blade, click the **Show database connection strings** link.
+12. On the **SQL Database** blade, open the **Show database connection strings** link.
 
     ![On the SQL database blade, in the Essentials blade, the Connection strings (show database connection strings) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image59.png "SQL database blade")
 
@@ -636,9 +633,9 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![On the Web App blade, the App name field is set to contososportsadmin2101](media/2019-03-28-05-29-59.png "Web App blade")
 
-4. Click on **App Service plan/Location**, and select the **ContosoSportsPlan** used by the front-end Web app.
+4. Click on **Windows Plan**, and select the **ContosoSportsPlan** used by the front-end Web app.
 
-5. After the values are accepted, click **Create**.  It will take a few minutes to provision.
+5. After the values are accepted, click **Review and create**, then **Create**.  It will take a few minutes to provision.
 
 #### Subtask 2: Update the configuration in the starter project
 
@@ -646,7 +643,7 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![The App Service blade displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image80.png "App Service blade")
 
-2. On the **App Service** blade, click on **Configuration settings** in the left pane.
+2. On the **App Service** blade, click on **Configuration** in the left pane.
 
     ![In the App Service blade, under Settings, click Configuration link.](media/2019-04-19-16-38-54.png "Configuration link")
 
@@ -654,11 +651,11 @@ In this exercise, you will provision a website via the Azure Web App template us
 
 4. Add a new **Connection string** with the following values:
 
-    - Name: **ContosoSportsLeague**
+    - Name: `ContosoSportsLeague`
 
     - Value: **Enter the Connection String for the primary SQL Database**.
 
-    - Type: **SQL Azure**
+    - Type: `SQL Azure`
 
     ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
 
@@ -680,19 +677,19 @@ In this exercise, you will provision a website via the Azure Web App template us
 
     ![In Solution Explorer, the right-click menu for Contoso.Apps.SportsLeague.Admin displays, and Publish is selected.](media/2019-04-19-14-30-03.png "Right-Click menu")
 
-3. Choose **Microsoft Azure App Service** as the publish target, and choose **Select Existing**.
+3. Choose **App Service** as the publish target, choose **Select Existing**, then click **Publish**
 
     ![On the Publish tab, Microsoft Azure App Service is selected. Below that, the radio button is selected for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image87.png "Publish tab")
 
 4. Select the **Web App** for the Call Center Admin App.
 
-    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and contososportsadmin4 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
+    ![In the App Service section, in the tree view at the bottom, the contososports folder is expanded, and the Call Center Web App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image88.png "App Service section")
 
-5. Click **OK**, and click **Publish** to deploy the site.
+5. Click **OK** to deploy the site.
 
     ![Display the Visual Studio Contoso.Apps.SportsLeague.Admin publish success message in the output.](media/2019-03-28-05-45-28.png "Publish Succeeded")
 
-6. The website should load / display the following:
+6. Once deployment is complete, navigate to the Web App. It should look like the following:
 
     ![The Contoso website displays the Contoso Sports League Admin webpage, which says that orders that display below are sorted by date, and you can click on an order to see its details. However, at this time, there is no data available under Completed Orders.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image89.png "Contoso website")
 
@@ -728,10 +725,11 @@ In this exercise, the attendee will provision an Azure API app template using th
 
     ![In Solution Explorer, Contoso.Apps.PaymentGateway is selected, and in its right-click menu, Publish is selected.](media/2019-04-19-14-52-22.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**.
-    - If your Azure resource group does not show, choose **New Profile**.
-    - Select **Select Existing**.
-4. Select the Payment Gateway API app created earlier, click **OK** **\>** **Publish**.
+3. On the **Publish Web** dialog box, select **Azure App Service**, then choose **Select Existing**, and **Publish**.
+
+    > **Note**: If your Azure resource group does not show, choose **New Profile**.
+
+4. Select the Payment Gateway API app created earlier, click **OK**.
 
     ![In the App Service section, the contososports folder is expanded, and PaymentsAPIO is selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image98.png "App Service section")
 
@@ -741,7 +739,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 6. Copy and paste the gateway **URL** of the deployed **API App** into Notepad for later use.
 
-7. Your browser should open and display the following web page:
+7. Viewing the Web App in a browser will display the following web page:
 
    ![Your App Service app is up and running web page displayed](media/2019-04-11-04-58-04.png "App is up and running")
 
@@ -753,7 +751,7 @@ In this exercise, the attendee will provision an Azure API app template using th
 
 1. Using a new tab or instance of your browser, navigate to the Azure Management Portal (<http://portal.azure.com>).
 
-2. In the navigation menu to the left, click **+Create a resource** -\> **Web** -\> **API App**.
+2. In the navigation menu to the left, select **+Create a resource** -\> **Web** -\> **API App**.
 
 3. On the new **API App** blade, specify a unique name for the **API App**, and ensure the previously used Resource Group and App Service Plan are selected.
 
@@ -772,7 +770,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In the App Service blade, under API, CORS is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image102.png "App Service blade")
 
-2. In the **Allowed Origins** text box, specify "*" to allow all origins, and click **Save**.
+2. In the **Allowed Origins** text box, specify `*` to allow all origins, and click **Save**.
 
     >**Note**: You should not normally do this in a production environment.
 
@@ -786,11 +784,11 @@ click **App Services** and then clicking the Offer API app you just created.
 
 2. In the **Connection Strings** section, add a new **Connection string** with the following values:
 
-      - Name: **ContosoSportsLeague**
+      - Name: `ContosoSportsLeague`
 
       - Value: **Enter the Connection String for the SQL Database that was created**.
 
-      - Type: **SQL Azure**
+      - Type: `SQL Azure`
 
         ![The Connection Strings fields display the previously defined values.](media/2019-04-11-04-31-51.png "Connection Strings fields")
 
@@ -812,7 +810,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![In Solution Explorer, from the Contoso.Apps.SportsLeague.Admin right-click menu, Publish is selected.](media/2019-04-19-15-03-45.png "Solution Explorer")
 
-3. On the **Publish Web** dialog box, click **Microsoft Azure App Service**, and choose **Select Existing**.
+3. On the **Publish Web** dialog box, click **Azure App Service**, choose **Select Existing**, and select **Publish**.
 
     ![On the Publish tab, the Microsoft Azure App Service tile is selected, and under it, the radio button for Select Existing is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image109.png "Publish tab")
 
@@ -852,21 +850,21 @@ click **App Services** and then clicking the Offer API app you just created.
 
 6. Add a new **Application Setting** with the following values:
 
-   - App Setting Name: **paymentsAPIUrl**
+   - App Setting Name: `paymentsAPIUrl`
 
-   - Value: Enter the **HTTPS** URL for the Payments API App with **/api/nvp** appended to the end.
+   - Value: Enter the **HTTPS** URL for the Payments API App with `/api/nvp` appended to the end.
 
-        >**Example**: <https://paymentsapi0.azurewebsites.net/api/nvp>
+        >**Example**: `https://paymentsapi0.azurewebsites.net/api/nvp`
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image116.png "App settings")
 
 7. Add another **Application Setting** with the following values:
 
-   - App Setting Name: **offersAPIUrl**
+   - App Setting Name: `offersAPIUrl`
 
-   - Value: Enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end
+   - Value: Enter the **HTTPS** URL for the Offers API App with `/api/get` appended to the end
 
-    >**Example**: <https://offersapi4.azurewebsites.net/api/get>
+    >**Example**: `https://offersapi4.azurewebsites.net/api/get`
 
     ![In the Application settings section of the App Service blade, the previously defined application setting values are selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image117.png "App settings section")
 
@@ -888,7 +886,7 @@ click **App Services** and then clicking the Offer API app you just created.
 
     ![On the Contoso Sports League webpage, Today\'s offers display: Baseball socks, Road bike, and baseball mitt.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image121.png "Contoso Sports League webpage")
 
-4. Submit several test orders to ensure all pieces of the site are functional.  ``Accept the default data during the payment processing.``
+4. Submit several test orders to ensure all pieces of the site are functional.  **Accept the default data during the payment processing.**
 
     ![On the Contoso Sports League webpage, the message Order Completed displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image122.png "Contoso Sports League webpage")
 
@@ -920,15 +918,11 @@ The Contoso call center admin application will only be accessible by users of th
 
     If you already have a Premium Azure Active Directory, skip to Task 2.
 
-5. On the **Activate** blade, click on the **Free Trial** link within the **Azure AD Premium P2** box.
+5. On the **Activate** blade, click on the **Free Trial** link within the **Azure AD Premium P2**, then click **Activate**.
 
-    ![The Free trial link is selected on the Activate blade in the Azure AD Premium P2 box.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image126.png "Activate blade")
+    ![The Free trial link is selected on the Activate blade in the Azure AD Premium P2 box, and the Activate button is highlighted.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image126.png "Activate blade")
 
-6. On the **Active Azure AD Premium P2 trial** blade, click the **Activate** button.
-
-    ![On the Active Azure AD Premium P2 trial blade, the Activate button is boxed in red.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image127.png "Active Azure AD Premium trial blade")
-
-7. Close the **Azure Active Directory** blades.
+6. Close the **Azure Active Directory** blades.
 
 ### Task 2: Create a new Contoso user
 
@@ -949,7 +943,7 @@ The Contoso call center admin application will only be accessible by users of th
 
     ![Under Name, the Domain Name is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image129.png "Domain name")
 
-5. On the **Azure Active Directory** blade, click on **Users and groups** followed by **All users**.
+5. On the **Azure Active Directory** blade, click on **Users**.
 
     ![Under Manage, All users is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image130.png "Azure Active Directory blade")
 
@@ -1045,15 +1039,15 @@ The Contoso call center admin application will only be accessible by users of th
 
     ![The Configure company branding link is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image149.png "Configure company branding link")
 
-5. On the **Configure company branding** blade, select the **default\_signin\_illustration.jpg** image file from **C:\\MCW** for the **Sign-in page image**.
+5. On the **Configure company branding** blade, select the `default_signin_illustration.jpg` image file from `C:\MCW` for the **Sign-in page image**.
 
     ![The Configure company branding blade displays the default sign in picture of the Contoso sports league text, and a person on a bicycle. Below that, the Select a file field and browse icon is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image150.png "Configure company branding blade")
 
-6. Select the **logo-60-280.png** image file from the supplementary files for the **Banner image**.
+6. Select the `logo-60-280.png` image file from the supplementary files for the **Banner image**.
 
     ![The Contoso sports league banner text displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image151.png "Contoso sports league banner")
 
-    Click **Save**.
+7. Click **Save**.
 
     ![The Save button is circled on the Configure company branding blade.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image152.png "Configure company branding blade")
 
@@ -1097,13 +1091,15 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
 3. Click on the orange **No Subscription** message for instructions on how to link to an active subscription.
 
-    ![In the Azure Portal, on the left, the \"No subscription linked to this B2C tenant or the Subscription needs your attention\" message is selected. On the right, under Subscription reminder, the three steps to link the B2C tenant to an Azure subscription are circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image158.png "Azure Portal")
+    ![In the Azure Portal, on the left, the \"No subscription linked to this B2C tenant or the Subscription needs your attention\" message is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image158.png "Azure Portal")
+
+    ![the three steps to link the B2C tenant to an Azure subscription are circled.](media/2019-08-25-17-45-26.png "Azure Portal")
 
     >**Note**: Essentially, you will need to switch back to your previous Azure AD tenant, and then launch the Azure AD B2C creation wizard again.
 
 4. Click on **Link an existing Azure AD B2C Tenant to my Azure subscription,** and select the Tenant you just created in the dropdown list and the existing resource group **contososports**. Then, click **Create**.
 
-    ![In the Create new B2C Tenant or Link to existing Tenant blade, on the left, Link an existing Azure AD B2C Tenant to my Azure subscription is selected. On the right, in the Azure AD B2C Resource blade, the Azure AD B2C Tenant drop-down field is contosob2cdemo123.onmicrosoft.com. The Resource group is using the existing contososports.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image159.png "Create new B2C Tenant or Link to existing Tenant")
+    ![In the Create new B2C Tenant or Link to existing Tenant blade, on the left, Link an existing Azure AD B2C Tenant to my Azure subscription is selected. On the right, in the Azure AD B2C Resource blade, the Azure AD B2C Tenant drop-down field is contosodb2ccustsitecp.onmicrosoft.com. The Resource group is using the existing contososports.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image159.png "Create new B2C Tenant or Link to existing Tenant")
 
 5. After creation completes, open the new Azure AD B2C tenant by clicking **Resource Groups** in the navigation menu to the left and, then, **contososports**. Then, in the new blade, click the B2C tenant you just created.
 
@@ -1123,13 +1119,13 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
    - Name: **Contoso B2C Application**
 
-   - Reply URL: **https://\[your web url\].azurewebsites.net** (This should be the HTTPS URL to the Contoso E-Commerce Site.)
-
    - Include Web App / web API: **Yes**
 
    - Allow Implicit Flow: **Yes**
 
-    ![The New application fields are set to the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image161.png "New application")
+   - Reply URL: `https://[your web url].azurewebsites.net` (This should be the HTTPS URL to the Contoso E-Commerce Site.)
+
+   ![The New application fields are set to the previously defined values.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image161.png "New application")
 
 2. Click **Create**.
 
@@ -1196,19 +1192,21 @@ In this exercise, you will configure an Azure AD Business to Consumer (B2C) inst
 
     ![Choose application options are displayed. Contoso B2C Application option is selected. Run user flow button is displayed.](media/2019-03-28-12-55-51.png "Test the user flow")
 
-    - Test user flow
+13. A browser tab/window will open that looks like the following screenshot.
 
     ![Test the user flow.  Sample sign in presented in the browser.](media/2019-03-28-13-00-01.png "Test the user flow")
 
-    - Click **Sign up now**.
+14. Click **Sign up now**.
 
-    ![Sign up now fields are presented to the user](media/2019-03-28-13-02-25.png "Sign up now")
+   ![Sign up now fields are presented to the user](media/2019-03-28-13-02-25.png "Sign up now")
 
 ### Task 4: Create a sign-in policy
 
 To enable ``sign-in`` on your application, you will need to create a ``sign-in`` policy. This policy describes the experiences consumers will go through during sign-in and the contents of tokens the application will receive on successful sign-ins. Many of the previous steps will be repeated for this policy.
 
 1. Click **User flows (polices)** link on the left blade.
+
+    ![The User flows item is highlighted.](media/2019-08-25-18-01-57.png "Azure Portal")
 
 2. Click **+ New user flow** link at the top of the blade.
 
@@ -1231,11 +1229,11 @@ To enable ``sign-in`` on your application, you will need to create a ``sign-in``
 
     ![In the Add policy blade, Application claims (4 Selected) is selected. In the Select application claims blade, the following five application claims are selected: Display Name, Identity Provider, Postal Code, and User\'s Object ID.](media/2019-03-28-13-31-03.png "Add policy and Select application claims blades")
 
-      - Click the **OK** button.
+8. Click the **OK** button.
 
 8. Click **Create**. Observe the policy just created appears as **B2C\_1\_SignIn** (the **B2C\_1\_** fragment is automatically added) in the **Sign-in policies** blade.
 
-9. Open the policy by clicking **B2C\_1\_SignIn**.
+9. Open the policy by clicking **B2C\_1\_SignIn**, then click **Run user flow**.
 
 10. You should see the **Contonso B2C Application** selected from the dropdown, if not choose it.  Leave the defaults selected.
 
@@ -1283,7 +1281,7 @@ To enable profile editing on your application, you will need to create a profile
 
 9. Click **Create**. Observe the policy just created appears as \"**B2C\_1\_EditProfile**\" (the **B2C\_1\_** fragment is automatically added) in the **Profile editing policies** blade.
 
-10. Open the policy by clicking **B2C\_1\_EditProfile**.
+10. Open the policy by clicking **B2C\_1\_EditProfile**, then click **Run user flow**.
 
 11. Select **Contoso B2C application** in the **Select Application** drop-down.
 
@@ -1315,7 +1313,7 @@ To enable profile editing on your application, you will need to create a profile
 
    - ida:UserProfilePolicyId - **B2C\_1\_EditProfile**
 
-   - ida:AadInstance - https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}
+   - ida:AadInstance - `https://login.microsoftonline.com/{0}/v2.0/.well-known/openid-configuration?p={1}`
 
    Example of settings:
 
@@ -1367,7 +1365,7 @@ To enable profile editing on your application, you will need to create a profile
 
 12. Replace the entire contents of Startup.Auth.cs with the following code and Save.
 
-    ```csharp
+   ```csharp
     // App_Start\Startup.Auth.cs
     using System;
     using Owin;
@@ -1456,9 +1454,9 @@ To enable profile editing on your application, you will need to create a profile
             }
         }
     }
-    ```
+   ```
 
-    > **Note**: The parameters you provide in **OpenIdConnectAuthenticationOptions** serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
+   > **Note**: The parameters you provide in **OpenIdConnectAuthenticationOptions** serve as coordinates for your app to communicate with Azure AD. You also need to set up cookie authentication. The OpenID Connect middleware uses cookies to maintain user sessions, among other things.
 
 ### Task 7: Send authentication requests to Azure AD
 
@@ -1661,9 +1659,11 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![A screenshot that provides an overview of Application Insights and a button to click Create.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image185.png "Application insights resource")
 
-3. Enter the name as **Contoso.Apps.SportsLeague.Web.** Choose the existing resource group of **contososports**. Location should be the same location as your resource group.
+3. Enter the name as **Contoso.Apps.SportsLeague.Web** Choose the existing resource group of **contososports**. Location should be the same location as your resource group.
 
     ![A dialog that shows the properties of the application insights resource.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image186.png "Application insights creation dialog")
+
+4. Click **Review + create**, then **Create**.
 
 ### Task 1: Configure the application for telemetry
 
@@ -1699,7 +1699,7 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![Screenshot of Output.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image193.png "Output")
 
-9. Open the file **\\Helpers\\TelemetryHelper.cs** located in the **Contoso.Apps.SportsLeague.Web** project.
+9. Open the file `\Helpers\TelemetryHelper.cs` located in the **Contoso.Apps.SportsLeague.Web** project.
 
 10. Add the following using statement to the top of the file:
 
@@ -1721,7 +1721,7 @@ To configure the application for logging and diagnostics, you have been asked to
     client.TrackEvent(eventName, properties);
     ```
 
-13. Save the **TelemetryHelper.cs** file.
+13. Save the `TelemetryHelper.cs` file.
 
 #### Subtask 2: Enable client side telemetry
 
@@ -1743,13 +1743,27 @@ To configure the application for logging and diagnostics, you have been asked to
 
     ![From the Configure menu, Getting started is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image196.png "Configure menu")
 
-5. In the portal, navigate to How-to Guides-> Collect data-> Configure applications-> Web Pages -> JavaScript.
+5. In the portal, navigate to **How-to Guides** -> **Monitor resources** -> **Applications** -> **Code-based monitoring** -> **Web pages** -> **Client-side JavaScript**, then navigate to the **Adding the Javascript SDK** section of the documentation page.
 
     ![Screenshot of the MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION arrow.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image197.png "MONITOR AND DIAGNOSE CLIENT SIDE APPLICATION ")
 
-6. Select and copy the full contents of the JavaScript on the **Client application monitoring and diagnosis** blade.
+    > **Note**: You can find the documentation page at the following URL: <https://docs.microsoft.com/en-us/azure/azure-monitor/app/javascript#snippet-based-setup>
+
+6. Select and copy the full contents of the JavaScript under the **Snippet based setup** heading.
 
     ![Under Guidance in the Client application monitoring and diagnosis blade, JavaScript displays. ](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image198.png "Client application monitoring and diagnosis blade")
+
+    Here's the Javascript code to copy/paste for quick reference:
+
+```javascript
+    <script type="text/javascript">
+    var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}var t={config:e};t.initialize=!0;var i=document,a=window;setTimeout(function(){var n=i.createElement("script");n.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",i.getElementsByTagName("script")[0].parentNode.appendChild(n)});try{t.cookie=i.cookie}catch(e){}t.queue=[],t.version=2;for(var r=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];r.length;)n("track"+r.pop());n("startTrackPage"),n("stopTrackPage");var s="Track"+r[0];if(n("start"+s),n("stop"+s),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)){n("_"+(r="onerror"));var o=a[r];a[r]=function(e,n,i,a,s){var c=o&&o(e,n,i,a,s);return!0!==c&&t["_"+r]({message:e,url:n,lineNumber:i,columnNumber:a,error:s}),c},e.autoExceptionInstrumented=!0}return t}(
+    {
+        instrumentationKey:"INSTRUMENTATION_KEY"
+    }
+    );window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({});
+    </script>
+```
 
 7. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** in Visual Studio.
 
@@ -1887,103 +1901,97 @@ Contoso wants to automate the process of generating receipts in PDF format and a
 
 ### Task 1: Create an Azure Function to Generate PDF Receipts
 
-1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom. Then in the new blade, select your Subscription, type a unique App name that identifies your function app e.g. (ContosoFunctionApp), then specify the following settings:
-
-    - [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
-
-    - [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): One of the following plans:
-
-    - **Hosting plan**: The default hosting plan type for Azure Functions is **Consumption Plan**. When you choose a consumption plan, you must also choose the **Location**. For now, select **App Service Plan**.
-        - **Runtime Stack**: Keep **.NET** value.
-
-        - **App Service plan**: An App Service plan requires you to create an **App Service plan/location** or select an existing one. These settings determine the [location, features, cost, and compute resources](https://azure.microsoft.com/pricing/details/app-service/) associated with your app. For now, select the existing App Service Plan you have been using so far in this lab.
-
-        - **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking **Select Existing** and choosing the storage account in the **contososports** resource group.
-        - **Application Insights** - Disabled
+1. Click the **+Create a resource** button found on the upper left-hand corner of the Azure portal and then click **Compute \> Function App**. Click **Create** button at the bottom.
 
     ![On the left side of the Portal, the Create a resource button is selected. In the middle, under New, Compute is selected. On the right, under Compute, Function App is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image221.png "Azure Portal")
 
-2. Click **Create** to provision and deploy the new function app.
+2. Provision and deploy the new function app, with the following settings:
+
+    - [**Resource Group**](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview): Use the existing resource group, **contososports**.
+
+    - **OS**: Windows
+
+    - [**Hosting plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview): App Service Plan
+
+    - **App Service plan**: Select the **existing App Service Plan** you have been using so far in this lab. An App Service plan requires you to create an App Service plan/location or select an existing one. These settings determine the [location, features, cost, and compute resources](https://azure.microsoft.com/pricing/details/app-service/) associated with your app.
+
+    - **Runtime Stack**: .NET Core
+
+    - **Storage account**: Each function app requires a storage account. Choose the existing storage account by clicking **Select Existing** and choosing the storage account in the **contososports** resource group.
+
+    - **Application Insights**: Disabled
 
     ![Under Function App, the App name field is set to ContosoFunctionApp, and at the bottom the Create button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image222.png "Function App section")
 
-3. Paste your storage account connection string into Notepad.
+3. Navigate to the Storage Account in the **contososports** resource group, go to **Access Keys** and copy the **Connection String** for the Storage Account. Paste your storage account connection string into Notepad to save for later.
 
     ![Display storage account list.  Pointing to Access keys.](media/2019-04-15-15-07-15.png "Storage Account Access keys")
 
-4. Create Function App Application Settings
-    - Navigate to the Function App you just created earlier.
+4. Navigate to the **Function App** that was just created, and click on **Configuration**.
 
-    ![Display Contoso Function App. Arrow showing the Application Setting link.](media/2019-04-15-15-15-22.png "Contoso Function App Application Settings")
+    ![Display Contoso Function App, with the Configuration link highlighted.](media/2019-04-15-15-15-22.png "Contoso Function App Application Settings")
 
-    - Click the **+ New application setting** link.
-    - Enter the name ``AzureWebJobsStorage``.
-    - Enter the value for your storage account connection string.
-    - Click the **Update** button.
+5. Add a new Application Setting with the following values, then click **Save**:
 
-    - Click the **+ New application setting** link.
-    - Enter the name ``contososportsstorage``.
-    - Enter the value for your storage account connection string, again.
-    - Click the **Update** button.
+    - **Name**: `contososportsstorage`
+    - **Value**: Enter the Connection String for your storage account.
 
     ![Updated Function App Application settings. Showing final values.](media/2019-04-15-16-18-36.png "Updated Function App Application settings.")
 
-5. Publish the Function App.
-
-    - Open the Visual Studio solution.
-    - Right click on the **ContosoFunctionApp** project.
-    - Select **Publish**.
+6. To publish the Function App, open the Visual Studio solution, Right-click on the **ContosoFunctionApp** project, then select **Publish**.
 
     ![Visual Studio Solution Explorer is open. Menu is displayed for Contoso Function App. Selecting function app publish.](media/2019-04-15-15-31-03.png "Selecting function app publish")
 
-    - Select your Function App.
+7. On the **Pick a publish target** dialog, Select **Select existing**, then click **Publish**.
+
+8. Select the **Function App**, then click **OK**.
 
     ![Azure function app tree displayed. The Contoso Function App is selected.](media/2019-04-15-15-34-54.png "Azure function app tree displayed")
 
-    - Check for errors in the Output window.
+9. The publish should only take minute or so. You can check the **Output** window for any errors that may occur.
 
     ![The build Output window is displayed. Publish succeeded message is shown.](media/2019-04-15-15-33-20.png "Output window.")
 
-6. Test your newly published Function App.
+10. To test your newly published Function App, start by navigating back to your Contoso Function App in the Azure Portal. Select the newly created **ContosoMakePDF** function listed in the functions.
 
-    - Navigate back to your Contoso Function App in the Azure Portal. You should see the newly created **ContosoMakePDF** function listed in the functions.  Select it.
+11. Click on the **Test** link located on the right-hand blade.
 
-    - Click on the **Test** link located on the right-hand blade.
+  ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
 
-        ![Function apps are listed on the left hand side. ContosoMakePDF is selected.  There is an arrow pointing to the Test link on the right pane.](media/2019-04-15-15-40-27.png "Function Test link")
+12. Select **POST** for the HTTP method.
 
-    - Select POST for the HTTP method.
+13. Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
 
-    - Open the **sample.dat** file found in your lab files Contoso.CreatePDFReport directory.  Copy the contents into the **Request body** text box.
+  ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
 
-        ![A small screenshot of Windows Explorer is shown emphasizing the file path to the sample.dat file.](media/2019-04-15-15-47-39.png "Sample.dat File")
+14. Select the **Run** button located at the bottom of the blade.
 
-    - Click the **Run** button located at the bottom of the blade.
+    ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
 
-        ![The screenshot displays the Test blade with sample.dat contents. The Request body field shows the Order JSON. There is an arrow pointing to Run button.](media/2019-04-15-15-52-59.png "Display Test blade with sample.dat contents")
+    > **Note**: There is also a **Run** button located at the top of the Azure Function blade. Clicking either of these buttons will run the function just the same.
 
     After a few seconds, you should see logs similar to the image below. You should see return status code of 200.  The **Output** text box should show recent Contoso purchase data. You should see a message stating the file has been created and stored in the blob storage.
 
     ![There is a screenshot displaying the Function App test result log.  A status code of 200 OK is displayed on the right side pane.](media/2019-04-15-15-58-54.png "Function App test result log.")
 
-7. Check your receipt PDF in the storage account blob.
+15. Check your receipt PDF in the storage account blob.
 
     - Navigate to the ContosoSports storage account.
-    - Click on the **Blobs** link.
+    - Select the **Blobs** link.
 
-        ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
+    ![The Settings options are displayed. There is an arrow pointing to the Blobs link.](media/2019-04-15-16-06-17.png "Blobs link")
 
-8. Click the newly created **receipts** blob container.
+16. Choose the newly created **receipts** blob container.
 
     ![The storage account blobs are listed. Receipts blob container is highlighted.](media/2019-04-15-16-08-35.png "Click the Blobs link")
 
-9. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
+17. Open **ContosoSportsLeague-Store-Receipt-XX.pdf** link.
 
     ![There is a screenshot displaying a list of the newly created PDF receipts. An arrow pointing to the Download link is located on the right side of the screen.](media/2019-04-15-16-11-24.png "PDF Receipts")
 
-    - Open the ``...`` link and choose download menu item.
+    - Open the `...` link and choose download menu item.
 
-     ![A sample Contoso Sports League PDF receipt is displayed.](media/2019-04-15-16-15-06.png "Sample PDF receipt")
+    ![A sample Contoso Sports League PDF receipt is displayed.](media/2019-04-15-16-15-06.png "Sample PDF receipt")
 
 ### Task 2: Create an Azure Logic App to Process Orders
 
@@ -2075,9 +2083,9 @@ The advantages of using Logic Apps include the following:
 
     ![In the Order item code, the following line of code is circled: \"Order\": \"@{base64(triggerBody()?\[\'MessageText\'\])}\"](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image251.png "Order item code")
 
-    Click **Save** again.
+17. Click **Save** again.
 
-17. Run the logic app. It should process the orders you have submitted previously to test PDF generation. Using Azure Storage Explorer or Visual Studio Cloud Explorer you can navigate to the storage account and open the receipts container to see the created PDFs.
+18. Run the logic app. It should process the orders you have submitted previously to test PDF generation. Using Azure Storage Explorer or Visual Studio Cloud Explorer you can navigate to the storage account and open the receipts container to see the created PDFs.
 
     ![In Azure Storage Explorer, on the left, the following tree view is expanded: Storage Accounts\\contososportsstorage01r\\Blob Containers. Under Blob Containers, receipts is selected. On the right, the ContosoSportsLeague-Store-Receipt-72.pdf is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image252.png "Azure Storage Explorer")
 
@@ -2095,7 +2103,7 @@ The advantages of using Logic Apps include the following:
 
     ![In the SQL Server section, on the Actions tab, SQL Server - Update row is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image256.png "SQL Server section")
 
-22. Name the connection ContosoSportsDB, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create**.
+22. Name the connection `ContosoSportsDB`, and select the primary ContosoSportsDB database for your solution. Under the user name and password used to create it, click **Create**.
 
     ![TheUpdate row section displays the previously defined settings.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image257.png "Update row")
 
@@ -2181,31 +2189,23 @@ The advantages of using Logic Apps include the following:
 
     ![Screenshot of the Twilio account Sign up for free webpage.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image268.png "Twilio account Sign up webpage")
 
-2. When you sign up for a free Twilio trial, you will be asked to verify your personal phone number. This is an important security step that is mandatory for trying Twilio.
-
-    ![On the Verification prompt, the \"We need to verify you\'re a human\" message displays. Under that is a phone number field, and a Verify via SMS button.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image269.png "Verification prompt")
-
-3. Give your project a name.
-
-    ![Screenshot of Twilio project name screen.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/twilio-project-name.png "Twilio Project Name Screen")
-
-4. Click **All Products & Services**.
+2. Click **All Products & Services**.
 
     ![In the Console, under Home, the All Products and Services (ellipses) button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image270.png "Console")
 
-5. Click on **Phone Numbers**.
+3. Click on **Phone Numbers**.
 
     ![On the Console, under Numbers, Phone Numbers is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image271.png "Console")
 
-6. Click **Get Started**.
+4. Click **Get Started**.
 
     ![On the Console, under Phone Numbers, the Get Started button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image272.png "Console")
 
-7. Click the **Get your first Twilio phone number** button.
+5. Click the **Get your first Twilio phone number** button.
 
     ![On the Get Started with Phone Numbers prompt, the Get your first Twilio phone number button displays.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image273.png "Get Started with Phone Numbers prompt")
 
-8. Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done**.
+6. Record the **Phone Number**, click the **Choose this Number** button on the **Your first Twilio Phone Number** prompt, and click **Done**.
 
     ![On the Your first Twilio Phone Number prompt, the number is obscured.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image274.png "Your first Twilio Phone Number prompt")
 
@@ -2213,14 +2213,14 @@ The advantages of using Logic Apps include the following:
 
     ![On the Console, on the left, the Home button and the Settings menu tab are selected. On the right, under API Credentials, Account SID and Auth Token are circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image275.png "Console")
 
-#### Subtask 2: Create a new logic app 
+#### Subtask 2: Create a new logic app
 
 1. Open **SQL Server Management Studio** and connect to the SQL Database for the **ContosoSportsDB** database.
 
     >**Note**: You can find the database server name by:
-    - Navigate the Azure ContosoSportsDB in the portal.
-    - In the Overview, locate the **Show database connection strings** link.
-    - Copy the **Server** parameter value.
+    > - Navigate the Azure ContosoSportsDB in the portal.
+    > - In the Overview, locate the **Show database connection strings** link.
+    > - Copy the **Server** parameter value.
     e.g. Server=tcp:``contososqlserver2019th.database.windows.net,1433``
 
     ![In Object Explorer, ContosoSportsDBserver1234.database is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image276.png "Object Explorer")
@@ -2367,12 +2367,12 @@ The advantages of using Logic Apps include the following:
 
 31. Immediately before the **Send\_Text\_Message\_(SMS)** section, create a new line, and add the following code:
 
-    ```json
+  ```json
     "forEach_email": {
-        "type": "Foreach",
-        "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
-        "actions": {
-    ```
+      "type": "Foreach",
+      "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
+      "actions": {
+  ```
 
 32. Remove the **runAfter** block from the **Send\_Text\_Message\_(SMS)** action.
 
@@ -2380,15 +2380,15 @@ The advantages of using Logic Apps include the following:
 
 33. Locate the closing bracket of the **Send\_Text\_Message\_(SMS)** action, create a new line after it (be **SURE** to place a leading comma after the closing bracket), and add the following code:
 
-    ```json
-         },
-            "runAfter": {
-                "Execute_stored_procedure_2": [
-                    "Succeeded"
-                ]
-            }
+  ```json
+        },
+        "runAfter": {
+            "Execute_stored_procedure_2": [
+                "Succeeded"
+            ]
         }
-    ```
+    }
+  ```
 
 34. Click **Save** on the toolbar to enable the logic app.
 
