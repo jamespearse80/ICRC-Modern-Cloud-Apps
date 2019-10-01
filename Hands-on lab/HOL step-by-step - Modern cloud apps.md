@@ -2378,7 +2378,7 @@ The advantages of using Logic Apps include the following:
   ```json
     "forEach_email": {
       "type": "Foreach",
-      "foreach": "@body('Execute_stored_procedure_2')['ResultSets']['Table1']",
+      "foreach": "@body('Execute_stored_procedure_(V2)_2')['ResultSets']['Table1']",
       "actions": {
   ```
 
@@ -2391,7 +2391,7 @@ The advantages of using Logic Apps include the following:
   ```json
         },
         "runAfter": {
-            "Execute_stored_procedure_2": [
+            "Execute_stored_procedure_(V2)_2": [
                 "Succeeded"
             ]
         }
@@ -2402,7 +2402,7 @@ The advantages of using Logic Apps include the following:
 
     ![On the Logic Apps Designer toolbar, the Save button is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image304.png "Logic Apps Designer toolbar")
 
-35. After the code for the **Send\_Text\_Message\_(SMS)** has been modified to be contained within the **forEach\_email** action and you save it, it should look like the following:
+35. After the code for the **Send\_Text\_Message\_(SMS)** has been modified to be contained within the **forEach\_email** action and you save it, it should look similar to the following:
 
     ![The Code view displays the code from \"Foreach\" to \"Execute stored procedure.\"](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image303.png "Code view")
 
