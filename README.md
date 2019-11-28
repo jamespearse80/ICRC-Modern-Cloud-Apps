@@ -8,8 +8,7 @@ September 2019
 
 ## Target audience
 
-Application developers
-Infrastrucutre Engineers
+Application developers & Infrastrucutre Engineers
 
 ## Abstracts
 
