@@ -4,7 +4,7 @@ The Contoso Sports League Association (CSLA) is one of the largest sports franch
 
 CSLA would like to modernize their websites and move to the cloud, ultimately moving away from managing infrastructure. They are interested in whether Platform-as-a-Service (PaaS) will meet their needs so they can completely remove the infrastructure management overhead.
 
-September 2019
+November 2019
 
 ## Target audience
 
@@ -14,9 +14,7 @@ Application developers & Infrastrucutre Engineers
 
 ### Workshop
 
-In this workshop, you will work as a group to implement an end-to-end solution for e-commerce that is based on Azure App Services, Azure Active Directory, and Azure DevOps. You will ensure the solution is PCI compliant, and appropriate security measures are put into place for both on-premises and public access scenarios.
-
-At the end of this workshop, you will be better able to deploy and configure Azure Web Apps and associated services. In addition, you will learn to configure Web Apps for authentication with Azure AD, instrument and load-test the application with App Insights, and automate back-end services using Azure Functions and Logic Apps.
+In this workshop, you will work to implement an end-to-end solution for e-commerce that is based on Azure App Services, Azure Active Directory, and Azure DevOps.At the end of this workshop, you will be better able to deploy and configure Azure Web Apps and associated services. In addition, you will learn to configure Web Apps for authentication with Azure AD, instrument and load-test the application with App Insights, and automate back-end services using Azure Functions and Logic Apps.
 
 ### Hands-on Lab
 
