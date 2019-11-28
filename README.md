@@ -8,7 +8,7 @@ November 2019
 
 ## Target audience
 
-Application developers & Infrastructure Engineers
+ICRC Application developers & Infrastructure Engineers
 
 ## Abstracts
 
