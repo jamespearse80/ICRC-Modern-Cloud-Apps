@@ -327,7 +327,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Key: `AzureQueueConnectionString`
 
-   - Value: Enter the Connection String for the **Azure Storage Account** just created.
+   - Value: Enter the Connection String for the **Azure Storage Account** you just created and saved to your notepad, and then hit OK
 
     ![In the App settings section for the App Service blade, the new entry for AzureQueueConnectionString is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image40.png "App settings section")
 
@@ -343,46 +343,50 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
    - Type: `SQLAzure`
 
-    >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously.
+    >**Important**: Ensure you replace the string placeholder values **{your\_username}** **{your\_password\_here}** with the username and password you setup during previously. Please note: make sure you remove the {} brackets
 
     ![The password string placeholder value displays: Password={your\_password\_here};](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image43.png "String placeholder value")
 
+   - Hit OK
+
 9. Click **Save**.
 
-#### Subtask 4: Deploy the e-commerce Web App from Visual Studio
+#### Subtask 4: Deploy the e-commerce Web App from Visual Studio - Using your LabVM
 
-1. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio.
+1. Connect to LabVM and open Visual Studio Community edition 2019 (shortcut is on the desktop)
+
+2. Navigate to the **Contoso.Apps.SportsLeague.Web** project located in the **Web** folder using the **Solution Explorer** of Visual Studio.
 
     ![In Solution Explorer, under Solution \'Contoso.Apps.SportsLeague\' (7 projects), Web is expanded, and under Web, Contoso.Apps.SportsLeague.Web is selected.](media/2019-04-19-14-03-04.png "Solution Explorer")
 
-2. Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
+3. Right-click the **Contoso.Apps.SportsLeague.Web** project, and click **Publish**.
 
     >Note: Don't publish if the configuration does not show your settings. Choose **New Profile** to publish to your Azure portal.
     > ![Visual Studio Publish configuration left over from developer. A don't publish message is displayed. There is a box around New Profile link.](media/2019-03-22-12-42-48.png "Select New Profile")
 
-3. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
+4. Choose **Azure App Service** as the publish target, and choose **Select Existing** and then **Publish** at the bottom of the wizard.
 
     ![On the Publish tab, the Microsoft Azure App Service tile is selected, as is the radio button for Select Existing.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image47.png "Publish tab")
 
     ![App Service Select Existing App Service dialog is displayed. The Sign In link is highlighted](media/2019-04-19-14-07-19.png "Azure Sign In")
 
-4. If prompted, log on with your Azure Subscription credentials.
+5. If prompted, log on with your Azure Subscription credentials.
 
     >**Note:** If you Sign In and nothing happens, shut down Visual Studio reopen to the solution. Repeat the publishing steps.
 
-5. Select the **Contoso Sports Web App** (with the name you created previously).
+6. Select the **Contoso Sports Web App** (with the name you created previously).
 
     ![Under Subscriptions, under contososports, contososportsweb0 is selected.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image49.png "Subscriptions")
 
-6. Click **OK**, and click **Publish** to publish the Web application.
+7. Click **OK**, and click **Publish** to publish the Web application.
 
-7. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
+8. In the Visual Studio **Output** view, you will see a status that indicates the Web App was published successfully.
 
     ![Screenshot of the Visual Studio Output view, with the Publish Succeeded message circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image50.png "Visual Studio Output view")
 
     >**Note:** Your URL will differ from the one shown in the Output screenshot because it has to be globally unique.
 
-8. A new browser should automatically open the new web applications. Validate the website by clicking the **Store** link on the menu. You should see product items. As long as products return, the connection to the database is successful.
+9. A new browser should automatically open the new web applications. Validate the website by clicking the **Store** link on the menu. You should see product items. As long as products return, the connection to the database is successful.
 
     ![Screenshot of the Store link.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image51.png "Store link")
 
@@ -390,7 +394,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 ### Task 2: Setup SQL Database Geo-Replication
 
-In this exercise, the attendee will provision a secondary SQL Database and configure Geo-Replication using the Microsoft Azure Portal.
+In this exercise, you will provision a secondary SQL Database and configure Geo-Replication using the Microsoft Azure Portal.
 
 #### Subtask 1: Add secondary database
 
@@ -406,7 +410,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
 4. Select the Azure Region to place the Secondary within.
 
-    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West US, which on the map has a blue checkmark.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image54.png "Geo-Replication blade")
+    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West Europe, which on the map has a blue checkmark.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image54.png "Geo-Replication blade")
 
     The Secondary Azure Region should be the Region Pair for the region the SQL Database is hosted in. Consult <https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions> to see which region pair the location you are using for this lab is in.
 
@@ -460,7 +464,7 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
     ![On the SQL database blade in the Essentials section, the Server name (contososqlserver2.database.windows.net) link is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image61.png "SQL database blade, Essentials section")
 
-15. On the **SQL Server** blade, click **Set Server Firewall** at the top.
+15. On the **SQL Server** blade, click **Show firewall settings** on the right
 
     ![On the SQL Server blade, at the top, the Set Server Firewall tile is boxed in red.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image62.png "SQL Server blade, Essentials section")
 
@@ -480,10 +484,6 @@ In this exercise, the attendee will provision a secondary SQL Database and confi
 
 #### Subtask 2: Failover secondary SQL database
 
->**Note:** This is optional.
-
-Since the Replication and Failover process can take anywhere from 10 to 30 minutes to complete, you have the choice to skip Subtask 2 through 5, and skip directly to Task 3. However, if you have the time, it is recommended that you complete these steps.
-
 1. Using a new tab or instance of your browser, navigate to the Azure Management Portal <http://portal.azure.com>.
 
 2. In the navigation menu to the left, click **SQL databases**, and click the name of the *primary* SQL Database you created previously.
@@ -496,7 +496,7 @@ Since the Replication and Failover process can take anywhere from 10 to 30 minut
 
 4. On the **Geo-Replication** blade, select the *secondary* database.
 
-    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West US, which on the map has a blue check mark. Under Secondaries, East US is circled, and on the map displays with a green check mark. A line connects the West Coast (blue) and East Coast (green) check marks.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image65.png "Geo-Replication blade")
+    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to West Europe, which on the map has a blue check mark. Under Secondaries, East US is circled, and on the map displays with a green check mark. A line connects the West Coast (blue) and East Coast (green) check marks.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image65.png "Geo-Replication blade")
 
 5. Click the **Forced Failover** button.
 
@@ -570,7 +570,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 4. On the **Geo-Replication** blade, select the Secondary database.
 
-    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to East US, which on the map has a blue check mark. Under Secondaries, West US is circled, and on the map displays with a green check mark. A line connects the East US (blue) and West US (green) check marks.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image75.png "Geo-Replication blade")
+    ![The Geo-Replication blade has a map of the world with locations marked on it. Under the map, Primary is set to East US, which on the map has a blue check mark. Under Secondaries, West Europe is circled, and on the map displays with a green check mark. A line connects the East US (blue) and West Europe (green) check marks.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image75.png "Geo-Replication blade")
 
 5. Click the **Forced Failover** button.
 
@@ -578,7 +578,7 @@ The failover may take a few minutes to complete. You can continue with the next 
 
 6. On the **Forced Failover** prompt, click **Yes**.
 
-    ![On the West US Secondary database blade, in response to the questing asking if you are sure you want to proceed, the Yes button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image77.png "Failover prompt")
+    ![On the West Europe Secondary database blade, in response to the questing asking if you are sure you want to proceed, the Yes button is circled.](images/Hands-onlabstep-by-step-Moderncloudappsimages/media/image77.png "Failover prompt")
 
 The failover may take a few minutes to complete. You can continue with the next Subtask modifying the Web App to point back to the Primary SQL Database while the Failover is pending.
 
