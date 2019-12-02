@@ -179,7 +179,7 @@ Before initiating this afternoons hands-on lab, you will setup an environment to
 
     ![Select Purchase.](images/Setup/2019-06-24-17-20-12.png)
 
-18. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
+18. The deployment will take **15-30 minutes to complete**. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
     ![View template deployment status.](images/Setup/2019-06-24-17-22-19.png "Resource group deployments")
 
