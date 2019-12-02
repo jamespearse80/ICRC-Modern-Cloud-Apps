@@ -109,7 +109,7 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 | Detect failures | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-asp-net-exceptions/> |
 | Monitor performance problems | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-web-monitor-performance/> |
 
-## Important - before commencing the hands-on lab you must redeem your Azure pass code
+## Important - Before commencing the hands-on lab you must redeem your Azure pass code
 
 ## Redeem FREE Microsoft Azure pass
 
