@@ -149,6 +149,14 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 | Azure Functions -- create first function | <https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function> |
 | Azure Functions docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-functions> |
 
+## Important - before commencing the hands-on lab you must redeem your Azure pass code
+
+## redeem Azure pass
+
+1. Navigate to https://www.microsoftazurepass.com/Home/HowTo 
+
+2. follow the instuructions to activate Azure pass - YOU MUST HAVE A MICROSOFT ACCOUNT i.e bob.smith@outlook.com
+
 ## Exercise 1: Proof of concept deployment
 
 Duration: 60 minutes
@@ -161,7 +169,7 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 
 #### Subtask 1: Create the Web App and SQL database instance
 
-1. Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance and login with your lab-provided Azure credentials.
+1. Navigate to the Azure Management portal, [http://portal.azure.com](http://portal.azure.com/), using a new tab or instance and login with your Azure credentials.
 
 2. In the navigation menu to the left, select **+Create a resource** and in the Marketplace search text box, enter **Web App + SQL** and select the appropriate auto-suggestion.
 
