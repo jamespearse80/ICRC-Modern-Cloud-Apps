@@ -32,13 +32,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
   - [Help references](#help-references)
-    [Exercise 1: Deploy Azure Lab VM](#exercise-1-Deploy-Azure-Lab-VM - Morning Session)
-    - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1-deploy-the-e-commerce-website-sql-database-and-storage)
-      - [Subtask 1: Create the Web App and SQL database instance](#subtask-1-create-the-web-app-and-sql-database-instance)
-      - [Subtask 2: Provision the storage account](#subtask-2-provision-the-storage-account)
-      - [Subtask 3: Update the configuration in the starter project](#subtask-3-update-the-configuration-in-the-starter-project)
-      - [Subtask 4: Deploy the e-commerce Web App from Visual Studio](#subtask-4-deploy-the-e-commerce-web-app-from-visual-studio)
-  - [Exercise 2: Proof of concept deployment](#exercise-2-proof-of-concept-deployment - Afternoon Session)
+    [Exercise 1: Deploy Azure Lab VM - Morning Session]
+    - [Task 1: Download GitHub Resources](#download-github-resources)
+      [Task 2: Deploy Resources to Azure]
+      [Task 3: Explore the Contoso Sports League Sample(s)]
+  - [Exercise 2: Proof of concept deployment - Afternoon Session]
     - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1-deploy-the-e-commerce-website-sql-database-and-storage)
       - [Subtask 1: Create the Web App and SQL database instance](#subtask-1-create-the-web-app-and-sql-database-instance)
       - [Subtask 2: Provision the storage account](#subtask-2-provision-the-storage-account)
@@ -103,24 +101,13 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 | Deploying an API app | <https://azure.microsoft.com/en-us/documentation/articles/app-service-dotnet-deploy-api-app/> |
 | Accessing an API app from a JavaScript client | <https://azure.microsoft.com/en-us/documentation/articles/app-service-api-javascript-client/> |
 | SQL Database Geo-Replication overview | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/> |
-| What is Azure AD? | <https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/> |
 | Azure Web Apps authentication | <http://azure.microsoft.com/blog/2014/11/13/azure-websites-authentication-authorization/> |
 | View your access and usage reports | <https://msdn.microsoft.com/en-us/library/azure/dn283934.aspx> |
-| Custom branding an Azure AD Tenant | <https://msdn.microsoft.com/en-us/library/azure/Dn532270.aspx> |
 | Service Principal Authentication | <https://docs.microsoft.com/en-us/azure/app-service-api/app-service-api-dotnet-service-principal-auth> |
-| Consumer Site B2C | <https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-dotnet> |
-| Getting Started with Active Directory B2C | <https://azure.microsoft.com/en-us/trial/get-started-active-directory-b2c/> |
-| How to Delete an Azure Active Directory | <https://blog.nicholasrogoff.com/2017/01/20/how-to-delete-an-azure-active-directory-add-tenant/> |
-| Run performance tests on your app | <http://blogs.msdn.com/b/visualstudioalm/archive/2015/09/15/announcing-public-preview-for-performance-load-testing-of-azure-webapp.aspx> |
 | Application Insights Custom Events | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-api-custom-events-metrics/> |
 | Enabling Application Insights | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-start-monitoring-app-health-usage/> |
 | Detect failures | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-asp-net-exceptions/> |
 | Monitor performance problems | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-web-monitor-performance/> |
-| Creating a Logic App | <https://azure.microsoft.com/en-us/documentation/articles/app-service-logic-create-a-logic-app/> |
-| Logic app connectors | <https://azure.microsoft.com/en-us/documentation/articles/app-service-logic-connectors-list/> |
-| Logic Apps Docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-what-are-logic-apps> |
-| Azure Functions -- create first function | <https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function> |
-| Azure Functions docs | <https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-azure-functions> |
 
 ## Important - before commencing the hands-on lab you must redeem your Azure pass code
 
@@ -132,7 +119,101 @@ You should of been given an Azure Pass "promo code" - PLEASE ask if you have not
 
 2. Follow the instuructions to activate Azure pass - **YOU MUST HAVE A MICROSOFT ACCOUNT** i.e bob.smith@outlook.com
 
-## Exercise 1: Proof of concept deployment
+## Exercise 1: Deploy the Azure lab VM
+
+Duration: 60 minutes
+
+Before initiating ths afternoons hands-on lab, you will setup an environment to use for the rest of the exercises.
+
+### Task 1: Download GitHub resources
+
+1. Open a browser window to the Cloud Workshop GitHub repository (<https://github.com/microsoft/MCW-Modern-cloud-apps>).
+
+2. Select **Clone or download**, then select **Download Zip**.
+
+    ![Download Zip from Github repository.](images/Setup/2019-06-24-17-08-18.png)
+
+3. Extract the zip file to your local machine, be sure to keep note of where you have extracted the files. You should now see a set of folders:
+
+    ![Windows Explorer showing the extracted files.](images/Setup/2019-06-24-17-10-56.png)
+
+### Task 2: Deploy resources to Azure
+
+1. Open your Azure Portal.
+
+2. Select **Resource groups**.
+
+3. Select **+Add**.
+ 
+4. Type a resource group name, such as *ContosoSports-[your initials or first name]*.
+
+5. Select **Review + Create**, then select **Create**.
+
+6. Select **Refresh** to see your new resource group displayed and select it.
+
+7. Select **Export template**, and then select **Deploy**.
+
+    ![Select Deploy](images/Setup/2019-06-24-17-15-18.png)
+
+8. Select **Build your own template in the editor**.
+
+9. In the extracted folder, open the `\Hands-on lab\Scripts\template.json` file.
+
+10. Copy and paste it into the window.
+
+11. Select **Save**
+
+12. Select **Edit parameters**
+
+    ![Select Edit Parameters.](images/Setup/2019-06-24-17-17-05.png)
+
+13. In the extracted folder, open the **\Hands-on lab\Scripts\parameters.json** file.
+
+14. Copy and paste it into the window.
+
+15. Select **Save**.
+
+16. Check the **I agree to the terms and conditions stated above** checkbox.
+
+17. Select **Purchase**.
+
+    ![Select Purchase.](images/Setup/2019-06-24-17-20-12.png)
+
+18. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
+
+    ![View template deployment status.](images/Setup/2019-06-24-17-22-19.png "Resource group deployments")
+
+19. **Note**: A configuration script to install SSMS and the require lab files will run after the deployment of the LabVM completes. The task will be listed on the deployment progress screen as `LabVM/CustomScriptExtension`. You should wait for this task to complete before attempting to log into the LabVM in the next task, as it downloads and installs files you will need for the next task.
+
+    ![The CustomScriptExtension task in highlighted in the list of deployment tasks.](media/deployment-progress.png "Deployment progress")
+
+### Task 3: Explore the Contoso Sports League sample
+
+1. Connect to the **LabVM** that was deployed using the previous template using Remote Desktop, using these credentials:
+
+    - **Admin username**: `demouser`
+    - **Admin password**: `demo@pass123`
+
+2. Open the `C:\MCW` folder.
+
+3. From the **Contoso Sports League** folder under **MCW**, open the Visual Studio Solution file: `Contoso.Apps.SportsLeague.sln`.
+
+4. The solution contains the following projects:
+
+    |    |            |
+    |----------|:-------------:|
+    | Contoso.Apps.SportsLeague.Web |   Contoso Sports League e-commerce application |
+    | Contoso.Apps.SportsLeague.Admin |   Contoso Sports League call center admin application |
+    | Contoso.Apps.Common  |   Shared tier |
+    | Contoso.Apps.SportsLeague.Data  |   Shared tier |
+    | Contoso.Apps.FunctionApp  |   Function app tier |
+    | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
+    | Contoso.Apps.PaymentGateway   |     API for payment processing |
+
+You should follow all of the steps provided *before* performing the Hands-on lab.
+
+
+## Exercise 2: Proof of concept deployment
 
 Duration: 120 minutes
 
