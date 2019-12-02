@@ -113,7 +113,7 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 
 ## Redeem FREE Microsoft Azure pass
 
-You should of been given an Azure Pass "promo code" - PLEASE ask if you have not 
+You should of been given an Azure Pass **"promo code"** - PLEASE ask if you have not 
 
 1. Navigate to the following webpage https://www.microsoftazurepass.com/Home/HowTo 
 
@@ -123,11 +123,11 @@ You should of been given an Azure Pass "promo code" - PLEASE ask if you have not
 
 Duration: 60 minutes
 
-Before initiating ths afternoons hands-on lab, you will setup an environment to use for the rest of the exercises.
+Before initiating this afternoons hands-on lab, you will setup an environment to use for the rest of the exercises.
 
 ### Task 1: Download GitHub resources
 
-1. Open a browser window to the Cloud Workshop GitHub repository (<https://github.com/microsoft/MCW-Modern-cloud-apps>).
+1. Open a browser window to the Cloud Workshop GitHub repository (<https://github.com/jamespearse80/ICRC-Modern-Cloud-Apps>).
 
 2. Select **Clone or download**, then select **Download Zip**.
 
