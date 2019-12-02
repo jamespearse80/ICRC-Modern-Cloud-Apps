@@ -96,6 +96,11 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 |    |            |
 |----------|:-------------|
 | **Description** | **Links** |
+| GitHub | <https://help.github.com/en/github/getting-started-with-github> |
+| Azure | <https://azure.microsoft.com/en-us/overview/what-is-azure/> |
+| Azure ARM | <https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview> |
+| Azure VM | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview> |
+| Azure SQL | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview> |
 | SQL firewall | <https://azure.microsoft.com/en-us/documentation/articles/sql-database-configure-firewall-settings/> |
 | Deploying a Web App | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-deploy/> |
 | Deploying an API app | <https://azure.microsoft.com/en-us/documentation/articles/app-service-dotnet-deploy-api-app/> |
@@ -105,6 +110,7 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 | View your access and usage reports | <https://msdn.microsoft.com/en-us/library/azure/dn283934.aspx> |
 | Detect failures | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-asp-net-exceptions/> |
 | Monitor performance problems | <https://azure.microsoft.com/en-us/documentation/articles/app-insights-web-monitor-performance/> |
+| Visual Studio | <https://docs.microsoft.com/en-us/visualstudio/windows/?view=vs-2019> |
 
 ## Important - Before commencing the hands-on lab you must redeem your Azure pass code
 
