@@ -59,38 +59,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 6: Update and deploy the e-commerce website](#task-6-update-and-deploy-the-e-commerce-website)
       - [Subtask 1: Update the Application Settings for the Web App that hosts the Contoso.Apps.SportsLeague.Web project](#subtask-1-update-the-application-settings-for-the-web-app-that-hosts-the-contosoappssportsleagueweb-project)
       - [Subtask 2: Validate App Settings are correct](#subtask-2-validate-app-settings-are-correct)
-  - [Exercise 2: Identity and Security](#exercise-2-identity-and-security)
-    - [Task 1: Enable Azure AD Premium Trial](#task-1-enable-azure-ad-premium-trial)
-    - [Task 2: Create a new Contoso user](#task-2-create-a-new-contoso-user)
-    - [Task 3: Configure access control for the call center administration Web Application](#task-3-configure-access-control-for-the-call-center-administration-web-application)
-      - [Subtask 1: Enable Azure AD Authentication](#subtask-1-enable-azure-ad-authentication)
-      - [Subtask 2: Verify the call center administration website uses the access control logon](#subtask-2-verify-the-call-center-administration-website-uses-the-access-control-logon)
-    - [Task 4: Apply custom branding for the Azure Active Directory logon page](#task-4-apply-custom-branding-for-the-azure-active-directory-logon-page)
-    - [Task 5: Verify the branding has been successfully applied to the Azure Active Directory logon page](#task-5-verify-the-branding-has-been-successfully-applied-to-the-azure-active-directory-logon-page)
-  - [Exercise 3: Enable Azure B2C for customer site](#exercise-3-enable-azure-b2c-for-customer-site)
-    - [Task 1: Create a new directory](#task-1-create-a-new-directory)
-    - [Task 2: Add a new application](#task-2-add-a-new-application)
-    - [Task 3: Create Policies, Sign up](#task-3-create-policies-sign-up)
-    - [Task 4: Create a sign-in policy](#task-4-create-a-sign-in-policy)
-    - [Task 5: Create a profile editing policy](#task-5-create-a-profile-editing-policy)
-    - [Task 6: Modify the Contoso.App.SportsLeague.Web](#task-6-modify-the-contosoappsportsleagueweb)
-    - [Task 7: Send authentication requests to Azure AD](#task-7-send-authentication-requests-to-azure-ad)
-    - [Task 8: Display user information](#task-8-display-user-information)
-    - [Task 9: Run the sample app](#task-9-run-the-sample-app)
-  - [Exercise 4: Enabling Telemetry with Application Insights](#exercise-4-enabling-telemetry-with-application-insights)
-    - [Task 1: Configure the application for telemetry](#task-1-configure-the-application-for-telemetry)
-      - [Subtask 1: Add Application Insights Telemetry to the e-commerce website project](#subtask-1-add-application-insights-telemetry-to-the-e-commerce-website-project)
-      - [Subtask 2: Enable client side telemetry](#subtask-2-enable-client-side-telemetry)
-      - [Subtask 3: Deploy the e-commerce Web App from Visual Studio](#subtask-3-deploy-the-e-commerce-web-app-from-visual-studio)
-    - [Task 2: Creating the web performance test and load test](#task-2-creating-the-web-performance-test-and-load-test)
-      - [Subtask 1: Create the load test](#subtask-1-create-the-load-test)
-      - [Subtask 2: View the Application Insights logs](#subtask-2-view-the-application-insights-logs)
-  - [Exercise 5: Automating backend processes with Azure Functions and Logic Apps](#exercise-5-automating-backend-processes-with-azure-functions-and-logic-apps)
-    - [Task 1: Create an Azure Function to Generate PDF Receipts](#task-1-create-an-azure-function-to-generate-pdf-receipts)
-    - [Task 2: Create an Azure Logic App to Process Orders](#task-2-create-an-azure-logic-app-to-process-orders)
-    - [Task 3: Use Twilio to send SMS Order Notifications](#task-3-use-twilio-to-send-sms-order-notifications)
-      - [Subtask 1: Configure your Twilio trial account](#subtask-1-configure-your-twilio-trial-account)
-      - [Subtask 2: Create a new logic app](#subtask-2-create-a-new-logic-app)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Delete resources](#task-1-delete-resources)
 
@@ -156,7 +124,7 @@ You should of been given an Azure Pass "promo code" - PLEASE ask if you have not
 
 1. Navigate to the following webpage https://www.microsoftazurepass.com/Home/HowTo 
 
-2. Follow the instuructions to activate Azure pass - YOU MUST HAVE A MICROSOFT ACCOUNT i.e bob.smith@outlook.com
+2. Follow the instuructions to activate Azure pass - **YOU MUST HAVE A MICROSOFT ACCOUNT** i.e bob.smith@outlook.com
 
 ## Exercise 1: Proof of concept deployment
 
