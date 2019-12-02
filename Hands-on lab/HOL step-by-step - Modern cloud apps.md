@@ -116,9 +116,8 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 
 ## Requirements
 
-1. Microsoft Azure subscription
-2. Local machine or a virtual machine configured with Visual Studio 2019 Community Edition
-3. Twilio account and/or personal cell phone to setup a trial Twilio account
+1. Microsoft Azure subscription - You will be given an Azure pass code to activate $200 (30-days) worth of credit 
+2. Microsoft account - i.e bob.smith@outlook.com
 
 ## Help references
 
@@ -151,15 +150,17 @@ The Cloud Workshop: Modern Cloud Apps lab is a hands-on exercise that will chall
 
 ## Important - before commencing the hands-on lab you must redeem your Azure pass code
 
-## redeem Azure pass
+## Redeem FREE Microsoft Azure pass
 
-1. Navigate to https://www.microsoftazurepass.com/Home/HowTo 
+You should of been given an Azure Pass "promo code" - PLEASE ask if you have not 
 
-2. follow the instuructions to activate Azure pass - YOU MUST HAVE A MICROSOFT ACCOUNT i.e bob.smith@outlook.com
+1. Navigate to the following webpage https://www.microsoftazurepass.com/Home/HowTo 
+
+2. Follow the instuructions to activate Azure pass - YOU MUST HAVE A MICROSOFT ACCOUNT i.e bob.smith@outlook.com
 
 ## Exercise 1: Proof of concept deployment
 
-Duration: 60 minutes
+Duration: 120 minutes
 
 Contoso has asked you to create a proof of concept deployment in Microsoft Azure by deploying the web, database, and API applications for the solution as well as validating that the core functionality of the solution works. Ensure all resources use the same resource group previously created for the App Service Environment.
 
@@ -262,8 +263,6 @@ In this exercise, you will provision a website via the Azure **Web App + SQL** t
 19. Close all configuration blades.
 
 #### Subtask 2: Provision the storage account
-
->**Note:** You can skip the storage account provisioning steps if you use the storage account created during the Lab VM provisioning.
 
 1. Using a new tab or instance of your browser, navigate to the Azure Management portal <http://portal.azure.com>.
 
