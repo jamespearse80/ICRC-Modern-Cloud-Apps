@@ -26,21 +26,14 @@ By the end of this hands-on lab, you will have learned how to use several key se
 
 ## Azure services and related products
 
+- Azure ARM 
+- Azure Virtual Machine(s)
+- Azure Networking 
 - Azure App Service (Web App, API App)
-- App Service Environment
-- Azure Functions
-- Application Gateway
-- Azure Traffic Manager
 - Azure Storage
-- Azure Storage Queues
-- Azure Data Factory
-- Azure SQL Database
-- Azure Active Directory
-- Azure Logic Apps
-- Azure DevOps
-- Azure Application Insights
+- Azure SQL Database (inc replication & failover)
 - Visual Studio 2019 Community Edition or later
-- Twilio (third-party service to send SMS messages)
+- GitHub
 
 ## Azure solutions
 
