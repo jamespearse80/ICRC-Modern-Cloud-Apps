@@ -32,11 +32,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
   - [Help references](#help-references)
-  - [Exercise 1: Deploy Azure Lab VM - Morning Session]
-    - [Task 1: Download GitHub Resources](#download-github-resources)
-    - [Task 2: Deploy Resources to Azure](#deploy-resources-to-azure)
-    - [Task 3: Explore the Contoso Sports League Sample(s)](#Explore-the-contoso-sports-league-samples)
-  - [Exercise 2: Proof of concept deployment - Afternoon Session]
+  - [Exercise 1: Deploy Azure Lab VM - Morning Session](#exercise-1-deploy-the-azure-lab-vm)
+    - [Task 1: Download GitHub Resources](#task-1-download-github-resources)
+    - [Task 2: Deploy Resources to Azure](#task-2-deploy-resources-to-azure)
+    - [Task 3: Explore the Contoso Sports League Sample(s)](#task-3-Explore-the-contoso-sports-league-samples)
+  - [Exercise 2: Proof of concept deployment - Afternoon Session](#exercise-2-proof-of-concept-deployment)
     - [Task 1: Deploy the e-commerce website, SQL Database, and storage](#task-1-deploy-the-e-commerce-website-sql-database-and-storage)
       - [Subtask 1: Create the Web App and SQL database instance](#subtask-1-create-the-web-app-and-sql-database-instance)
       - [Subtask 2: Provision the storage account](#subtask-2-provision-the-storage-account)
