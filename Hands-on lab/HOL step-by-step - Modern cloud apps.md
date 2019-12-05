@@ -72,7 +72,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
+In this hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Azure SQL Database and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
 The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members working on the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
