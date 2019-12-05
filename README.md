@@ -22,11 +22,11 @@ In this workshop, you will work to implement an end-to-end solution for e-commer
 
 ### Hands-on Lab
 
-Exercise 1
+**Exercise 1**
 
 Deploy an IaaS based LabVM that you will use later to deploy Web & Api Apps to Azure (using Visual Studio)
 
-Exercise 2
+**Exercise 2**
 
 You will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
