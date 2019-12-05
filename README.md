@@ -1,8 +1,12 @@
-# Modern cloud apps
+Hi Everyone :)
+
+For today's ICRC Azure day you are going to carry out a number of Azure "hands-on" excercices all designed to demonstrate what is possible in Azure today. We have created a ficitional orginisation that has asked you to demonstrate how Platform as a service (PaaS) can remove the burden of infrastrucutre management. 
+
+# Modern cloud apps - overview
 
 The Contoso Sports League Association (CSLA) is one of the largest sports franchises and is struggling to keep up with demand from their growing user base. They currently host an e-commerce website and have a backend website that supports their call center, allowing employees to view order information.
 
-CSLA would like to modernize their websites and move to the cloud, ultimately moving away from managing infrastructure. They are interested in whether Platform-as-a-Service (PaaS) will meet their needs so they can completely remove the infrastructure management overhead.
+CSLA would like to modernize their websites and move to the cloud, ultimately moving away from managing infrastructure. They are interested in whether Platform-as-a-Service (PaaS) will meet their needs so they can remove some of the infrastructure management overhead.
 
 November 2019
 
@@ -18,7 +22,13 @@ In this workshop, you will work to implement an end-to-end solution for e-commer
 
 ### Hands-on Lab
 
-In today's hands-on lab, you will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
+**Exercise 1**
+
+Deploy an IaaS based LabVM that you will use later to deploy Web & Api Apps to Azure (using Visual Studio)
+
+**Exercise 2**
+
+You will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
 The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
@@ -44,4 +54,6 @@ App Modernization
 - [MCW](https://github.com/Microsoft/MCW)
 
 ## Help & Support
+
+See james.pearse@microsoft.com 
 
