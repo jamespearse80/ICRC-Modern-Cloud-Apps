@@ -1,6 +1,6 @@
 Hi Everyone :)
 
-For today's ICRC Azure day you are going to carry out a number of Azure "hands-on" excercices all designed to demonstrate what is possible in Azure today. We have created a ficitional orginisation that has asked you to demonstrate how Platform as a service (PaaS) can remove the burden of infrastrucutre management. 
+For today's ICRC Azure day you are going to carry out a number of Azure "hands-on" excercices all designed to demonstrate what is possible in Azure today. We have created a ficitional orginisation that has asked you to demonstrate how platform as a service (PaaS) can remove the burden of infrastructure managemen, and allow the organisation to be more agile. 
 
 # Modern cloud apps - overview
 
@@ -8,7 +8,7 @@ The Contoso Sports League Association (CSLA) is one of the largest sports franch
 
 CSLA would like to modernize their websites and move to the cloud, ultimately moving away from managing infrastructure. They are interested in whether Platform-as-a-Service (PaaS) will meet their needs so they can remove some of the infrastructure management overhead.
 
-November 2019
+Dec 2019
 
 ## Target audience
 
