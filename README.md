@@ -18,17 +18,17 @@ ICRC Application developers & Infrastructure Engineers
 
 ### Workshop
 
-In this workshop, you will work to implement an end-to-end solution for e-commerce that is based on Azure App Services, Azure Active Directory, and Azure DevOps.At the end of this workshop, you will be better able to deploy and configure Azure Web Apps and associated services. In addition, you will learn to configure Web Apps for authentication with Azure AD, instrument and load-test the application with App Insights, and automate back-end services using Azure Functions and Logic Apps.
+In this workshop, you will work to implement an end-to-end solution for e-commerce that is based on Azure App Services, Azure SQL and Azure DevOps. At the end of this workshop, you will be better able to deploy and configure Azure Web Apps and associated services. 
 
 ### Hands-on Lab
 
 **Exercise 1**
 
-Deploy an IaaS based LabVM that you will use later to deploy Web & Api Apps to Azure (using Visual Studio)
+Deploy an IaaS based LabVM (with associated Azure environment inc networking, storage, network secuirty group and IaaS vm) that you will use later to deploy Web & Api Apps to Azure (using Visual Studio)
 
 **Exercise 2**
 
-You will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure Functions, Azure SQL Database, Azure Logic Apps, and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
+You will be challenged to implement an end-to-end scenario using a supplied sample that is based on Azure App Services, Microsoft Azure  SQL Database and related services. The scenario will include implementing compute, storage, workflows, and monitoring, using various components of Microsoft Azure.
 
 The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
