@@ -170,9 +170,9 @@ Before initiating this afternoons hands-on lab, you will setup an environment to
 
     ![Select Edit Parameters.](images/Setup/2019-06-24-17-17-05.png)
 
-13. In the extracted folder, open the **\Hands-on lab\Scripts\parameters.json** file. **Note: You must overwrite the existing content**
+13. In the extracted folder, open the **\Hands-on lab\Scripts\parameters.json** file. 
 
-14. Copy and paste it into the window.
+14. Copy and paste it into the window. **Note: You must overwrite the existing content**
 
 15. Select **Save**.
 
