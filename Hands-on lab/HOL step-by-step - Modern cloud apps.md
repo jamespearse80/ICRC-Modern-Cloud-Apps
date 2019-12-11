@@ -154,15 +154,15 @@ Before initiating this afternoons hands-on lab, you will setup an environment to
 
 6. Select **Refresh** to see your new resource group displayed and select it.
 
-7. Select **Export template**, and then select **Deploy**.
+7. Select **Export template**, in the left hand pane - next select **Deploy**.
 
     ![Select Deploy](images/Setup/2019-06-24-17-15-18.png)
 
 8. Select **Build your own template in the editor**.
 
-9. In the extracted folder, open the `\Hands-on lab\Scripts\template.json` file.
+9. In your extracted GitHub folder, open the `\Hands-on lab\Scripts\template.json` file.
 
-10. Copy and paste it into the window. **Note: You must overwrite the existing content**
+10. Copy and paste the content into the window. **Note: You must overwrite and replace the existing scripted content in the window**
 
 11. Select **Save**
 
@@ -170,9 +170,9 @@ Before initiating this afternoons hands-on lab, you will setup an environment to
 
     ![Select Edit Parameters.](images/Setup/2019-06-24-17-17-05.png)
 
-13. In the extracted folder, open the **\Hands-on lab\Scripts\parameters.json** file. 
+13. In your extracted GitHub folder, open the **\Hands-on lab\Scripts\parameters.json** file. 
 
-14. Copy and paste it into the window. **Note: You must overwrite the existing content**
+14. Copy and paste the content into the window. **Note: You must overwrite and replace the existing scripted content in the window**
 
 15. Select **Save**.
 
