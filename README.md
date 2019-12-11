@@ -1,6 +1,6 @@
 Hi Everyone :)
 
-For today's ICRC Azure day you are going to carry out a number of Azure "hands-on" excercices all designed to demonstrate what is possible in Azure today. We have created a ficitional orginisation that has asked you to demonstrate how platform as a service (PaaS) can remove the burden of infrastructure managemen, and allow the organisation to be more agile. 
+For today's ICRC Azure day you are going to carry out a number of Azure "hands-on" excercices all designed to demonstrate what is possible in Azure today. We have created a ficitional orginisation that has asked you to demonstrate how platform as a service (PaaS) can remove the burden of infrastructure management, and allow the organisation to be more agile. 
 
 # Modern cloud apps - overview
 
