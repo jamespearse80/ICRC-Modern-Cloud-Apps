@@ -213,6 +213,8 @@ Before initiating this afternoons hands-on lab, you will setup an environment to
     | Contoso.Apps.SportsLeague.Offers |  API for returning list of available products |
     | Contoso.Apps.PaymentGateway   |     API for payment processing |
 
+Please have a look and explore the projects, note that you do not need to do anything further until Exercise 2
+
 You should follow all of the steps provided *before* performing Exercise 2 of todays Hands-on lab.
 
 
